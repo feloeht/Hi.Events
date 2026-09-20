@@ -7,7 +7,6 @@ namespace HiEvents\Services\Application\Handlers\Cashless;
 use HiEvents\DomainObjects\CashlessWalletDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\Generated\CashlessTopupDomainObjectAbstract;
-use HiEvents\DomainObjects\Generated\OrderDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\ProductDomainObjectAbstract;
 use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\DomainObjects\ProductDomainObject;
@@ -17,7 +16,6 @@ use HiEvents\Exceptions\CashlessNotEnabledException;
 use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Helper\Currency;
 use HiEvents\Repository\Interfaces\CashlessTopupRepositoryInterface;
-use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Cashless\DTO\CreateCashlessTopupDTO;
 use HiEvents\Services\Application\Handlers\Order\CreateOrderHandler;
@@ -38,7 +36,6 @@ class CreateCashlessTopupHandler
         private readonly CashlessWalletResolveService $walletResolveService,
         private readonly CashlessTopupRepositoryInterface $topupRepository,
         private readonly ProductRepositoryInterface $productRepository,
-        private readonly OrderRepositoryInterface $orderRepository,
         private readonly CreateOrderHandler $createOrderHandler,
         private readonly DatabaseManager $databaseManager,
     ) {}
@@ -92,7 +89,7 @@ class CreateCashlessTopupHandler
 
             $this->createTopup($wallet, $order, $topupData->amount);
 
-            return $this->prefillBuyerFromTicket($order, $wallet);
+            return $order;
         });
     }
 
@@ -128,23 +125,6 @@ class CreateCashlessTopupHandler
         }
 
         return $product;
-    }
-
-    private function prefillBuyerFromTicket(
-        OrderDomainObject $order,
-        CashlessWalletDomainObject $wallet,
-    ): OrderDomainObject {
-        $attendee = $wallet->getAttendee();
-
-        if ($attendee === null) {
-            return $order;
-        }
-
-        return $this->orderRepository->updateFromArray($order->getId(), [
-            OrderDomainObjectAbstract::FIRST_NAME => $attendee->getFirstName(),
-            OrderDomainObjectAbstract::LAST_NAME => $attendee->getLastName(),
-            OrderDomainObjectAbstract::EMAIL => $attendee->getEmail(),
-        ]);
     }
 
     private function createTopup(CashlessWalletDomainObject $wallet, OrderDomainObject $order, float $amount): void

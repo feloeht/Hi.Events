@@ -81,6 +81,7 @@ use HiEvents\Http\Actions\Cashless\Public\CreateCashlessSalesPointSessionAction;
 use HiEvents\Http\Actions\Cashless\Public\CreateStaffTopupPublicAction;
 use HiEvents\Http\Actions\Cashless\Public\GetCashlessQuotePublicAction;
 use HiEvents\Http\Actions\Cashless\Public\GetCashlessSalesPointPublicAction;
+use HiEvents\Http\Actions\Cashless\Public\GetCashlessSalesPointTransactionsPublicAction;
 use HiEvents\Http\Actions\Cashless\Public\GetCashlessWalletForSalesPointAction;
 use HiEvents\Http\Actions\Cashless\Public\ReverseCashlessTransactionPublicAction;
 use HiEvents\Http\Actions\Cashless\Public\CreateCashlessTopupPublicAction;
@@ -719,6 +720,7 @@ $router->prefix('/public')->group(
             ->middleware('throttle:10,1');
         $router->get('/cashless/sales-points/{sales_point_short_id}', GetCashlessSalesPointPublicAction::class);
         $router->get('/cashless/sales-points/{sales_point_short_id}/wallets/{attendee_public_id}', GetCashlessWalletForSalesPointAction::class);
+        $router->get('/cashless/sales-points/{sales_point_short_id}/transactions', GetCashlessSalesPointTransactionsPublicAction::class);
         $router->post('/cashless/sales-points/{sales_point_short_id}/quote', GetCashlessQuotePublicAction::class);
         $router->post('/cashless/sales-points/{sales_point_short_id}/purchases', CreateCashlessPurchasePublicAction::class);
         $router->post('/cashless/sales-points/{sales_point_short_id}/topups', CreateStaffTopupPublicAction::class);

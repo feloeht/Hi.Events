@@ -3,9 +3,14 @@ import {Tabs} from "@mantine/core";
 import {IconArrowsExchange, IconCoin, IconReceipt} from "@tabler/icons-react";
 import {useState} from "react";
 import {useParams} from "react-router";
-import {CashlessStaffPaymentMethod, CashlessTransaction, CashlessWalletPublic, Product} from "../../../types.ts";
+import {useQueryClient} from "@tanstack/react-query";
+import {CashlessStaffPaymentMethod, CashlessWalletPublic, Product} from "../../../types.ts";
 import {publicCashlessClient} from "../../../api/cashless-public.client.ts";
 import {useGetCashlessSalesPointPublic} from "../../../queries/useGetCashlessSalesPointPublic.ts";
+import {
+    GET_CASHLESS_SALES_POINT_TRANSACTIONS_QUERY_KEY,
+    useGetCashlessSalesPointTransactions,
+} from "../../../queries/useGetCashlessSalesPointTransactions.ts";
 import {HomepageInfoMessage} from "../../common/HomepageInfoMessage";
 import {showError, showSuccess} from "../../../utilites/notifications.tsx";
 import {formatCurrency} from "../../../utilites/currency.ts";
@@ -27,10 +32,10 @@ const CashlessPos = () => {
     const {token, storeToken, clearToken} = usePosSession(String(salesPointShortId));
     const {data: salesPoint, isError} = useGetCashlessSalesPointPublic(salesPointShortId, token);
 
+    const queryClient = useQueryClient();
     const [wallet, setWallet] = useState<CashlessWalletPublic | null>(null);
     const [scannedId, setScannedId] = useState('');
     const [cart, setCart] = useState<CartLine[]>([]);
-    const [recentTransactions, setRecentTransactions] = useState<CashlessTransaction[]>([]);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [reversingShortId, setReversingShortId] = useState<string | null>(null);
     const [scannerResetToken, setScannerResetToken] = useState(0);
@@ -43,6 +48,12 @@ const CashlessPos = () => {
     }));
     const chargeQuote = useCashlessQuote(String(salesPointShortId), token, {items: basket});
     const topupQuote = useCashlessQuote(String(salesPointShortId), token, {topupAmount});
+
+    const isUnlocked = !!salesPoint && (!salesPoint.requires_pin || !!salesPoint.products);
+    const {data: transactions = []} = useGetCashlessSalesPointTransactions(salesPointShortId, token, isUnlocked);
+    const refreshTransactions = () => queryClient.invalidateQueries({
+        queryKey: [GET_CASHLESS_SALES_POINT_TRANSACTIONS_QUERY_KEY, salesPointShortId],
+    });
 
     const currency = salesPoint?.currency ?? 'USD';
     const sellsProducts = (salesPoint?.products?.length ?? 0) > 0;
@@ -117,10 +128,7 @@ const CashlessPos = () => {
             }, token);
 
             showSuccess(t`Charged ${formatCurrency(Math.abs(data.amount), currency)} — ${formatCurrency(data.balance_after, currency)} left`);
-            setRecentTransactions((transactions) => [
-                {...data, attendee_public_id: wallet.attendee_public_id},
-                ...transactions,
-            ]);
+            refreshTransactions();
             resetCustomer();
         } catch (error: any) {
             showError(error?.response?.data?.message || t`This payment could not be taken.`);
@@ -145,10 +153,7 @@ const CashlessPos = () => {
             }, token);
 
             showSuccess(t`Added ${formatCurrency(amount, currency)} — balance is now ${formatCurrency(data.balance_after, currency)}`);
-            setRecentTransactions((transactions) => [
-                {...data, attendee_public_id: wallet.attendee_public_id},
-                ...transactions,
-            ]);
+            refreshTransactions();
             resetCustomer();
         } catch (error: any) {
             showError(error?.response?.data?.message || t`This top-up could not be recorded.`);
@@ -163,8 +168,7 @@ const CashlessPos = () => {
         try {
             await publicCashlessClient.reverseTransaction(String(salesPointShortId), transactionShortId, token);
             showSuccess(t`Transaction undone`);
-            setRecentTransactions((transactions) =>
-                transactions.filter((transaction) => transaction.short_id !== transactionShortId));
+            refreshTransactions();
         } catch (error: any) {
             showError(error?.response?.data?.message || t`This transaction could not be undone.`);
         } finally {
@@ -260,7 +264,7 @@ const CashlessPos = () => {
 
                 <Tabs.Panel value="history" className={classes.panel}>
                     <HistoryTab
-                        transactions={recentTransactions}
+                        transactions={transactions}
                         currency={currency}
                         reversingShortId={reversingShortId}
                         onReverse={reverse}

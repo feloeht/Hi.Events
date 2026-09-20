@@ -87,6 +87,13 @@ export const publicCashlessClient = {
         );
         return response.data;
     },
+    getSalesPointTransactions: async (salesPointShortId: IdParam, sessionToken?: string | null) => {
+        const response = await publicApi.get<GenericDataResponse<CashlessTransaction[]>>(
+            `/cashless/sales-points/${salesPointShortId}/transactions`,
+            sessionHeaders(sessionToken),
+        );
+        return response.data;
+    },
     reverseTransaction: async (salesPointShortId: IdParam, transactionShortId: IdParam, sessionToken?: string | null) => {
         const response = await publicApi.post<GenericDataResponse<CashlessTransaction>>(
             `/cashless/sales-points/${salesPointShortId}/transactions/${transactionShortId}/reverse`,

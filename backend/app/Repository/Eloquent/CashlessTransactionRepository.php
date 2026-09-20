@@ -62,6 +62,17 @@ class CashlessTransactionRepository extends BaseRepository implements CashlessTr
         ));
     }
 
+    public function findBySalesPointId(int $salesPointId, int $limit): Collection
+    {
+        return $this->runQuery(fn () => $this->handleResults(
+            $this->model
+                ->where(CashlessTransactionDomainObjectAbstract::CASHLESS_SALES_POINT_ID, $salesPointId)
+                ->orderByDesc(CashlessTransactionDomainObjectAbstract::ID)
+                ->limit($limit)
+                ->get()
+        ));
+    }
+
     public function findCreditingTopupsForRefund(int $walletId): Collection
     {
         return $this->runQuery(fn () => $this->handleResults(

@@ -105,6 +105,14 @@ test.describe('cashless', () => {
     await pos.chargeButton().click();
     await expect(page.getByText('$30.00 left')).toBeVisible();
 
+    await page.getByRole('tab', { name: 'History' }).click();
+    await expect(page.getByText('2 × Beer')).toBeVisible();
+
+    await page.reload();
+    await page.getByRole('tab', { name: 'History' }).click();
+    await expect(page.getByText('2 × Beer')).toBeVisible();
+    await expect(page.getByText(attendee.publicId)).toBeVisible();
+
     const publicWallet = new CashlessWalletPublicPage(page);
     await publicWallet.goto(event.eventId, attendee.shortId);
     await expect(publicWallet.balance()).toBeVisible();
@@ -196,5 +204,29 @@ test.describe('cashless', () => {
     await entry.submitTicketId(attendee.publicId.toLowerCase());
     await expect(page).toHaveURL(new RegExp(`/cashless/${event.eventId}/${attendee.publicId}$`));
     await expect(new CashlessWalletPublicPage(page).balance()).toBeVisible();
+  });
+
+  test('a visitor tops up online and reaches the checkout details without an error', async ({
+    page,
+    api,
+    account,
+    publicApi,
+  }) => {
+    const { event, order } = await seedCashlessEvent(api, publicApi, account.organizerId);
+    const attendee = order.attendees[0];
+
+    const wallet = new CashlessWalletPublicPage(page);
+    await wallet.goto(event.eventId, attendee.publicId);
+    await page.getByTestId('cashless-topup-button').click();
+
+    await expect(page).toHaveURL(new RegExp(`/checkout/${event.eventId}/o_[^/]+/details`));
+    await page.getByRole('textbox', { name: 'First Name', exact: true }).fill('Marie');
+    await page.getByRole('textbox', { name: 'Last Name', exact: true }).fill('Durand');
+    await page.getByRole('textbox', { name: 'Email Address', exact: true }).fill('marie@example.com');
+    await page.getByRole('textbox', { name: 'Confirm Email Address', exact: true }).fill('marie@example.com');
+    await page.getByRole('button', { name: 'Continue to Payment' }).click();
+
+    await expect(page).toHaveURL(/\/(payment|summary)$/);
+    await expect(page.getByText(/already been processed/i)).toHaveCount(0);
   });
 });

@@ -22,5 +22,10 @@ interface CashlessTransactionRepositoryInterface extends RepositoryInterface
     /**
      * @return Collection<CashlessTransactionDomainObject>
      */
+    public function findBySalesPointId(int $salesPointId, int $limit): Collection;
+
+    /**
+     * @return Collection<CashlessTransactionDomainObject>
+     */
     public function findCreditingTopupsForRefund(int $walletId): Collection;
 }
