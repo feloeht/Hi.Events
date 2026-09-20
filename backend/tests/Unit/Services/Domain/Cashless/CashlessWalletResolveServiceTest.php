@@ -40,7 +40,7 @@ class CashlessWalletResolveServiceTest extends TestCase
     public function test_a_public_id_reference_is_matched_case_insensitively_on_public_id(): void
     {
         $this->expectAttendeeLookup(AttendeeDomainObjectAbstract::PUBLIC_ID, 'A-QKS3J8R', AttendeeStatus::ACTIVE);
-        $this->walletRepository->shouldReceive('findFirstWhere')->andReturn(new CashlessWalletDomainObject());
+        $this->walletRepository->shouldReceive('findFirstWhere')->andReturn(new CashlessWalletDomainObject);
 
         $wallet = $this->service->resolveByTicketReference(5, ' a-qks3j8r ');
 
@@ -50,7 +50,7 @@ class CashlessWalletResolveServiceTest extends TestCase
     public function test_a_short_id_reference_is_matched_on_short_id(): void
     {
         $this->expectAttendeeLookup(AttendeeDomainObjectAbstract::SHORT_ID, 'a_abc123', AttendeeStatus::ACTIVE);
-        $this->walletRepository->shouldReceive('findFirstWhere')->andReturn(new CashlessWalletDomainObject());
+        $this->walletRepository->shouldReceive('findFirstWhere')->andReturn(new CashlessWalletDomainObject);
 
         $this->assertNotNull($this->service->resolveByTicketReference(5, 'a_abc123')->getAttendee());
     }
@@ -75,7 +75,7 @@ class CashlessWalletResolveServiceTest extends TestCase
 
     private function expectAttendeeLookup(string $field, string $value, AttendeeStatus $status): void
     {
-        $attendee = (new AttendeeDomainObject())->setId(9)->setEventId(5)->setStatus($status->name);
+        $attendee = (new AttendeeDomainObject)->setId(9)->setEventId(5)->setStatus($status->name);
 
         $this->attendeeRepository
             ->shouldReceive('findFirstWhere')
