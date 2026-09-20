@@ -10,6 +10,7 @@ use HiEvents\Exceptions\CashlessSalesPointAccessException;
 use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Repository\Eloquent\Value\Relationship;
 use HiEvents\Repository\Interfaces\CashlessTransactionRepositoryInterface;
+use HiEvents\Services\Domain\Cashless\CashlessAttendeeNameMasker;
 use HiEvents\Services\Domain\Cashless\CashlessSalesPointAccessService;
 use HiEvents\Services\Domain\Cashless\CashlessWalletResolveService;
 
@@ -21,6 +22,7 @@ class GetCashlessWalletForSalesPointHandler
         private readonly CashlessSalesPointAccessService $salesPointAccessService,
         private readonly CashlessWalletResolveService $walletResolveService,
         private readonly CashlessTransactionRepositoryInterface $transactionRepository,
+        private readonly CashlessAttendeeNameMasker $nameMasker,
     ) {}
 
     /**
@@ -38,6 +40,10 @@ class GetCashlessWalletForSalesPointHandler
             eventId: $salesPoint->getEventId(),
             attendeePublicId: $attendeePublicId,
         );
+
+        if (! $salesPoint->getAllowStaffTopups()) {
+            $this->nameMasker->maskLastName($wallet->getAttendee());
+        }
 
         return $wallet->setTransactions(
             $this->transactionRepository

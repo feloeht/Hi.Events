@@ -11,6 +11,7 @@ use HiEvents\Exceptions\CashlessNotEnabledException;
 use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Repository\Eloquent\Value\Relationship;
 use HiEvents\Repository\Interfaces\CashlessTransactionRepositoryInterface;
+use HiEvents\Services\Domain\Cashless\CashlessAttendeeNameMasker;
 use HiEvents\Services\Domain\Cashless\CashlessSettingsService;
 use HiEvents\Services\Domain\Cashless\CashlessWalletResolveService;
 
@@ -22,6 +23,7 @@ class GetCashlessWalletPublicHandler
         private readonly CashlessSettingsService $cashlessSettingsService,
         private readonly CashlessWalletResolveService $walletResolveService,
         private readonly CashlessTransactionRepositoryInterface $transactionRepository,
+        private readonly CashlessAttendeeNameMasker $nameMasker,
     ) {}
 
     /**
@@ -34,7 +36,7 @@ class GetCashlessWalletPublicHandler
 
         $wallet = $this->walletResolveService->resolveByTicketReference($eventId, $ticketReference);
 
-        $wallet->getAttendee()?->setLastName($this->initialOf($wallet->getAttendee()->getLastName()));
+        $this->nameMasker->maskLastName($wallet->getAttendee());
 
         return $wallet->setTransactions(
             $this->transactionRepository
@@ -42,10 +44,5 @@ class GetCashlessWalletPublicHandler
                 ->loadRelation(new Relationship(CashlessSalesPointDomainObject::class, name: 'sales_point'))
                 ->findByWalletId($wallet->getId(), self::RECENT_TRANSACTION_LIMIT)
         );
-    }
-
-    private function initialOf(?string $lastName): string
-    {
-        return $lastName === null || $lastName === '' ? '' : mb_strtoupper(mb_substr($lastName, 0, 1)).'.';
     }
 }
