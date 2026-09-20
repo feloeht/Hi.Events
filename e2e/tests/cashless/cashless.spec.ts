@@ -206,7 +206,7 @@ test.describe('cashless', () => {
     await expect(new CashlessWalletPublicPage(page).balance()).toBeVisible();
   });
 
-  test('a visitor tops up online and reaches the checkout details without an error', async ({
+  test('a visitor tops up online and reaches a checkout already filled from the ticket', async ({
     page,
     api,
     account,
@@ -220,10 +220,8 @@ test.describe('cashless', () => {
     await page.getByTestId('cashless-topup-button').click();
 
     await expect(page).toHaveURL(new RegExp(`/checkout/${event.eventId}/o_[^/]+/details`));
-    await page.getByRole('textbox', { name: 'First Name', exact: true }).fill('Marie');
-    await page.getByRole('textbox', { name: 'Last Name', exact: true }).fill('Durand');
-    await page.getByRole('textbox', { name: 'Email Address', exact: true }).fill('marie@example.com');
-    await page.getByRole('textbox', { name: 'Confirm Email Address', exact: true }).fill('marie@example.com');
+    await expect(page.getByRole('textbox', { name: 'First Name', exact: true })).toHaveValue(order.buyerFirstName);
+    await expect(page.getByRole('textbox', { name: 'Email Address', exact: true })).toHaveValue(order.buyerEmail);
     await page.getByRole('button', { name: 'Continue to Payment' }).click();
 
     await expect(page).toHaveURL(/\/(payment|summary)$/);

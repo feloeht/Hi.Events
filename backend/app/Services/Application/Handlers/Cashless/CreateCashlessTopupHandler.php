@@ -7,6 +7,7 @@ namespace HiEvents\Services\Application\Handlers\Cashless;
 use HiEvents\DomainObjects\CashlessWalletDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\Generated\CashlessTopupDomainObjectAbstract;
+use HiEvents\DomainObjects\Generated\OrderDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\ProductDomainObjectAbstract;
 use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\DomainObjects\ProductDomainObject;
@@ -16,11 +17,13 @@ use HiEvents\Exceptions\CashlessNotEnabledException;
 use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Helper\Currency;
 use HiEvents\Repository\Interfaces\CashlessTopupRepositoryInterface;
+use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Repository\Interfaces\ProductRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Cashless\DTO\CreateCashlessTopupDTO;
 use HiEvents\Services\Application\Handlers\Order\CreateOrderHandler;
 use HiEvents\Services\Application\Handlers\Order\DTO\CreateOrderPublicDTO;
 use HiEvents\Services\Application\Handlers\Order\DTO\ProductOrderDetailsDTO;
+use HiEvents\Services\Domain\Cashless\CashlessOccurrenceResolver;
 use HiEvents\Services\Domain\Cashless\CashlessSettingsService;
 use HiEvents\Services\Domain\Cashless\CashlessWalletResolveService;
 use HiEvents\Services\Domain\Product\DTO\OrderProductPriceDTO;
@@ -36,6 +39,8 @@ class CreateCashlessTopupHandler
         private readonly CashlessWalletResolveService $walletResolveService,
         private readonly CashlessTopupRepositoryInterface $topupRepository,
         private readonly ProductRepositoryInterface $productRepository,
+        private readonly OrderRepositoryInterface $orderRepository,
+        private readonly CashlessOccurrenceResolver $occurrenceResolver,
         private readonly CreateOrderHandler $createOrderHandler,
         private readonly DatabaseManager $databaseManager,
     ) {}
@@ -64,8 +69,9 @@ class CreateCashlessTopupHandler
         );
 
         $topupProduct = $this->getTopupProduct($settings);
+        $occurrenceId = $this->occurrenceResolver->resolveForSale($topupData->event_id);
 
-        return $this->databaseManager->transaction(function () use ($topupData, $wallet, $topupProduct) {
+        return $this->databaseManager->transaction(function () use ($topupData, $wallet, $topupProduct, $occurrenceId) {
             $order = $this->createOrderHandler->handle(
                 eventId: $topupData->event_id,
                 createOrderPublicDTO: CreateOrderPublicDTO::fromArray([
@@ -82,6 +88,7 @@ class CreateCashlessTopupHandler
                                     price: $topupData->amount,
                                 ),
                             ]),
+                            event_occurrence_id: $occurrenceId,
                         ),
                     ]),
                 ]),
@@ -89,7 +96,7 @@ class CreateCashlessTopupHandler
 
             $this->createTopup($wallet, $order, $topupData->amount);
 
-            return $order;
+            return $this->prefillBuyerFromTicket($order, $wallet);
         });
     }
 
@@ -125,6 +132,23 @@ class CreateCashlessTopupHandler
         }
 
         return $product;
+    }
+
+    private function prefillBuyerFromTicket(
+        OrderDomainObject $order,
+        CashlessWalletDomainObject $wallet,
+    ): OrderDomainObject {
+        $attendee = $wallet->getAttendee();
+
+        if ($attendee === null) {
+            return $order;
+        }
+
+        return $this->orderRepository->updateFromArray($order->getId(), [
+            OrderDomainObjectAbstract::FIRST_NAME => $attendee->getFirstName(),
+            OrderDomainObjectAbstract::LAST_NAME => $attendee->getLastName(),
+            OrderDomainObjectAbstract::EMAIL => $attendee->getEmail(),
+        ]);
     }
 
     private function createTopup(CashlessWalletDomainObject $wallet, OrderDomainObject $order, float $amount): void
