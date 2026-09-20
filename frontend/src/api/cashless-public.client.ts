@@ -20,15 +20,15 @@ const sessionHeaders = (sessionToken?: string | null) =>
     sessionToken ? {headers: {'X-Cashless-Session': sessionToken}} : undefined;
 
 export const publicCashlessClient = {
-    getWallet: async (eventId: IdParam, attendeeShortId: IdParam) => {
+    getWallet: async (eventId: IdParam, ticketReference: IdParam) => {
         const response = await publicApi.get<GenericDataResponse<CashlessWalletPublic>>(
-            `/events/${eventId}/cashless/${attendeeShortId}`,
+            `/events/${eventId}/cashless/${ticketReference}`,
         );
         return response.data;
     },
-    createTopup: async (eventId: IdParam, attendeeShortId: IdParam, amount: number) => {
+    createTopup: async (eventId: IdParam, ticketReference: IdParam, amount: number) => {
         const response = await publicApi.post<GenericDataResponse<Order>>(
-            `/events/${eventId}/cashless/${attendeeShortId}/topup`, {amount},
+            `/events/${eventId}/cashless/${ticketReference}/topup`, {amount},
         );
         return response.data;
     },

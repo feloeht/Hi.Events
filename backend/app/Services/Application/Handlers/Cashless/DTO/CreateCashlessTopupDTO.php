@@ -8,7 +8,7 @@ class CreateCashlessTopupDTO extends BaseDataObject
 {
     public function __construct(
         public int $event_id,
-        public string $attendee_short_id,
+        public string $ticket_reference,
         public float $amount,
         public string $session_identifier,
         public bool $is_user_authenticated = false,

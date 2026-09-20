@@ -132,6 +132,7 @@ Gotchas:
 - Crediting a top-up runs in `CreditCashlessWalletJob`, dispatched from `OrderStatusChangedEvent`. Keeping it queued is what stops the Unit suite from hitting the DB. A `PENDING` `cashless_topups` row against a `COMPLETED` order means the job never ran — that is the reconciliation signal
 - Sales point writes are idempotent on `client_reference_id`, unique per sales point. Any new till operation must send one
 - The till never computes a total itself: it asks `CashlessQuoteService` (`/quote`) so the amount shown to staff, and the amount to key into a card terminal, always match what the order will charge
+- Visitors reach their balance without logging in: the event homepage links to `/cashless/:eventId` (type or scan the ticket ID), which redirects to `/cashless/:eventId/:ticketReference`. `CashlessWalletResolveService::resolveByTicketReference` accepts both `A-…` public ids and `a_…` short ids; the public wallet response only exposes the surname initial, and both public endpoints are throttled because the public id is the only secret
 
 #### Enums
 - Status enums go in `backend/app/DomainObjects/Status/`

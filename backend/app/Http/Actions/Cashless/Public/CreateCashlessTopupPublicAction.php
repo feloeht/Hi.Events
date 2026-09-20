@@ -37,14 +37,14 @@ class CreateCashlessTopupPublicAction extends BaseAction
     public function __invoke(
         CreateCashlessTopupRequest $request,
         int $eventId,
-        string $attendeeShortId,
+        string $ticketReference,
     ): JsonResponse {
         $sessionId = $this->sessionIdentifierService->getSessionId();
 
         try {
             $order = $this->createCashlessTopupHandler->handle(CreateCashlessTopupDTO::from([
                 'event_id' => $eventId,
-                'attendee_short_id' => $attendeeShortId,
+                'ticket_reference' => $ticketReference,
                 'amount' => (float) $request->input('amount'),
                 'session_identifier' => $sessionId,
                 'is_user_authenticated' => $this->isUserAuthenticated(),

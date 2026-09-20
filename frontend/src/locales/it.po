@@ -483,7 +483,7 @@ msgstr "Uno schema settimanale"
 msgid "Abandoned"
 msgstr "Abbandonato"
 
-#: src/components/layouts/EventHomepage/index.tsx:482
+#: src/components/layouts/EventHomepage/index.tsx:483
 msgid "About"
 msgstr "Informazioni"
 
@@ -815,7 +815,7 @@ msgstr "Aggiungi livello"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:385
+#: src/components/layouts/EventHomepage/index.tsx:386
 msgid "Add to Calendar"
 msgstr "Aggiungi al Calendario"
 
@@ -1128,6 +1128,10 @@ msgstr "Consenti le ricariche dalla pagina del biglietto"
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:90
 msgid "Almost there! We're just waiting for your payment to be processed. This should only take a few seconds."
 msgstr "Quasi fatto! Stiamo solo aspettando che il tuo pagamento venga elaborato. Dovrebbe richiedere solo pochi secondi."
+
+#: src/components/layouts/EventHomepage/index.tsx:599
+msgid "Already have a ticket? Top up the balance attached to it and pay at the event with its QR code."
+msgstr "Hai già un biglietto? Ricarica il saldo associato e paga all'evento con il suo codice QR."
 
 #: src/components/routes/auth/Register/index.tsx:73
 msgid "Already have an account? <0>{0}</0>"
@@ -2277,6 +2281,7 @@ msgid "Cash"
 msgstr "Contanti"
 
 #: src/components/layouts/Event/index.tsx:146
+#: src/components/layouts/EventHomepage/index.tsx:596
 msgid "Cashless"
 msgstr "Cashless"
 
@@ -2409,8 +2414,8 @@ msgstr "Solo check-in"
 msgid "Check out"
 msgstr "Annulla il check-in"
 
-#: src/components/layouts/EventHomepage/index.tsx:344
 #: src/components/layouts/EventHomepage/index.tsx:345
+#: src/components/layouts/EventHomepage/index.tsx:346
 msgid "Check out this event: {0}"
 msgstr "Dai un'occhiata a questo evento: {0}"
 
@@ -3019,7 +3024,7 @@ msgid "Connection details are required for online events"
 msgstr "I dettagli di connessione sono obbligatori per gli eventi online"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:684
+#: src/components/layouts/EventHomepage/index.tsx:704
 #: src/components/layouts/OrganizerHomepage/index.tsx:259
 msgid "Contact"
 msgstr "Contatto"
@@ -3044,7 +3049,8 @@ msgstr "Il contenuto è obbligatorio"
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
-#: src/components/layouts/EventHomepage/index.tsx:210
+#: src/components/layouts/EventHomepage/index.tsx:211
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:108
 #: src/components/routes/product-widget/SelectProducts/index.tsx:895
 msgid "Continue"
 msgstr "Continua"
@@ -4921,6 +4927,10 @@ msgstr "Il nome dell'evento deve contenere meno di 150 caratteri"
 msgid "Event Not Available"
 msgstr "Evento Non Disponibile"
 
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:37
+msgid "Event not found"
+msgstr "Evento non trovato"
+
 #: src/components/layouts/Event/index.tsx:300
 msgid "Event Page"
 msgstr "Pagina dell'evento"
@@ -5822,7 +5832,7 @@ msgstr "Genera codice"
 msgid "German"
 msgstr "Tedesco"
 
-#: src/components/layouts/EventHomepage/index.tsx:517
+#: src/components/layouts/EventHomepage/index.tsx:518
 msgid "Get Directions"
 msgstr "Indicazioni stradali"
 
@@ -5838,7 +5848,7 @@ msgstr "Ricevi i pagamenti con Stripe"
 msgid "Get started"
 msgstr "Iniziare"
 
-#: src/components/layouts/EventHomepage/index.tsx:209
+#: src/components/layouts/EventHomepage/index.tsx:210
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "Ottieni i biglietti"
@@ -6552,7 +6562,7 @@ msgstr "John"
 msgid "Johnson"
 msgstr "Johnson"
 
-#: src/components/layouts/EventHomepage/index.tsx:413
+#: src/components/layouts/EventHomepage/index.tsx:414
 msgid "Join from anywhere"
 msgstr "Partecipa da ovunque"
 
@@ -6885,7 +6895,7 @@ msgstr "Caricamento..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:495
+#: src/components/layouts/EventHomepage/index.tsx:496
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -7315,7 +7325,7 @@ msgid "Multi line text box"
 msgstr "Casella di testo multilinea"
 
 #: src/components/common/EventCard/index.tsx:108
-#: src/components/layouts/EventHomepage/index.tsx:181
+#: src/components/layouts/EventHomepage/index.tsx:182
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
 msgid "Multiple locations"
 msgstr "Più luoghi"
@@ -8144,7 +8154,7 @@ msgstr "Online: indica i dettagli di collegamento"
 msgid "Online & in-person"
 msgstr "Online e in presenza"
 
-#: src/components/layouts/EventHomepage/index.tsx:182
+#: src/components/layouts/EventHomepage/index.tsx:183
 msgid "Online & in-person — see schedule"
 msgstr "Online e in presenza: vedi la programmazione"
 
@@ -8153,7 +8163,7 @@ msgstr "Online e in presenza: vedi la programmazione"
 msgid "Online event"
 msgstr "Evento online"
 
-#: src/components/layouts/EventHomepage/index.tsx:411
+#: src/components/layouts/EventHomepage/index.tsx:412
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 msgid "Online Event"
 msgstr "Evento online"
@@ -8165,6 +8175,10 @@ msgstr "Dettagli Evento Online"
 #: src/components/common/CashlessTransactionTable/index.tsx:31
 msgid "Online top-up"
 msgstr "Ricarica online"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:51
+msgid "Online top-ups are not available"
+msgstr "Le ricariche online non sono disponibili"
 
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Only {cap} available"
@@ -8320,6 +8334,10 @@ msgstr "Oppure abilita i pagamenti offline e disabilita Stripe"
 #: src/components/layouts/CashlessPos/TopUpTab.tsx:66
 msgid "Or type the ticket ID"
 msgstr "Oppure inserisci l'ID del biglietto"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:89
+msgid "Or type your ticket ID"
+msgstr "Oppure digita l'ID del tuo biglietto"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:443
 msgid "order"
@@ -8540,7 +8558,7 @@ msgid "Organization Name"
 msgstr "Nome Organizzazione"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:596
+#: src/components/layouts/EventHomepage/index.tsx:616
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -9275,8 +9293,12 @@ msgstr "Stampa Biglietti"
 msgid "Print to PDF"
 msgstr "Stampa in PDF"
 
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:90
+msgid "Printed under the QR code on your ticket, like A-XXXXXXX."
+msgstr "Stampato sotto il codice QR del biglietto, come A-XXXXXXX."
+
 #: src/components/common/CookieConsentBanner/index.tsx:82
-#: src/components/layouts/EventHomepage/index.tsx:700
+#: src/components/layouts/EventHomepage/index.tsx:720
 #: src/components/layouts/OrganizerHomepage/index.tsx:342
 msgid "Privacy Policy"
 msgstr "Informativa sulla privacy"
@@ -9691,7 +9713,7 @@ msgstr "Registra il rimborso senza movimentare denaro. Usalo quando restituisci 
 msgid "Recurring"
 msgstr "Ricorrente"
 
-#: src/components/layouts/EventHomepage/index.tsx:375
+#: src/components/layouts/EventHomepage/index.tsx:376
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -10158,7 +10180,7 @@ msgstr "Le vendite sono sospese"
 
 #: src/components/common/ProductPriceAvailability/index.tsx:24
 #: src/components/common/ProductPriceAvailability/index.tsx:63
-#: src/components/layouts/EventHomepage/index.tsx:196
+#: src/components/layouts/EventHomepage/index.tsx:197
 msgid "Sales ended"
 msgstr "Vendite terminate"
 
@@ -10332,6 +10354,10 @@ msgstr "Scansiona"
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
 msgid "Scan a ticket to check in an attendee"
 msgstr "Scansiona un biglietto per fare il check-in di un partecipante"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:76
+msgid "Scan my ticket QR code"
+msgstr "Scansiona il codice QR del mio biglietto"
 
 #: src/components/modals/CashlessTicketLookupModal/index.tsx:40
 msgid "Scan the ticket QR code with a handheld scanner, or type the ID printed on the ticket."
@@ -10550,7 +10576,7 @@ msgstr "Pagamento sicuro"
 msgid "Security"
 msgstr "Sicurezza"
 
-#: src/components/layouts/EventHomepage/index.tsx:438
+#: src/components/layouts/EventHomepage/index.tsx:439
 msgid "See schedule"
 msgstr "Vedi la programmazione"
 
@@ -10991,7 +11017,7 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "La configurazione richiede solo pochi minuti e non serve un account Stripe già esistente. Stripe gestisce carte, wallet, metodi di pagamento locali e protezione antifrode, così tu puoi concentrarti sul tuo evento."
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:349
+#: src/components/layouts/EventHomepage/index.tsx:350
 #: src/components/layouts/OrganizerLayout/index.tsx:239
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
@@ -11214,7 +11240,7 @@ msgid "Sold out"
 msgstr "Esaurito"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:91
-#: src/components/layouts/EventHomepage/index.tsx:202
+#: src/components/layouts/EventHomepage/index.tsx:203
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:215
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:22
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:128
@@ -11889,7 +11915,7 @@ msgstr "Modello salvato con successo"
 msgid "Term"
 msgstr "Termine"
 
-#: src/components/layouts/EventHomepage/index.tsx:706
+#: src/components/layouts/EventHomepage/index.tsx:726
 #: src/components/layouts/OrganizerHomepage/index.tsx:349
 msgid "Terms of Service"
 msgstr "Termini di servizio"
@@ -11906,6 +11932,10 @@ msgstr "Grazie per aver partecipato!"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
 msgid "Thanks,"
 msgstr "Grazie,"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:26
+msgid "That doesn't look like a ticket ID. It starts with A- and is printed under the QR code."
+msgstr "Non sembra un ID biglietto. Inizia con A- ed è stampato sotto il codice QR."
 
 #: src/components/layouts/CashlessPos/PinGate.tsx:27
 msgid "That PIN is not correct."
@@ -12253,7 +12283,7 @@ msgstr "Solo questa data"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "Questo scollega {stripeAccountId} da questo organizzatore. Le vendite di biglietti a pagamento smetteranno di funzionare finché non colleghi di nuovo un account Stripe."
 
-#: src/components/layouts/EventHomepage/index.tsx:399
+#: src/components/layouts/EventHomepage/index.tsx:400
 msgid "This event has ended"
 msgstr "Questo evento è terminato"
 
@@ -12737,6 +12767,15 @@ msgstr "Ricarica un biglietto"
 #: src/components/modals/CashlessTopupModal/index.tsx:61
 msgid "Top up cashless balance"
 msgstr "Ricarica il credito cashless"
+
+#: src/components/layouts/EventHomepage/index.tsx:607
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:59
+msgid "Top up my balance"
+msgstr "Ricarica il mio saldo"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:52
+msgid "Top up your balance at any top-up point during the event."
+msgstr "Ricarica il tuo saldo in qualsiasi punto di ricarica durante l'evento."
 
 #: src/components/layouts/CashlessPos/HistoryTab.tsx:32
 #: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:17
@@ -13542,7 +13581,7 @@ msgstr "Visualizza pagina dell'evento"
 msgid "View logs"
 msgstr "Visualizza log"
 
-#: src/components/layouts/EventHomepage/index.tsx:558
+#: src/components/layouts/EventHomepage/index.tsx:559
 msgid "View Map"
 msgstr "Vedi mappa"
 
@@ -13550,7 +13589,7 @@ msgstr "Vedi mappa"
 msgid "View Message"
 msgstr "Visualizza messaggio"
 
-#: src/components/layouts/EventHomepage/index.tsx:467
+#: src/components/layouts/EventHomepage/index.tsx:468
 msgid "View on Google Maps"
 msgstr "Visualizza su Google Maps"
 
@@ -13686,6 +13725,10 @@ msgstr "Non siamo riusciti a trovare l'ordine che stai cercando. Il link potrebb
 #: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:25
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "Non siamo riusciti a trovare il biglietto che stai cercando. Il link potrebbe essere scaduto o i dettagli del biglietto potrebbero essere cambiati."
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:38
+msgid "We couldn't find this event."
+msgstr "Non abbiamo trovato questo evento."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:422
 msgid "We couldn't find this order. It may have been removed."

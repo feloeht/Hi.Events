@@ -697,7 +697,15 @@ export const router: RouteObject[] = [
         errorElement: <ErrorPage />,
     },
     {
-        path: "/cashless/:eventId/:attendeeShortId",
+        path: "/cashless/:eventId",
+        async lazy() {
+            const CashlessTopupEntry = await import("./components/routes/product-widget/CashlessTopupEntry");
+            return { Component: CashlessTopupEntry.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/cashless/:eventId/:ticketReference",
         async lazy() {
             const CashlessWallet = await import("./components/routes/product-widget/CashlessWallet");
             return { Component: CashlessWallet.default };

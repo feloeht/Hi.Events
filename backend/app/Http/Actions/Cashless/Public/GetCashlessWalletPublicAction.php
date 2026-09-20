@@ -21,10 +21,10 @@ class GetCashlessWalletPublicAction extends BaseAction
     /**
      * Get the cashless balance attached to a ticket
      */
-    public function __invoke(int $eventId, string $attendeeShortId): JsonResponse
+    public function __invoke(int $eventId, string $ticketReference): JsonResponse
     {
         try {
-            $wallet = $this->getCashlessWalletPublicHandler->handle($eventId, $attendeeShortId);
+            $wallet = $this->getCashlessWalletPublicHandler->handle($eventId, $ticketReference);
         } catch (CashlessNotEnabledException|CashlessWalletUnavailableException $e) {
             return $this->errorResponse(
                 message: $e->getMessage(),

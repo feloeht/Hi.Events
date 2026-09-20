@@ -483,7 +483,7 @@ msgstr "按星期模式"
 msgid "Abandoned"
 msgstr "已放棄"
 
-#: src/components/layouts/EventHomepage/index.tsx:482
+#: src/components/layouts/EventHomepage/index.tsx:483
 msgid "About"
 msgstr "關於"
 
@@ -815,7 +815,7 @@ msgstr "增加層級"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:385
+#: src/components/layouts/EventHomepage/index.tsx:386
 msgid "Add to Calendar"
 msgstr "添加到日曆"
 
@@ -1128,6 +1128,10 @@ msgstr "允許透過門票頁面充值"
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:90
 msgid "Almost there! We're just waiting for your payment to be processed. This should only take a few seconds."
 msgstr "快完成了！我們正在等待您的付款處理。這只需要幾秒鐘。"
+
+#: src/components/layouts/EventHomepage/index.tsx:599
+msgid "Already have a ticket? Top up the balance attached to it and pay at the event with its QR code."
+msgstr "已有門票？為其綁定的餘額增值，並在活動現場以二維碼付款。"
 
 #: src/components/routes/auth/Register/index.tsx:73
 msgid "Already have an account? <0>{0}</0>"
@@ -2277,6 +2281,7 @@ msgid "Cash"
 msgstr "現金"
 
 #: src/components/layouts/Event/index.tsx:146
+#: src/components/layouts/EventHomepage/index.tsx:596
 msgid "Cashless"
 msgstr "無現金支付"
 
@@ -2409,8 +2414,8 @@ msgstr "僅簽到"
 msgid "Check out"
 msgstr "取消簽到"
 
-#: src/components/layouts/EventHomepage/index.tsx:344
 #: src/components/layouts/EventHomepage/index.tsx:345
+#: src/components/layouts/EventHomepage/index.tsx:346
 msgid "Check out this event: {0}"
 msgstr "看看這個活動：{0}"
 
@@ -3019,7 +3024,7 @@ msgid "Connection details are required for online events"
 msgstr "線上活動必須填寫連線詳情"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:684
+#: src/components/layouts/EventHomepage/index.tsx:704
 #: src/components/layouts/OrganizerHomepage/index.tsx:259
 msgid "Contact"
 msgstr "聯絡"
@@ -3044,7 +3049,8 @@ msgstr "內容為必填"
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
-#: src/components/layouts/EventHomepage/index.tsx:210
+#: src/components/layouts/EventHomepage/index.tsx:211
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:108
 #: src/components/routes/product-widget/SelectProducts/index.tsx:895
 msgid "Continue"
 msgstr "繼續"
@@ -4921,6 +4927,10 @@ msgstr "活動名稱應少於 150 個字元"
 msgid "Event Not Available"
 msgstr "活動不可用"
 
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:37
+msgid "Event not found"
+msgstr "找不到活動"
+
 #: src/components/layouts/Event/index.tsx:300
 msgid "Event Page"
 msgstr "活動頁面"
@@ -5822,7 +5832,7 @@ msgstr "產生代碼"
 msgid "German"
 msgstr "德國"
 
-#: src/components/layouts/EventHomepage/index.tsx:517
+#: src/components/layouts/EventHomepage/index.tsx:518
 msgid "Get Directions"
 msgstr "取得路線"
 
@@ -5838,7 +5848,7 @@ msgstr "用 Stripe 收款"
 msgid "Get started"
 msgstr "開始使用"
 
-#: src/components/layouts/EventHomepage/index.tsx:209
+#: src/components/layouts/EventHomepage/index.tsx:210
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "購票"
@@ -6552,7 +6562,7 @@ msgstr "約翰"
 msgid "Johnson"
 msgstr "約翰遜"
 
-#: src/components/layouts/EventHomepage/index.tsx:413
+#: src/components/layouts/EventHomepage/index.tsx:414
 msgid "Join from anywhere"
 msgstr "隨時隨地加入"
 
@@ -6885,7 +6895,7 @@ msgstr "加載中..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:495
+#: src/components/layouts/EventHomepage/index.tsx:496
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -7315,7 +7325,7 @@ msgid "Multi line text box"
 msgstr "多行文本框"
 
 #: src/components/common/EventCard/index.tsx:108
-#: src/components/layouts/EventHomepage/index.tsx:181
+#: src/components/layouts/EventHomepage/index.tsx:182
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
 msgid "Multiple locations"
 msgstr "多個地點"
@@ -8144,7 +8154,7 @@ msgstr "網上 — 請填寫連線資料"
 msgid "Online & in-person"
 msgstr "網上及實體"
 
-#: src/components/layouts/EventHomepage/index.tsx:182
+#: src/components/layouts/EventHomepage/index.tsx:183
 msgid "Online & in-person — see schedule"
 msgstr "網上及實體 — 詳見排程"
 
@@ -8153,7 +8163,7 @@ msgstr "網上及實體 — 詳見排程"
 msgid "Online event"
 msgstr "網上活動"
 
-#: src/components/layouts/EventHomepage/index.tsx:411
+#: src/components/layouts/EventHomepage/index.tsx:412
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 msgid "Online Event"
 msgstr "線上活動"
@@ -8165,6 +8175,10 @@ msgstr "在線活動詳情"
 #: src/components/common/CashlessTransactionTable/index.tsx:31
 msgid "Online top-up"
 msgstr "線上充值"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:51
+msgid "Online top-ups are not available"
+msgstr "暫不支援網上增值"
 
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Only {cap} available"
@@ -8320,6 +8334,10 @@ msgstr "或啟用線下付款並停用 Stripe"
 #: src/components/layouts/CashlessPos/TopUpTab.tsx:66
 msgid "Or type the ticket ID"
 msgstr "或輸入門票 ID"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:89
+msgid "Or type your ticket ID"
+msgstr "或輸入你的票號"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:443
 msgid "order"
@@ -8540,7 +8558,7 @@ msgid "Organization Name"
 msgstr "組織名稱"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:596
+#: src/components/layouts/EventHomepage/index.tsx:616
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -9275,8 +9293,12 @@ msgstr "打印票"
 msgid "Print to PDF"
 msgstr "列印為PDF"
 
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:90
+msgid "Printed under the QR code on your ticket, like A-XXXXXXX."
+msgstr "印在門票二維碼下方，例如 A-XXXXXXX。"
+
 #: src/components/common/CookieConsentBanner/index.tsx:82
-#: src/components/layouts/EventHomepage/index.tsx:700
+#: src/components/layouts/EventHomepage/index.tsx:720
 #: src/components/layouts/OrganizerHomepage/index.tsx:342
 msgid "Privacy Policy"
 msgstr "私隱政策"
@@ -9691,7 +9713,7 @@ msgstr "只記錄退款而不實際轉帳。當您在現場退還現金時使用
 msgid "Recurring"
 msgstr "重複"
 
-#: src/components/layouts/EventHomepage/index.tsx:375
+#: src/components/layouts/EventHomepage/index.tsx:376
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -10158,7 +10180,7 @@ msgstr "銷售已暫停"
 
 #: src/components/common/ProductPriceAvailability/index.tsx:24
 #: src/components/common/ProductPriceAvailability/index.tsx:63
-#: src/components/layouts/EventHomepage/index.tsx:196
+#: src/components/layouts/EventHomepage/index.tsx:197
 msgid "Sales ended"
 msgstr "銷售結束"
 
@@ -10332,6 +10354,10 @@ msgstr "掃描"
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
 msgid "Scan a ticket to check in an attendee"
 msgstr "掃描門票即可為參加者簽到"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:76
+msgid "Scan my ticket QR code"
+msgstr "掃描我的門票二維碼"
 
 #: src/components/modals/CashlessTicketLookupModal/index.tsx:40
 msgid "Scan the ticket QR code with a handheld scanner, or type the ID printed on the ticket."
@@ -10550,7 +10576,7 @@ msgstr "安全結帳"
 msgid "Security"
 msgstr "安全"
 
-#: src/components/layouts/EventHomepage/index.tsx:438
+#: src/components/layouts/EventHomepage/index.tsx:439
 msgid "See schedule"
 msgstr "查看排程"
 
@@ -10991,7 +11017,7 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "設定只需幾分鐘 — 毋須已有的 Stripe 帳戶。Stripe 會處理信用卡、電子錢包、各地付款方式和防詐騙，讓你專注於活動本身。"
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:349
+#: src/components/layouts/EventHomepage/index.tsx:350
 #: src/components/layouts/OrganizerLayout/index.tsx:239
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
@@ -11214,7 +11240,7 @@ msgid "Sold out"
 msgstr "售罄"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:91
-#: src/components/layouts/EventHomepage/index.tsx:202
+#: src/components/layouts/EventHomepage/index.tsx:203
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:215
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:22
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:128
@@ -11889,7 +11915,7 @@ msgstr "範本儲存成功"
 msgid "Term"
 msgstr "關鍵字"
 
-#: src/components/layouts/EventHomepage/index.tsx:706
+#: src/components/layouts/EventHomepage/index.tsx:726
 #: src/components/layouts/OrganizerHomepage/index.tsx:349
 msgid "Terms of Service"
 msgstr "服務條款"
@@ -11906,6 +11932,10 @@ msgstr "感謝您的參與！"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
 msgid "Thanks,"
 msgstr "多謝，"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:26
+msgid "That doesn't look like a ticket ID. It starts with A- and is printed under the QR code."
+msgstr "這不像是票號。票號以 A- 開頭，印在二維碼下方。"
 
 #: src/components/layouts/CashlessPos/PinGate.tsx:27
 msgid "That PIN is not correct."
@@ -12253,7 +12283,7 @@ msgstr "只限此日期"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "此操作將中斷 {stripeAccountId} 與此主辦方的連接。在您重新連接 Stripe 帳戶之前，付費門票銷售將無法進行。"
 
-#: src/components/layouts/EventHomepage/index.tsx:399
+#: src/components/layouts/EventHomepage/index.tsx:400
 msgid "This event has ended"
 msgstr "此活動已結束"
 
@@ -12737,6 +12767,15 @@ msgstr "為門票充值"
 #: src/components/modals/CashlessTopupModal/index.tsx:61
 msgid "Top up cashless balance"
 msgstr "為無現金餘額充值"
+
+#: src/components/layouts/EventHomepage/index.tsx:607
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:59
+msgid "Top up my balance"
+msgstr "為我的餘額增值"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:52
+msgid "Top up your balance at any top-up point during the event."
+msgstr "活動期間可在任何增值點為餘額增值。"
 
 #: src/components/layouts/CashlessPos/HistoryTab.tsx:32
 #: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:17
@@ -13542,7 +13581,7 @@ msgstr "查看活動頁面"
 msgid "View logs"
 msgstr "查看日誌"
 
-#: src/components/layouts/EventHomepage/index.tsx:558
+#: src/components/layouts/EventHomepage/index.tsx:559
 msgid "View Map"
 msgstr "查看地圖"
 
@@ -13550,7 +13589,7 @@ msgstr "查看地圖"
 msgid "View Message"
 msgstr "查看訊息"
 
-#: src/components/layouts/EventHomepage/index.tsx:467
+#: src/components/layouts/EventHomepage/index.tsx:468
 msgid "View on Google Maps"
 msgstr "在谷歌地圖上查看"
 
@@ -13686,6 +13725,10 @@ msgstr "我們找不到您要查找的訂單。連結可能已過期或訂單詳
 #: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:25
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "我們找不到您要查找的門票。連結可能已過期或門票詳情可能已更改。"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:38
+msgid "We couldn't find this event."
+msgstr "我們找不到此活動。"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:422
 msgid "We couldn't find this order. It may have been removed."

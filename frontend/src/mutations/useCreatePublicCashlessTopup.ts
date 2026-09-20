@@ -4,10 +4,10 @@ import {IdParam} from "../types.ts";
 
 export const useCreatePublicCashlessTopup = () => {
     return useMutation({
-        mutationFn: ({eventId, attendeeShortId, amount}: {
+        mutationFn: ({eventId, ticketReference, amount}: {
             eventId: IdParam,
-            attendeeShortId: IdParam,
+            ticketReference: IdParam,
             amount: number
-        }) => publicCashlessClient.createTopup(eventId, attendeeShortId, amount),
+        }) => publicCashlessClient.createTopup(eventId, ticketReference, amount),
     });
 };

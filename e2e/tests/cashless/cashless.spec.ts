@@ -1,6 +1,7 @@
 import { test, expect } from '../../fixtures';
 import {
   CashlessPosPage,
+  CashlessTopupEntryPage,
   CashlessSalesPointPage,
   CashlessWalletPublicPage,
   CashlessWalletsPage,
@@ -175,5 +176,25 @@ test.describe('cashless', () => {
     await pos.unlock('0000');
 
     await expect(page.getByText('That PIN is not correct.')).toBeVisible();
+  });
+
+  test('a visitor reaches their balance from the event page by typing their ticket ID', async ({
+    page,
+    api,
+    account,
+    publicApi,
+  }) => {
+    const { event, order } = await seedCashlessEvent(api, publicApi, account.organizerId);
+    const attendee = order.attendees[0];
+
+    const entry = new CashlessTopupEntryPage(page);
+    await entry.gotoFromEventPage(event.eventId, event.slug);
+
+    await entry.submitTicketId('not-a-ticket');
+    await expect(page.getByText("That doesn't look like a ticket ID")).toBeVisible();
+
+    await entry.submitTicketId(attendee.publicId.toLowerCase());
+    await expect(page).toHaveURL(new RegExp(`/cashless/${event.eventId}/${attendee.publicId}$`));
+    await expect(new CashlessWalletPublicPage(page).balance()).toBeVisible();
   });
 });

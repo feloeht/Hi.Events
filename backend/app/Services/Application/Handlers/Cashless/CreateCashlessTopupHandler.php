@@ -61,9 +61,9 @@ class CreateCashlessTopupHandler
 
         $this->validateAmount($topupData->amount, $settings);
 
-        $wallet = $this->walletResolveService->resolveByAttendeeShortId(
+        $wallet = $this->walletResolveService->resolveByTicketReference(
             eventId: $topupData->event_id,
-            attendeeShortId: $topupData->attendee_short_id,
+            ticketReference: $topupData->ticket_reference,
         );
 
         $topupProduct = $this->getTopupProduct($settings);

@@ -73,12 +73,28 @@ export class CashlessPosPage {
 export class CashlessWalletPublicPage {
   constructor(private readonly page: Page) {}
 
-  async goto(eventId: number, attendeeShortId: string): Promise<void> {
-    await this.page.goto(`/cashless/${eventId}/${attendeeShortId}`);
+  async goto(eventId: number, ticketReference: string): Promise<void> {
+    await this.page.goto(`/cashless/${eventId}/${ticketReference}`);
     await this.page.waitForLoadState('networkidle');
   }
 
   balance(): Locator {
     return this.page.getByText('Available to spend');
+  }
+}
+
+export class CashlessTopupEntryPage {
+  constructor(private readonly page: Page) {}
+
+  async gotoFromEventPage(eventId: number, slug: string): Promise<void> {
+    await this.page.goto(`/event/${eventId}/${slug}`);
+    await this.page.waitForLoadState('networkidle');
+    await this.page.getByTestId('event-cashless-topup-link').click();
+    await this.page.waitForURL(new RegExp(`/cashless/${eventId}$`));
+  }
+
+  async submitTicketId(ticketId: string): Promise<void> {
+    await this.page.getByTestId('cashless-entry-ticket-input').fill(ticketId);
+    await this.page.getByTestId('cashless-entry-continue-button').click();
   }
 }

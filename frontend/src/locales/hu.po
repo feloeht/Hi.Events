@@ -483,7 +483,7 @@ msgstr "Heti minta"
 msgid "Abandoned"
 msgstr "Elhagyott"
 
-#: src/components/layouts/EventHomepage/index.tsx:482
+#: src/components/layouts/EventHomepage/index.tsx:483
 msgid "About"
 msgstr "Rólunk"
 
@@ -815,7 +815,7 @@ msgstr "Szint hozzáadása"
 
 #: src/components/common/AddEventToCalendarButton/index.tsx:15
 #: src/components/common/AddToCalendarCTA/index.tsx:25
-#: src/components/layouts/EventHomepage/index.tsx:385
+#: src/components/layouts/EventHomepage/index.tsx:386
 msgid "Add to Calendar"
 msgstr "Hozzáadás a naptárhoz"
 
@@ -1128,6 +1128,10 @@ msgstr "Feltöltés engedélyezése a jegy oldaláról"
 #: src/components/routes/product-widget/PaymentReturn/index.tsx:90
 msgid "Almost there! We're just waiting for your payment to be processed. This should only take a few seconds."
 msgstr "Majdnem kész! Csak a fizetés feldolgozására várunk. Ez csak néhány másodpercet vesz igénybe."
+
+#: src/components/layouts/EventHomepage/index.tsx:599
+msgid "Already have a ticket? Top up the balance attached to it and pay at the event with its QR code."
+msgstr "Már van jegye? Töltse fel a hozzá tartozó egyenleget, és fizessen a helyszínen a QR-kódjával."
 
 #: src/components/routes/auth/Register/index.tsx:73
 msgid "Already have an account? <0>{0}</0>"
@@ -2277,6 +2281,7 @@ msgid "Cash"
 msgstr "Készpénz"
 
 #: src/components/layouts/Event/index.tsx:146
+#: src/components/layouts/EventHomepage/index.tsx:596
 msgid "Cashless"
 msgstr "Cashless"
 
@@ -2409,8 +2414,8 @@ msgstr "Csak bejelentkezés"
 msgid "Check out"
 msgstr "Beléptetés visszavonása"
 
-#: src/components/layouts/EventHomepage/index.tsx:344
 #: src/components/layouts/EventHomepage/index.tsx:345
+#: src/components/layouts/EventHomepage/index.tsx:346
 msgid "Check out this event: {0}"
 msgstr "Nézze meg ezt az eseményt: {0}"
 
@@ -3019,7 +3024,7 @@ msgid "Connection details are required for online events"
 msgstr "Online eseményekhez kötelező megadni a csatlakozási adatokat"
 
 #: src/components/common/WaitlistTable/index.tsx:152
-#: src/components/layouts/EventHomepage/index.tsx:684
+#: src/components/layouts/EventHomepage/index.tsx:704
 #: src/components/layouts/OrganizerHomepage/index.tsx:259
 msgid "Contact"
 msgstr "Kapcsolat"
@@ -3044,7 +3049,8 @@ msgstr "A tartalom megadása kötelező"
 
 #: src/components/common/WidgetEditor/index.tsx:29
 #: src/components/common/WidgetEditor/index.tsx:222
-#: src/components/layouts/EventHomepage/index.tsx:210
+#: src/components/layouts/EventHomepage/index.tsx:211
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:108
 #: src/components/routes/product-widget/SelectProducts/index.tsx:895
 msgid "Continue"
 msgstr "Folytatás"
@@ -4921,6 +4927,10 @@ msgstr "Az esemény nevének 150 karakternél rövidebbnek kell lennie."
 msgid "Event Not Available"
 msgstr "Esemény nem elérhető"
 
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:37
+msgid "Event not found"
+msgstr "Az esemény nem található"
+
 #: src/components/layouts/Event/index.tsx:300
 msgid "Event Page"
 msgstr "Eseményoldal"
@@ -5822,7 +5832,7 @@ msgstr "Kód generálása"
 msgid "German"
 msgstr "Német"
 
-#: src/components/layouts/EventHomepage/index.tsx:517
+#: src/components/layouts/EventHomepage/index.tsx:518
 msgid "Get Directions"
 msgstr "Útvonal"
 
@@ -5838,7 +5848,7 @@ msgstr "Fizetés fogadása Stripe-pal"
 msgid "Get started"
 msgstr "Kezdés"
 
-#: src/components/layouts/EventHomepage/index.tsx:209
+#: src/components/layouts/EventHomepage/index.tsx:210
 #: src/components/routes/event/HomepageDesigner/index.tsx:287
 msgid "Get Tickets"
 msgstr "Jegyek vásárlása"
@@ -6552,7 +6562,7 @@ msgstr "János"
 msgid "Johnson"
 msgstr "Johnson"
 
-#: src/components/layouts/EventHomepage/index.tsx:413
+#: src/components/layouts/EventHomepage/index.tsx:414
 msgid "Join from anywhere"
 msgstr "Csatlakozzon bárhonnan"
 
@@ -6885,7 +6895,7 @@ msgstr "Betöltés..."
 #: src/components/common/LocationPicker/index.tsx:173
 #: src/components/common/LocationPicker/index.tsx:221
 #: src/components/common/LocationPicker/index.tsx:294
-#: src/components/layouts/EventHomepage/index.tsx:495
+#: src/components/layouts/EventHomepage/index.tsx:496
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:470
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
@@ -7315,7 +7325,7 @@ msgid "Multi line text box"
 msgstr "Többsoros szövegdoboz"
 
 #: src/components/common/EventCard/index.tsx:108
-#: src/components/layouts/EventHomepage/index.tsx:181
+#: src/components/layouts/EventHomepage/index.tsx:182
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:47
 msgid "Multiple locations"
 msgstr "Több helyszín"
@@ -8144,7 +8154,7 @@ msgstr "Online – adja meg a csatlakozási adatokat"
 msgid "Online & in-person"
 msgstr "Online és személyesen"
 
-#: src/components/layouts/EventHomepage/index.tsx:182
+#: src/components/layouts/EventHomepage/index.tsx:183
 msgid "Online & in-person — see schedule"
 msgstr "Online és személyesen – lásd az ütemtervet"
 
@@ -8153,7 +8163,7 @@ msgstr "Online és személyesen – lásd az ütemtervet"
 msgid "Online event"
 msgstr "Online esemény"
 
-#: src/components/layouts/EventHomepage/index.tsx:411
+#: src/components/layouts/EventHomepage/index.tsx:412
 #: src/components/layouts/OrganizerHomepage/EventCard/index.tsx:178
 msgid "Online Event"
 msgstr "Online esemény"
@@ -8165,6 +8175,10 @@ msgstr "Online esemény részletei"
 #: src/components/common/CashlessTransactionTable/index.tsx:31
 msgid "Online top-up"
 msgstr "Online feltöltés"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:51
+msgid "Online top-ups are not available"
+msgstr "Az online feltöltés nem érhető el"
 
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Only {cap} available"
@@ -8320,6 +8334,10 @@ msgstr "Vagy engedélyezd az offline fizetést és tiltsd le a Stripe-ot"
 #: src/components/layouts/CashlessPos/TopUpTab.tsx:66
 msgid "Or type the ticket ID"
 msgstr "Vagy írd be a jegy azonosítóját"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:89
+msgid "Or type your ticket ID"
+msgstr "Vagy írja be a jegye azonosítóját"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:443
 msgid "order"
@@ -8540,7 +8558,7 @@ msgid "Organization Name"
 msgstr "Szervezet neve"
 
 #: src/components/common/AdminEventsTable/index.tsx:89
-#: src/components/layouts/EventHomepage/index.tsx:596
+#: src/components/layouts/EventHomepage/index.tsx:616
 #: src/components/modals/EditUserModal/index.tsx:56
 #: src/components/modals/InviteUserModal/index.tsx:47
 #: src/components/routes/account/ManageAccount/sections/Users/index.tsx:99
@@ -9275,8 +9293,12 @@ msgstr "Jegyek nyomtatása"
 msgid "Print to PDF"
 msgstr "Nyomtatás PDF-be"
 
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:90
+msgid "Printed under the QR code on your ticket, like A-XXXXXXX."
+msgstr "A jegyén lévő QR-kód alatt található, például A-XXXXXXX."
+
 #: src/components/common/CookieConsentBanner/index.tsx:82
-#: src/components/layouts/EventHomepage/index.tsx:700
+#: src/components/layouts/EventHomepage/index.tsx:720
 #: src/components/layouts/OrganizerHomepage/index.tsx:342
 msgid "Privacy Policy"
 msgstr "Adatvédelmi irányelvek"
@@ -9691,7 +9713,7 @@ msgstr "Rögzíti a visszatérítést pénzmozgás nélkül. Akkor használd, ha
 msgid "Recurring"
 msgstr "Ismétlődő"
 
-#: src/components/layouts/EventHomepage/index.tsx:375
+#: src/components/layouts/EventHomepage/index.tsx:376
 #: src/components/modals/CreateEventModal/index.tsx:240
 #: src/components/routes/event/Settings/index.tsx:66
 msgid "Recurring Event"
@@ -10158,7 +10180,7 @@ msgstr "Értékesítés szüneteltetve"
 
 #: src/components/common/ProductPriceAvailability/index.tsx:24
 #: src/components/common/ProductPriceAvailability/index.tsx:63
-#: src/components/layouts/EventHomepage/index.tsx:196
+#: src/components/layouts/EventHomepage/index.tsx:197
 msgid "Sales ended"
 msgstr "Értékesítés befejezve"
 
@@ -10332,6 +10354,10 @@ msgstr "Beolvasás"
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
 msgid "Scan a ticket to check in an attendee"
 msgstr "Olvasson be egy jegyet a résztvevő beléptetéséhez"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:76
+msgid "Scan my ticket QR code"
+msgstr "Jegyem QR-kódjának beolvasása"
 
 #: src/components/modals/CashlessTicketLookupModal/index.tsx:40
 msgid "Scan the ticket QR code with a handheld scanner, or type the ID printed on the ticket."
@@ -10550,7 +10576,7 @@ msgstr "Biztonságos pénztár"
 msgid "Security"
 msgstr "Biztonság"
 
-#: src/components/layouts/EventHomepage/index.tsx:438
+#: src/components/layouts/EventHomepage/index.tsx:439
 msgid "See schedule"
 msgstr "Ütemterv megtekintése"
 
@@ -10991,7 +11017,7 @@ msgid "Setup takes just a few minutes — you don't need an existing Stripe acco
 msgstr "A beállítás mindössze pár percet vesz igénybe – nincs szükség meglévő Stripe-fiókra. A Stripe kezeli a kártyákat, a digitális tárcákat, a helyi fizetési módokat és a csalásvédelmet, így Ön az eseményére koncentrálhat."
 
 #: src/components/common/ShareIcon/index.tsx:30
-#: src/components/layouts/EventHomepage/index.tsx:349
+#: src/components/layouts/EventHomepage/index.tsx:350
 #: src/components/layouts/OrganizerLayout/index.tsx:239
 #: src/components/modals/ShareModal/index.tsx:37
 #: src/components/modals/ShareModal/index.tsx:165
@@ -11214,7 +11240,7 @@ msgid "Sold out"
 msgstr "Elfogyott"
 
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:91
-#: src/components/layouts/EventHomepage/index.tsx:202
+#: src/components/layouts/EventHomepage/index.tsx:203
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:215
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:22
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:128
@@ -11889,7 +11915,7 @@ msgstr "Sablon sikeresen mentve"
 msgid "Term"
 msgstr "Kulcsszó"
 
-#: src/components/layouts/EventHomepage/index.tsx:706
+#: src/components/layouts/EventHomepage/index.tsx:726
 #: src/components/layouts/OrganizerHomepage/index.tsx:349
 msgid "Terms of Service"
 msgstr "Szolgáltatási feltételek"
@@ -11906,6 +11932,10 @@ msgstr "Köszönjük, hogy részt vett!"
 #: src/components/routes/event/OccurrencesTab/rescheduleMessageTemplate.ts:77
 msgid "Thanks,"
 msgstr "Köszönjük,"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:26
+msgid "That doesn't look like a ticket ID. It starts with A- and is printed under the QR code."
+msgstr "Ez nem tűnik jegyazonosítónak. A-val kezdődik, és a QR-kód alatt olvasható."
 
 #: src/components/layouts/CashlessPos/PinGate.tsx:27
 msgid "That PIN is not correct."
@@ -12253,7 +12283,7 @@ msgstr "Csak ez az időpont"
 msgid "This disconnects {stripeAccountId} from this organizer. Paid ticket sales will stop working until you connect a Stripe account again."
 msgstr "Ez leválasztja a(z) {stripeAccountId} fiókot erről a szervezőről. A fizetős jegyértékesítés nem fog működni, amíg újra nem kapcsol össze egy Stripe-fiókot."
 
-#: src/components/layouts/EventHomepage/index.tsx:399
+#: src/components/layouts/EventHomepage/index.tsx:400
 msgid "This event has ended"
 msgstr "Ez az esemény véget ért"
 
@@ -12737,6 +12767,15 @@ msgstr "Jegy feltöltése"
 #: src/components/modals/CashlessTopupModal/index.tsx:61
 msgid "Top up cashless balance"
 msgstr "Cashless egyenleg feltöltése"
+
+#: src/components/layouts/EventHomepage/index.tsx:607
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:59
+msgid "Top up my balance"
+msgstr "Egyenlegem feltöltése"
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:52
+msgid "Top up your balance at any top-up point during the event."
+msgstr "Töltse fel egyenlegét bármelyik feltöltési ponton az esemény alatt."
 
 #: src/components/layouts/CashlessPos/HistoryTab.tsx:32
 #: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:17
@@ -13542,7 +13581,7 @@ msgstr "Esemény oldal megtekintése"
 msgid "View logs"
 msgstr "Naplók megtekintése"
 
-#: src/components/layouts/EventHomepage/index.tsx:558
+#: src/components/layouts/EventHomepage/index.tsx:559
 msgid "View Map"
 msgstr "Térkép megtekintése"
 
@@ -13550,7 +13589,7 @@ msgstr "Térkép megtekintése"
 msgid "View Message"
 msgstr "Üzenet megtekintése"
 
-#: src/components/layouts/EventHomepage/index.tsx:467
+#: src/components/layouts/EventHomepage/index.tsx:468
 msgid "View on Google Maps"
 msgstr "Megtekintés a Google Térképen"
 
@@ -13686,6 +13725,10 @@ msgstr "Nem találtuk a keresett rendelést. A link lejárhatott, vagy a rendel�
 #: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:25
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "Nem találtuk a keresett jegyet. A link lejárhatott, vagy a jegy adatai megváltozhattak."
+
+#: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:38
+msgid "We couldn't find this event."
+msgstr "Nem találtuk ezt az eseményt."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:422
 msgid "We couldn't find this order. It may have been removed."

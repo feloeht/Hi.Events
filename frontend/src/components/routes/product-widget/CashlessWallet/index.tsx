@@ -15,10 +15,10 @@ import classes from './CashlessWallet.module.scss';
 const SUGGESTED_MULTIPLIERS = [1, 2, 4, 10];
 
 const CashlessWallet = () => {
-    const {eventId, attendeeShortId} = useParams();
+    const {eventId, ticketReference} = useParams();
     const navigate = useNavigate();
     const {data: event, isError: eventError} = useGetEventPublic(eventId);
-    const {data: wallet, isError: walletError} = useGetPublicCashlessWallet(eventId, attendeeShortId);
+    const {data: wallet, isError: walletError} = useGetPublicCashlessWallet(eventId, ticketReference);
     const topupMutation = useCreatePublicCashlessTopup();
 
     const minimumAmount = event?.settings?.cashless_min_topup_amount ?? 5;
@@ -55,7 +55,7 @@ const CashlessWallet = () => {
             return;
         }
 
-        topupMutation.mutate({eventId, attendeeShortId, amount: Number(amount)}, {
+        topupMutation.mutate({eventId, ticketReference, amount: Number(amount)}, {
             onSuccess: ({data}) => navigate(`/checkout/${eventId}/${data.short_id}/details`),
             onError: (error: any) => showError(
                 error?.response?.data?.message || t`We couldn't start your top-up. Please try again.`

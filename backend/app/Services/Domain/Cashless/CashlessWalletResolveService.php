@@ -11,6 +11,7 @@ use HiEvents\DomainObjects\Generated\AttendeeDomainObjectAbstract;
 use HiEvents\DomainObjects\Generated\CashlessWalletDomainObjectAbstract;
 use HiEvents\DomainObjects\Status\AttendeeStatus;
 use HiEvents\Exceptions\CashlessWalletUnavailableException;
+use HiEvents\Helper\IdHelper;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\CashlessWalletRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
@@ -36,11 +37,13 @@ class CashlessWalletResolveService
     /**
      * @throws CashlessWalletUnavailableException
      */
-    public function resolveByAttendeeShortId(int $eventId, string $attendeeShortId): CashlessWalletDomainObject
+    public function resolveByTicketReference(int $eventId, string $ticketReference): CashlessWalletDomainObject
     {
-        return $this->resolveForAttendee(
-            $this->findAttendee($eventId, AttendeeDomainObjectAbstract::SHORT_ID, trim($attendeeShortId))
-        );
+        $reference = trim($ticketReference);
+
+        return str_starts_with(strtoupper($reference), IdHelper::ATTENDEE_PREFIX_PUBLIC)
+            ? $this->resolveByAttendeePublicId($eventId, $reference)
+            : $this->resolveForAttendee($this->findAttendee($eventId, AttendeeDomainObjectAbstract::SHORT_ID, $reference));
     }
 
     /**

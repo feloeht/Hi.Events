@@ -708,8 +708,9 @@ $router->prefix('/public')->group(
 
 
         // Cashless
-        $router->get('/events/{event_id}/cashless/{attendee_short_id}', GetCashlessWalletPublicAction::class);
-        $router->post('/events/{event_id}/cashless/{attendee_short_id}/topup', CreateCashlessTopupPublicAction::class)
+        $router->get('/events/{event_id}/cashless/{ticket_reference}', GetCashlessWalletPublicAction::class)
+            ->middleware('throttle:30,1');
+        $router->post('/events/{event_id}/cashless/{ticket_reference}/topup', CreateCashlessTopupPublicAction::class)
             ->middleware('throttle:20,1');
 
 

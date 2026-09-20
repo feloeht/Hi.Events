@@ -4,14 +4,14 @@ import {IdParam} from "../types.ts";
 
 export const GET_PUBLIC_CASHLESS_WALLET_QUERY_KEY = 'getPublicCashlessWallet';
 
-export const useGetPublicCashlessWallet = (eventId: IdParam, attendeeShortId: IdParam) => {
+export const useGetPublicCashlessWallet = (eventId: IdParam, ticketReference: IdParam) => {
     return useQuery({
-        queryKey: [GET_PUBLIC_CASHLESS_WALLET_QUERY_KEY, eventId, attendeeShortId],
+        queryKey: [GET_PUBLIC_CASHLESS_WALLET_QUERY_KEY, eventId, ticketReference],
         queryFn: async () => {
-            const {data} = await publicCashlessClient.getWallet(eventId, attendeeShortId);
+            const {data} = await publicCashlessClient.getWallet(eventId, ticketReference);
             return data;
         },
-        enabled: !!eventId && !!attendeeShortId,
+        enabled: !!eventId && !!ticketReference,
         retry: false,
     });
 };

@@ -8,6 +8,8 @@ class IdHelper
 {
     public const ATTENDEE_PREFIX = 'a';
 
+    public const ATTENDEE_PREFIX_PUBLIC = 'A-';
+
     public const ORDER_PREFIX = 'o';
 
     public const EVENT_PREFIX = 'e';

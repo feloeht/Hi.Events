@@ -28,11 +28,13 @@ class GetCashlessWalletPublicHandler
      * @throws CashlessNotEnabledException
      * @throws CashlessWalletUnavailableException
      */
-    public function handle(int $eventId, string $attendeeShortId): CashlessWalletDomainObject
+    public function handle(int $eventId, string $ticketReference): CashlessWalletDomainObject
     {
         $this->cashlessSettingsService->getEnabledSettings($eventId);
 
-        $wallet = $this->walletResolveService->resolveByAttendeeShortId($eventId, $attendeeShortId);
+        $wallet = $this->walletResolveService->resolveByTicketReference($eventId, $ticketReference);
+
+        $wallet->getAttendee()?->setLastName($this->initialOf($wallet->getAttendee()->getLastName()));
 
         return $wallet->setTransactions(
             $this->transactionRepository
@@ -40,5 +42,10 @@ class GetCashlessWalletPublicHandler
                 ->loadRelation(new Relationship(CashlessSalesPointDomainObject::class, name: 'sales_point'))
                 ->findByWalletId($wallet->getId(), self::RECENT_TRANSACTION_LIMIT)
         );
+    }
+
+    private function initialOf(?string $lastName): string
+    {
+        return $lastName === null || $lastName === '' ? '' : mb_strtoupper(mb_substr($lastName, 0, 1)).'.';
     }
 }
