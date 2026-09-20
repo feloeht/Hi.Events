@@ -1624,7 +1624,6 @@ export interface CreateCashlessTopupRequest {
 export interface CashlessRefundResult {
     refunded_amount: number;
     unrefundable_amount: number;
-    remaining_balance: number;
 }
 
 export interface CashlessDailyStats {

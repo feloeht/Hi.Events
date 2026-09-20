@@ -18,7 +18,6 @@ class CashlessRefundResultResource extends BaseResource
         return [
             'refunded_amount' => $this->refunded_amount,
             'unrefundable_amount' => $this->unrefundable_amount,
-            'remaining_balance' => $this->remaining_balance,
         ];
     }
 }

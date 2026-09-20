@@ -37,14 +37,13 @@ class CashlessSettingsService
 
     /**
      * @throws CashlessNotEnabledException
+     * @throws ResourceNotFoundException
      */
     public function getEnabledSettings(int $eventId): EventSettingDomainObject
     {
-        $settings = $this->eventSettingsRepository->findFirstWhere([
-            EventSettingDomainObjectAbstract::EVENT_ID => $eventId,
-        ]);
+        $settings = $this->getSettings($eventId);
 
-        if ($settings === null || ! $settings->getCashlessEnabled()) {
+        if (! $settings->getCashlessEnabled()) {
             throw new CashlessNotEnabledException(
                 __('Cashless payments are not enabled for this event.')
             );

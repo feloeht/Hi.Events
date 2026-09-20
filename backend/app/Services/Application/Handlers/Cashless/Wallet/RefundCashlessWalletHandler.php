@@ -70,7 +70,6 @@ class RefundCashlessWalletHandler
         return new RefundCashlessWalletResultDTO(
             refunded_amount: $refundedAmount,
             unrefundable_amount: Currency::round($wallet->getBalance() - $refundedAmount),
-            remaining_balance: Currency::round($wallet->getBalance() - $refundedAmount),
         );
     }
 

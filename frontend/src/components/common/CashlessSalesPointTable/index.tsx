@@ -22,7 +22,7 @@ interface CashlessSalesPointTableProps {
     openCreateModal: () => void;
 }
 
-export const salesPointUrl = (shortId: string) =>
+const salesPointUrl = (shortId: string) =>
     typeof window === 'undefined' ? '' : `${window.location.origin}/cashless/pos/${shortId}`;
 
 export const CashlessSalesPointTable = ({salesPoints, currency, openCreateModal}: CashlessSalesPointTableProps) => {

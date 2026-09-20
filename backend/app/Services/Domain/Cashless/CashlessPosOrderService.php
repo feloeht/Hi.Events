@@ -10,6 +10,7 @@ use HiEvents\DomainObjects\Generated\OrderDomainObjectAbstract;
 use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\DomainObjects\OrderItemDomainObject;
 use HiEvents\DomainObjects\Status\OrderPaymentStatus;
+use HiEvents\DomainObjects\Status\OrderRefundStatus;
 use HiEvents\DomainObjects\Status\OrderStatus;
 use HiEvents\Repository\Interfaces\OrderRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Order\CreateOrderHandler;
@@ -17,9 +18,11 @@ use HiEvents\Services\Application\Handlers\Order\DTO\CreateOrderPublicDTO;
 use HiEvents\Services\Application\Handlers\Order\DTO\ProductOrderDetailsDTO;
 use HiEvents\Services\Domain\Cashless\DTO\CashlessPurchaseItemRequestDTO;
 use HiEvents\Services\Domain\EventStatistics\EventStatisticsIncrementService;
+use HiEvents\Services\Domain\EventStatistics\EventStatisticsRefundService;
 use HiEvents\Services\Domain\Order\OrderCancelService;
 use HiEvents\Services\Domain\Product\DTO\OrderProductPriceDTO;
 use HiEvents\Services\Domain\Product\ProductQuantityUpdateService;
+use HiEvents\Values\MoneyValue;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Throwable;
@@ -32,6 +35,8 @@ class CashlessPosOrderService
         private readonly ProductQuantityUpdateService $productQuantityUpdateService,
         private readonly EventStatisticsIncrementService $statisticsIncrementService,
         private readonly OrderCancelService $orderCancelService,
+        private readonly CashlessOccurrenceResolver $occurrenceResolver,
+        private readonly EventStatisticsRefundService $statisticsRefundService,
     ) {}
 
     /**
@@ -45,6 +50,8 @@ class CashlessPosOrderService
         Collection $items,
         string $locale,
     ): OrderDomainObject {
+        $occurrenceId = $this->occurrenceResolver->resolveForSale($eventId);
+
         $order = $this->createOrderHandler->handle(
             eventId: $eventId,
             createOrderPublicDTO: CreateOrderPublicDTO::fromArray([
@@ -59,6 +66,7 @@ class CashlessPosOrderService
                             price_id: $item->product_price_id,
                         ),
                     ]),
+                    event_occurrence_id: $occurrenceId,
                 )),
             ]),
             deleteExistingOrdersForSession: false,
@@ -90,6 +98,16 @@ class CashlessPosOrderService
         $order = $this->orderRepository
             ->loadRelation(OrderItemDomainObject::class)
             ->findById($orderId);
+
+        $this->statisticsRefundService->updateForRefund(
+            $order,
+            MoneyValue::fromFloat($order->getTotalGross(), $order->getCurrency()),
+        );
+
+        $this->orderRepository->updateFromArray($orderId, [
+            OrderDomainObjectAbstract::TOTAL_REFUNDED => $order->getTotalGross(),
+            OrderDomainObjectAbstract::REFUND_STATUS => OrderRefundStatus::REFUNDED->name,
+        ]);
 
         $this->orderCancelService->cancelOrder($order);
     }
