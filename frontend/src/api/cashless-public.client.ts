@@ -1,5 +1,6 @@
 import {publicApi} from "./public-client";
 import {
+    CashlessQuote,
     CashlessSalesPointPublic,
     CashlessStaffPaymentMethod,
     CashlessTransaction,
@@ -47,6 +48,16 @@ export const publicCashlessClient = {
     getWalletAtSalesPoint: async (salesPointShortId: IdParam, attendeePublicId: IdParam, sessionToken?: string | null) => {
         const response = await publicApi.get<GenericDataResponse<CashlessWalletPublic>>(
             `/cashless/sales-points/${salesPointShortId}/wallets/${attendeePublicId}`, sessionHeaders(sessionToken),
+        );
+        return response.data;
+    },
+    getQuote: async (
+        salesPointShortId: IdParam,
+        payload: { items?: CashlessPurchaseItem[]; topup_amount?: number },
+        sessionToken?: string | null,
+    ) => {
+        const response = await publicApi.post<GenericDataResponse<CashlessQuote>>(
+            `/cashless/sales-points/${salesPointShortId}/quote`, payload, sessionHeaders(sessionToken),
         );
         return response.data;
     },

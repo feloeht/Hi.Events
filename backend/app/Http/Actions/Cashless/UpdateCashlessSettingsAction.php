@@ -33,8 +33,7 @@ class UpdateCashlessSettingsAction extends BaseAction
             'cashless_allow_remaining_balance_refund' => $request->boolean('cashless_allow_remaining_balance_refund'),
             'cashless_refund_deadline_at' => $request->input('cashless_refund_deadline_at'),
             'cashless_online_topup_enabled' => $request->boolean('cashless_online_topup_enabled'),
-            'cashless_topup_fixed_fee' => (float) $request->input('cashless_topup_fixed_fee'),
-            'cashless_topup_percentage_fee' => (float) $request->input('cashless_topup_percentage_fee'),
+            'cashless_topup_tax_and_fee_ids' => array_map('intval', $request->input('cashless_topup_tax_and_fee_ids', [])),
         ]));
 
         return $this->resourceResponse(

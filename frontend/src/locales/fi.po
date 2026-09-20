@@ -13,12 +13,12 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/layouts/Event/index.tsx:239
+#: src/components/layouts/Event/index.tsx:234
 #: src/components/layouts/OrganizerLayout/index.tsx:218
 msgid "- Click to Publish"
 msgstr "– Napsauta julkaistaksesi"
 
-#: src/components/layouts/Event/index.tsx:241
+#: src/components/layouts/Event/index.tsx:236
 #: src/components/layouts/OrganizerLayout/index.tsx:220
 msgid "- Click to Unpublish"
 msgstr "– Napsauta poistaaksesi julkaisun"
@@ -80,7 +80,7 @@ msgstr "{0} Oletus"
 msgid "{0} left"
 msgstr "{0} jäljellä"
 
-#: src/components/layouts/AppLayout/Sidebar/index.tsx:87
+#: src/components/layouts/AppLayout/Sidebar/index.tsx:88
 #: src/components/layouts/AuthLayout/index.tsx:158
 msgid "{0} logo"
 msgstr "{0}-logo"
@@ -88,6 +88,10 @@ msgstr "{0}-logo"
 #: src/components/modals/CreateAttendeeModal/index.tsx:272
 msgid "{0} of {1} seats are taken."
 msgstr "{0}/{1} paikkaa on varattuna."
+
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:119
+msgid "{0} onto the ticket plus {1} in fees"
+msgstr "{0} lipulle plus {1} maksuja"
 
 #: src/components/routes/events/Dashboard/index.tsx:141
 msgid "{0} organizers"
@@ -374,7 +378,7 @@ msgstr "Saldo syntyy, kun osallistuja lataa ensimmäisen kerran tai kun henkilö
 msgid "A button label is required when a URL is set"
 msgstr "Painikkeen teksti vaaditaan, kun URL on asetettu"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:212
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:224
 msgid "A cancellation notice has been sent to"
 msgstr "Peruutusilmoitus on lähetetty osoitteeseen"
 
@@ -653,7 +657,7 @@ msgstr "Aktiiviset maksutavat"
 msgid "Activity"
 msgstr "Toiminta"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:114
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:133
 msgid "Add {0}"
 msgstr "Lisää {0}"
 
@@ -742,7 +746,8 @@ msgid "Add event details"
 msgstr "Lisää tapahtuman tiedot"
 
 #: src/components/modals/CashlessTopupModal/index.tsx:108
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:87
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:89
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:96
 msgid "Add funds"
 msgstr "Lataa saldoa"
 
@@ -765,7 +770,7 @@ msgstr "Lisää useita aikoja, jos järjestät useita istuntoja päivässä."
 msgid "Add New"
 msgstr "Lisää uusi"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:151
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:154
 msgid "Add one"
 msgstr "Lisää yksi"
 
@@ -843,7 +848,7 @@ msgstr "Lisätuotteet"
 msgid "Add-ons"
 msgstr "Lisätuotteet"
 
-#: src/components/layouts/CashlessPos/index.tsx:137
+#: src/components/layouts/CashlessPos/index.tsx:147
 msgid "Added {0} — balance is now {1}"
 msgstr "Lisättiin {0} — saldo on nyt {1}"
 
@@ -851,15 +856,11 @@ msgstr "Lisättiin {0} — saldo on nyt {1}"
 msgid "Added at checkout"
 msgstr "Lisätään kassalla"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:129
-msgid "Added to the fixed fee above."
-msgstr "Lisätään yllä olevaan kiinteään maksuun."
-
 #: src/components/common/PlatformFeesSettings/index.tsx:257
 msgid "Additional Fees"
 msgstr "Lisämaksut"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:404
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:416
 msgid "Additional Information"
 msgstr "Lisätiedot"
 
@@ -894,7 +895,7 @@ msgstr "Osoiterivi 2"
 msgid "Address Line 2"
 msgstr "Osoiterivi 2"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:92
+#: src/components/routes/event/Cashless/Settings/index.tsx:98
 msgid "Adds a top-up option to every ticket and lets your sales points take payment."
 msgstr "Lisää latausvaihtoehdon jokaiseen lippuun ja antaa myyntipisteidesi veloittaa."
 
@@ -1106,7 +1107,7 @@ msgstr "Salli asiakkaiden liittyä jonotuslistalle, kun tämä tuote on loppuunm
 msgid "Allow customers to join a waitlist when this product is sold out. Customers join the waitlist for a specific date."
 msgstr "Salli asiakkaiden liittyä jonotuslistalle, kun tämä tuote on loppuunmyyty. Asiakkaat liittyvät jonotuslistalle tietylle päivämäärälle."
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:141
+#: src/components/routes/event/Cashless/Settings/index.tsx:139
 msgid "Allow refunds of unspent balance"
 msgstr "Salli käyttämättömän saldon palautus"
 
@@ -1120,7 +1121,7 @@ msgstr "Salli hakukoneindeksointi"
 msgid "Allow search engines to index this event"
 msgstr "Salli hakukoneiden indeksoida tämä tapahtuma"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:109
+#: src/components/routes/event/Cashless/Settings/index.tsx:115
 msgid "Allow top-ups from the ticket page"
 msgstr "Salli lataukset lipun sivulta"
 
@@ -1180,7 +1181,7 @@ msgstr "Maksettu summa"
 msgid "Amount paid ({0})"
 msgstr "Maksettu summa ({0})"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:84
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:88
 #: src/components/modals/CashlessTopupModal/index.tsx:78
 msgid "Amount to add"
 msgstr "Lisättävä summa"
@@ -1289,6 +1290,10 @@ msgstr "käytössä"
 #: src/components/routes/product-widget/SelectProducts/index.tsx:918
 msgid "applied — {0} off your order"
 msgstr "käytössä — {0} alennus tilauksestasi"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:124
+msgid "Applied on top of the amount loaded. Card top-ups pay them; cash at a sales point does not."
+msgstr "Lisätään ladattuun summaan. Korttilataukset maksavat ne; käteinen myyntipisteessä ei."
 
 #: src/components/common/CapacityAssignmentList/index.tsx:94
 msgid "Applies to {0} products"
@@ -1480,7 +1485,7 @@ msgstr "Haluatko varmasti poistaa tämän webhookin?"
 msgid "Are you sure you want to leave?"
 msgstr "Haluatko varmasti poistua?"
 
-#: src/components/layouts/Event/index.tsx:203
+#: src/components/layouts/Event/index.tsx:198
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Haluatko varmasti muuttaa tämän tapahtuman luonnokseksi? Tapahtuma piiloutuu julkisilta."
 
@@ -1512,11 +1517,11 @@ msgstr "Haluatko varmasti julkaista tämän järjestäjäprofiilin? Julkaisun j�
 msgid "Are you sure you want to remove this entry from the waitlist?"
 msgstr "Haluatko varmasti poistaa tämän merkinnän jonotuslistalta?"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:534
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:546
 msgid "Are you sure you want to resend the order confirmation to {0}?"
 msgstr "Haluatko varmasti lähettää tilausvahvistuksen uudelleen osoitteeseen {0}?"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:509
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:521
 msgid "Are you sure you want to resend the ticket to {0}?"
 msgstr "Haluatko varmasti lähettää lipun uudelleen osoitteeseen {0}?"
 
@@ -1677,7 +1682,7 @@ msgstr "Osallistujan lippu"
 msgid "Attendee Updated"
 msgstr "Osallistuja päivitetty"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:457
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:469
 msgid "Attendee updated successfully"
 msgstr "Osallistuja päivitetty onnistuneesti"
 
@@ -1798,7 +1803,7 @@ msgstr "Saatavilla olevat ajat: {dayName}"
 msgid "Available to Refund"
 msgstr "Hyvitettävissä"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:71
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:72
 msgid "Available to spend"
 msgstr "Käytettävissä"
 
@@ -1816,7 +1821,7 @@ msgid "Awaiting offline payment"
 msgstr "Odottaa offline-maksua"
 
 #: src/components/routes/event/orders.tsx:28
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:63
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:64
 msgid "Awaiting Offline Payment"
 msgstr "Odottaa offline-maksua"
 
@@ -1836,7 +1841,7 @@ msgstr "Odottaa maksua"
 #: src/components/common/OrdersTable/index.tsx:335
 #: src/components/common/OrderStatusBadge/index.tsx:10
 #: src/components/routes/event/attendees.tsx:31
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:60
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:61
 msgid "Awaiting Payment"
 msgstr "Odottaa maksua"
 
@@ -1904,7 +1909,7 @@ msgstr "Saldo"
 msgid "Balance after"
 msgstr "Saldo jälkeen"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:31
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:32
 msgid "Balance not found"
 msgstr "Saldoa ei löytynyt"
 
@@ -1924,7 +1929,7 @@ msgstr "Saldo ladattu"
 msgid "Balance updated"
 msgstr "Saldo päivitetty"
 
-#: src/components/layouts/Event/index.tsx:149
+#: src/components/layouts/Event/index.tsx:147
 msgid "Balances"
 msgstr "Saldot"
 
@@ -1969,7 +1974,7 @@ msgid "Because this account has completed orders, transaction records (amounts, 
 msgstr "Koska tällä tilillä on valmiita tilauksia, tapahtumatiedot (summat, päivämäärät ja laskutustiedot) säilytetään anonymisoituina lakisääteisiä ja verotuksellisia tarkoituksia varten. Kaikki henkilötiedot poistetaan pysyvästi."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:571
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:293
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:305
 msgid "Billing Address"
 msgstr "Laskutusosoite"
 
@@ -1990,7 +1995,7 @@ msgstr "Varattu"
 msgid "Booking limit for this date"
 msgstr "Varausraja tälle päivämäärälle"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:207
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:219
 msgid "Bookmark this page to manage your order anytime."
 msgstr "Lisää sivu kirjanmerkkeihin hallitaksesi tilaustasi milloin tahansa."
 
@@ -2205,7 +2210,7 @@ msgstr "Peruuttaminen peruuttaa kaikki tähän tilaukseen liittyvät osallistuja
 #: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:20
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:126
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:171
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:101
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:102
 msgid "Cancelled"
 msgstr "Peruutettu"
 
@@ -2257,16 +2262,16 @@ msgstr "kapasiteetin päivitykset"
 msgid "Capacity Used"
 msgstr "Käytetty kapasiteetti"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:100
+#: src/components/routes/event/Cashless/Settings/index.tsx:106
 msgid "Card fees make very small top-ups uneconomical."
 msgstr "Korttimaksut tekevät hyvin pienistä latauksista kannattamattomia."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:100
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:107
 #: src/components/modals/CashlessTopupModal/index.tsx:89
 msgid "Card terminal"
 msgstr "Maksupääte"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:99
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:106
 #: src/components/modals/CashlessTopupModal/index.tsx:88
 msgid "Cash"
 msgstr "Käteinen"
@@ -2276,6 +2281,7 @@ msgid "Cashless"
 msgstr "Cashless"
 
 #: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:67
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:127
 msgid "Cashless balance"
 msgstr "Cashless-saldo"
 
@@ -2283,7 +2289,7 @@ msgstr "Cashless-saldo"
 msgid "Cashless Balances"
 msgstr "Cashless-saldot"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:45
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:46
 msgid "Cashless is not available"
 msgstr "Cashless ei ole käytettävissä"
 
@@ -2295,12 +2301,12 @@ msgstr "Cashless on pois päältä"
 msgid "Cashless Revenue"
 msgstr "Cashless-tuotto"
 
-#: src/components/layouts/Event/index.tsx:155
-#: src/components/routes/event/Cashless/Settings/index.tsx:85
+#: src/components/layouts/Event/index.tsx:150
+#: src/components/routes/event/Cashless/Settings/index.tsx:91
 msgid "Cashless Settings"
 msgstr "Cashless-asetukset"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:75
+#: src/components/routes/event/Cashless/Settings/index.tsx:81
 msgid "Cashless settings saved"
 msgstr "Cashless-asetukset tallennettu"
 
@@ -2361,21 +2367,17 @@ msgstr "Muuta jonotuslistan asetuksia"
 msgid "Changed duration for {count} date(s)"
 msgstr "Kesto muutettiin {count} päivälle"
 
-#: src/components/layouts/CashlessPos/index.tsx:207
+#: src/components/layouts/CashlessPos/index.tsx:217
 msgid "Charge"
 msgstr "Veloita"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:190
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:211
 msgid "Charge {0}"
 msgstr "Veloita {0}"
 
-#: src/components/layouts/CashlessPos/index.tsx:109
+#: src/components/layouts/CashlessPos/index.tsx:119
 msgid "Charged {0} — {1} left"
 msgstr "Veloitettiin {0} — jäljellä {1}"
-
-#: src/components/routes/event/Cashless/Settings/index.tsx:120
-msgid "Charged on top of the amount loaded, to cover card fees."
-msgstr "Veloitetaan ladatun summan päälle korttimaksujen kattamiseksi."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:399
 msgid "Charges"
@@ -2639,7 +2641,7 @@ msgid "Class with a T-shirt add-on"
 msgstr "Tunti T-paitalisällä"
 
 #: src/components/common/OccurrenceSelect/index.tsx:133
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:181
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:202
 #: src/components/routes/event/OccurrencesTab/index.tsx:547
 msgid "Clear"
 msgstr "Tyhjennä"
@@ -2695,7 +2697,7 @@ msgstr "Sulje"
 msgid "Close modal"
 msgstr "Sulje valintaikkuna"
 
-#: src/components/layouts/AppLayout/Sidebar/index.tsx:104
+#: src/components/layouts/AppLayout/Sidebar/index.tsx:105
 msgid "Close sidebar"
 msgstr "Sulje sivupalkki"
 
@@ -2778,7 +2780,7 @@ msgstr "Sarakkeet"
 msgid "Comedy"
 msgstr "Komedia"
 
-#: src/components/layouts/AppLayout/Sidebar/index.tsx:75
+#: src/components/layouts/AppLayout/Sidebar/index.tsx:76
 msgid "Coming Soon"
 msgstr "Tulossa pian"
 
@@ -2944,7 +2946,7 @@ msgstr "Vahvista salasana"
 msgid "Confirm Spam"
 msgstr "Vahvista roskapostiksi"
 
-#: src/components/layouts/Event/index.tsx:316
+#: src/components/layouts/Event/index.tsx:311
 msgid "Confirm your email to access all features."
 msgstr "Vahvista sähköpostiosoitteesi päästäksesi kaikkiin ominaisuuksiin."
 
@@ -2952,7 +2954,7 @@ msgstr "Vahvista sähköpostiosoitteesi päästäksesi kaikkiin ominaisuuksiin."
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "Vahvistussähköposti lähetetty! Tarkista postilaatikkosi."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:202
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:214
 msgid "Confirmation sent to"
 msgstr "Vahvistus lähetetty osoitteeseen"
 
@@ -4143,7 +4145,7 @@ msgid "Downloading Invoice"
 msgstr "Ladataan laskua"
 
 #: src/components/common/EventCard/index.tsx:96
-#: src/components/layouts/Event/index.tsx:238
+#: src/components/layouts/Event/index.tsx:233
 #: src/components/layouts/OrganizerLayout/index.tsx:217
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
@@ -4270,7 +4272,7 @@ msgstr "Varhaisen oston etu"
 #: src/components/common/TaxAndFeeList/index.tsx:73
 #: src/components/routes/admin/Announcements/index.tsx:211
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:54
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:241
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:253
 #: src/hooks/useAttendeeActions.tsx:82
 #: src/hooks/useOrderActions.tsx:104
 msgid "Edit"
@@ -4299,7 +4301,7 @@ msgstr "Muokkaa ilmoitusta"
 msgid "Edit Answer"
 msgstr "Muokkaa vastausta"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:127
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:139
 msgid "Edit Attendee"
 msgstr "Muokkaa osallistujaa"
 
@@ -4454,7 +4456,7 @@ msgstr "Kelpoiset sisäänkirjautumislistat"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:78
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:68
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:68
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:257
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:269
 #: src/components/routes/profile/ManageProfile/index.tsx:157
 msgid "Email"
 msgstr "Sähköposti"
@@ -4584,7 +4586,7 @@ msgstr "Ota osallistujien itsepalvelu käyttöön"
 msgid "Enable attendee self-service by default"
 msgstr "Ota osallistujien itsepalvelu oletuksena käyttöön"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:91
+#: src/components/routes/event/Cashless/Settings/index.tsx:97
 msgid "Enable cashless payments"
 msgstr "Ota cashless-maksut käyttöön"
 
@@ -4858,7 +4860,7 @@ msgstr "Tapahtuman mukautettu malli"
 
 #: src/components/routes/my-tickets/index.tsx:79
 #: src/components/routes/organizer/Reports/CheckInSummaryReport/index.tsx:29
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:323
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:335
 msgid "Event Date"
 msgstr "Tapahtumapäivä"
 
@@ -4882,7 +4884,7 @@ msgstr "Tapahtuman kuvaus"
 
 #: src/components/routes/event/Settings/index.tsx:48
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:71
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:627
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:639
 msgid "Event Details"
 msgstr "Tapahtumatiedot"
 
@@ -4919,7 +4921,7 @@ msgstr "Tapahtuman nimen tulee olla alle 150 merkkiä"
 msgid "Event Not Available"
 msgstr "Tapahtuma ei ole saatavilla"
 
-#: src/components/layouts/Event/index.tsx:305
+#: src/components/layouts/Event/index.tsx:300
 msgid "Event Page"
 msgstr "Tapahtumasivu"
 
@@ -4934,14 +4936,14 @@ msgstr "Tapahtuma-asetukset"
 
 #: src/components/common/EventCard/index.tsx:79
 #: src/components/common/StatusToggle/index.tsx:62
-#: src/components/layouts/Event/index.tsx:214
+#: src/components/layouts/Event/index.tsx:209
 #: src/components/modals/PublishEventModal/index.tsx:129
 msgid "Event status update failed. Please try again later"
 msgstr "Tapahtuman tilan päivitys epäonnistui. Yritä myöhemmin uudelleen"
 
 #: src/components/common/EventCard/index.tsx:76
 #: src/components/common/StatusToggle/index.tsx:54
-#: src/components/layouts/Event/index.tsx:211
+#: src/components/layouts/Event/index.tsx:206
 msgid "Event status updated"
 msgstr "Tapahtuman tila päivitetty"
 
@@ -5331,11 +5333,11 @@ msgstr "Päivän avaaminen uudelleen epäonnistui"
 msgid "Failed to reorder questions"
 msgstr "Kysymysten uudelleenjärjestely epäonnistui"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:550
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:562
 msgid "Failed to resend order confirmation"
 msgstr "Tilausvahvistuksen uudelleenlähetys epäonnistui"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:526
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:538
 msgid "Failed to resend ticket"
 msgstr "Liput uudelleenlähetys epäonnistui"
 
@@ -5416,7 +5418,7 @@ msgstr "Kumppanin päivitys epäonnistui"
 msgid "Failed to update answer."
 msgstr "Vastauksen päivitys epäonnistui."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:466
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:478
 msgid "Failed to update attendee"
 msgstr "Osallistujan päivitys epäonnistui"
 
@@ -5432,7 +5434,7 @@ msgstr "Tapahtuman tilan päivitys epäonnistui"
 msgid "Failed to update messaging tier"
 msgstr "Viestitasojen päivitys epäonnistui"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:501
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:513
 msgid "Failed to update order"
 msgstr "Tilauksen päivitys epäonnistui"
 
@@ -5493,6 +5495,8 @@ msgstr "Kulun ohitus tallennettu"
 #: src/components/common/InlineOrderSummary/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/ProductForm/index.tsx:486
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:174
+#: src/components/routes/event/Cashless/Settings/index.tsx:130
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
 msgid "Fees"
@@ -5551,8 +5555,8 @@ msgstr "Suodattimet"
 msgid "Filters ({activeFilterCount})"
 msgstr "Suodattimet ({activeFilterCount})"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:78
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:67
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:81
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:71
 msgid "Find"
 msgstr "Hae"
 
@@ -5761,7 +5765,7 @@ msgstr "alkaen {start}, {end} asti"
 msgid "from {start}, for {count} dates"
 msgstr "alkaen {start}, kestää {count} päivää"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:74
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:75
 msgid "Frozen"
 msgstr "Jäädytetty"
 
@@ -5931,7 +5935,7 @@ msgstr "Vieras"
 msgid "Guest Management"
 msgstr "Vierashallinta"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:638
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:650
 msgid "Guests"
 msgstr "Vieraat"
 
@@ -6122,7 +6126,7 @@ msgstr "Korostettu"
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr "Korostetuilla tuotteilla on eri taustaväri, jotta ne erottuvat tapahtumasivulla."
 
-#: src/components/layouts/CashlessPos/index.tsx:214
+#: src/components/layouts/CashlessPos/index.tsx:224
 msgid "History"
 msgstr "Historia"
 
@@ -6160,7 +6164,7 @@ msgstr "Tunnit"
 msgid "How capacity works"
 msgstr "Näin kapasiteetti toimii"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:94
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:101
 msgid "How did they pay?"
 msgstr "Miten hän maksoi?"
 
@@ -6403,7 +6407,7 @@ msgstr "Instagram"
 msgid "Instant Stripe payouts"
 msgstr "Välittömät Stripe-tilitykset"
 
-#: src/components/layouts/Event/index.tsx:158
+#: src/components/layouts/Event/index.tsx:153
 #: src/components/layouts/OrganizerLayout/index.tsx:114
 msgid "Integrations"
 msgstr "Integraatiot"
@@ -6743,7 +6747,7 @@ msgstr "Viimeisimmät sisäänkirjautumiset"
 msgid "Leave “from” as today to start right away."
 msgstr "Jätä “from” tänään aloittaaksesi välittömästi."
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:151
+#: src/components/routes/event/Cashless/Settings/index.tsx:149
 msgid "Leave blank to keep refunds open indefinitely."
 msgstr "Jätä tyhjäksi, jos palautukset pysyvät auki toistaiseksi."
 
@@ -6771,7 +6775,7 @@ msgstr "Jätä päälle kattaaksesi kaikki tapahtuman liput. Poista käytöstä 
 msgid "Leave this empty for a top-up desk that only loads balances and sells nothing."
 msgstr "Jätä tyhjäksi, jos kyseessä on latauspiste, joka vain lataa saldoja eikä myy mitään."
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:83
+#: src/components/routes/event/Cashless/Settings/index.tsx:89
 msgid "Let attendees load money onto their ticket and pay with its QR code at your bars and stands."
 msgstr "Anna osallistujien ladata rahaa lippuunsa ja maksaa sen QR-koodilla baareissasi ja kojuissasi."
 
@@ -6783,7 +6787,7 @@ msgstr "Ilmoita heille muutoksesta"
 msgid "Let them know about the changes"
 msgstr "Ilmoita heille muutoksista"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:142
+#: src/components/routes/event/Cashless/Settings/index.tsx:140
 msgid "Lets you return what attendees did not spend, to their card or in person."
 msgstr "Voit palauttaa sen, mitä osallistujat eivät käyttäneet, kortille tai käteisenä."
 
@@ -6828,7 +6832,7 @@ msgid "List"
 msgstr "Luettelo"
 
 #: src/components/common/EventCard/index.tsx:99
-#: src/components/layouts/Event/index.tsx:240
+#: src/components/layouts/Event/index.tsx:235
 #: src/components/layouts/OrganizerLayout/index.tsx:219
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
@@ -6886,7 +6890,7 @@ msgstr "Ladataan..."
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
 #: src/components/routes/my-tickets/index.tsx:90
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:336
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:348
 msgid "Location"
 msgstr "Sijainti"
 
@@ -6915,7 +6919,7 @@ msgstr "sijainnit"
 msgid "Locations"
 msgstr "Sijainnit"
 
-#: src/components/layouts/CashlessPos/index.tsx:198
+#: src/components/layouts/CashlessPos/index.tsx:208
 msgid "Lock till"
 msgstr "Lukitse kassa"
 
@@ -6958,7 +6962,7 @@ msgstr "Kirjaudu ulos"
 msgid "Look Up My Tickets"
 msgstr "Etsi lippuni"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:82
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:85
 msgid "Looking up {scannedId}..."
 msgstr "Haetaan {scannedId}…"
 
@@ -7213,7 +7217,7 @@ msgstr "Vähimmäismäärä tilauksessa"
 msgid "Minimum Price"
 msgstr "Minimihinta"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:99
+#: src/components/routes/event/Cashless/Settings/index.tsx:105
 msgid "Minimum top-up"
 msgstr "Vähimmäislataus"
 
@@ -7361,7 +7365,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:248
 msgid "Name"
 msgstr "Nimi"
 
@@ -7715,7 +7719,7 @@ msgid "No payment methods are currently available. Please contact the event orga
 msgstr "Maksutapoja ei ole tällä hetkellä saatavilla. Ota yhteyttä tapahtuman järjestäjään saadaksesi apua."
 
 #: src/components/common/OrderStatusBadge/index.tsx:13
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:59
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:60
 msgid "No Payment Required"
 msgstr "Maksua ei vaadita"
 
@@ -7890,7 +7894,7 @@ msgstr "Ei lasketa"
 msgid "Not Eligible"
 msgstr "Ei kelvollinen"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:170
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:191
 msgid "Not enough on this ticket. Short by {0}."
 msgstr "Tämän lipun saldo ei riitä. Puuttuu {0}."
 
@@ -8162,14 +8166,6 @@ msgstr "Verkkotapahtuman tiedot"
 msgid "Online top-up"
 msgstr "Verkkolataus"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:119
-msgid "Online top-up fee"
-msgstr "Verkkolatauksen maksu"
-
-#: src/components/routes/event/Cashless/Settings/index.tsx:128
-msgid "Online top-up fee (percentage)"
-msgstr "Verkkolatauksen maksu (prosentti)"
-
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Only {cap} available"
 msgstr "Saatavilla vain {cap}"
@@ -8312,7 +8308,7 @@ msgstr "tai"
 msgid "or add a single date"
 msgstr "tai lisää yksi päivämäärä"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:106
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:115
 msgid "Or choose an amount"
 msgstr "Tai valitse summa"
 
@@ -8320,8 +8316,8 @@ msgstr "Tai valitse summa"
 msgid "Or enable offline payments and disable Stripe"
 msgstr "Tai ota offline-maksut käyttöön ja poista Stripe käytöstä"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:72
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:62
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:75
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:66
 msgid "Or type the ticket ID"
 msgstr "Tai kirjoita lipun tunnus"
 
@@ -8350,7 +8346,7 @@ msgid "Order answers"
 msgstr "Tilauksen vastaukset"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:404
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:377
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:389
 msgid "Order cancelled"
 msgstr "Tilaus peruutettu"
 
@@ -8360,7 +8356,7 @@ msgstr "Tilaus peruutettu"
 
 #: src/components/layouts/Checkout/index.tsx:322
 #: src/components/routes/product-widget/CollectInformation/index.tsx:394
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:387
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:399
 msgid "Order complete"
 msgstr "Tila valmis"
 
@@ -8369,7 +8365,7 @@ msgstr "Tila valmis"
 msgid "Order Confirmation"
 msgstr "Tilauksen vahvistus"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:544
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:556
 msgid "Order confirmation resent successfully"
 msgstr "Tilauksen vahvistus lähetettiin uudelleen onnistuneesti."
 
@@ -8377,7 +8373,7 @@ msgstr "Tilauksen vahvistus lähetettiin uudelleen onnistuneesti."
 msgid "Order Created"
 msgstr "Tilaus luotu"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:273
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:285
 msgid "Order Date"
 msgstr "Tilauksen päivämäärä"
 
@@ -8386,7 +8382,7 @@ msgid "Order details"
 msgstr "Tilauksen tiedot"
 
 #: src/components/common/OrdersTable/index.tsx:178
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:613
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:625
 msgid "Order Details"
 msgstr "Tilauksen tiedot"
 
@@ -8423,7 +8419,7 @@ msgstr "Tilaus merkitty maksetuksi"
 msgid "Order not found"
 msgstr "Tilausta ei löytynyt"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:561
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:573
 msgid "Order Not Found"
 msgstr "Tilausta ei löytynyt"
 
@@ -8447,7 +8443,7 @@ msgstr "Tilauksen omistajat tuotteilla"
 msgid "Order Ref"
 msgstr "Tilausviite"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:252
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:264
 msgid "Order Reference"
 msgstr "Tilausviite"
 
@@ -8480,7 +8476,7 @@ msgstr "Tilaussumma"
 msgid "Order Updated"
 msgstr "Tilaus päivitetty"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:483
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:495
 msgid "Order updated successfully"
 msgstr "Tilaus päivitettiin onnistuneesti."
 
@@ -8554,7 +8550,7 @@ msgstr "Organisaation nimi"
 #: src/components/routes/admin/SpamEvents/index.tsx:129
 #: src/components/routes/admin/SpamEvents/index.tsx:245
 #: src/components/routes/events/Dashboard/index.tsx:194
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:355
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:367
 msgid "Organizer"
 msgstr "Järjestäjä"
 
@@ -8617,7 +8613,7 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "Järjestäjät voivat hallita vain tapahtumia ja tuotteita. He eivät voi hallita käyttäjiä, tilin asetuksia tai laskutustietoja."
 
 #: src/components/common/OrdersTable/index.tsx:305
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:101
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:108
 #: src/components/modals/CashlessTopupModal/index.tsx:90
 #: src/constants/eventCategories.ts:31
 msgid "Other"
@@ -8698,7 +8694,7 @@ msgstr "Osittainen hyvitys"
 
 #: src/components/common/OrderStatusBadge/index.tsx:16
 #: src/components/routes/event/orders.tsx:33
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:74
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:75
 msgid "Partially Refunded"
 msgstr "Osittain hyvitetty"
 
@@ -8809,11 +8805,11 @@ msgid "Payment Due Period"
 msgstr "Maksuaika"
 
 #: src/components/common/OrderStatusBadge/index.tsx:14
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:61
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:62
 msgid "Payment Failed"
 msgstr "Maksu epäonnistui"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:413
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:425
 #: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Maksuohjeet"
@@ -8836,11 +8832,11 @@ msgid "Payment received"
 msgstr "Maksu vastaanotettu"
 
 #: src/components/common/OrderStatusBadge/index.tsx:12
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:62
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:63
 msgid "Payment Received"
 msgstr "Maksu vastaanotettu"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:286
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:298
 msgid "Payment Status"
 msgstr "Maksun tila"
 
@@ -8873,7 +8869,7 @@ msgid "Pending review"
 msgstr "Odottaa tarkistusta"
 
 #: src/components/common/EventCard/index.tsx:93
-#: src/components/layouts/Event/index.tsx:236
+#: src/components/layouts/Event/index.tsx:231
 #: src/components/routes/admin/Messages/index.tsx:124
 msgid "Pending Review"
 msgstr "Odottaa tarkistusta"
@@ -9210,8 +9206,8 @@ msgstr "Esikatselu"
 msgid "Preview checkout form"
 msgstr "Esikatsele kassalomaketta"
 
-#: src/components/layouts/Event/index.tsx:298
-#: src/components/layouts/Event/index.tsx:302
+#: src/components/layouts/Event/index.tsx:293
+#: src/components/layouts/Event/index.tsx:297
 msgid "Preview Event page"
 msgstr "Esikatsele tapahtumasivua"
 
@@ -9258,7 +9254,7 @@ msgstr "Ensisijainen väri"
 msgid "Primary Text Color"
 msgstr "Ensisijainen tekstiväri"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:647
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:659
 msgid "Print All Tickets"
 msgstr "Tulosta kaikki liput"
 
@@ -9266,7 +9262,7 @@ msgstr "Tulosta kaikki liput"
 msgid "Print Preview"
 msgstr "Tulostuksen esikatselu"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:117
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:118
 msgid "Print Ticket"
 msgstr "Tulosta lippu"
 
@@ -9289,7 +9285,7 @@ msgstr "Tietosuojaseloste"
 msgid "Process Refund"
 msgstr "Käsittele hyvitys"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:396
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:408
 msgid "Processing order"
 msgstr "Tilauksen käsittely"
 
@@ -9593,10 +9589,10 @@ msgstr "Valintanappivaihtoehto"
 msgid "Rate"
 msgstr "Kanta"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:464
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:499
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:524
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:548
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:476
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:511
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:536
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:560
 msgid "Rate limit exceeded. Please try again later."
 msgstr "Liian monta pyyntöä. Yritä myöhemmin uudelleen."
 
@@ -9748,7 +9744,7 @@ msgstr "Palauta saldo"
 msgid "Refund failed"
 msgstr "Hyvitys epäonnistui"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:72
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:73
 msgid "Refund Failed"
 msgstr "Hyvitys epäonnistui"
 
@@ -9765,7 +9761,7 @@ msgid "Refund pending"
 msgstr "Hyvitys odottaa"
 
 #: src/components/common/OrderStatusBadge/index.tsx:17
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:71
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:72
 msgid "Refund Pending"
 msgstr "Hyvitys odottaa"
 
@@ -9778,7 +9774,7 @@ msgid "Refund remaining balance"
 msgstr "Palauta jäljellä oleva saldo"
 
 #: src/components/routes/event/orders.tsx:60
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:279
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:291
 msgid "Refund Status"
 msgstr "Hyvityksen tila"
 
@@ -9788,7 +9784,7 @@ msgstr "Hyvityksen tila"
 #: src/components/common/StatsCharts/index.tsx:109
 #: src/components/routes/event/orders.tsx:32
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:428
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:73
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:74
 msgid "Refunded"
 msgstr "Hyvitetty"
 
@@ -9809,7 +9805,7 @@ msgstr "Hyvitetty: {0}"
 msgid "Refunds"
 msgstr "Hyvitykset"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:150
+#: src/components/routes/event/Cashless/Settings/index.tsx:148
 msgid "Refunds close at"
 msgstr "Palautukset sulkeutuvat"
 
@@ -9864,7 +9860,7 @@ msgstr "Poista"
 msgid "Remove label from all dates"
 msgstr "Poista merkintä kaikilta päiviltä"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:143
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:146
 msgid "Remove one"
 msgstr "Poista yksi"
 
@@ -9931,7 +9927,7 @@ msgstr "Välttämättömiä sivuston toiminnalle, esimerkiksi kirjautumisesi sä
 msgid "Resend code"
 msgstr "Lähetä koodi uudelleen"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:262
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:274
 msgid "Resend Confirmation"
 msgstr "Lähetä vahvistus uudelleen"
 
@@ -9939,7 +9935,7 @@ msgstr "Lähetä vahvistus uudelleen"
 msgid "Resend Confirmation Email"
 msgstr "Lähetä vahvistussähköposti uudelleen"
 
-#: src/components/layouts/Event/index.tsx:318
+#: src/components/layouts/Event/index.tsx:313
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:162
 msgid "Resend email"
 msgstr "Lähetä sähköposti uudelleen"
@@ -9960,7 +9956,7 @@ msgstr "Lähetä kutsu uudelleen"
 msgid "Resend order email"
 msgstr "Lähetä tilausviesti uudelleen"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:136
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:148
 msgid "Resend Ticket"
 msgstr "Lähetä lippu uudelleen"
 
@@ -10178,7 +10174,7 @@ msgstr "Myyntipiste luotu"
 msgid "Sales point deleted"
 msgstr "Myyntipiste poistettu"
 
-#: src/components/layouts/CashlessPos/index.tsx:169
+#: src/components/layouts/CashlessPos/index.tsx:179
 msgid "Sales point not found"
 msgstr "Myyntipistettä ei löytynyt"
 
@@ -10186,7 +10182,7 @@ msgstr "Myyntipistettä ei löytynyt"
 msgid "Sales point updated"
 msgstr "Myyntipiste päivitetty"
 
-#: src/components/layouts/Event/index.tsx:153
+#: src/components/layouts/Event/index.tsx:148
 #: src/components/routes/event/Cashless/SalesPoints/index.tsx:37
 msgid "Sales Points"
 msgstr "Myyntipisteet"
@@ -10289,7 +10285,7 @@ msgstr "Tallenna myyntipiste"
 msgid "Save schedule"
 msgstr "Tallenna aikataulu"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:162
+#: src/components/routes/event/Cashless/Settings/index.tsx:160
 msgid "Save settings"
 msgstr "Tallenna asetukset"
 
@@ -10731,6 +10727,7 @@ msgid "Select which events will trigger this webhook"
 msgstr "Valitse, mitkä tapahtumat laukaisevat tämän webhookin"
 
 #: src/components/forms/ProductForm/index.tsx:481
+#: src/components/routes/event/Cashless/Settings/index.tsx:125
 msgid "Select..."
 msgstr "Valitse..."
 
@@ -10876,8 +10873,8 @@ msgstr "SEO-otsikko"
 msgid "September"
 msgstr "Syyskuu"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:98
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:79
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:101
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:83
 msgid "Serve someone else"
 msgstr "Palvele seuraavaa"
 
@@ -11008,8 +11005,8 @@ msgstr "Jaa"
 msgid "Share Affiliate Link"
 msgstr "Jaa kumppanilinkki"
 
-#: src/components/layouts/Event/index.tsx:256
-#: src/components/layouts/Event/index.tsx:262
+#: src/components/layouts/Event/index.tsx:251
+#: src/components/layouts/Event/index.tsx:257
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:102
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:131
 msgid "Share Event"
@@ -11104,7 +11101,7 @@ msgstr "Näytä jäljellä oleva kapasiteetti ostajille"
 msgid "Show tax and fees separately"
 msgstr "Näytä verot ja maksut erikseen"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:80
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:81
 msgid "Show the QR code on your ticket at any bar or stand and the amount is taken straight from this balance — no cash, no card."
 msgstr "Näytä lippusi QR-koodi missä tahansa baarissa tai kojussa, niin summa veloitetaan suoraan tästä saldosta — ei käteistä, ei korttia."
 
@@ -11531,6 +11528,7 @@ msgstr "Aihe:"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:168
 msgid "Subtotal"
 msgstr "Välisumma"
 
@@ -11698,7 +11696,7 @@ msgstr "Webhook päivitetty onnistuneesti"
 
 #: src/components/common/ProgressStepper/index.tsx:20
 #: src/components/common/ProgressStepper/index.tsx:24
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:583
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:595
 msgid "Summary"
 msgstr "Yhteenveto"
 
@@ -11747,7 +11745,11 @@ msgstr "T-paita"
 msgid "T-shirts, mugs and more"
 msgstr "T-paitoja, mukit ja muuta"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:133
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:114
+msgid "Take on the card terminal"
+msgstr "Veloita maksupäätteellä"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:136
 msgid "Tap a product to start an order."
 msgstr "Aloita tilaus napauttamalla tuotetta."
 
@@ -11775,6 +11777,7 @@ msgstr "Kohdennetaan osallistujia {0} valitun istunnon yli."
 #: src/components/common/OrdersTable/index.tsx:269
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:180
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:42
@@ -11817,6 +11820,7 @@ msgstr "Veroyhteenveto"
 
 #: src/components/common/InlineOrderSummary/index.tsx:189
 #: src/components/forms/ProductForm/index.tsx:483
+#: src/components/routes/event/Cashless/Settings/index.tsx:127
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:48
 msgid "Taxes"
 msgstr "Verot"
@@ -11912,7 +11916,7 @@ msgstr "PIN-koodi ei ole oikein."
 msgid "That promo code is invalid"
 msgstr "Tämä kampanjakoodi on virheellinen"
 
-#: src/components/layouts/CashlessPos/index.tsx:49
+#: src/components/layouts/CashlessPos/index.tsx:59
 msgid "That ticket could not be found."
 msgstr "Lippua ei löytynyt."
 
@@ -11991,7 +11995,7 @@ msgstr "Napsauttamasi linkki ei kelpaa."
 msgid "The maximum number of products for {0}is {1}"
 msgstr "Tuotteiden enimmäismäärä kohteelle {0}on {1}"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:53
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:54
 msgid "The minimum top-up is {0}"
 msgstr "Vähimmäislataus on {0}"
 
@@ -12175,7 +12179,7 @@ msgstr "Tällä osallistujalla on maksamaton tilaus."
 msgid "This balance could not be refunded"
 msgstr "Tätä saldoa ei voitu palauttaa"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:95
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:98
 msgid "This balance is frozen"
 msgstr "Tämä saldo on jäädytetty"
 
@@ -12265,11 +12269,11 @@ msgstr "Tämä tapahtuma ei ole saatavilla"
 msgid "This event is not published yet"
 msgstr "Tätä tapahtumaa ei ole vielä julkaistu"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:46
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:47
 msgid "This event is not using cashless payments."
 msgstr "Tämä tapahtuma ei käytä cashless-maksuja."
 
-#: src/components/layouts/Event/index.tsx:194
+#: src/components/layouts/Event/index.tsx:189
 msgid "This event is pending manual review and cannot be published until the review is complete."
 msgstr "Tämä tapahtuma odottaa manuaalista tarkistusta, eikä sitä voi julkaista ennen kuin tarkistus on valmis."
 
@@ -12326,7 +12330,7 @@ msgstr "Tämä linkki ei kelpaa tai on vanhentunut."
 msgid "This link is no longer valid"
 msgstr "Tämä linkki ei ole enää voimassa"
 
-#: src/components/layouts/CashlessPos/index.tsx:170
+#: src/components/layouts/CashlessPos/index.tsx:180
 msgid "This link is no longer valid. Ask the organizer for a new one."
 msgstr "Tämä linkki ei ole enää voimassa. Pyydä järjestäjältä uusi."
 
@@ -12354,7 +12358,7 @@ msgstr "Tilaus on jo maksettu."
 msgid "This order has already been refunded."
 msgstr "Tilauksesta on jo tehty hyvitys."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:378
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:390
 msgid "This order has been cancelled."
 msgstr "Tilaus on peruttu."
 
@@ -12362,11 +12366,11 @@ msgstr "Tilaus on peruttu."
 msgid "This order has expired. Please start again."
 msgstr "Tilaus on vanhentunut. Aloita uudelleen."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:397
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:409
 msgid "This order is being processed."
 msgstr "Tilausta käsitellään."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:388
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:400
 msgid "This order is complete."
 msgstr "Tilaus on valmis."
 
@@ -12394,7 +12398,7 @@ msgstr "Järjestäjäprofiilia ei ole vielä julkaistu"
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr "Tämä ohittaa kaikki näkyvyysasetukset ja piilottaa tuotteen kaikilta asiakkailta."
 
-#: src/components/layouts/CashlessPos/index.tsx:116
+#: src/components/layouts/CashlessPos/index.tsx:126
 msgid "This payment could not be taken."
 msgstr "Tätä maksua ei voitu veloittaa."
 
@@ -12430,7 +12434,7 @@ msgstr "Tämä raportti on tarkoitettu ainoastaan tiedoksi. Keskustele aina vero
 msgid "This reset password link is invalid or expired."
 msgstr "Tämä salasanan palautuslinkki ei kelpaa tai on vanhentunut."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:38
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:42
 msgid "This sales point is not allowed to top up balances."
 msgstr "Tämä myyntipiste ei saa ladata saldoja."
 
@@ -12446,7 +12450,7 @@ msgstr "Tämä lippu skannattiin juuri. Odota ennen uutta skannausta."
 msgid "This tier's quantity is shared across all dates"
 msgstr "Tämän hintatason määrä on jaettu kaikkien päivämäärien kesken"
 
-#: src/components/layouts/CashlessPos/index.tsx:144
+#: src/components/layouts/CashlessPos/index.tsx:154
 msgid "This top-up could not be recorded."
 msgstr "Tätä latausta ei voitu kirjata."
 
@@ -12454,7 +12458,7 @@ msgstr "Tätä latausta ei voitu kirjata."
 msgid "This transaction could not be reversed"
 msgstr "Tätä tapahtumaa ei voitu perua"
 
-#: src/components/layouts/CashlessPos/index.tsx:159
+#: src/components/layouts/CashlessPos/index.tsx:169
 msgid "This transaction could not be undone."
 msgstr "Tätä tapahtumaa ei voitu kumota."
 
@@ -12574,7 +12578,7 @@ msgstr "Lipun esikatselu tapahtumalle"
 msgid "Ticket price"
 msgstr "Lipun hinta"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:520
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:532
 msgid "Ticket resent successfully"
 msgstr "Lippu lähetettiin uudelleen onnistuneesti"
 
@@ -12667,7 +12671,7 @@ msgstr "Käyttökerrat"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:119
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:145
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:125
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:350
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:362
 #: src/components/routes/profile/ManageProfile/index.tsx:188
 msgid "Timezone"
 msgstr "Aikavyöhyke"
@@ -12717,11 +12721,11 @@ msgid "Top Organizers (Last 14 Days)"
 msgstr "Suosituimmat järjestäjät (viimeiset 14 päivää)"
 
 #: src/components/common/CashlessWalletTable/index.tsx:104
-#: src/components/layouts/CashlessPos/index.tsx:211
+#: src/components/layouts/CashlessPos/index.tsx:221
 msgid "Top up"
 msgstr "Lataa"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:122
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:131
 msgid "Top up {0}"
 msgstr "Lataa {0}"
 
@@ -12743,9 +12747,17 @@ msgstr "Lataus"
 msgid "Top-up at the event"
 msgstr "Lataus tapahtumassa"
 
+#: src/components/routes/event/Cashless/Settings/index.tsx:123
+msgid "Top-up taxes and fees"
+msgstr "Latauksen verot ja maksut"
+
 #: src/components/common/CashlessTransactionTable/index.tsx:61
 msgid "Top-ups and purchases will appear here as they happen."
 msgstr "Lataukset ja ostot näkyvät tässä sitä mukaa kun niitä tapahtuu."
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:90
+msgid "Top-ups are taken at the event. Show your ticket QR code at any top-up point."
+msgstr "Lataukset tehdään tapahtumassa. Näytä lipun QR-koodi missä tahansa latauspisteessä."
 
 #: src/components/common/CashlessWalletTable/index.tsx:72
 #: src/components/common/StatsCharts/index.tsx:107
@@ -12759,7 +12771,7 @@ msgstr "yhteensä"
 #: src/components/common/AdminOrdersTable/index.tsx:81
 #: src/components/common/InlineOrderSummary/index.tsx:219
 #: src/components/common/OrderSummary/index.tsx:104
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:164
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:185
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
@@ -12859,11 +12871,11 @@ msgstr "Seuranta ja analytiikka"
 msgid "Transaction reversed"
 msgstr "Tapahtuma peruttu"
 
-#: src/components/layouts/CashlessPos/index.tsx:155
+#: src/components/layouts/CashlessPos/index.tsx:165
 msgid "Transaction undone"
 msgstr "Tapahtuma kumottu"
 
-#: src/components/layouts/Event/index.tsx:154
+#: src/components/layouts/Event/index.tsx:149
 msgid "Transactions"
 msgstr "Tapahtumat"
 
@@ -12909,7 +12921,7 @@ msgstr "Poista äänet käytöstä"
 msgid "Turn sound on"
 msgstr "Ota äänet käyttöön"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:110
+#: src/components/routes/event/Cashless/Settings/index.tsx:116
 msgid "Turn this off to take top-ups only at your sales points."
 msgstr "Ota pois käytöstä, jos lataukset tehdään vain myyntipisteissä."
 
@@ -13451,7 +13463,7 @@ msgstr "Vahvistetut käyttäjät voivat lähtettää osallistujille sähköposti
 msgid "Verify Email"
 msgstr "Vahvista sähköpostiosoite"
 
-#: src/components/layouts/Event/index.tsx:315
+#: src/components/layouts/Event/index.tsx:310
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:156
 msgid "Verify your email"
 msgstr "Vahvista sähköpostiosoitteesi"
@@ -13566,7 +13578,7 @@ msgstr "Näytä järjestäjäsivu"
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:59
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:109
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:110
 msgid "View Ticket"
 msgstr "Näytä lippu"
 
@@ -13655,7 +13667,7 @@ msgstr "Kategorian poistaminen ei onnistunut. Yritä uudelleen."
 msgid "We couldn't disconnect this Stripe account. Please try again."
 msgstr "Tämän Stripe-tilin yhteyden katkaiseminen ei onnistunut. Yritä uudelleen."
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:32
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:33
 msgid "We couldn't find a cashless balance for this ticket. The link may have expired."
 msgstr "Emme löytäneet cashless-saldoa tälle lipulle. Linkki on ehkä vanhentunut."
 
@@ -13667,7 +13679,7 @@ msgstr "Tähän sähköpostiosoitteeseen liittyviä tilauksia ei löytynyt."
 msgid "We couldn't find any tickets matching {0}"
 msgstr "Hakua {0} vastaavia lippuja ei löytynyt"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:562
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:574
 msgid "We couldn't find the order you're looking for. The link may have expired or the order details may have changed."
 msgstr "Etsimääsi tilausta ei löytynyt. Linkki on ehkä vanhentunut tai tilauksen tiedot ovat saattaneet muuttua."
 
@@ -13695,7 +13707,7 @@ msgstr "Stripeen ei juuri nyt saatu yhteyttä. Yritä hetken kuluttua uudelleen.
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Kategorioiden järjestyksen muuttaminen ei onnistunut. Yritä uudelleen."
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:60
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:61
 msgid "We couldn't start your top-up. Please try again."
 msgstr "Latausta ei voitu aloittaa. Yritä uudelleen."
 
@@ -13809,7 +13821,7 @@ msgstr "Webhook ei lähetä ilmoituksia"
 msgid "Webhook will send notifications"
 msgstr "Webhook lähettää ilmoituksia"
 
-#: src/components/layouts/Event/index.tsx:160
+#: src/components/layouts/Event/index.tsx:155
 #: src/components/layouts/OrganizerLayout/index.tsx:115
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
@@ -14047,7 +14059,7 @@ msgstr "Kuka järjestää tämän tapahtuman?"
 msgid "Who should be asked this question?"
 msgstr "Keneltä tämä kysymys kysytään?"
 
-#: src/components/layouts/Event/index.tsx:159
+#: src/components/layouts/Event/index.tsx:154
 msgid "Widget Embed"
 msgstr "Widgetin upotus"
 
@@ -14294,7 +14306,7 @@ msgstr "Aloittamiseen tarvitaan vähintään yksi tuote. Tuote voi olla maksuton
 msgid "You're changing session times"
 msgstr "Olet muuttamassa istuntojen aikoja"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:170
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:182
 msgid "You're going to {0}!"
 msgstr "Olet menossa tapahtumaan {0}!"
 
@@ -14350,7 +14362,7 @@ msgstr "Osallistujasi näkyvät täällä, kun he ovat ilmoittautuneet tapahtuma
 msgid "Your awesome website 🎉"
 msgstr "Hieno verkkosivustosi 🎉"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:67
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:68
 msgid "Your cashless balance"
 msgstr "Cashless-saldosi"
 
@@ -14402,11 +14414,11 @@ msgstr "Nimesi"
 msgid "Your new password must be at least 8 characters long."
 msgstr "Uuden salasanasi on oltava vähintään 8 merkkiä pitkä."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:599
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:611
 msgid "Your order details have been updated. A confirmation email has been sent to the new email address."
 msgstr "Tilauksesi tiedot on päivitetty. Vahvistussähköposti on lähetetty uuteen sähköpostiosoitteeseen."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:171
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:183
 msgid "Your order has been cancelled"
 msgstr "Tilauksesi on peruttu"
 
@@ -14414,7 +14426,7 @@ msgstr "Tilauksesi on peruttu"
 msgid "Your order has been cancelled."
 msgstr "Tilauksesi on peruttu."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:173
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:185
 msgid "Your order is awaiting payment"
 msgstr "Tilauksesi odottaa maksua"
 

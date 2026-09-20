@@ -56,8 +56,8 @@ export class CashlessPosPage {
     await this.page.getByTestId('cashless-pos-pin-submit-button').click();
   }
 
-  async lookUpTicket(ticketPublicId: string): Promise<void> {
-    await this.page.getByTestId('cashless-pos-ticket-input').fill(ticketPublicId);
+  async lookUpTicket(ticketPublicId: string, inputTestId = 'cashless-pos-ticket-input'): Promise<void> {
+    await this.page.getByTestId(inputTestId).fill(ticketPublicId);
     await this.page.getByRole('button', { name: 'Find' }).click();
   }
 

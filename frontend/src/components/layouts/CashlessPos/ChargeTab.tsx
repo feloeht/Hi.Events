@@ -2,7 +2,7 @@ import {t} from "@lingui/macro";
 import {Button, TextInput} from "@mantine/core";
 import {IconScan, IconTrash} from "@tabler/icons-react";
 import {useState} from "react";
-import {CashlessSalesPointPublic, CashlessWalletPublic, Product} from "../../../types.ts";
+import {CashlessQuote, CashlessSalesPointPublic, CashlessWalletPublic, Product} from "../../../types.ts";
 import {InlineCameraScanner} from "../../common/InlineCameraScanner";
 import {formatCurrency} from "../../../utilites/currency.ts";
 import classes from "./CashlessPos.module.scss";
@@ -28,6 +28,7 @@ interface ChargeTabProps {
     onClear: () => void;
     onCharge: () => void;
     scannerResetToken: number;
+    quote: CashlessQuote | null;
 }
 
 export const ChargeTab = ({
@@ -43,10 +44,12 @@ export const ChargeTab = ({
                               onClear,
                               onCharge,
                               scannerResetToken,
+                              quote,
                           }: ChargeTabProps) => {
     const [manualId, setManualId] = useState('');
     const currency = salesPoint.currency ?? 'USD';
-    const total = cart.reduce((sum, line) => sum + (line.unitPrice * line.quantity), 0);
+    const subtotal = cart.reduce((sum, line) => sum + (line.unitPrice * line.quantity), 0);
+    const total = quote?.total ?? subtotal;
     const canCharge = !!wallet && cart.length > 0 && wallet.balance >= total && wallet.status === 'ACTIVE';
 
     return (
@@ -160,6 +163,24 @@ export const ChargeTab = ({
                     ))}
 
                     <div className={classes.cartFooter}>
+                        {!!quote?.fees && (
+                            <div className={classes.subtotalRow}>
+                                <span>{t`Subtotal`}</span>
+                                <span>{formatCurrency(quote.subtotal, currency)}</span>
+                            </div>
+                        )}
+                        {!!quote?.fees && (
+                            <div className={classes.subtotalRow}>
+                                <span>{t`Fees`}</span>
+                                <span>{formatCurrency(quote.fees, currency)}</span>
+                            </div>
+                        )}
+                        {!!quote?.taxes && (
+                            <div className={classes.subtotalRow}>
+                                <span>{t`Tax`}</span>
+                                <span>{formatCurrency(quote.taxes, currency)}</span>
+                            </div>
+                        )}
                         <div className={classes.totalRow}>
                             <span>{t`Total`}</span>
                             <strong>{formatCurrency(total, currency)}</strong>

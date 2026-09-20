@@ -22,6 +22,7 @@ const CashlessWallet = () => {
     const topupMutation = useCreatePublicCashlessTopup();
 
     const minimumAmount = event?.settings?.cashless_min_topup_amount ?? 5;
+    const onlineTopupEnabled = event?.settings?.cashless_online_topup_enabled ?? true;
     const [amount, setAmount] = useState<number | string>(minimumAmount * 2);
 
     if (eventError || walletError) {
@@ -83,6 +84,14 @@ const CashlessWallet = () => {
                 </Trans>
             </p>
 
+            {!onlineTopupEnabled && (
+                <div className={classes.topupCard}>
+                    <h3 className={classes.sectionTitle}>{t`Add funds`}</h3>
+                    <p>{t`Top-ups are taken at the event. Show your ticket QR code at any top-up point.`}</p>
+                </div>
+            )}
+
+            {onlineTopupEnabled && (
             <div className={classes.topupCard}>
                 <h3 className={classes.sectionTitle}>{t`Add funds`}</h3>
 
@@ -122,6 +131,7 @@ const CashlessWallet = () => {
                     {t`Top up ${formatCurrency(Number(amount) || 0, wallet.currency)}`}
                 </Button>
             </div>
+            )}
 
             <CashlessTransactionHistory
                 transactions={wallet.transactions ?? []}

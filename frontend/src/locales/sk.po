@@ -13,12 +13,12 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/layouts/Event/index.tsx:239
+#: src/components/layouts/Event/index.tsx:234
 #: src/components/layouts/OrganizerLayout/index.tsx:218
 msgid "- Click to Publish"
 msgstr "- Kliknite pre zverejnenie"
 
-#: src/components/layouts/Event/index.tsx:241
+#: src/components/layouts/Event/index.tsx:236
 #: src/components/layouts/OrganizerLayout/index.tsx:220
 msgid "- Click to Unpublish"
 msgstr "- Kliknite pre zrušenie zverejnenia"
@@ -80,7 +80,7 @@ msgstr "Predvolená {0}"
 msgid "{0} left"
 msgstr "{0} zostáva"
 
-#: src/components/layouts/AppLayout/Sidebar/index.tsx:87
+#: src/components/layouts/AppLayout/Sidebar/index.tsx:88
 #: src/components/layouts/AuthLayout/index.tsx:158
 msgid "{0} logo"
 msgstr "logo {0}"
@@ -88,6 +88,10 @@ msgstr "logo {0}"
 #: src/components/modals/CreateAttendeeModal/index.tsx:272
 msgid "{0} of {1} seats are taken."
 msgstr "Obsadených miest: {0} z {1}."
+
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:119
+msgid "{0} onto the ticket plus {1} in fees"
+msgstr "{0} na lístok plus {1} poplatkov"
 
 #: src/components/routes/events/Dashboard/index.tsx:141
 msgid "{0} organizers"
@@ -374,7 +378,7 @@ msgstr "Zostatok vznikne pri prvom dobití účastníkom alebo keď váš tím d
 msgid "A button label is required when a URL is set"
 msgstr "Pri nastavenej URL adrese je potrebné označenie tlačidla"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:212
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:224
 msgid "A cancellation notice has been sent to"
 msgstr "Oznámenie o zrušení bolo odoslané na"
 
@@ -653,7 +657,7 @@ msgstr "Aktívne platobné metódy"
 msgid "Activity"
 msgstr "Aktivita"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:114
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:133
 msgid "Add {0}"
 msgstr "Pridať {0}"
 
@@ -742,7 +746,8 @@ msgid "Add event details"
 msgstr "Pridať podrobnosti o podujatí"
 
 #: src/components/modals/CashlessTopupModal/index.tsx:108
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:87
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:89
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:96
 msgid "Add funds"
 msgstr "Dobiť"
 
@@ -765,7 +770,7 @@ msgstr "Pridajte viac časov, ak máte za deň viac termínov."
 msgid "Add New"
 msgstr "Pridať nové"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:151
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:154
 msgid "Add one"
 msgstr "Pridať jeden"
 
@@ -843,7 +848,7 @@ msgstr "Doplnkové produkty"
 msgid "Add-ons"
 msgstr "Doplnky"
 
-#: src/components/layouts/CashlessPos/index.tsx:137
+#: src/components/layouts/CashlessPos/index.tsx:147
 msgid "Added {0} — balance is now {1}"
 msgstr "Pridané {0} — zostatok je teraz {1}"
 
@@ -851,15 +856,11 @@ msgstr "Pridané {0} — zostatok je teraz {1}"
 msgid "Added at checkout"
 msgstr "Pridané pri platbe"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:129
-msgid "Added to the fixed fee above."
-msgstr "Pripočíta sa k pevnému poplatku vyššie."
-
 #: src/components/common/PlatformFeesSettings/index.tsx:257
 msgid "Additional Fees"
 msgstr "Ďalšie poplatky"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:404
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:416
 msgid "Additional Information"
 msgstr "Ďalšie informácie"
 
@@ -894,7 +895,7 @@ msgstr "Adresa riadok 2"
 msgid "Address Line 2"
 msgstr "Adresa riadok 2"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:92
+#: src/components/routes/event/Cashless/Settings/index.tsx:98
 msgid "Adds a top-up option to every ticket and lets your sales points take payment."
 msgstr "Pridá možnosť dobitia ku každému lístku a umožní predajným miestam prijímať platby."
 
@@ -1106,7 +1107,7 @@ msgstr "Umožniť zákazníkom pripojiť sa na čakaciu listinu, keď je tento p
 msgid "Allow customers to join a waitlist when this product is sold out. Customers join the waitlist for a specific date."
 msgstr "Umožniť zákazníkom pripojiť sa na čakaciu listinu, keď je tento produkt vypredaný. Zákazníci sa pripájajú na čakaciu listinu pre konkrétny dátum."
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:141
+#: src/components/routes/event/Cashless/Settings/index.tsx:139
 msgid "Allow refunds of unspent balance"
 msgstr "Povoliť vrátenie neminutého zostatku"
 
@@ -1120,7 +1121,7 @@ msgstr "Povoliť indexovanie vyhľadávačmi"
 msgid "Allow search engines to index this event"
 msgstr "Umožniť vyhľadávačom indexovať túto udalosť"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:109
+#: src/components/routes/event/Cashless/Settings/index.tsx:115
 msgid "Allow top-ups from the ticket page"
 msgstr "Povoliť dobíjanie zo stránky lístka"
 
@@ -1180,7 +1181,7 @@ msgstr "Zaplatená suma"
 msgid "Amount paid ({0})"
 msgstr "Zaplatená suma ({0})"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:84
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:88
 #: src/components/modals/CashlessTopupModal/index.tsx:78
 msgid "Amount to add"
 msgstr "Suma na pridanie"
@@ -1289,6 +1290,10 @@ msgstr "použité"
 #: src/components/routes/product-widget/SelectProducts/index.tsx:918
 msgid "applied — {0} off your order"
 msgstr "použitý — zľava {0} na vašu objednávku"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:124
+msgid "Applied on top of the amount loaded. Card top-ups pay them; cash at a sales point does not."
+msgstr "Pripočítavajú sa k dobitej sume. Dobitia kartou ich platia; hotovosť na predajnom mieste nie."
 
 #: src/components/common/CapacityAssignmentList/index.tsx:94
 msgid "Applies to {0} products"
@@ -1480,7 +1485,7 @@ msgstr "Naozaj chcete odstrániť tento webhook?"
 msgid "Are you sure you want to leave?"
 msgstr "Naozaj chcete odísť?"
 
-#: src/components/layouts/Event/index.tsx:203
+#: src/components/layouts/Event/index.tsx:198
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Naozaj chcete nastaviť túto udalosť ako koncept? Udalosť bude skrytá pred verejnosťou."
 
@@ -1512,11 +1517,11 @@ msgstr "Naozaj chcete zverejniť profil tohto organizátora? Po zverejnení bude
 msgid "Are you sure you want to remove this entry from the waitlist?"
 msgstr "Naozaj chcete odstrániť tento záznam zo zoznamu čakateľov?"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:534
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:546
 msgid "Are you sure you want to resend the order confirmation to {0}?"
 msgstr "Naozaj chcete znovu odoslať potvrdenie objednávky na adresu {0}?"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:509
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:521
 msgid "Are you sure you want to resend the ticket to {0}?"
 msgstr "Naozaj chcete znovu odoslať lístok na adresu {0}?"
 
@@ -1677,7 +1682,7 @@ msgstr "Lístok účastníka"
 msgid "Attendee Updated"
 msgstr "Účastník aktualizovaný"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:457
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:469
 msgid "Attendee updated successfully"
 msgstr "Účastník bol úspešne aktualizovaný"
 
@@ -1798,7 +1803,7 @@ msgstr "Dostupné časy — {dayName}"
 msgid "Available to Refund"
 msgstr "Dostupné na vrátenie"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:71
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:72
 msgid "Available to spend"
 msgstr "K dispozícii"
 
@@ -1816,7 +1821,7 @@ msgid "Awaiting offline payment"
 msgstr "Čaká na platbu offline"
 
 #: src/components/routes/event/orders.tsx:28
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:63
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:64
 msgid "Awaiting Offline Payment"
 msgstr "Čaká na platbu offline"
 
@@ -1836,7 +1841,7 @@ msgstr "Čaká na platbu"
 #: src/components/common/OrdersTable/index.tsx:335
 #: src/components/common/OrderStatusBadge/index.tsx:10
 #: src/components/routes/event/attendees.tsx:31
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:60
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:61
 msgid "Awaiting Payment"
 msgstr "Čaká na platbu"
 
@@ -1904,7 +1909,7 @@ msgstr "Zostatok"
 msgid "Balance after"
 msgstr "Zostatok po"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:31
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:32
 msgid "Balance not found"
 msgstr "Zostatok sa nenašiel"
 
@@ -1924,7 +1929,7 @@ msgstr "Zostatok dobitý"
 msgid "Balance updated"
 msgstr "Zostatok aktualizovaný"
 
-#: src/components/layouts/Event/index.tsx:149
+#: src/components/layouts/Event/index.tsx:147
 msgid "Balances"
 msgstr "Zostatky"
 
@@ -1969,7 +1974,7 @@ msgid "Because this account has completed orders, transaction records (amounts, 
 msgstr "Keďže tento účet má dokončené objednávky, záznamy o transakciách (sumy, dátumy a údaje faktúr) budú uchované v anonymizovanej podobe na právne a daňové účely. Všetky osobné údaje budú natrvalo odstránené."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:571
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:293
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:305
 msgid "Billing Address"
 msgstr "Fakturačná adresa"
 
@@ -1990,7 +1995,7 @@ msgstr "Rezervované"
 msgid "Booking limit for this date"
 msgstr "Limit rezervácií pre tento dátum"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:207
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:219
 msgid "Bookmark this page to manage your order anytime."
 msgstr "Uložte si túto stránku do záložiek a spravujte svoju objednávku kedykoľvek."
 
@@ -2205,7 +2210,7 @@ msgstr "Zrušením sa zrušia všetci účastníci spojení s touto objednávkou
 #: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:20
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:126
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:171
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:101
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:102
 msgid "Cancelled"
 msgstr "Zrušené"
 
@@ -2257,16 +2262,16 @@ msgstr "zmeny kapacity"
 msgid "Capacity Used"
 msgstr "Využitá kapacita"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:100
+#: src/components/routes/event/Cashless/Settings/index.tsx:106
 msgid "Card fees make very small top-ups uneconomical."
 msgstr "Poplatky za karty robia veľmi malé dobitia nerentabilnými."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:100
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:107
 #: src/components/modals/CashlessTopupModal/index.tsx:89
 msgid "Card terminal"
 msgstr "Platobný terminál"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:99
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:106
 #: src/components/modals/CashlessTopupModal/index.tsx:88
 msgid "Cash"
 msgstr "Hotovosť"
@@ -2276,6 +2281,7 @@ msgid "Cashless"
 msgstr "Cashless"
 
 #: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:67
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:127
 msgid "Cashless balance"
 msgstr "Cashless zostatok"
 
@@ -2283,7 +2289,7 @@ msgstr "Cashless zostatok"
 msgid "Cashless Balances"
 msgstr "Cashless zostatky"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:45
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:46
 msgid "Cashless is not available"
 msgstr "Cashless nie je k dispozícii"
 
@@ -2295,12 +2301,12 @@ msgstr "Cashless je vypnutý"
 msgid "Cashless Revenue"
 msgstr "Cashless tržby"
 
-#: src/components/layouts/Event/index.tsx:155
-#: src/components/routes/event/Cashless/Settings/index.tsx:85
+#: src/components/layouts/Event/index.tsx:150
+#: src/components/routes/event/Cashless/Settings/index.tsx:91
 msgid "Cashless Settings"
 msgstr "Nastavenia cashless"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:75
+#: src/components/routes/event/Cashless/Settings/index.tsx:81
 msgid "Cashless settings saved"
 msgstr "Nastavenia cashless uložené"
 
@@ -2361,21 +2367,17 @@ msgstr "Zmeniť nastavenia zoznamu čakateľov"
 msgid "Changed duration for {count} date(s)"
 msgstr "Dĺžka zmenená pre {count} termín(ov)"
 
-#: src/components/layouts/CashlessPos/index.tsx:207
+#: src/components/layouts/CashlessPos/index.tsx:217
 msgid "Charge"
 msgstr "Zaúčtovať"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:190
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:211
 msgid "Charge {0}"
 msgstr "Zaúčtovať {0}"
 
-#: src/components/layouts/CashlessPos/index.tsx:109
+#: src/components/layouts/CashlessPos/index.tsx:119
 msgid "Charged {0} — {1} left"
 msgstr "Zaúčtované {0} — zostáva {1}"
-
-#: src/components/routes/event/Cashless/Settings/index.tsx:120
-msgid "Charged on top of the amount loaded, to cover card fees."
-msgstr "Účtuje sa nad rámec dobitej sumy, na pokrytie poplatkov za karty."
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:399
 msgid "Charges"
@@ -2639,7 +2641,7 @@ msgid "Class with a T-shirt add-on"
 msgstr "Kurz s tričkom ako doplnkom"
 
 #: src/components/common/OccurrenceSelect/index.tsx:133
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:181
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:202
 #: src/components/routes/event/OccurrencesTab/index.tsx:547
 msgid "Clear"
 msgstr "Vymazať"
@@ -2695,7 +2697,7 @@ msgstr "Zavrieť"
 msgid "Close modal"
 msgstr "Zavrieť modálne okno"
 
-#: src/components/layouts/AppLayout/Sidebar/index.tsx:104
+#: src/components/layouts/AppLayout/Sidebar/index.tsx:105
 msgid "Close sidebar"
 msgstr "Zavrieť bočný panel"
 
@@ -2778,7 +2780,7 @@ msgstr "Stĺpce"
 msgid "Comedy"
 msgstr "Komédia"
 
-#: src/components/layouts/AppLayout/Sidebar/index.tsx:75
+#: src/components/layouts/AppLayout/Sidebar/index.tsx:76
 msgid "Coming Soon"
 msgstr "Čoskoro"
 
@@ -2944,7 +2946,7 @@ msgstr "Potvrdiť heslo"
 msgid "Confirm Spam"
 msgstr "Potvrdiť spam"
 
-#: src/components/layouts/Event/index.tsx:316
+#: src/components/layouts/Event/index.tsx:311
 msgid "Confirm your email to access all features."
 msgstr "Potvrďte svoj e-mail pre prístup ku všetkým funkciám."
 
@@ -2952,7 +2954,7 @@ msgstr "Potvrďte svoj e-mail pre prístup ku všetkým funkciám."
 msgid "Confirmation email sent! Please check your inbox."
 msgstr "Potvrdzovací e-mail odoslaný! Skontrolujte svoju doručenú poštu."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:202
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:214
 msgid "Confirmation sent to"
 msgstr "Potvrdenie odoslané na"
 
@@ -4143,7 +4145,7 @@ msgid "Downloading Invoice"
 msgstr "Sťahovanie faktúry"
 
 #: src/components/common/EventCard/index.tsx:96
-#: src/components/layouts/Event/index.tsx:238
+#: src/components/layouts/Event/index.tsx:233
 #: src/components/layouts/OrganizerLayout/index.tsx:217
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
@@ -4270,7 +4272,7 @@ msgstr "Skorý vtáčik"
 #: src/components/common/TaxAndFeeList/index.tsx:73
 #: src/components/routes/admin/Announcements/index.tsx:211
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:54
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:241
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:253
 #: src/hooks/useAttendeeActions.tsx:82
 #: src/hooks/useOrderActions.tsx:104
 msgid "Edit"
@@ -4299,7 +4301,7 @@ msgstr "Upraviť oznámenie"
 msgid "Edit Answer"
 msgstr "Upraviť odpoveď"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:127
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:139
 msgid "Edit Attendee"
 msgstr "Upraviť účastníka"
 
@@ -4454,7 +4456,7 @@ msgstr "Oprávnené zoznamy odbavení"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:78
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditAttendeeModal/index.tsx:68
 #: src/components/routes/product-widget/OrderSummaryAndProducts/EditOrderModal/index.tsx:68
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:257
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:269
 #: src/components/routes/profile/ManageProfile/index.tsx:157
 msgid "Email"
 msgstr "E-mail"
@@ -4584,7 +4586,7 @@ msgstr "Povoliť samoobsluhu účastníka"
 msgid "Enable attendee self-service by default"
 msgstr "Predvolene povoliť samoobsluhu účastníka"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:91
+#: src/components/routes/event/Cashless/Settings/index.tsx:97
 msgid "Enable cashless payments"
 msgstr "Zapnúť cashless platby"
 
@@ -4858,7 +4860,7 @@ msgstr "Vlastná šablóna udalosti"
 
 #: src/components/routes/my-tickets/index.tsx:79
 #: src/components/routes/organizer/Reports/CheckInSummaryReport/index.tsx:29
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:323
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:335
 msgid "Event Date"
 msgstr "Dátum udalosti"
 
@@ -4882,7 +4884,7 @@ msgstr "Popis udalosti"
 
 #: src/components/routes/event/Settings/index.tsx:48
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:71
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:627
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:639
 msgid "Event Details"
 msgstr "Podrobnosti udalosti"
 
@@ -4919,7 +4921,7 @@ msgstr "Názov udalosti by mal mať menej ako 150 znakov"
 msgid "Event Not Available"
 msgstr "Udalosť nie je dostupná"
 
-#: src/components/layouts/Event/index.tsx:305
+#: src/components/layouts/Event/index.tsx:300
 msgid "Event Page"
 msgstr "Stránka udalosti"
 
@@ -4934,14 +4936,14 @@ msgstr "Nastavenia udalosti"
 
 #: src/components/common/EventCard/index.tsx:79
 #: src/components/common/StatusToggle/index.tsx:62
-#: src/components/layouts/Event/index.tsx:214
+#: src/components/layouts/Event/index.tsx:209
 #: src/components/modals/PublishEventModal/index.tsx:129
 msgid "Event status update failed. Please try again later"
 msgstr "Aktualizácia stavu udalosti zlyhala. Skúste to neskôr."
 
 #: src/components/common/EventCard/index.tsx:76
 #: src/components/common/StatusToggle/index.tsx:54
-#: src/components/layouts/Event/index.tsx:211
+#: src/components/layouts/Event/index.tsx:206
 msgid "Event status updated"
 msgstr "Stav udalosti aktualizovaný"
 
@@ -5331,11 +5333,11 @@ msgstr "Termín sa nepodarilo znova otvoriť"
 msgid "Failed to reorder questions"
 msgstr "Nepodarilo sa preusporiadať otázky"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:550
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:562
 msgid "Failed to resend order confirmation"
 msgstr "Nepodarilo sa znovu odoslať potvrdenie objednávky"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:526
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:538
 msgid "Failed to resend ticket"
 msgstr "Nepodarilo sa znovu odoslať lístok"
 
@@ -5416,7 +5418,7 @@ msgstr "Nepodarilo sa aktualizovať partnera"
 msgid "Failed to update answer."
 msgstr "Nepodarilo sa aktualizovať odpoveď."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:466
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:478
 msgid "Failed to update attendee"
 msgstr "Nepodarilo sa aktualizovať účastníka"
 
@@ -5432,7 +5434,7 @@ msgstr "Nepodarilo sa aktualizovať stav udalosti"
 msgid "Failed to update messaging tier"
 msgstr "Nepodarilo sa aktualizovať úroveň správ"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:501
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:513
 msgid "Failed to update order"
 msgstr "Nepodarilo sa aktualizovať objednávku"
 
@@ -5493,6 +5495,8 @@ msgstr "Vlastný poplatok uložený"
 #: src/components/common/InlineOrderSummary/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/ProductForm/index.tsx:486
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:174
+#: src/components/routes/event/Cashless/Settings/index.tsx:130
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
 msgid "Fees"
@@ -5551,8 +5555,8 @@ msgstr "Filtre"
 msgid "Filters ({activeFilterCount})"
 msgstr "Filtre ({activeFilterCount})"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:78
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:67
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:81
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:71
 msgid "Find"
 msgstr "Nájsť"
 
@@ -5761,7 +5765,7 @@ msgstr "od {start} do {end}"
 msgid "from {start}, for {count} dates"
 msgstr "od {start}, {count} termínov"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:74
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:75
 msgid "Frozen"
 msgstr "Zmrazené"
 
@@ -5931,7 +5935,7 @@ msgstr "Hosť"
 msgid "Guest Management"
 msgstr "Správa hostí"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:638
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:650
 msgid "Guests"
 msgstr "Hostia"
 
@@ -6122,7 +6126,7 @@ msgstr "Zvýraznené"
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr "Zvýraznené produkty budú mať inú farbu pozadia, aby vynikli na stránke udalosti."
 
-#: src/components/layouts/CashlessPos/index.tsx:214
+#: src/components/layouts/CashlessPos/index.tsx:224
 msgid "History"
 msgstr "História"
 
@@ -6160,7 +6164,7 @@ msgstr "Hodiny"
 msgid "How capacity works"
 msgstr "Ako funguje kapacita"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:94
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:101
 msgid "How did they pay?"
 msgstr "Ako zaplatil?"
 
@@ -6403,7 +6407,7 @@ msgstr "Instagram"
 msgid "Instant Stripe payouts"
 msgstr "Okamžité výplaty cez Stripe"
 
-#: src/components/layouts/Event/index.tsx:158
+#: src/components/layouts/Event/index.tsx:153
 #: src/components/layouts/OrganizerLayout/index.tsx:114
 msgid "Integrations"
 msgstr "Integrácie"
@@ -6743,7 +6747,7 @@ msgstr "Najnovšie check-iny"
 msgid "Leave “from” as today to start right away."
 msgstr "Ponechajte „Od“ na dnešku, ak chcete začať hneď."
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:151
+#: src/components/routes/event/Cashless/Settings/index.tsx:149
 msgid "Leave blank to keep refunds open indefinitely."
 msgstr "Nechajte prázdne, ak majú vrátenia zostať otvorené neobmedzene."
 
@@ -6771,7 +6775,7 @@ msgstr "Nechajte zapnuté, aby sa vzťahovalo na všetky lístky podujatia. Vypn
 msgid "Leave this empty for a top-up desk that only loads balances and sells nothing."
 msgstr "Nechajte prázdne pre dobíjacie miesto, ktoré len dobíja zostatky a nič nepredáva."
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:83
+#: src/components/routes/event/Cashless/Settings/index.tsx:89
 msgid "Let attendees load money onto their ticket and pay with its QR code at your bars and stands."
 msgstr "Umožnite účastníkom nahrať peniaze na lístok a platiť jeho QR kódom vo vašich baroch a stánkoch."
 
@@ -6783,7 +6787,7 @@ msgstr "Dajte im vedieť o zmene"
 msgid "Let them know about the changes"
 msgstr "Dajte im vedieť o zmenách"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:142
+#: src/components/routes/event/Cashless/Settings/index.tsx:140
 msgid "Lets you return what attendees did not spend, to their card or in person."
 msgstr "Umožní vám vrátiť to, čo účastníci neminuli — na kartu alebo osobne."
 
@@ -6828,7 +6832,7 @@ msgid "List"
 msgstr "Zoznam"
 
 #: src/components/common/EventCard/index.tsx:99
-#: src/components/layouts/Event/index.tsx:240
+#: src/components/layouts/Event/index.tsx:235
 #: src/components/layouts/OrganizerLayout/index.tsx:219
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
@@ -6886,7 +6890,7 @@ msgstr "Načítavanie..."
 #: src/components/routes/event/Settings/index.tsx:54
 #: src/components/routes/event/Settings/Sections/LocationSettings/index.tsx:150
 #: src/components/routes/my-tickets/index.tsx:90
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:336
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:348
 msgid "Location"
 msgstr "Miesto"
 
@@ -6915,7 +6919,7 @@ msgstr "miest"
 msgid "Locations"
 msgstr "Miesta"
 
-#: src/components/layouts/CashlessPos/index.tsx:198
+#: src/components/layouts/CashlessPos/index.tsx:208
 msgid "Lock till"
 msgstr "Zamknúť pokladňu"
 
@@ -6958,7 +6962,7 @@ msgstr "Odhlásiť sa"
 msgid "Look Up My Tickets"
 msgstr "Vyhľadať moje lístky"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:82
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:85
 msgid "Looking up {scannedId}..."
 msgstr "Hľadá sa {scannedId}…"
 
@@ -7213,7 +7217,7 @@ msgstr "Minimum na objednávku"
 msgid "Minimum Price"
 msgstr "Minimálna cena"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:99
+#: src/components/routes/event/Cashless/Settings/index.tsx:105
 msgid "Minimum top-up"
 msgstr "Minimálne dobitie"
 
@@ -7361,7 +7365,7 @@ msgstr "Nam placerat elementum..."
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:63
 #: src/components/routes/admin/Configurations/index.tsx:224
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:80
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:236
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:248
 msgid "Name"
 msgstr "Meno"
 
@@ -7715,7 +7719,7 @@ msgid "No payment methods are currently available. Please contact the event orga
 msgstr "Momentálne nie sú dostupné žiadne platobné metódy. Kontaktujte organizátora udalosti."
 
 #: src/components/common/OrderStatusBadge/index.tsx:13
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:59
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:60
 msgid "No Payment Required"
 msgstr "Platba nie je potrebná"
 
@@ -7890,7 +7894,7 @@ msgstr "Nepočíta sa"
 msgid "Not Eligible"
 msgstr "Neoprávnený"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:170
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:191
 msgid "Not enough on this ticket. Short by {0}."
 msgstr "Na tomto lístku nie je dosť prostriedkov. Chýba {0}."
 
@@ -8162,14 +8166,6 @@ msgstr "Podrobnosti online udalosti"
 msgid "Online top-up"
 msgstr "Online dobitie"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:119
-msgid "Online top-up fee"
-msgstr "Poplatok za online dobitie"
-
-#: src/components/routes/event/Cashless/Settings/index.tsx:128
-msgid "Online top-up fee (percentage)"
-msgstr "Poplatok za online dobitie (percento)"
-
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Only {cap} available"
 msgstr "K dispozícii len {cap}"
@@ -8312,7 +8308,7 @@ msgstr "alebo"
 msgid "or add a single date"
 msgstr "alebo pridajte jeden termín"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:106
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:115
 msgid "Or choose an amount"
 msgstr "Alebo zvoľte sumu"
 
@@ -8320,8 +8316,8 @@ msgstr "Alebo zvoľte sumu"
 msgid "Or enable offline payments and disable Stripe"
 msgstr "Alebo povoľte offline platby a vypnite Stripe"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:72
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:62
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:75
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:66
 msgid "Or type the ticket ID"
 msgstr "Alebo zadajte ID lístka"
 
@@ -8350,7 +8346,7 @@ msgid "Order answers"
 msgstr "Odpovede objednávky"
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:404
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:377
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:389
 msgid "Order cancelled"
 msgstr "Objednávka zrušená"
 
@@ -8360,7 +8356,7 @@ msgstr "Objednávka zrušená"
 
 #: src/components/layouts/Checkout/index.tsx:322
 #: src/components/routes/product-widget/CollectInformation/index.tsx:394
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:387
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:399
 msgid "Order complete"
 msgstr "Objednávka dokončená"
 
@@ -8369,7 +8365,7 @@ msgstr "Objednávka dokončená"
 msgid "Order Confirmation"
 msgstr "Potvrdenie objednávky"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:544
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:556
 msgid "Order confirmation resent successfully"
 msgstr "Potvrdenie objednávky bolo úspešne znovu odoslané"
 
@@ -8377,7 +8373,7 @@ msgstr "Potvrdenie objednávky bolo úspešne znovu odoslané"
 msgid "Order Created"
 msgstr "Objednávka vytvorená"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:273
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:285
 msgid "Order Date"
 msgstr "Dátum objednávky"
 
@@ -8386,7 +8382,7 @@ msgid "Order details"
 msgstr "Podrobnosti objednávky"
 
 #: src/components/common/OrdersTable/index.tsx:178
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:613
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:625
 msgid "Order Details"
 msgstr "Podrobnosti objednávky"
 
@@ -8423,7 +8419,7 @@ msgstr "Objednávka označená ako zaplatená"
 msgid "Order not found"
 msgstr "Objednávka nenájdená"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:561
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:573
 msgid "Order Not Found"
 msgstr "Objednávka nenájdená"
 
@@ -8447,7 +8443,7 @@ msgstr "Vlastníci objednávok s produktmi"
 msgid "Order Ref"
 msgstr "Ref. objednávky"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:252
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:264
 msgid "Order Reference"
 msgstr "Referencia objednávky"
 
@@ -8480,7 +8476,7 @@ msgstr "Celková suma objednávky"
 msgid "Order Updated"
 msgstr "Objednávka aktualizovaná"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:483
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:495
 msgid "Order updated successfully"
 msgstr "Objednávka bola úspešne aktualizovaná"
 
@@ -8554,7 +8550,7 @@ msgstr "Názov organizácie"
 #: src/components/routes/admin/SpamEvents/index.tsx:129
 #: src/components/routes/admin/SpamEvents/index.tsx:245
 #: src/components/routes/events/Dashboard/index.tsx:194
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:355
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:367
 msgid "Organizer"
 msgstr "Organizátor"
 
@@ -8617,7 +8613,7 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "Organizátori môžu spravovať iba udalosti a produkty. Nemôžu spravovať používateľov, nastavenia účtu ani fakturačné informácie."
 
 #: src/components/common/OrdersTable/index.tsx:305
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:101
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:108
 #: src/components/modals/CashlessTopupModal/index.tsx:90
 #: src/constants/eventCategories.ts:31
 msgid "Other"
@@ -8698,7 +8694,7 @@ msgstr "Čiastočné vrátenie"
 
 #: src/components/common/OrderStatusBadge/index.tsx:16
 #: src/components/routes/event/orders.tsx:33
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:74
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:75
 msgid "Partially Refunded"
 msgstr "Čiastočne vrátené"
 
@@ -8809,11 +8805,11 @@ msgid "Payment Due Period"
 msgstr "Lehota splatnosti"
 
 #: src/components/common/OrderStatusBadge/index.tsx:14
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:61
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:62
 msgid "Payment Failed"
 msgstr "Platba zlyhala"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:413
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:425
 #: src/components/routes/product-widget/Payment/PaymentMethods/Offline/index.tsx:14
 msgid "Payment Instructions"
 msgstr "Pokyny k platbe"
@@ -8836,11 +8832,11 @@ msgid "Payment received"
 msgstr "Platba prijatá"
 
 #: src/components/common/OrderStatusBadge/index.tsx:12
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:62
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:63
 msgid "Payment Received"
 msgstr "Platba prijatá"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:286
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:298
 msgid "Payment Status"
 msgstr "Stav platby"
 
@@ -8873,7 +8869,7 @@ msgid "Pending review"
 msgstr "Čaká na kontrolu"
 
 #: src/components/common/EventCard/index.tsx:93
-#: src/components/layouts/Event/index.tsx:236
+#: src/components/layouts/Event/index.tsx:231
 #: src/components/routes/admin/Messages/index.tsx:124
 msgid "Pending Review"
 msgstr "Čaká na kontrolu"
@@ -9210,8 +9206,8 @@ msgstr "Náhľad"
 msgid "Preview checkout form"
 msgstr "Náhľad formulára pokladne"
 
-#: src/components/layouts/Event/index.tsx:298
-#: src/components/layouts/Event/index.tsx:302
+#: src/components/layouts/Event/index.tsx:293
+#: src/components/layouts/Event/index.tsx:297
 msgid "Preview Event page"
 msgstr "Náhľad stránky udalosti"
 
@@ -9258,7 +9254,7 @@ msgstr "Primárna farba"
 msgid "Primary Text Color"
 msgstr "Primárna farba textu"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:647
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:659
 msgid "Print All Tickets"
 msgstr "Vytlačiť všetky lístky"
 
@@ -9266,7 +9262,7 @@ msgstr "Vytlačiť všetky lístky"
 msgid "Print Preview"
 msgstr "Náhľad tlače"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:117
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:118
 msgid "Print Ticket"
 msgstr "Vytlačiť lístok"
 
@@ -9289,7 +9285,7 @@ msgstr "Zásady ochrany osobných údajov"
 msgid "Process Refund"
 msgstr "Spracovať vrátenie"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:396
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:408
 msgid "Processing order"
 msgstr "Spracovanie objednávky"
 
@@ -9593,10 +9589,10 @@ msgstr "Prepínač"
 msgid "Rate"
 msgstr "Sadzba"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:464
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:499
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:524
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:548
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:476
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:511
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:536
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:560
 msgid "Rate limit exceeded. Please try again later."
 msgstr "Prekročený limit požiadaviek. Skúste to neskôr."
 
@@ -9748,7 +9744,7 @@ msgstr "Vrátiť zostatok"
 msgid "Refund failed"
 msgstr "Vrátenie zlyhalo"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:72
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:73
 msgid "Refund Failed"
 msgstr "Vrátenie zlyhalo"
 
@@ -9765,7 +9761,7 @@ msgid "Refund pending"
 msgstr "Vrátenie čaká"
 
 #: src/components/common/OrderStatusBadge/index.tsx:17
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:71
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:72
 msgid "Refund Pending"
 msgstr "Vrátenie čaká"
 
@@ -9778,7 +9774,7 @@ msgid "Refund remaining balance"
 msgstr "Vrátiť zvyšný zostatok"
 
 #: src/components/routes/event/orders.tsx:60
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:279
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:291
 msgid "Refund Status"
 msgstr "Stav vrátenia"
 
@@ -9788,7 +9784,7 @@ msgstr "Stav vrátenia"
 #: src/components/common/StatsCharts/index.tsx:109
 #: src/components/routes/event/orders.tsx:32
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:428
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:73
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:74
 msgid "Refunded"
 msgstr "Vrátené"
 
@@ -9809,7 +9805,7 @@ msgstr "Vrátené: {0}"
 msgid "Refunds"
 msgstr "Vrátenia"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:150
+#: src/components/routes/event/Cashless/Settings/index.tsx:148
 msgid "Refunds close at"
 msgstr "Vrátenia sa uzatvárajú"
 
@@ -9864,7 +9860,7 @@ msgstr "Odstrániť"
 msgid "Remove label from all dates"
 msgstr "Odstrániť označenie zo všetkých termínov"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:143
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:146
 msgid "Remove one"
 msgstr "Odobrať jeden"
 
@@ -9931,7 +9927,7 @@ msgstr "Potrebné na fungovanie stránky, napríklad na udržanie prihlásenia."
 msgid "Resend code"
 msgstr "Znovu odoslať kód"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:262
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:274
 msgid "Resend Confirmation"
 msgstr "Znovu odoslať potvrdenie"
 
@@ -9939,7 +9935,7 @@ msgstr "Znovu odoslať potvrdenie"
 msgid "Resend Confirmation Email"
 msgstr "Znovu odoslať potvrdzovací e-mail"
 
-#: src/components/layouts/Event/index.tsx:318
+#: src/components/layouts/Event/index.tsx:313
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:162
 msgid "Resend email"
 msgstr "Znovu odoslať e-mail"
@@ -9960,7 +9956,7 @@ msgstr "Znovu odoslať pozvánku"
 msgid "Resend order email"
 msgstr "Znovu odoslať e-mail objednávky"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:136
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:148
 msgid "Resend Ticket"
 msgstr "Znovu odoslať lístok"
 
@@ -10178,7 +10174,7 @@ msgstr "Predajné miesto vytvorené"
 msgid "Sales point deleted"
 msgstr "Predajné miesto odstránené"
 
-#: src/components/layouts/CashlessPos/index.tsx:169
+#: src/components/layouts/CashlessPos/index.tsx:179
 msgid "Sales point not found"
 msgstr "Predajné miesto sa nenašlo"
 
@@ -10186,7 +10182,7 @@ msgstr "Predajné miesto sa nenašlo"
 msgid "Sales point updated"
 msgstr "Predajné miesto aktualizované"
 
-#: src/components/layouts/Event/index.tsx:153
+#: src/components/layouts/Event/index.tsx:148
 #: src/components/routes/event/Cashless/SalesPoints/index.tsx:37
 msgid "Sales Points"
 msgstr "Predajné miesta"
@@ -10289,7 +10285,7 @@ msgstr "Uložiť predajné miesto"
 msgid "Save schedule"
 msgstr "Uložiť harmonogram"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:162
+#: src/components/routes/event/Cashless/Settings/index.tsx:160
 msgid "Save settings"
 msgstr "Uložiť nastavenia"
 
@@ -10731,6 +10727,7 @@ msgid "Select which events will trigger this webhook"
 msgstr "Vybrať, ktoré udalosti spustia tento webhook"
 
 #: src/components/forms/ProductForm/index.tsx:481
+#: src/components/routes/event/Cashless/Settings/index.tsx:125
 msgid "Select..."
 msgstr "Vybrať..."
 
@@ -10876,8 +10873,8 @@ msgstr "SEO názov"
 msgid "September"
 msgstr "September"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:98
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:79
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:101
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:83
 msgid "Serve someone else"
 msgstr "Obslúžiť ďalšieho"
 
@@ -11008,8 +11005,8 @@ msgstr "Zdieľať"
 msgid "Share Affiliate Link"
 msgstr "Zdieľať partnerský odkaz"
 
-#: src/components/layouts/Event/index.tsx:256
-#: src/components/layouts/Event/index.tsx:262
+#: src/components/layouts/Event/index.tsx:251
+#: src/components/layouts/Event/index.tsx:257
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:102
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:131
 msgid "Share Event"
@@ -11104,7 +11101,7 @@ msgstr "Zobrazovať zostávajúcu kapacitu kupujúcim"
 msgid "Show tax and fees separately"
 msgstr "Zobraziť dane a poplatky samostatne"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:80
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:81
 msgid "Show the QR code on your ticket at any bar or stand and the amount is taken straight from this balance — no cash, no card."
 msgstr "Ukážte QR kód na svojom lístku v ktoromkoľvek bare či stánku a suma sa strhne priamo z tohto zostatku — bez hotovosti a bez karty."
 
@@ -11531,6 +11528,7 @@ msgstr "Predmet:"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:168
 msgid "Subtotal"
 msgstr "Medzisúčet"
 
@@ -11698,7 +11696,7 @@ msgstr "Webhook bol úspešne aktualizovaný"
 
 #: src/components/common/ProgressStepper/index.tsx:20
 #: src/components/common/ProgressStepper/index.tsx:24
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:583
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:595
 msgid "Summary"
 msgstr "Súhrn"
 
@@ -11747,7 +11745,11 @@ msgstr "Tričko"
 msgid "T-shirts, mugs and more"
 msgstr "Tričká, hrnčeky a ďalšie"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:133
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:114
+msgid "Take on the card terminal"
+msgstr "Zaúčtovať na platobnom termináli"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:136
 msgid "Tap a product to start an order."
 msgstr "Ťuknutím na produkt začnite objednávku."
 
@@ -11775,6 +11777,7 @@ msgstr "Cielené na účastníkov z {0} vybraných termínov."
 #: src/components/common/OrdersTable/index.tsx:269
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:180
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:42
@@ -11817,6 +11820,7 @@ msgstr "Súhrn daní"
 
 #: src/components/common/InlineOrderSummary/index.tsx:189
 #: src/components/forms/ProductForm/index.tsx:483
+#: src/components/routes/event/Cashless/Settings/index.tsx:127
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:48
 msgid "Taxes"
 msgstr "Dane"
@@ -11912,7 +11916,7 @@ msgstr "Tento PIN nie je správny."
 msgid "That promo code is invalid"
 msgstr "Tento promo kód je neplatný"
 
-#: src/components/layouts/CashlessPos/index.tsx:49
+#: src/components/layouts/CashlessPos/index.tsx:59
 msgid "That ticket could not be found."
 msgstr "Tento lístok sa nenašiel."
 
@@ -11991,7 +11995,7 @@ msgstr "Odkaz, na ktorý ste klikli, je neplatný."
 msgid "The maximum number of products for {0}is {1}"
 msgstr "Maximálny počet produktov pre {0} je {1}"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:53
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:54
 msgid "The minimum top-up is {0}"
 msgstr "Minimálne dobitie je {0}"
 
@@ -12175,7 +12179,7 @@ msgstr "Tento účastník má nezaplatenú objednávku."
 msgid "This balance could not be refunded"
 msgstr "Tento zostatok sa nepodarilo vrátiť"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:95
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:98
 msgid "This balance is frozen"
 msgstr "Tento zostatok je zmrazený"
 
@@ -12265,11 +12269,11 @@ msgstr "Toto podujatie nie je dostupné"
 msgid "This event is not published yet"
 msgstr "Táto udalosť ešte nie je zverejnená"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:46
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:47
 msgid "This event is not using cashless payments."
 msgstr "Toto podujatie nepoužíva cashless platby."
 
-#: src/components/layouts/Event/index.tsx:194
+#: src/components/layouts/Event/index.tsx:189
 msgid "This event is pending manual review and cannot be published until the review is complete."
 msgstr "Toto podujatie čaká na manuálnu kontrolu a nemôže byť zverejnené, kým sa kontrola nedokončí."
 
@@ -12326,7 +12330,7 @@ msgstr "Tento odkaz je neplatný alebo vypršal."
 msgid "This link is no longer valid"
 msgstr "Tento odkaz už nie je platný"
 
-#: src/components/layouts/CashlessPos/index.tsx:170
+#: src/components/layouts/CashlessPos/index.tsx:180
 msgid "This link is no longer valid. Ask the organizer for a new one."
 msgstr "Tento odkaz už neplatí. Požiadajte organizátora o nový."
 
@@ -12354,7 +12358,7 @@ msgstr "Táto objednávka už bola zaplatená."
 msgid "This order has already been refunded."
 msgstr "Táto objednávka už bola vrátená."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:378
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:390
 msgid "This order has been cancelled."
 msgstr "Táto objednávka bola zrušená."
 
@@ -12362,11 +12366,11 @@ msgstr "Táto objednávka bola zrušená."
 msgid "This order has expired. Please start again."
 msgstr "Táto objednávka vypršala. Začnite znovu."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:397
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:409
 msgid "This order is being processed."
 msgstr "Táto objednávka sa spracováva."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:388
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:400
 msgid "This order is complete."
 msgstr "Táto objednávka je dokončená."
 
@@ -12394,7 +12398,7 @@ msgstr "Profil tohto organizátora ešte nie je zverejnený"
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr "Toto prepíše všetky nastavenia viditeľnosti a skryje produkt pred všetkými zákazníkmi."
 
-#: src/components/layouts/CashlessPos/index.tsx:116
+#: src/components/layouts/CashlessPos/index.tsx:126
 msgid "This payment could not be taken."
 msgstr "Túto platbu sa nepodarilo prijať."
 
@@ -12430,7 +12434,7 @@ msgstr "Táto správa slúži iba na informačné účely. Pred použitím tých
 msgid "This reset password link is invalid or expired."
 msgstr "Tento odkaz na obnovenie hesla je neplatný alebo vypršal."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:38
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:42
 msgid "This sales point is not allowed to top up balances."
 msgstr "Toto predajné miesto nesmie dobíjať zostatky."
 
@@ -12446,7 +12450,7 @@ msgstr "Tento lístok bol práve naskenovaný. Pred ďalším skenovaním počka
 msgid "This tier's quantity is shared across all dates"
 msgstr "Množstvo tejto úrovne je spoločné pre všetky dátumy"
 
-#: src/components/layouts/CashlessPos/index.tsx:144
+#: src/components/layouts/CashlessPos/index.tsx:154
 msgid "This top-up could not be recorded."
 msgstr "Toto dobitie sa nepodarilo zaznamenať."
 
@@ -12454,7 +12458,7 @@ msgstr "Toto dobitie sa nepodarilo zaznamenať."
 msgid "This transaction could not be reversed"
 msgstr "Túto transakciu sa nepodarilo stornovať"
 
-#: src/components/layouts/CashlessPos/index.tsx:159
+#: src/components/layouts/CashlessPos/index.tsx:169
 msgid "This transaction could not be undone."
 msgstr "Túto transakciu sa nepodarilo vrátiť späť."
 
@@ -12574,7 +12578,7 @@ msgstr "Náhľad lístka pre"
 msgid "Ticket price"
 msgstr "Cena lístka"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:520
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:532
 msgid "Ticket resent successfully"
 msgstr "Lístok bol úspešne znovu odoslaný"
 
@@ -12667,7 +12671,7 @@ msgstr "Počet použití"
 #: src/components/routes/auth/AcceptInvitation/index.tsx:119
 #: src/components/routes/event/Settings/Sections/EventDetailsForm/index.tsx:145
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:125
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:350
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:362
 #: src/components/routes/profile/ManageProfile/index.tsx:188
 msgid "Timezone"
 msgstr "Časové pásmo"
@@ -12717,11 +12721,11 @@ msgid "Top Organizers (Last 14 Days)"
 msgstr "Najlepší organizátori (posledných 14 dní)"
 
 #: src/components/common/CashlessWalletTable/index.tsx:104
-#: src/components/layouts/CashlessPos/index.tsx:211
+#: src/components/layouts/CashlessPos/index.tsx:221
 msgid "Top up"
 msgstr "Dobiť"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:122
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:131
 msgid "Top up {0}"
 msgstr "Dobiť {0}"
 
@@ -12743,9 +12747,17 @@ msgstr "Dobitie"
 msgid "Top-up at the event"
 msgstr "Dobitie na podujatí"
 
+#: src/components/routes/event/Cashless/Settings/index.tsx:123
+msgid "Top-up taxes and fees"
+msgstr "Dane a poplatky za dobitie"
+
 #: src/components/common/CashlessTransactionTable/index.tsx:61
 msgid "Top-ups and purchases will appear here as they happen."
 msgstr "Dobitia a nákupy sa tu budú zobrazovať priebežne."
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:90
+msgid "Top-ups are taken at the event. Show your ticket QR code at any top-up point."
+msgstr "Dobitia sa robia na podujatí. Ukážte QR kód lístka na ktoromkoľvek dobíjacom mieste."
 
 #: src/components/common/CashlessWalletTable/index.tsx:72
 #: src/components/common/StatsCharts/index.tsx:107
@@ -12759,7 +12771,7 @@ msgstr "celkom"
 #: src/components/common/AdminOrdersTable/index.tsx:81
 #: src/components/common/InlineOrderSummary/index.tsx:219
 #: src/components/common/OrderSummary/index.tsx:104
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:164
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:185
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
@@ -12859,11 +12871,11 @@ msgstr "Sledovanie a analytika"
 msgid "Transaction reversed"
 msgstr "Transakcia stornovaná"
 
-#: src/components/layouts/CashlessPos/index.tsx:155
+#: src/components/layouts/CashlessPos/index.tsx:165
 msgid "Transaction undone"
 msgstr "Transakcia vrátená späť"
 
-#: src/components/layouts/Event/index.tsx:154
+#: src/components/layouts/Event/index.tsx:149
 msgid "Transactions"
 msgstr "Transakcie"
 
@@ -12909,7 +12921,7 @@ msgstr "Vypnúť zvuk"
 msgid "Turn sound on"
 msgstr "Zapnúť zvuk"
 
-#: src/components/routes/event/Cashless/Settings/index.tsx:110
+#: src/components/routes/event/Cashless/Settings/index.tsx:116
 msgid "Turn this off to take top-ups only at your sales points."
 msgstr "Vypnite, ak chcete dobíjať len na predajných miestach."
 
@@ -13451,7 +13463,7 @@ msgstr "Overené účty môžu posielať správy účastníkom a spravovať e-ma
 msgid "Verify Email"
 msgstr "Overiť e-mail"
 
-#: src/components/layouts/Event/index.tsx:315
+#: src/components/layouts/Event/index.tsx:310
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:156
 msgid "Verify your email"
 msgstr "Overte svoj e-mail"
@@ -13566,7 +13578,7 @@ msgstr "Zobraziť domovskú stránku organizátora"
 
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:59
 #: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:109
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:110
 msgid "View Ticket"
 msgstr "Zobraziť lístok"
 
@@ -13655,7 +13667,7 @@ msgstr "Nepodarilo sa odstrániť kategóriu. Skúste to znovu."
 msgid "We couldn't disconnect this Stripe account. Please try again."
 msgstr "Tento účet Stripe sa nepodarilo odpojiť. Skúste to znova."
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:32
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:33
 msgid "We couldn't find a cashless balance for this ticket. The link may have expired."
 msgstr "Pre tento lístok sme nenašli cashless zostatok. Odkaz mohol vypršať."
 
@@ -13667,7 +13679,7 @@ msgstr "Nenašli sa žiadne objednávky spojené s touto e-mailovou adresou."
 msgid "We couldn't find any tickets matching {0}"
 msgstr "Nenašli sa žiadne lístky zodpovedajúce {0}"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:562
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:574
 msgid "We couldn't find the order you're looking for. The link may have expired or the order details may have changed."
 msgstr "Nenašla sa objednávka, ktorú hľadáte. Odkaz mohol vypršať alebo sa podrobnosti objednávky mohli zmeniť."
 
@@ -13695,7 +13707,7 @@ msgstr "Momentálne sa nevieme spojiť so Stripe. Skúste to o chvíľu znova."
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Nepodarilo sa preusporiadať kategórie. Skúste to znovu."
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:60
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:61
 msgid "We couldn't start your top-up. Please try again."
 msgstr "Nepodarilo sa spustiť vaše dobitie. Skúste to znova."
 
@@ -13809,7 +13821,7 @@ msgstr "Webhook nebude odosielať notifikácie"
 msgid "Webhook will send notifications"
 msgstr "Webhook bude odosielať notifikácie"
 
-#: src/components/layouts/Event/index.tsx:160
+#: src/components/layouts/Event/index.tsx:155
 #: src/components/layouts/OrganizerLayout/index.tsx:115
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
@@ -14047,7 +14059,7 @@ msgstr "Kto organizuje túto udalosť?"
 msgid "Who should be asked this question?"
 msgstr "Komu má byť táto otázka položená?"
 
-#: src/components/layouts/Event/index.tsx:159
+#: src/components/layouts/Event/index.tsx:154
 msgid "Widget Embed"
 msgstr "Vloženie widgetu"
 
@@ -14294,7 +14306,7 @@ msgstr "Na začiatok potrebujete aspoň jeden produkt. Bezplatný, platený aleb
 msgid "You're changing session times"
 msgstr "Meníte časy termínov"
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:170
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:182
 msgid "You're going to {0}!"
 msgstr "Idete na {0}!"
 
@@ -14350,7 +14362,7 @@ msgstr "Vaši účastníci sa zobrazia tu po registrácii na udalosť. Môžete 
 msgid "Your awesome website 🎉"
 msgstr "Vaša skvelá webová stránka 🎉"
 
-#: src/components/routes/product-widget/CashlessWallet/index.tsx:67
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:68
 msgid "Your cashless balance"
 msgstr "Váš cashless zostatok"
 
@@ -14402,11 +14414,11 @@ msgstr "Vaše meno"
 msgid "Your new password must be at least 8 characters long."
 msgstr "Nové heslo musí mať aspoň 8 znakov."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:599
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:611
 msgid "Your order details have been updated. A confirmation email has been sent to the new email address."
 msgstr "Podrobnosti objednávky boli aktualizované. Na novú e-mailovú adresu bol odoslaný potvrdzovací e-mail."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:171
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:183
 msgid "Your order has been cancelled"
 msgstr "Vaša objednávka bola zrušená"
 
@@ -14414,7 +14426,7 @@ msgstr "Vaša objednávka bola zrušená"
 msgid "Your order has been cancelled."
 msgstr "Vaša objednávka bola zrušená."
 
-#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:173
+#: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:185
 msgid "Your order is awaiting payment"
 msgstr "Vaša objednávka čaká na platbu"
 

@@ -193,8 +193,7 @@ export class ApiClient {
       cashless_allow_remaining_balance_refund: boolean;
       cashless_refund_deadline_at?: string | null;
       cashless_online_topup_enabled?: boolean;
-      cashless_topup_fixed_fee?: number;
-      cashless_topup_percentage_fee?: number;
+      cashless_topup_tax_and_fee_ids?: number[];
     },
   ): Promise<CashlessSettings> {
     return unwrap<CashlessSettings>(
@@ -202,8 +201,7 @@ export class ApiClient {
         headers: jsonHeaders,
         data: {
           cashless_online_topup_enabled: true,
-          cashless_topup_fixed_fee: 0,
-          cashless_topup_percentage_fee: 0,
+          cashless_topup_tax_and_fee_ids: [],
           ...payload,
         },
       }),

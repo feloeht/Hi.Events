@@ -1516,8 +1516,7 @@ export interface CashlessSettings {
     cashless_allow_remaining_balance_refund: boolean;
     cashless_refund_deadline_at: string | null;
     cashless_online_topup_enabled: boolean;
-    cashless_topup_fixed_fee: number;
-    cashless_topup_percentage_fee: number;
+    cashless_topup_tax_and_fee_ids: number[];
 }
 
 export interface CashlessTransactionItem {
@@ -1633,4 +1632,11 @@ export interface CashlessDailyStats {
     topped_up: number;
     spent: number;
     refunded: number;
+}
+
+export interface CashlessQuote {
+    subtotal: number;
+    fees: number;
+    taxes: number;
+    total: number;
 }

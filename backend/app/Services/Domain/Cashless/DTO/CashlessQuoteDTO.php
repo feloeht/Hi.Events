@@ -3,13 +3,13 @@
 namespace HiEvents\Services\Domain\Cashless\DTO;
 
 use HiEvents\DataTransferObjects\BaseDataObject;
-use Illuminate\Support\Collection;
 
-class CashlessBasketDTO extends BaseDataObject
+class CashlessQuoteDTO extends BaseDataObject
 {
     public function __construct(
+        public float $subtotal,
+        public float $fees,
+        public float $taxes,
         public float $total,
-        /** @var Collection<CashlessTransactionItemDTO> */
-        public Collection $items,
     ) {}
 }

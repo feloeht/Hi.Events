@@ -10,6 +10,7 @@ import {HomepageInfoMessage} from "../../common/HomepageInfoMessage";
 import {showError, showSuccess} from "../../../utilites/notifications.tsx";
 import {formatCurrency} from "../../../utilites/currency.ts";
 import {usePosSession} from "./usePosSession.ts";
+import {useCashlessQuote} from "./useCashlessQuote.ts";
 import {PinGate} from "./PinGate.tsx";
 import {CartLine, ChargeTab} from "./ChargeTab.tsx";
 import {TopUpTab} from "./TopUpTab.tsx";
@@ -33,6 +34,15 @@ const CashlessPos = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [reversingShortId, setReversingShortId] = useState<string | null>(null);
     const [scannerResetToken, setScannerResetToken] = useState(0);
+    const [topupAmount, setTopupAmount] = useState(20);
+
+    const basket = cart.map((line) => ({
+        product_id: line.product_id,
+        product_price_id: line.product_price_id,
+        quantity: line.quantity,
+    }));
+    const chargeQuote = useCashlessQuote(String(salesPointShortId), token, {items: basket});
+    const topupQuote = useCashlessQuote(String(salesPointShortId), token, {topupAmount});
 
     const currency = salesPoint?.currency ?? 'USD';
     const sellsProducts = (salesPoint?.products?.length ?? 0) > 0;
@@ -229,6 +239,7 @@ const CashlessPos = () => {
                         onClear={resetCustomer}
                         onCharge={charge}
                         scannerResetToken={scannerResetToken}
+                        quote={chargeQuote}
                     />
                 </Tabs.Panel>}
 
@@ -242,6 +253,8 @@ const CashlessPos = () => {
                         onClear={resetCustomer}
                         onTopUp={topUp}
                         scannerResetToken={scannerResetToken}
+                        quote={topupQuote}
+                        onAmountChange={setTopupAmount}
                     />
                 </Tabs.Panel>
 

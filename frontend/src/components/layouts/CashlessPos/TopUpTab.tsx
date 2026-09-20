@@ -1,7 +1,7 @@
 import {t} from "@lingui/macro";
 import {Button, NumberInput, Select, TextInput} from "@mantine/core";
 import {useState} from "react";
-import {CashlessSalesPointPublic, CashlessStaffPaymentMethod, CashlessWalletPublic} from "../../../types.ts";
+import {CashlessQuote, CashlessSalesPointPublic, CashlessStaffPaymentMethod, CashlessWalletPublic} from "../../../types.ts";
 import {InlineCameraScanner} from "../../common/InlineCameraScanner";
 import {formatCurrency} from "../../../utilites/currency.ts";
 import classes from "./CashlessPos.module.scss";
@@ -15,6 +15,8 @@ interface TopUpTabProps {
     onClear: () => void;
     onTopUp: (amount: number, paymentMethod: CashlessStaffPaymentMethod) => void;
     scannerResetToken: number;
+    quote: CashlessQuote | null;
+    onAmountChange: (amount: number) => void;
 }
 
 export const TopUpTab = ({
@@ -26,6 +28,8 @@ export const TopUpTab = ({
                              onClear,
                              onTopUp,
                              scannerResetToken,
+                             quote,
+                             onAmountChange,
                          }: TopUpTabProps) => {
     const [manualId, setManualId] = useState('');
     const [amount, setAmount] = useState<number | string>(20);
@@ -86,7 +90,10 @@ export const TopUpTab = ({
                         min={0.01}
                         decimalScale={2}
                         value={amount}
-                        onChange={setAmount}
+                        onChange={(value) => {
+                            setAmount(value);
+                            onAmountChange(Number(value) || 0);
+                        }}
                         data-testid="cashless-pos-topup-amount-input"
                     />
 
@@ -101,6 +108,18 @@ export const TopUpTab = ({
                             {value: 'OTHER', label: t`Other`},
                         ]}
                     />
+
+                    {paymentMethod !== 'CASH' && !!quote?.fees && (
+                        <div className={classes.terminalTotal}>
+                            <span>{t`Take on the card terminal`}</span>
+                            <strong data-testid="cashless-pos-terminal-total">
+                                {formatCurrency(quote.total, currency)}
+                            </strong>
+                            <span className={classes.terminalNote}>
+                                {t`${formatCurrency(Number(amount) || 0, currency)} onto the ticket plus ${formatCurrency(quote.fees + quote.taxes, currency)} in fees`}
+                            </span>
+                        </div>
+                    )}
 
                     <Button
                         size="lg"

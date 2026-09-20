@@ -123,6 +123,44 @@ test.describe('cashless', () => {
     await expect(authedPage.getByRole('link', { name: 'Sales Points' })).toHaveAttribute('aria-current', 'page');
   });
 
+  test('a top-up-only sales point shows the amount to key into the card terminal', async ({ page, api, account, publicApi }) => {
+    const { event, order } = await seedCashlessEvent(api, publicApi, account.organizerId);
+    const attendee = order.attendees[0];
+
+    const { id: accountId } = await api.getAccount();
+    const fee = await api.createTaxOrFee(accountId, {
+      name: uniqueName('Card handling'),
+      calculation_type: 'FIXED',
+      type: 'FEE',
+      rate: 0.35,
+      is_active: true,
+      is_default: false,
+    });
+    await api.updateCashlessSettings(event.eventId, {
+      cashless_enabled: true,
+      cashless_min_topup_amount: 5,
+      cashless_allow_remaining_balance_refund: false,
+      cashless_topup_tax_and_fee_ids: [fee.id],
+    });
+
+    const salesPoint = await api.createCashlessSalesPoint(event.eventId, {
+      name: uniqueName('Top-up desk'),
+      product_ids: [],
+    });
+
+    const pos = new CashlessPosPage(page);
+    await pos.goto(salesPoint.short_id);
+
+    await expect(page.getByRole('tab', { name: 'Charge' })).toHaveCount(0);
+
+    await pos.lookUpTicket(attendee.publicId, 'cashless-pos-topup-ticket-input');
+    await page.getByRole('combobox', { name: 'How did they pay?' }).click();
+    await page.getByRole('option', { name: 'Card terminal' }).click();
+    await page.getByTestId('cashless-pos-topup-amount-input').fill('20');
+
+    await expect(page.getByTestId('cashless-pos-terminal-total')).toHaveText('$20.35');
+  });
+
   test('a sales point refuses the wrong PIN', async ({ page, api, account, publicApi }) => {
     const { event, drinkId } = await seedCashlessEvent(api, publicApi, account.organizerId);
 

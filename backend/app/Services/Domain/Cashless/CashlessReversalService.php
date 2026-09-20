@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace HiEvents\Services\Domain\Cashless;
 
 use HiEvents\DomainObjects\CashlessTransactionDomainObject;
+use HiEvents\DomainObjects\Enums\CashlessTransactionType;
 use HiEvents\Exceptions\CashlessTransactionNotReversibleException;
 use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Exceptions\InsufficientCashlessBalanceException;
@@ -14,7 +15,7 @@ class CashlessReversalService
 {
     public function __construct(
         private readonly CashlessWalletService $walletService,
-        private readonly CashlessProductSalesService $productSalesService,
+        private readonly CashlessPosOrderService $posOrderService,
     ) {}
 
     /**
@@ -30,7 +31,9 @@ class CashlessReversalService
     ): CashlessTransactionDomainObject {
         $reversal = $this->walletService->reverse($transaction, $reversedByUserId, $notes);
 
-        $this->productSalesService->unrecordSale($transaction);
+        if ($transaction->getType() === CashlessTransactionType::PURCHASE->value && $transaction->getOrderId() !== null) {
+            $this->posOrderService->cancelSale($transaction->getOrderId());
+        }
 
         return $reversal;
     }

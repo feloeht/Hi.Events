@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace HiEvents\Services\Application\Handlers\Cashless;
 
-use HiEvents\DomainObjects\Generated\TaxAndFeesDomainObjectAbstract;
+use HiEvents\DomainObjects\Generated\ProductDomainObjectAbstract;
+use HiEvents\DomainObjects\TaxAndFeesDomainObject;
 use HiEvents\Exceptions\ResourceNotFoundException;
-use HiEvents\Repository\Interfaces\TaxAndFeeRepositoryInterface;
+use HiEvents\Repository\Interfaces\ProductRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Cashless\DTO\CashlessSettingsDTO;
 use HiEvents\Services\Domain\Cashless\CashlessSettingsService;
 
@@ -14,7 +15,7 @@ class GetCashlessSettingsHandler
 {
     public function __construct(
         private readonly CashlessSettingsService $cashlessSettingsService,
-        private readonly TaxAndFeeRepositoryInterface $taxAndFeeRepository,
+        private readonly ProductRepositoryInterface $productRepository,
     ) {}
 
     /**
@@ -32,19 +33,23 @@ class GetCashlessSettingsHandler
             cashless_allow_remaining_balance_refund: $settings->getCashlessAllowRemainingBalanceRefund(),
             cashless_refund_deadline_at: $settings->getCashlessRefundDeadlineAt(),
             cashless_online_topup_enabled: $settings->getCashlessOnlineTopupEnabled(),
-            cashless_topup_fixed_fee: $this->feeRate($settings->getCashlessTopupFixedFeeId()),
-            cashless_topup_percentage_fee: $this->feeRate($settings->getCashlessTopupPercentageFeeId()),
+            cashless_topup_tax_and_fee_ids: $this->topupTaxAndFeeIds($settings->getCashlessTopupProductId()),
         );
     }
 
-    private function feeRate(?int $feeId): float
+    private function topupTaxAndFeeIds(?int $topupProductId): array
     {
-        if ($feeId === null) {
-            return 0.0;
+        if ($topupProductId === null) {
+            return [];
         }
 
-        return $this->taxAndFeeRepository->findFirstWhere([
-            TaxAndFeesDomainObjectAbstract::ID => $feeId,
-        ])?->getRate() ?? 0.0;
+        $product = $this->productRepository
+            ->loadRelation(TaxAndFeesDomainObject::class)
+            ->findFirstWhere([ProductDomainObjectAbstract::ID => $topupProductId]);
+
+        return ($product?->getTaxAndFees() ?? collect())
+            ->map(fn (TaxAndFeesDomainObject $taxOrFee) => $taxOrFee->getId())
+            ->values()
+            ->toArray();
     }
 }

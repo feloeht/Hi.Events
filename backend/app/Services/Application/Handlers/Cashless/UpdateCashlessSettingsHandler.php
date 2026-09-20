@@ -12,8 +12,9 @@ use HiEvents\Repository\Interfaces\EventSettingsRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Cashless\DTO\CashlessSettingsDTO;
 use HiEvents\Services\Application\Handlers\Cashless\DTO\UpdateCashlessSettingsDTO;
 use HiEvents\Services\Domain\Cashless\CashlessSettingsService;
-use HiEvents\Services\Domain\Cashless\CashlessTopupFeeProvisionService;
 use HiEvents\Services\Domain\Cashless\CashlessTopupProductProvisionService;
+use HiEvents\Services\Domain\Tax\DTO\TaxAndProductAssociateParams;
+use HiEvents\Services\Domain\Tax\TaxAndProductAssociationService;
 use Illuminate\Database\DatabaseManager;
 use Throwable;
 
@@ -23,9 +24,9 @@ class UpdateCashlessSettingsHandler
         private readonly EventSettingsRepositoryInterface $eventSettingsRepository,
         private readonly EventRepositoryInterface $eventRepository,
         private readonly CashlessTopupProductProvisionService $topupProductProvisionService,
-        private readonly CashlessTopupFeeProvisionService $topupFeeProvisionService,
         private readonly GetCashlessSettingsHandler $getCashlessSettingsHandler,
         private readonly CashlessSettingsService $cashlessSettingsService,
+        private readonly TaxAndProductAssociationService $taxAndProductAssociationService,
         private readonly DatabaseManager $databaseManager,
     ) {}
 
@@ -59,11 +60,12 @@ class UpdateCashlessSettingsHandler
                     minimumTopupAmount: $settingsData->cashless_min_topup_amount,
                 );
 
-                $this->topupFeeProvisionService->sync(
-                    event: $event,
-                    settings: $this->cashlessSettingsService->getSettings($settingsData->event_id),
-                    fixedFee: $settingsData->cashless_topup_fixed_fee,
-                    percentageFee: $settingsData->cashless_topup_percentage_fee,
+                $this->taxAndProductAssociationService->addTaxesToProduct(
+                    new TaxAndProductAssociateParams(
+                        productId: $this->cashlessSettingsService->getSettings($settingsData->event_id)->getCashlessTopupProductId(),
+                        accountId: $event->getAccountId(),
+                        taxAndFeeIds: $settingsData->cashless_topup_tax_and_fee_ids,
+                    ),
                 );
             }
 

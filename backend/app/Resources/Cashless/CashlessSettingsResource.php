@@ -23,8 +23,7 @@ class CashlessSettingsResource extends BaseResource
             'cashless_allow_remaining_balance_refund' => $this->cashless_allow_remaining_balance_refund,
             'cashless_refund_deadline_at' => $this->cashless_refund_deadline_at,
             'cashless_online_topup_enabled' => $this->cashless_online_topup_enabled,
-            'cashless_topup_fixed_fee' => $this->cashless_topup_fixed_fee,
-            'cashless_topup_percentage_fee' => $this->cashless_topup_percentage_fee,
+            'cashless_topup_tax_and_fee_ids' => $this->cashless_topup_tax_and_fee_ids,
         ];
     }
 }

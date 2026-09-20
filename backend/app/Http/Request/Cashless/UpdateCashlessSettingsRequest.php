@@ -16,8 +16,8 @@ class UpdateCashlessSettingsRequest extends BaseRequest
             'cashless_allow_remaining_balance_refund' => ['required', 'boolean'],
             'cashless_refund_deadline_at' => ['nullable', 'date'],
             'cashless_online_topup_enabled' => ['required', 'boolean'],
-            'cashless_topup_fixed_fee' => ['required', 'numeric', 'min:0', 'max:1000'],
-            'cashless_topup_percentage_fee' => ['required', 'numeric', 'min:0', 'max:100'],
+            'cashless_topup_tax_and_fee_ids' => ['present', 'array'],
+            'cashless_topup_tax_and_fee_ids.*' => ['required', 'integer'],
         ];
     }
 }

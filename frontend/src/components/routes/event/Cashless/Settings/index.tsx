@@ -1,18 +1,20 @@
 import {t} from "@lingui/macro";
-import {Button, NumberInput, Switch, TextInput} from "@mantine/core";
+import {Button, ComboboxItem, MultiSelect, NumberInput, Switch, TextInput} from "@mantine/core";
 import {useForm} from "@mantine/form";
 import {useEffect} from "react";
 import {useParams} from "react-router";
 import {PageBody} from "../../../../common/PageBody";
 import {PageTitle} from "../../../../common/PageTitle";
 import {Card} from "../../../../common/Card";
-import {InputGroup} from "../../../../common/InputGroup";
 import {useGetCashlessSettings} from "../../../../../queries/useGetCashlessSettings.ts";
 import {useUpdateCashlessSettings} from "../../../../../mutations/useUpdateCashlessSettings.ts";
 import {useGetEvent} from "../../../../../queries/useGetEvent.ts";
 import {useFormErrorResponseHandler} from "../../../../../hooks/useFormErrorResponseHandler.tsx";
 import {showSuccess} from "../../../../../utilites/notifications.tsx";
 import {getCurrencySymbol} from "../../../../../utilites/currency.ts";
+import {useGetTaxesAndFees} from "../../../../../queries/useGetTaxesAndFees.ts";
+import {taxAndFeeLabel} from "../../../../forms/ProductForm/ledgerSummaries.ts";
+import {TaxAndFee, TaxAndFeeType} from "../../../../../types.ts";
 
 interface CashlessSettingsFormValues {
     cashless_enabled: boolean;
@@ -20,8 +22,7 @@ interface CashlessSettingsFormValues {
     cashless_allow_remaining_balance_refund: boolean;
     cashless_refund_deadline_at: string;
     cashless_online_topup_enabled: boolean;
-    cashless_topup_fixed_fee: number | string;
-    cashless_topup_percentage_fee: number | string;
+    cashless_topup_tax_and_fee_ids: string[];
 }
 
 const CashlessSettings = () => {
@@ -30,6 +31,14 @@ const CashlessSettings = () => {
     const {data: settings} = useGetCashlessSettings(eventId);
     const updateMutation = useUpdateCashlessSettings();
     const errorHandler = useFormErrorResponseHandler();
+    const {data: taxesAndFees} = useGetTaxesAndFees();
+
+    const taxAndFeeOptions = (type: TaxAndFeeType): ComboboxItem[] => taxesAndFees?.data
+        ?.filter((item: TaxAndFee) => item.type === type)
+        .map((item: TaxAndFee) => ({
+            label: taxAndFeeLabel(item, event?.currency),
+            value: String(item.id),
+        })) || [];
 
     const form = useForm<CashlessSettingsFormValues>({
         initialValues: {
@@ -38,8 +47,7 @@ const CashlessSettings = () => {
             cashless_allow_remaining_balance_refund: false,
             cashless_refund_deadline_at: '',
             cashless_online_topup_enabled: true,
-            cashless_topup_fixed_fee: 0,
-            cashless_topup_percentage_fee: 0,
+            cashless_topup_tax_and_fee_ids: [],
         },
     });
 
@@ -54,8 +62,7 @@ const CashlessSettings = () => {
             cashless_allow_remaining_balance_refund: settings.cashless_allow_remaining_balance_refund,
             cashless_refund_deadline_at: settings.cashless_refund_deadline_at?.slice(0, 16) ?? '',
             cashless_online_topup_enabled: settings.cashless_online_topup_enabled,
-            cashless_topup_fixed_fee: settings.cashless_topup_fixed_fee,
-            cashless_topup_percentage_fee: settings.cashless_topup_percentage_fee,
+            cashless_topup_tax_and_fee_ids: settings.cashless_topup_tax_and_fee_ids.map(String),
         });
     }, [settings]);
 
@@ -68,8 +75,7 @@ const CashlessSettings = () => {
                 cashless_allow_remaining_balance_refund: values.cashless_allow_remaining_balance_refund,
                 cashless_refund_deadline_at: values.cashless_refund_deadline_at || null,
                 cashless_online_topup_enabled: values.cashless_online_topup_enabled,
-                cashless_topup_fixed_fee: Number(values.cashless_topup_fixed_fee),
-                cashless_topup_percentage_fee: Number(values.cashless_topup_percentage_fee),
+                cashless_topup_tax_and_fee_ids: values.cashless_topup_tax_and_fee_ids.map(Number),
             },
         }, {
             onSuccess: () => showSuccess(t`Cashless settings saved`),
@@ -112,29 +118,21 @@ const CashlessSettings = () => {
                         data-testid="cashless-online-topup-switch"
                     />
 
-                    {form.values.cashless_online_topup_enabled && (
-                        <InputGroup>
-                            <NumberInput
-                                mt="md"
-                                label={t`Online top-up fee`}
-                                description={t`Charged on top of the amount loaded, to cover card fees.`}
-                                prefix={getCurrencySymbol(event?.currency ?? 'USD')}
-                                min={0}
-                                decimalScale={2}
-                                {...form.getInputProps('cashless_topup_fixed_fee')}
-                            />
-                            <NumberInput
-                                mt="md"
-                                label={t`Online top-up fee (percentage)`}
-                                description={t`Added to the fixed fee above.`}
-                                suffix="%"
-                                min={0}
-                                max={100}
-                                decimalScale={2}
-                                {...form.getInputProps('cashless_topup_percentage_fee')}
-                            />
-                        </InputGroup>
-                    )}
+                    <MultiSelect
+                        mt="md"
+                        label={t`Top-up taxes and fees`}
+                        description={t`Applied on top of the amount loaded. Card top-ups pay them; cash at a sales point does not.`}
+                        placeholder={t`Select...`}
+                        data={[{
+                            group: t`Taxes`,
+                            items: taxAndFeeOptions(TaxAndFeeType.Tax),
+                        }, {
+                            group: t`Fees`,
+                            items: taxAndFeeOptions(TaxAndFeeType.Fee),
+                        }]}
+                        {...form.getInputProps('cashless_topup_tax_and_fee_ids')}
+                        data-testid="cashless-topup-fees-select"
+                    />
 
                     <Switch
                         mt="md"

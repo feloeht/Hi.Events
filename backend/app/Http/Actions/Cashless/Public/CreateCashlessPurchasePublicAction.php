@@ -13,6 +13,7 @@ use HiEvents\Http\ResponseCodes;
 use HiEvents\Resources\Cashless\CashlessTransactionResourcePublic;
 use HiEvents\Services\Application\Handlers\Cashless\DTO\CreateCashlessPurchaseDTO;
 use HiEvents\Services\Application\Handlers\Cashless\Public\CreateCashlessPurchasePublicHandler;
+use HiEvents\Services\Application\Locale\LocaleService;
 use HiEvents\Services\Domain\Cashless\DTO\CashlessPurchaseItemRequestDTO;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Collection;
@@ -22,6 +23,7 @@ class CreateCashlessPurchasePublicAction extends BaseCashlessSalesPointAction
 {
     public function __construct(
         private readonly CreateCashlessPurchasePublicHandler $createCashlessPurchasePublicHandler,
+        private readonly LocaleService $localeService,
     ) {}
 
     /**
@@ -49,6 +51,7 @@ class CreateCashlessPurchasePublicAction extends BaseCashlessSalesPointAction
                     $request->validated('items'),
                 )),
                 client_reference_id: $request->input('client_reference_id'),
+                locale: $this->localeService->getLocaleOrDefault($request->getPreferredLanguage()),
                 session_token: $this->getSessionToken($request),
             ));
         } catch (CashlessSalesPointAccessException $e) {

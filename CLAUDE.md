@@ -125,11 +125,13 @@ Gotchas:
 - Postgres returns `decimal` columns as strings. Domain objects type them as `float`, so every new decimal column needs a `'column' => 'float'` entry in the Eloquent model's `getCastMap()` or hydration throws a `TypeError`
 
 #### Cashless
-- A top-up is a **normal order** containing a hidden system product flagged `products.is_cashless_topup`, provisioned by `CashlessTopupProductProvisionService` when cashless is enabled. It deliberately carries no taxes or fees: topping up is an advance on consumption, and VAT is charged on the products sold at the sales point
+- A top-up is a **normal order** containing a hidden system product flagged `products.is_cashless_topup`, provisioned by `CashlessTopupProductProvisionService`. Its fees are the account's native taxes & fees, attached to that product from the cashless settings screen. Cash top-ups at a sales point never touch the product, so they never pay the fee
+- A sales point purchase is also a **normal order** (`CashlessPosOrderService`), created `COMPLETED` with `payment_provider = CASHLESS`. That is what makes it count in orders, product statistics, stock and reports. Reversing the purchase cancels the order through `OrderCancelService`. `CASHLESS` is not a checkout payment method: `UpdateEventSettingsRequest` deliberately only accepts Stripe and offline
 - Every balance mutation goes through `CashlessWalletService::record()` / `reverse()`, which take a row lock on the wallet. Never write `cashless_wallets.balance` directly — the ledger must always re-sum to the stored balance
 - `cashless_transactions` is append-only. A mistake is corrected with a `REVERSAL` row, never by editing or deleting
-- Crediting runs in `CreditCashlessWalletJob`, dispatched from `OrderStatusChangedEvent`. Keeping it queued is what stops the Unit suite from hitting the DB. A `PENDING` `cashless_topups` row against a `COMPLETED` order means the job never ran — that is the reconciliation signal
+- Crediting a top-up runs in `CreditCashlessWalletJob`, dispatched from `OrderStatusChangedEvent`. Keeping it queued is what stops the Unit suite from hitting the DB. A `PENDING` `cashless_topups` row against a `COMPLETED` order means the job never ran — that is the reconciliation signal
 - Sales point writes are idempotent on `client_reference_id`, unique per sales point. Any new till operation must send one
+- The till never computes a total itself: it asks `CashlessQuoteService` (`/quote`) so the amount shown to staff, and the amount to key into a card terminal, always match what the order will charge
 
 #### Enums
 - Status enums go in `backend/app/DomainObjects/Status/`

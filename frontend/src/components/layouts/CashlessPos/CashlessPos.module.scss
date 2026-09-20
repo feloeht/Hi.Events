@@ -77,6 +77,20 @@
     text-align: center;
     text-indent: .4em;
   }
+
+  :global(.mantine-PasswordInput-innerInput) {
+    height: 64px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .4em;
+    text-align: center;
+    text-indent: .4em;
+  }
+
+  :global(.mantine-PasswordInput-visibilityToggle) {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .gateTitle {
@@ -295,4 +309,34 @@
     grid-template-columns: 340px 1fr;
     align-items: start;
   }
+}
+
+.subtotalRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: .15rem 0;
+  font-size: .9rem;
+  color: var(--mantine-color-dimmed);
+}
+
+.terminalTotal {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding: .9rem 1rem;
+  margin-top: .75rem;
+  border: 1px solid var(--mantine-primary-color-filled);
+  border-radius: var(--mantine-radius-md);
+  background: var(--mantine-primary-color-light);
+
+  strong {
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+}
+
+.terminalNote {
+  font-size: .8rem;
+  color: var(--mantine-color-dimmed);
 }

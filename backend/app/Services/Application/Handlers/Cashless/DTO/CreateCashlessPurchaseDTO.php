@@ -14,6 +14,7 @@ class CreateCashlessPurchaseDTO extends BaseDataObject
         /** @var Collection<CashlessPurchaseItemRequestDTO> */
         public Collection $items,
         public string $client_reference_id,
+        public string $locale,
         public ?string $session_token = null,
     ) {}
 }
