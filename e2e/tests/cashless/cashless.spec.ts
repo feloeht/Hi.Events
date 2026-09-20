@@ -110,6 +110,19 @@ test.describe('cashless', () => {
     await expect(page.getByText('2 × Beer')).toBeVisible();
   });
 
+  test('the Balances menu item is only highlighted on the balances screen', async ({ authedPage, api, account, publicApi }) => {
+    const { event } = await seedCashlessEvent(api, publicApi, account.organizerId);
+
+    const balances = authedPage.getByRole('link', { name: 'Balances' });
+
+    await authedPage.goto(`/manage/event/${event.eventId}/cashless`);
+    await expect(balances).toHaveAttribute('aria-current', 'page');
+
+    await authedPage.goto(`/manage/event/${event.eventId}/cashless/sales-points`);
+    await expect(balances).not.toHaveAttribute('aria-current', 'page');
+    await expect(authedPage.getByRole('link', { name: 'Sales Points' })).toHaveAttribute('aria-current', 'page');
+  });
+
   test('a sales point refuses the wrong PIN', async ({ page, api, account, publicApi }) => {
     const { event, drinkId } = await seedCashlessEvent(api, publicApi, account.organizerId);
 

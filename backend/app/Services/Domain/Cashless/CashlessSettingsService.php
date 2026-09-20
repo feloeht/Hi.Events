@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\Generated\EventSettingDomainObjectAbstract;
 use HiEvents\Exceptions\CashlessNotEnabledException;
+use HiEvents\Exceptions\ResourceNotFoundException;
 use HiEvents\Repository\Interfaces\EventSettingsRepositoryInterface;
 
 class CashlessSettingsService
@@ -15,6 +16,24 @@ class CashlessSettingsService
     public function __construct(
         private readonly EventSettingsRepositoryInterface $eventSettingsRepository,
     ) {}
+
+    /**
+     * @throws ResourceNotFoundException
+     */
+    public function getSettings(int $eventId): EventSettingDomainObject
+    {
+        $settings = $this->eventSettingsRepository->findFirstWhere([
+            EventSettingDomainObjectAbstract::EVENT_ID => $eventId,
+        ]);
+
+        if ($settings === null) {
+            throw new ResourceNotFoundException(
+                __('Settings for event :id could not be found.', ['id' => $eventId])
+            );
+        }
+
+        return $settings;
+    }
 
     /**
      * @throws CashlessNotEnabledException

@@ -56,6 +56,7 @@ export const CashlessTransactionTable = ({transactions, currency, timezone}: Cas
     if (transactions.length === 0) {
         return (
             <NoResultsSplash
+                imageHref={"/blank-slate/orders.svg"}
                 heading={t`No cashless activity yet`}
                 subHeading={<p>{t`Top-ups and purchases will appear here as they happen.`}</p>}
             />

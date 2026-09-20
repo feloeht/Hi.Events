@@ -4,16 +4,17 @@ namespace HiEvents\Services\Application\Handlers\Cashless\DTO;
 
 use HiEvents\DataTransferObjects\BaseDataObject;
 
-class UpdateCashlessSettingsDTO extends BaseDataObject
+class CashlessSettingsDTO extends BaseDataObject
 {
     public function __construct(
         public int $event_id,
         public bool $cashless_enabled,
+        public ?int $cashless_topup_product_id,
         public float $cashless_min_topup_amount,
         public bool $cashless_allow_remaining_balance_refund,
+        public ?string $cashless_refund_deadline_at,
         public bool $cashless_online_topup_enabled,
         public float $cashless_topup_fixed_fee,
         public float $cashless_topup_percentage_fee,
-        public ?string $cashless_refund_deadline_at = null,
     ) {}
 }

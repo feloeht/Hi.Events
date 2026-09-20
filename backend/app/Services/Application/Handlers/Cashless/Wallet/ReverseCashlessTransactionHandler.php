@@ -11,14 +11,14 @@ use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Exceptions\InsufficientCashlessBalanceException;
 use HiEvents\Exceptions\ResourceNotFoundException;
 use HiEvents\Repository\Interfaces\CashlessTransactionRepositoryInterface;
-use HiEvents\Services\Domain\Cashless\CashlessWalletService;
+use HiEvents\Services\Domain\Cashless\CashlessReversalService;
 use Throwable;
 
 class ReverseCashlessTransactionHandler
 {
     public function __construct(
         private readonly CashlessTransactionRepositoryInterface $transactionRepository,
-        private readonly CashlessWalletService $walletService,
+        private readonly CashlessReversalService $reversalService,
     ) {}
 
     /**
@@ -43,6 +43,6 @@ class ReverseCashlessTransactionHandler
             throw new ResourceNotFoundException(__('This transaction could not be found.'));
         }
 
-        return $this->walletService->reverse($transaction, reversedByUserId: $userId, notes: $notes);
+        return $this->reversalService->reverse($transaction, reversedByUserId: $userId, notes: $notes);
     }
 }

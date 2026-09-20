@@ -1,5 +1,6 @@
 import {api} from "./client";
 import {
+    CashlessDailyStats,
     CashlessRefundResult,
     CashlessSalesPoint,
     CashlessSettings,
@@ -22,6 +23,13 @@ export const cashlessClient = {
     },
     updateSettings: async (eventId: IdParam, settings: Omit<CashlessSettings, 'event_id' | 'cashless_topup_product_id'>) => {
         const response = await api.put<GenericDataResponse<CashlessSettings>>(`events/${eventId}/cashless/settings`, settings);
+        return response.data;
+    },
+
+    getDailyStats: async (eventId: IdParam, startDate: string, endDate: string) => {
+        const response = await api.get<{ data: CashlessDailyStats[] }>(
+            `events/${eventId}/cashless/stats?start_date=${startDate}&end_date=${endDate}`,
+        );
         return response.data;
     },
 

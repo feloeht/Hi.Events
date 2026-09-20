@@ -50,6 +50,7 @@ export const CashlessSalesPointTable = ({salesPoints, currency, openCreateModal}
     if (salesPoints.length === 0) {
         return (
             <NoResultsSplash
+                imageHref={"/blank-slate/check-in-lists.svg"}
                 heading={t`No sales points yet`}
                 subHeading={(
                     <>

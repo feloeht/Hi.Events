@@ -66,6 +66,19 @@
   border-radius: var(--mantine-radius-lg);
 }
 
+.pinInput {
+  width: 100%;
+
+  input {
+    height: 64px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: .4em;
+    text-align: center;
+    text-indent: .4em;
+  }
+}
+
 .gateTitle {
   margin: .75rem 0 .25rem;
   font-size: 1.25rem;

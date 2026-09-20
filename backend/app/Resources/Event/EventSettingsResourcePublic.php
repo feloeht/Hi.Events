@@ -64,6 +64,7 @@ class EventSettingsResourcePublic extends JsonResource
             // Cashless settings
             'cashless_enabled' => $this->getCashlessEnabled(),
             'cashless_min_topup_amount' => $this->getCashlessMinTopupAmount(),
+            'cashless_online_topup_enabled' => $this->getCashlessOnlineTopupEnabled(),
 
             // Payment settings
             'payment_providers' => $this->getPaymentProviders(),

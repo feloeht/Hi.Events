@@ -50,6 +50,7 @@ export const CashlessWalletTable = ({wallets}: CashlessWalletTableProps) => {
     if (wallets.length === 0) {
         return (
             <NoResultsSplash
+                imageHref={"/blank-slate/tickets.svg"}
                 heading={t`No cashless balances yet`}
                 subHeading={(
                     <p>

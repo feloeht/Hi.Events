@@ -13,6 +13,8 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     final public const ID = 'id';
     final public const EVENT_ID = 'event_id';
     final public const CASHLESS_TOPUP_PRODUCT_ID = 'cashless_topup_product_id';
+    final public const CASHLESS_TOPUP_FIXED_FEE_ID = 'cashless_topup_fixed_fee_id';
+    final public const CASHLESS_TOPUP_PERCENTAGE_FEE_ID = 'cashless_topup_percentage_fee_id';
     final public const PRE_CHECKOUT_MESSAGE = 'pre_checkout_message';
     final public const POST_CHECKOUT_MESSAGE = 'post_checkout_message';
     final public const PRODUCT_PAGE_MESSAGE = 'product_page_message';
@@ -75,10 +77,13 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     final public const CASHLESS_MIN_TOPUP_AMOUNT = 'cashless_min_topup_amount';
     final public const CASHLESS_ALLOW_REMAINING_BALANCE_REFUND = 'cashless_allow_remaining_balance_refund';
     final public const CASHLESS_REFUND_DEADLINE_AT = 'cashless_refund_deadline_at';
+    final public const CASHLESS_ONLINE_TOPUP_ENABLED = 'cashless_online_topup_enabled';
 
     protected int $id;
     protected int $event_id;
     protected ?int $cashless_topup_product_id = null;
+    protected ?int $cashless_topup_fixed_fee_id = null;
+    protected ?int $cashless_topup_percentage_fee_id = null;
     protected ?string $pre_checkout_message = null;
     protected ?string $post_checkout_message = null;
     protected ?string $product_page_message = null;
@@ -141,6 +146,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     protected float $cashless_min_topup_amount = 5.0;
     protected bool $cashless_allow_remaining_balance_refund = false;
     protected ?string $cashless_refund_deadline_at = null;
+    protected bool $cashless_online_topup_enabled = true;
 
     public function toArray(): array
     {
@@ -148,6 +154,8 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
                     'id' => $this->id ?? null,
                     'event_id' => $this->event_id ?? null,
                     'cashless_topup_product_id' => $this->cashless_topup_product_id ?? null,
+                    'cashless_topup_fixed_fee_id' => $this->cashless_topup_fixed_fee_id ?? null,
+                    'cashless_topup_percentage_fee_id' => $this->cashless_topup_percentage_fee_id ?? null,
                     'pre_checkout_message' => $this->pre_checkout_message ?? null,
                     'post_checkout_message' => $this->post_checkout_message ?? null,
                     'product_page_message' => $this->product_page_message ?? null,
@@ -210,6 +218,7 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
                     'cashless_min_topup_amount' => $this->cashless_min_topup_amount ?? null,
                     'cashless_allow_remaining_balance_refund' => $this->cashless_allow_remaining_balance_refund ?? null,
                     'cashless_refund_deadline_at' => $this->cashless_refund_deadline_at ?? null,
+                    'cashless_online_topup_enabled' => $this->cashless_online_topup_enabled ?? null,
                 ];
     }
 
@@ -244,6 +253,28 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     public function getCashlessTopupProductId(): ?int
     {
         return $this->cashless_topup_product_id;
+    }
+
+    public function setCashlessTopupFixedFeeId(?int $cashless_topup_fixed_fee_id): self
+    {
+        $this->cashless_topup_fixed_fee_id = $cashless_topup_fixed_fee_id;
+        return $this;
+    }
+
+    public function getCashlessTopupFixedFeeId(): ?int
+    {
+        return $this->cashless_topup_fixed_fee_id;
+    }
+
+    public function setCashlessTopupPercentageFeeId(?int $cashless_topup_percentage_fee_id): self
+    {
+        $this->cashless_topup_percentage_fee_id = $cashless_topup_percentage_fee_id;
+        return $this;
+    }
+
+    public function getCashlessTopupPercentageFeeId(): ?int
+    {
+        return $this->cashless_topup_percentage_fee_id;
     }
 
     public function setPreCheckoutMessage(?string $pre_checkout_message): self
@@ -927,5 +958,16 @@ abstract class EventSettingDomainObjectAbstract extends \HiEvents\DomainObjects\
     public function getCashlessRefundDeadlineAt(): ?string
     {
         return $this->cashless_refund_deadline_at;
+    }
+
+    public function setCashlessOnlineTopupEnabled(bool $cashless_online_topup_enabled): self
+    {
+        $this->cashless_online_topup_enabled = $cashless_online_topup_enabled;
+        return $this;
+    }
+
+    public function getCashlessOnlineTopupEnabled(): bool
+    {
+        return $this->cashless_online_topup_enabled;
     }
 }

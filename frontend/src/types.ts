@@ -263,6 +263,7 @@ export interface EventSettings {
     cashless_min_topup_amount?: number;
     cashless_allow_remaining_balance_refund?: boolean;
     cashless_refund_deadline_at?: string | null;
+    cashless_online_topup_enabled?: boolean;
 
     // Invoice settings
     enable_invoicing: boolean;
@@ -1514,6 +1515,9 @@ export interface CashlessSettings {
     cashless_min_topup_amount: number;
     cashless_allow_remaining_balance_refund: boolean;
     cashless_refund_deadline_at: string | null;
+    cashless_online_topup_enabled: boolean;
+    cashless_topup_fixed_fee: number;
+    cashless_topup_percentage_fee: number;
 }
 
 export interface CashlessTransactionItem {
@@ -1622,4 +1626,11 @@ export interface CashlessRefundResult {
     refunded_amount: number;
     unrefundable_amount: number;
     remaining_balance: number;
+}
+
+export interface CashlessDailyStats {
+    date: string;
+    topped_up: number;
+    spent: number;
+    refunded: number;
 }

@@ -4,24 +4,27 @@ declare(strict_types=1);
 
 namespace HiEvents\Resources\Cashless;
 
-use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\Resources\BaseResource;
+use HiEvents\Services\Application\Handlers\Cashless\DTO\CashlessSettingsDTO;
 use Illuminate\Http\Request;
 
 /**
- * @mixin EventSettingDomainObject
+ * @mixin CashlessSettingsDTO
  */
 class CashlessSettingsResource extends BaseResource
 {
     public function toArray(Request $request): array
     {
         return [
-            'event_id' => $this->getEventId(),
-            'cashless_enabled' => $this->getCashlessEnabled(),
-            'cashless_topup_product_id' => $this->getCashlessTopupProductId(),
-            'cashless_min_topup_amount' => $this->getCashlessMinTopupAmount(),
-            'cashless_allow_remaining_balance_refund' => $this->getCashlessAllowRemainingBalanceRefund(),
-            'cashless_refund_deadline_at' => $this->getCashlessRefundDeadlineAt(),
+            'event_id' => $this->event_id,
+            'cashless_enabled' => $this->cashless_enabled,
+            'cashless_topup_product_id' => $this->cashless_topup_product_id,
+            'cashless_min_topup_amount' => $this->cashless_min_topup_amount,
+            'cashless_allow_remaining_balance_refund' => $this->cashless_allow_remaining_balance_refund,
+            'cashless_refund_deadline_at' => $this->cashless_refund_deadline_at,
+            'cashless_online_topup_enabled' => $this->cashless_online_topup_enabled,
+            'cashless_topup_fixed_fee' => $this->cashless_topup_fixed_fee,
+            'cashless_topup_percentage_fee' => $this->cashless_topup_percentage_fee,
         ];
     }
 }

@@ -1,5 +1,5 @@
 import {t} from "@lingui/macro";
-import {PasswordInput, Switch, Textarea, TextInput} from "@mantine/core";
+import {PasswordInput, Switch, Text, Textarea, TextInput} from "@mantine/core";
 import {UseFormReturnType} from "@mantine/form";
 import {useState} from "react";
 import {IconBeer} from "@tabler/icons-react";
@@ -36,8 +36,12 @@ export const CashlessSalesPointForm = ({form, productCategories, pinHelpText}: C
                 form={form}
                 productFieldName="product_ids"
                 includedProductTypes={[ProductType.General]}
-                noProductsMessage={t`Create a general product, like a drink, before setting up a sales point`}
+                noProductsMessage={t`Create a general product, like a drink, to sell it here`}
             />
+
+            <Text size="xs" c="dimmed" mt={4}>
+                {t`Leave this empty for a top-up desk that only loads balances and sells nothing.`}
+            </Text>
 
             <Switch
                 mt="md"

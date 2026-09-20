@@ -35,6 +35,7 @@ const CashlessPos = () => {
     const [scannerResetToken, setScannerResetToken] = useState(0);
 
     const currency = salesPoint?.currency ?? 'USD';
+    const sellsProducts = (salesPoint?.products?.length ?? 0) > 0;
 
     const lookUpWallet = async (attendeePublicId: string) => {
         setScannedId(attendeePublicId);
@@ -199,11 +200,13 @@ const CashlessPos = () => {
                 )}
             </header>
 
-            <Tabs defaultValue="charge" className={classes.tabs}>
+            <Tabs defaultValue={sellsProducts ? 'charge' : 'topup'} className={classes.tabs}>
                 <Tabs.List grow>
-                    <Tabs.Tab value="charge" leftSection={<IconReceipt size={16}/>}>
-                        {t`Charge`}
-                    </Tabs.Tab>
+                    {sellsProducts && (
+                        <Tabs.Tab value="charge" leftSection={<IconReceipt size={16}/>}>
+                            {t`Charge`}
+                        </Tabs.Tab>
+                    )}
                     <Tabs.Tab value="topup" leftSection={<IconCoin size={16}/>}>
                         {t`Top up`}
                     </Tabs.Tab>
@@ -212,7 +215,7 @@ const CashlessPos = () => {
                     </Tabs.Tab>
                 </Tabs.List>
 
-                <Tabs.Panel value="charge" className={classes.panel}>
+                {sellsProducts && <Tabs.Panel value="charge" className={classes.panel}>
                     <ChargeTab
                         salesPoint={salesPoint}
                         wallet={wallet}
@@ -227,7 +230,7 @@ const CashlessPos = () => {
                         onCharge={charge}
                         scannerResetToken={scannerResetToken}
                     />
-                </Tabs.Panel>
+                </Tabs.Panel>}
 
                 <Tabs.Panel value="topup" className={classes.panel}>
                     <TopUpTab

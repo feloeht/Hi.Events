@@ -51,6 +51,8 @@ class CashlessPurchasePricingService
         $product = $this->findSellableProduct($salesPoint, $requestedItem->product_id);
         $price = $this->findPrice($product, $requestedItem->product_price_id);
 
+        $this->assertStockCovers($product, $price, $requestedItem->quantity);
+
         $taxesAndFees = $this->taxAndFeeCalculationService->calculateTaxAndFeesForProduct(
             product: $product,
             price: $price->getPrice(),
@@ -110,6 +112,42 @@ class CashlessPurchasePricingService
         }
 
         return $price;
+    }
+
+    /**
+     * @throws ValidationException
+     */
+    private function assertStockCovers(ProductDomainObject $product, ProductPriceDomainObject $price, int $quantity): void
+    {
+        if ($price->isSoldOut()) {
+            throw ValidationException::withMessages([
+                'items' => __(':product is sold out.', ['product' => $product->getTitle()]),
+            ]);
+        }
+
+        $remaining = $this->remainingQuantity($price);
+
+        if ($remaining !== null && $quantity > $remaining) {
+            throw ValidationException::withMessages([
+                'items' => __('Only :count left of :product.', [
+                    'count' => $remaining,
+                    'product' => $product->getTitle(),
+                ]),
+            ]);
+        }
+    }
+
+    private function remainingQuantity(ProductPriceDomainObject $price): ?int
+    {
+        if ($price->getQuantityAvailable() !== null) {
+            return $price->getQuantityAvailable();
+        }
+
+        if ($price->getInitialQuantityAvailable() === null) {
+            return null;
+        }
+
+        return max(0, $price->getInitialQuantityAvailable() - $price->getQuantitySold());
     }
 
     private function itemTitle(ProductDomainObject $product, ProductPriceDomainObject $price): string

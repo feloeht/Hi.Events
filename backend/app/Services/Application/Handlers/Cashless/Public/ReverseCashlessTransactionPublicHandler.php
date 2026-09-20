@@ -12,8 +12,8 @@ use HiEvents\Exceptions\CashlessTransactionNotReversibleException;
 use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Exceptions\InsufficientCashlessBalanceException;
 use HiEvents\Repository\Interfaces\CashlessTransactionRepositoryInterface;
+use HiEvents\Services\Domain\Cashless\CashlessReversalService;
 use HiEvents\Services\Domain\Cashless\CashlessSalesPointAccessService;
-use HiEvents\Services\Domain\Cashless\CashlessWalletService;
 use Throwable;
 
 class ReverseCashlessTransactionPublicHandler
@@ -23,7 +23,7 @@ class ReverseCashlessTransactionPublicHandler
     public function __construct(
         private readonly CashlessSalesPointAccessService $salesPointAccessService,
         private readonly CashlessTransactionRepositoryInterface $transactionRepository,
-        private readonly CashlessWalletService $walletService,
+        private readonly CashlessReversalService $reversalService,
     ) {}
 
     /**
@@ -57,6 +57,6 @@ class ReverseCashlessTransactionPublicHandler
             );
         }
 
-        return $this->walletService->reverse($transaction, reversedByUserId: null);
+        return $this->reversalService->reverse($transaction, reversedByUserId: null);
     }
 }

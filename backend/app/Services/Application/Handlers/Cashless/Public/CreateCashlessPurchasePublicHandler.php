@@ -14,6 +14,7 @@ use HiEvents\Exceptions\CashlessWalletUnavailableException;
 use HiEvents\Exceptions\InsufficientCashlessBalanceException;
 use HiEvents\Repository\Interfaces\CashlessTransactionRepositoryInterface;
 use HiEvents\Services\Application\Handlers\Cashless\DTO\CreateCashlessPurchaseDTO;
+use HiEvents\Services\Domain\Cashless\CashlessProductSalesService;
 use HiEvents\Services\Domain\Cashless\CashlessPurchasePricingService;
 use HiEvents\Services\Domain\Cashless\CashlessSalesPointAccessService;
 use HiEvents\Services\Domain\Cashless\CashlessSettingsService;
@@ -32,6 +33,7 @@ class CreateCashlessPurchasePublicHandler
         private readonly CashlessPurchasePricingService $pricingService,
         private readonly CashlessWalletService $walletService,
         private readonly CashlessTransactionRepositoryInterface $transactionRepository,
+        private readonly CashlessProductSalesService $productSalesService,
     ) {}
 
     /**
@@ -64,7 +66,7 @@ class CreateCashlessPurchasePublicHandler
 
         $basket = $this->pricingService->priceBasket($salesPoint, $purchaseData->items);
 
-        return $this->walletService->record(new RecordCashlessTransactionDTO(
+        $transaction = $this->walletService->record(new RecordCashlessTransactionDTO(
             wallet_id: $wallet->getId(),
             type: CashlessTransactionType::PURCHASE,
             positive_amount: $basket->total,
@@ -72,6 +74,10 @@ class CreateCashlessPurchasePublicHandler
             client_reference_id: $purchaseData->client_reference_id,
             items: $basket->items,
         ));
+
+        $this->productSalesService->recordSale($basket->items);
+
+        return $transaction;
     }
 
     private function findByClientReference(

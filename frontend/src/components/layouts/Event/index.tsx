@@ -144,7 +144,7 @@ const EventLayout = () => {
 
         // 5. CASHLESS
         {label: t`Cashless`},
-        {link: 'cashless', label: t`Balances`, icon: IconCoin},
+        {link: 'cashless', label: t`Balances`, icon: IconCoin, matchExactly: true},
         {link: 'cashless/sales-points', label: t`Sales Points`, icon: IconBuildingStore},
         {link: 'cashless/transactions', label: t`Transactions`, icon: IconArrowsExchange},
         {link: 'cashless/settings', label: t`Cashless Settings`, icon: IconSettings},

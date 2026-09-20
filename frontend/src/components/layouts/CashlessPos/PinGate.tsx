@@ -1,5 +1,5 @@
 import {t} from "@lingui/macro";
-import {Button, PasswordInput} from "@mantine/core";
+import {Button, TextInput} from "@mantine/core";
 import {IconLock} from "@tabler/icons-react";
 import {useState} from "react";
 import {publicCashlessClient} from "../../../api/cashless-public.client.ts";
@@ -37,10 +37,12 @@ export const PinGate = ({salesPointShortId, salesPointName, onAuthenticated}: Pi
                 <h1 className={classes.gateTitle}>{salesPointName ?? t`Sales point`}</h1>
                 <p className={classes.gateSubtitle}>{t`Enter the PIN to open this till.`}</p>
 
-                <PasswordInput
+                <TextInput
                     autoFocus
-                    size="lg"
+                    size="xl"
                     inputMode="numeric"
+                    autoComplete="off"
+                    className={classes.pinInput}
                     value={pin}
                     onChange={(event) => setPin(event.currentTarget.value)}
                     aria-label={t`PIN`}
