@@ -454,6 +454,34 @@ export const router: RouteObject[] = [
                 }
             },
             {
+                path: "cashless",
+                async lazy() {
+                    const CashlessWallets = await import("./components/routes/event/Cashless/Wallets");
+                    return { Component: CashlessWallets.default };
+                }
+            },
+            {
+                path: "cashless/sales-points",
+                async lazy() {
+                    const CashlessSalesPoints = await import("./components/routes/event/Cashless/SalesPoints");
+                    return { Component: CashlessSalesPoints.default };
+                }
+            },
+            {
+                path: "cashless/transactions",
+                async lazy() {
+                    const CashlessTransactions = await import("./components/routes/event/Cashless/Transactions");
+                    return { Component: CashlessTransactions.default };
+                }
+            },
+            {
+                path: "cashless/settings",
+                async lazy() {
+                    const CashlessSettings = await import("./components/routes/event/Cashless/Settings");
+                    return { Component: CashlessSettings.default };
+                }
+            },
+            {
                 path: "messages",
                 async lazy() {
                     const Messages = await import("./components/routes/event/messages");
@@ -659,6 +687,22 @@ export const router: RouteObject[] = [
             return { Component: AttendeeProductAndInformation.default };
         },
         errorElement: <ErrorPage />
+    },
+    {
+        path: "/cashless/pos/:salesPointShortId",
+        async lazy() {
+            const CashlessPos = await import("./components/layouts/CashlessPos");
+            return { Component: CashlessPos.default };
+        },
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: "/cashless/:eventId/:attendeeShortId",
+        async lazy() {
+            const CashlessWallet = await import("./components/routes/product-widget/CashlessWallet");
+            return { Component: CashlessWallet.default };
+        },
+        errorElement: <ErrorPage />,
     },
     {
         path: "/check-in/:checkInListShortId",

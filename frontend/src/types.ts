@@ -258,6 +258,12 @@ export interface EventSettings {
     payment_providers: PaymentProvider[];
     allow_orders_awaiting_offline_payment_to_check_in: boolean;
 
+    // Cashless settings
+    cashless_enabled?: boolean;
+    cashless_min_topup_amount?: number;
+    cashless_allow_remaining_balance_refund?: boolean;
+    cashless_refund_deadline_at?: string | null;
+
     // Invoice settings
     enable_invoicing: boolean;
     invoice_label?: string;
@@ -1488,4 +1494,132 @@ export interface WaitlistStats {
     cancelled: number;
     expired: number;
     products: WaitlistProductStats[];
+}
+
+export type CashlessWalletStatus = 'ACTIVE' | 'FROZEN' | 'CLOSED';
+
+export type CashlessTransactionType =
+    'TOPUP_ONLINE'
+    | 'TOPUP_STAFF'
+    | 'PURCHASE'
+    | 'REVERSAL'
+    | 'REFUND_REMAINING';
+
+export type CashlessStaffPaymentMethod = 'CASH' | 'CARD_TERMINAL' | 'OTHER';
+
+export interface CashlessSettings {
+    event_id: IdParam;
+    cashless_enabled: boolean;
+    cashless_topup_product_id: number | null;
+    cashless_min_topup_amount: number;
+    cashless_allow_remaining_balance_refund: boolean;
+    cashless_refund_deadline_at: string | null;
+}
+
+export interface CashlessTransactionItem {
+    product_id: number | null;
+    product_title: string;
+    unit_price: number;
+    quantity: number;
+    total: number;
+}
+
+export interface CashlessTransaction {
+    id?: number;
+    short_id: string;
+    cashless_wallet_id?: number;
+    type: CashlessTransactionType;
+    amount: number;
+    balance_after: number;
+    order_id?: number | null;
+    cashless_sales_point_id?: number | null;
+    staff_payment_method?: CashlessStaffPaymentMethod | null;
+    reverses_transaction_id?: number | null;
+    notes?: string | null;
+    created_at: string;
+    items?: CashlessTransactionItem[];
+    sales_point_name?: string;
+    attendee_public_id?: string;
+    attendee_name?: string;
+}
+
+export interface CashlessWallet {
+    id: number;
+    event_id: number;
+    attendee_id: number;
+    balance: number;
+    total_topped_up: number;
+    total_spent: number;
+    total_refunded: number;
+    currency: string;
+    status: CashlessWalletStatus;
+    created_at: string;
+    updated_at: string;
+    attendee_public_id?: string;
+    attendee_first_name?: string;
+    attendee_last_name?: string;
+    attendee_email?: string;
+    transactions?: CashlessTransaction[];
+}
+
+export interface CashlessWalletPublic {
+    balance: number;
+    total_topped_up: number;
+    total_spent: number;
+    total_refunded: number;
+    currency: string;
+    status: CashlessWalletStatus;
+    attendee_public_id?: string;
+    attendee_name?: string;
+    transactions?: CashlessTransaction[];
+}
+
+export interface CashlessSalesPoint {
+    id: number;
+    event_id: number;
+    short_id: string;
+    name: string;
+    description: string | null;
+    has_access_pin: boolean;
+    allow_staff_topups: boolean;
+    activates_at: string | null;
+    expires_at: string | null;
+    created_at: string;
+    updated_at: string;
+    sales_total?: number;
+    transaction_count?: number;
+    products?: Product[];
+}
+
+export interface CashlessSalesPointPublic {
+    short_id: string;
+    name: string;
+    description: string | null;
+    requires_pin: boolean;
+    allow_staff_topups: boolean;
+    currency: string | null;
+    event_title: string | null;
+    products?: Product[];
+}
+
+export interface UpsertCashlessSalesPointRequest {
+    name: string;
+    description?: string | null;
+    product_ids: number[];
+    allow_staff_topups: boolean;
+    access_pin?: string | null;
+    activates_at?: string | null;
+    expires_at?: string | null;
+}
+
+export interface CreateCashlessTopupRequest {
+    amount: number;
+    payment_method: CashlessStaffPaymentMethod;
+    notes?: string;
+}
+
+export interface CashlessRefundResult {
+    refunded_amount: number;
+    unrefundable_amount: number;
+    remaining_balance: number;
 }

@@ -1,7 +1,7 @@
 import {t, Trans} from "@lingui/macro";
 import {IconCamera, IconCheck, IconScan, IconVolume, IconVolumeOff, IconX} from "@tabler/icons-react";
 import {ActionIcon} from "@mantine/core";
-import {InlineCameraScanner} from "./InlineCameraScanner.tsx";
+import {InlineCameraScanner} from "../../../common/InlineCameraScanner";
 import classes from "./ScanTab.module.scss";
 import {RecentScan} from "../types.ts";
 

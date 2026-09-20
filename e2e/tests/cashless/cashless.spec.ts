@@ -1,0 +1,128 @@
+import { test, expect } from '../../fixtures';
+import {
+  CashlessPosPage,
+  CashlessSalesPointPage,
+  CashlessWalletPublicPage,
+  CashlessWalletsPage,
+} from '../../pages/cashless.page';
+import { createCompletedOrder, createLiveEventWithFreeTicket } from '../../api/factory';
+import { uniqueName } from '../../utils/unique';
+
+const SALES_POINT_PIN = '4321';
+
+const seedCashlessEvent = async (api: any, publicApi: any, organizerId: number) => {
+  const event = await createLiveEventWithFreeTicket(api, organizerId);
+
+  await api.updateCashlessSettings(event.eventId, {
+    cashless_enabled: true,
+    cashless_min_topup_amount: 5,
+    cashless_allow_remaining_balance_refund: true,
+  });
+
+  const categories = await api.listProductCategories(event.eventId);
+  const drink = await api.createProduct(event.eventId, {
+    title: 'Beer',
+    product_type: 'GENERAL',
+    type: 'PAID',
+    product_category_id: categories[0].id,
+    prices: [{ price: 5 }],
+  });
+  const drinkWithPrices = await api.getProduct(event.eventId, drink.id);
+
+  const order = await createCompletedOrder(publicApi, event);
+
+  return {
+    event,
+    order,
+    drinkId: drink.id as number,
+    drinkPriceId: drinkWithPrices.prices[0].id as number,
+  };
+};
+
+test.describe('cashless', () => {
+  test('@smoke an organizer creates a sales point and sees it listed', async ({ authedPage, api, account, publicApi }) => {
+    const { event } = await seedCashlessEvent(api, publicApi, account.organizerId);
+    const salesPointName = uniqueName('Main Bar');
+
+    const salesPoints = new CashlessSalesPointPage(authedPage);
+    await salesPoints.goto(event.eventId);
+    await salesPoints.create(salesPointName, 'Beer');
+
+    await expect(salesPoints.row(salesPointName)).toBeVisible();
+    await expect(salesPoints.row(salesPointName)).toContainText('Beer');
+  });
+
+  test('an organizer tops up a ticket and the attendee sees the balance', async ({
+    authedPage,
+    api,
+    account,
+    publicApi,
+  }) => {
+    const { event, order } = await seedCashlessEvent(api, publicApi, account.organizerId);
+    const attendee = order.attendees[0];
+
+    const wallets = new CashlessWalletsPage(authedPage);
+    await wallets.goto(event.eventId);
+    await wallets.topUpByTicketId(attendee.publicId, 30);
+
+    await expect(authedPage.getByText('Balance topped up')).toBeVisible();
+    await expect(wallets.row(attendee.publicId)).toContainText('$30.00');
+  });
+
+  test('staff charge a ticket at a sales point and the balance drops', async ({
+    authedPage,
+    page,
+    api,
+    account,
+    publicApi,
+  }) => {
+    const { event, order, drinkId, drinkPriceId } = await seedCashlessEvent(api, publicApi, account.organizerId);
+    const attendee = order.attendees[0];
+
+    const salesPoint = await api.createCashlessSalesPoint(event.eventId, {
+      name: uniqueName('Bar'),
+      product_ids: [drinkId],
+      access_pin: SALES_POINT_PIN,
+    });
+
+    const wallets = new CashlessWalletsPage(authedPage);
+    await wallets.goto(event.eventId);
+    await wallets.topUpByTicketId(attendee.publicId, 40);
+    await expect(authedPage.getByText('Balance topped up')).toBeVisible();
+
+    const pos = new CashlessPosPage(page);
+    await pos.goto(salesPoint.short_id);
+    await pos.unlock(SALES_POINT_PIN);
+
+    await pos.lookUpTicket(attendee.publicId);
+    await expect(page.getByText(attendee.publicId)).toBeVisible();
+
+    await pos.addProduct(drinkPriceId);
+    await pos.addProduct(drinkPriceId);
+    await expect(pos.chargeButton()).toContainText('$10.00');
+
+    await pos.chargeButton().click();
+    await expect(page.getByText('$30.00 left')).toBeVisible();
+
+    const publicWallet = new CashlessWalletPublicPage(page);
+    await publicWallet.goto(event.eventId, attendee.shortId);
+    await expect(publicWallet.balance()).toBeVisible();
+    await expect(page.getByText('2 × Beer')).toBeVisible();
+  });
+
+  test('a sales point refuses the wrong PIN', async ({ page, api, account, publicApi }) => {
+    const { event, drinkId } = await seedCashlessEvent(api, publicApi, account.organizerId);
+
+    const salesPoint = await api.createCashlessSalesPoint(event.eventId, {
+      name: uniqueName('Bar'),
+      product_ids: [drinkId],
+      access_pin: SALES_POINT_PIN,
+    });
+
+    const pos = new CashlessPosPage(page);
+    await pos.goto(salesPoint.short_id);
+    await pos.unlock('0000');
+
+    await expect(page.getByText('That PIN is not correct.')).toBeVisible();
+  });
+});

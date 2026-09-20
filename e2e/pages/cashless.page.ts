@@ -1,0 +1,84 @@
+import type { Locator, Page } from '@playwright/test';
+
+export class CashlessSalesPointPage {
+  constructor(private readonly page: Page) {}
+
+  async goto(eventId: number): Promise<void> {
+    await this.page.goto(`/manage/event/${eventId}/cashless/sales-points`);
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async create(name: string, productTitle: string): Promise<void> {
+    await this.page.getByTestId('cashless-sales-point-create-button').click();
+    await this.page.getByLabel(/^Name/).fill(name);
+    await this.page.getByRole('combobox', { name: 'What can be sold here?' }).click();
+    await this.page.getByRole('option', { name: productTitle }).click();
+    await this.page.keyboard.press('Escape');
+    await this.page.getByTestId('cashless-sales-point-submit-button').click();
+  }
+
+  row(name: string): Locator {
+    return this.page.getByRole('row').filter({ hasText: name });
+  }
+}
+
+export class CashlessWalletsPage {
+  constructor(private readonly page: Page) {}
+
+  async goto(eventId: number): Promise<void> {
+    await this.page.goto(`/manage/event/${eventId}/cashless`);
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  row(ticketPublicId: string): Locator {
+    return this.page.getByRole('row').filter({ hasText: ticketPublicId });
+  }
+
+  async topUpByTicketId(ticketPublicId: string, amount: number): Promise<void> {
+    await this.page.getByTestId('cashless-ticket-topup-button').click();
+    await this.page.getByTestId('cashless-ticket-lookup-input').fill(ticketPublicId);
+    await this.page.getByTestId('cashless-ticket-lookup-submit-button').click();
+    await this.page.getByLabel('Amount to add').fill(String(amount));
+    await this.page.getByTestId('cashless-topup-submit-button').click();
+  }
+}
+
+export class CashlessPosPage {
+  constructor(private readonly page: Page) {}
+
+  async goto(salesPointShortId: string): Promise<void> {
+    await this.page.goto(`/cashless/pos/${salesPointShortId}`);
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  async unlock(pin: string): Promise<void> {
+    await this.page.getByTestId('cashless-pos-pin-input').fill(pin);
+    await this.page.getByTestId('cashless-pos-pin-submit-button').click();
+  }
+
+  async lookUpTicket(ticketPublicId: string): Promise<void> {
+    await this.page.getByTestId('cashless-pos-ticket-input').fill(ticketPublicId);
+    await this.page.getByRole('button', { name: 'Find' }).click();
+  }
+
+  async addProduct(priceId: number): Promise<void> {
+    await this.page.getByTestId(`cashless-pos-product-${priceId}`).click();
+  }
+
+  chargeButton(): Locator {
+    return this.page.getByTestId('cashless-pos-charge-button');
+  }
+}
+
+export class CashlessWalletPublicPage {
+  constructor(private readonly page: Page) {}
+
+  async goto(eventId: number, attendeeShortId: string): Promise<void> {
+    await this.page.goto(`/cashless/${eventId}/${attendeeShortId}`);
+    await this.page.waitForLoadState('networkidle');
+  }
+
+  balance(): Locator {
+    return this.page.getByText('Available to spend');
+  }
+}

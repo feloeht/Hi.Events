@@ -24,6 +24,10 @@ class IdHelper
 
     public const EVENT_LOCATION_PREFIX = 'el';
 
+    public const CASHLESS_SALES_POINT_PREFIX = 'csp';
+
+    public const CASHLESS_TRANSACTION_PREFIX = 'ctx';
+
     public static function shortId(string $prefix, int $length = 13): string
     {
         return sprintf('%s_%s', $prefix, Str::random($length));

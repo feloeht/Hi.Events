@@ -13,12 +13,12 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/layouts/Event/index.tsx:224
+#: src/components/layouts/Event/index.tsx:234
 #: src/components/layouts/OrganizerLayout/index.tsx:218
 msgid "- Click to Publish"
 msgstr "- Kattintson a közzétételhez"
 
-#: src/components/layouts/Event/index.tsx:226
+#: src/components/layouts/Event/index.tsx:236
 #: src/components/layouts/OrganizerLayout/index.tsx:220
 msgid "- Click to Unpublish"
 msgstr "- Kattintson a visszavonáshoz"
@@ -96,6 +96,10 @@ msgstr "{0} szervező"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:638
 msgid "{0} tickets"
 msgstr "{0} jegy"
+
+#: src/components/common/CashlessSalesPointTable/index.tsx:102
+msgid "{0} transactions"
+msgstr "{0} tranzakció"
 
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:42
 msgid "{0} updated successfully"
@@ -362,6 +366,10 @@ msgstr "20"
 msgid "25 places per date, plus 30 T-shirts across the whole run."
 msgstr "25 hely dátumonként, plusz 30 póló az egész sorozatra."
 
+#: src/components/common/CashlessWalletTable/index.tsx:56
+msgid "A balance is created the first time an attendee tops up, or the first time your staff loads their ticket at a sales point."
+msgstr "Az egyenleg akkor jön létre, amikor a résztvevő először tölt fel, vagy amikor a csapatod egy értékesítési ponton tölti fel a jegyét."
+
 #: src/components/routes/admin/Announcements/index.tsx:319
 msgid "A button label is required when a URL is set"
 msgstr "Gombfelirat megadása kötelező, ha URL van beállítva"
@@ -410,6 +418,10 @@ msgstr "Többsoros szövegbevitel"
 msgid "A new verification code has been sent to your email"
 msgstr "Új ellenőrző kód került elküldésre az e-mail címére."
 
+#: src/components/forms/CashlessSalesPointForm/index.tsx:63
+msgid "A note for your team"
+msgstr "Megjegyzés a csapatodnak"
+
 #: src/components/forms/TaxAndFeeForm/index.tsx:29
 msgid "A percentage of the product price. E.g., 3.5% of the product price"
 msgstr "A termék árának százaléka. Pl. a termék árának 3,5%-a"
@@ -421,6 +433,10 @@ msgstr "A kedvezmény nélküli promóciós kód elrejtett termékek felfedésé
 #: src/components/forms/QuestionForm/index.tsx:120
 msgid "A Radio option has multiple options but only one can be selected."
 msgstr "A rádió opció több lehetőséget kínál, de csak egy választható ki."
+
+#: src/components/common/CashlessSalesPointTable/index.tsx:57
+msgid "A sales point is a bar or stand. Give your team its link and they can scan tickets to take payment."
+msgstr "Az értékesítési pont egy bár vagy stand. Add oda a csapatodnak a linkjét, és jegyeket olvasva fizettethetnek."
 
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:299
 msgid "a shift in start/end times"
@@ -503,6 +519,10 @@ msgstr "Meghívó elfogadása"
 #: src/components/forms/ProductForm/index.tsx:592
 msgid "Access"
 msgstr "Hozzáférés"
+
+#: src/components/forms/CashlessSalesPointForm/index.tsx:55
+msgid "Access PIN"
+msgstr "Hozzáférési PIN"
 
 #: src/components/common/AdminOrdersTable/index.tsx:70
 #: src/components/routes/account/ManageAccount/index.tsx:22
@@ -633,6 +653,10 @@ msgstr "Aktív fizetési módok"
 msgid "Activity"
 msgstr "Tevékenység"
 
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:114
+msgid "Add {0}"
+msgstr "{0} hozzáadása"
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:830
 msgid "Add {0} first"
 msgstr "Először add hozzá: {0}"
@@ -717,6 +741,11 @@ msgstr "Részletek hozzáadása"
 msgid "Add event details"
 msgstr "Eseményadatok hozzáadása"
 
+#: src/components/modals/CashlessTopupModal/index.tsx:108
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:87
+msgid "Add funds"
+msgstr "Feltöltés"
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:154
 msgid "Add instructions for offline payments (e.g., bank transfer details, where to send checks, payment deadlines)"
 msgstr "Adjon hozzá utasításokat az offline fizetésekhez (pl. banki átutalás részletei, hová küldje a csekkeket, fizetési határidők)"
@@ -735,6 +764,10 @@ msgstr "Adjon meg több időpontot, ha naponta több alkalmat tart."
 #: src/components/common/HeadingCard/index.tsx:28
 msgid "Add New"
 msgstr "Új hozzáadása"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:151
+msgid "Add one"
+msgstr "Egy hozzáadása"
 
 #: src/components/forms/QuestionForm/index.tsx:68
 msgid "Add Option"
@@ -810,6 +843,10 @@ msgstr "Kiegészítő termékek"
 msgid "Add-ons"
 msgstr "Kiegészítők"
 
+#: src/components/layouts/CashlessPos/index.tsx:136
+msgid "Added {0} — balance is now {1}"
+msgstr "{0} hozzáadva — az egyenleg most {1}"
+
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:81
 msgid "Added at checkout"
 msgstr "A fizetéskor kerül hozzáadásra"
@@ -852,6 +889,10 @@ msgstr "Cím 2. sor"
 #: src/components/routes/product-widget/CollectInformation/index.tsx:567
 msgid "Address Line 2"
 msgstr "Cím 2. sor"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:79
+msgid "Adds a top-up option to every ticket and lets your sales points take payment."
+msgstr "Minden jegyhez feltöltési lehetőséget ad, és engedi, hogy az értékesítési pontok fizettessenek."
 
 #: src/components/layouts/Admin/index.tsx:12
 #: src/components/modals/EditUserModal/index.tsx:50
@@ -917,7 +958,7 @@ msgstr "A partneri értékesítések nem kerülnek nyomon követésre. Ez inakti
 msgid "Affiliate updated successfully"
 msgstr "Partner sikeresen frissítve"
 
-#: src/components/layouts/Event/index.tsx:127
+#: src/components/layouts/Event/index.tsx:130
 #: src/components/modals/DuplicateEventModal/index.tsx:58
 #: src/components/routes/event/Affiliates/index.tsx:64
 msgid "Affiliates"
@@ -1061,6 +1102,10 @@ msgstr "Lehetővé teszi az ügyfelek számára, hogy feliratkozzanak a váróli
 msgid "Allow customers to join a waitlist when this product is sold out. Customers join the waitlist for a specific date."
 msgstr "Lehetővé teszi az ügyfelek számára, hogy feliratkozzanak a várólistára, ha ez a termék elfogyott. Az ügyfelek egy adott dátumra iratkoznak fel a várólistára."
 
+#: src/components/routes/event/Cashless/Settings/index.tsx:95
+msgid "Allow refunds of unspent balance"
+msgstr "El nem költött egyenleg visszatérítésének engedélyezése"
+
 #: src/components/routes/event/Settings/Sections/SeoSettings/index.tsx:82
 #: src/components/routes/organizer/Settings/Sections/SeoSettings/index.tsx:82
 msgid "Allow search engine indexing"
@@ -1112,6 +1157,7 @@ msgstr "Mindig megvásárolható"
 msgid "Amazing, Event, Keywords..."
 msgstr "Csodálatos, esemény, kulcsszavak..."
 
+#: src/components/common/CashlessTransactionTable/index.tsx:73
 #: src/components/common/OrdersTable/index.tsx:259
 #: src/components/forms/TaxAndFeeForm/index.tsx:71
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:212
@@ -1125,6 +1171,11 @@ msgstr "Fizetett összeg"
 #: src/components/modals/CreateAttendeeModal/index.tsx:289
 msgid "Amount paid ({0})"
 msgstr "Fizetett összeg ({0})"
+
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:84
+#: src/components/modals/CashlessTopupModal/index.tsx:78
+msgid "Amount to add"
+msgstr "Hozzáadandó összeg"
 
 #: src/components/forms/AffiliateForm/index.tsx:90
 msgid "An email to associate with this affiliate. The affiliate will not be notified."
@@ -1202,6 +1253,10 @@ msgstr "Válaszok"
 #: src/components/forms/CheckInListForm/index.tsx:207
 msgid "Answers provided at checkout (e.g. meal choice)"
 msgstr "A fizetéskor megadott válaszok (pl. ételválasztás)"
+
+#: src/components/modals/CashlessRefundModal/index.tsx:66
+msgid "Any balance that was loaded as cash at a sales point has no card to return to. We will tell you how much is left to hand back."
+msgstr "Az értékesítési ponton készpénzzel feltöltött egyenleghez nincs kártya, amire visszatéríthetnénk. Megmondjuk, mennyit kell személyesen visszaadni."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1149
 msgid "Any dates you've manually customized will be kept."
@@ -1417,7 +1472,7 @@ msgstr "Biztosan törölni szeretné ezt a webhookot?"
 msgid "Are you sure you want to leave?"
 msgstr "Biztos, hogy el akarsz menni?"
 
-#: src/components/layouts/Event/index.tsx:188
+#: src/components/layouts/Event/index.tsx:198
 msgid "Are you sure you want to make this event draft? This will make the event invisible to the public"
 msgstr "Biztosan piszkozatba szeretné tenni ezt az eseményt? Ezzel az esemény láthatatlanná válik a nyilvánosság számára."
 
@@ -1526,6 +1581,10 @@ msgstr "Csomag hozzárendelése"
 msgid "Assigned Tier"
 msgstr "Hozzárendelt szint"
 
+#: src/components/forms/CashlessSalesPointForm/index.tsx:57
+msgid "At least 4 characters"
+msgstr "Legalább 4 karakter"
+
 #: src/components/modals/CreateOrganizerWebhookModal/index.tsx:37
 #: src/components/modals/CreateWebhookModal/index.tsx:37
 msgid "At least one event type must be selected"
@@ -1549,7 +1608,10 @@ msgid "attendee"
 msgstr "résztvevő"
 
 #: src/components/common/AttendeeTicket/index.tsx:101
+#: src/components/common/CashlessTransactionTable/index.tsx:71
+#: src/components/common/CashlessWalletTable/index.tsx:68
 #: src/components/common/QuestionsTable/index.tsx:462
+#: src/components/modals/CashlessTopupModal/index.tsx:65
 #: src/components/routes/product-widget/CollectInformation/index.tsx:669
 msgid "Attendee"
 msgstr "Résztvevő"
@@ -1625,7 +1687,7 @@ msgstr "résztvevő"
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:60
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:451
 #: src/components/common/StatBoxes/index.tsx:73
-#: src/components/layouts/Event/index.tsx:131
+#: src/components/layouts/Event/index.tsx:134
 #: src/components/modals/ManageOccurrenceModal/index.tsx:174
 #: src/components/modals/ManageOrderModal/index.tsx:283
 #: src/components/routes/admin/Messages/index.tsx:90
@@ -1638,6 +1700,10 @@ msgstr "résztvevő"
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:279
 msgid "Attendees"
 msgstr "Résztvevők"
+
+#: src/components/routes/event/Cashless/CashlessDisabledNotice/index.tsx:11
+msgid "Attendees cannot top up and your sales points cannot take payment until you turn cashless on in <0>cashless settings</0>."
+msgstr "A résztvevők nem tudnak feltölteni, és az értékesítési pontjaid nem tudnak fizettetni, amíg be nem kapcsolod a cashlesst a <0>cashless beállításokban</0>."
 
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:72
 msgid "attendees checked in"
@@ -1724,6 +1790,10 @@ msgstr "Elérhető időpontok – {dayName}"
 msgid "Available to Refund"
 msgstr "Visszatérítésre elérhető"
 
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:71
+msgid "Available to spend"
+msgstr "Elkölthető"
+
 #: src/components/common/Editor/Controls/LiquidTokenControl/LiquidTokenControl.tsx:52
 msgid "Available Tokens"
 msgstr "Elérhető tokenek"
@@ -1804,6 +1874,10 @@ msgstr "Vissza a jelentésekhez"
 msgid "Back to search"
 msgstr "Vissza a kereséshez"
 
+#: src/components/modals/CashlessRefundModal/index.tsx:53
+msgid "Back to the original payment method"
+msgstr "Az eredeti fizetési módra"
+
 #: src/components/common/ThemeColorControls/index.tsx:61
 #: src/components/common/WidgetEditor/index.tsx:181
 msgid "Background Color"
@@ -1813,6 +1887,38 @@ msgstr "Háttérszín"
 #: src/components/routes/organizer/OrganizerHomepageDesigner/index.tsx:261
 msgid "Background Type"
 msgstr "Háttér típusa"
+
+#: src/components/common/CashlessWalletTable/index.tsx:70
+msgid "Balance"
+msgstr "Egyenleg"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:74
+msgid "Balance after"
+msgstr "Egyenleg utána"
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:31
+msgid "Balance not found"
+msgstr "Az egyenleg nem található"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:35
+msgid "Balance refund"
+msgstr "Egyenleg visszatérítése"
+
+#: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:21
+msgid "Balance refunded"
+msgstr "Egyenleg visszatérítve"
+
+#: src/components/modals/CashlessTopupModal/index.tsx:50
+msgid "Balance topped up"
+msgstr "Egyenleg feltöltve"
+
+#: src/components/common/CashlessWalletTable/index.tsx:44
+msgid "Balance updated"
+msgstr "Egyenleg frissítve"
+
+#: src/components/layouts/Event/index.tsx:147
+msgid "Balances"
+msgstr "Egyenlegek"
 
 #: src/components/common/CapacityHelp/index.tsx:54
 msgid "Balcony"
@@ -1977,12 +2083,12 @@ msgstr "Naptár"
 msgid "Call-to-Action Button"
 msgstr "Cselekvésre ösztönző gomb"
 
-#: src/components/layouts/CheckIn/tabs/InlineCameraScanner.tsx:153
+#: src/components/common/InlineCameraScanner/index.tsx:164
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:90
 msgid "Camera"
 msgstr "Kamera"
 
-#: src/components/layouts/CheckIn/tabs/InlineCameraScanner.tsx:110
+#: src/components/common/InlineCameraScanner/index.tsx:121
 msgid "Camera permission was denied. <0>Request permission</0> again, or grant this page camera access in your browser settings."
 msgstr "A kamerához való hozzáférést elutasította. <0>Kérje újra az engedélyt</0>, vagy engedélyezze az oldal kamerahozzáférését a böngésző beállításaiban."
 
@@ -2088,6 +2194,7 @@ msgstr "A törlés törli az összes ehhez a rendeléshez tartozó résztvevőt,
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:21
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:120
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:425
+#: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:20
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:126
 #: src/components/routes/product-widget/OccurrenceSelector/index.tsx:171
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:101
@@ -2126,7 +2233,7 @@ msgstr "Kapacitás-hozzárendelések"
 msgid "Capacity management"
 msgstr "Kapacitáskezelés"
 
-#: src/components/layouts/Event/index.tsx:137
+#: src/components/layouts/Event/index.tsx:140
 msgid "Capacity Management"
 msgstr "Kapacitás kezelése"
 
@@ -2141,6 +2248,53 @@ msgstr "kapacitásfrissítések"
 #: src/components/routes/event/Reports/OccurrenceSummaryReport/index.tsx:66
 msgid "Capacity Used"
 msgstr "Felhasznált kapacitás"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:87
+msgid "Card fees make very small top-ups uneconomical. {0}"
+msgstr "A kártyadíjak miatt a nagyon kis összegű feltöltések nem kifizetődők. {0}"
+
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:100
+#: src/components/modals/CashlessTopupModal/index.tsx:89
+msgid "Card terminal"
+msgstr "Kártyaterminál"
+
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:99
+#: src/components/modals/CashlessTopupModal/index.tsx:88
+msgid "Cash"
+msgstr "Készpénz"
+
+#: src/components/layouts/Event/index.tsx:146
+msgid "Cashless"
+msgstr "Cashless"
+
+#: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:67
+msgid "Cashless balance"
+msgstr "Cashless egyenleg"
+
+#: src/components/routes/event/Cashless/Wallets/index.tsx:36
+msgid "Cashless Balances"
+msgstr "Cashless egyenlegek"
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:45
+msgid "Cashless is not available"
+msgstr "A cashless nem érhető el"
+
+#: src/components/routes/event/Cashless/CashlessDisabledNotice/index.tsx:10
+msgid "Cashless is switched off"
+msgstr "A cashless ki van kapcsolva"
+
+#: src/components/layouts/Event/index.tsx:150
+#: src/components/routes/event/Cashless/Settings/index.tsx:72
+msgid "Cashless Settings"
+msgstr "Cashless beállítások"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:62
+msgid "Cashless settings saved"
+msgstr "Cashless beállítások mentve"
+
+#: src/components/routes/event/Cashless/Transactions/index.tsx:59
+msgid "Cashless Transactions"
+msgstr "Cashless tranzakciók"
 
 #: src/components/modals/CreateProductCategoryModal/index.tsx:52
 msgid "Categories allow you to group products together. For example, you might have a category for \"Tickets\" and another for \"Merchandise\"."
@@ -2194,6 +2348,18 @@ msgstr "Várólistás beállítások módosítása"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:213
 msgid "Changed duration for {count} date(s)"
 msgstr "Az időtartam módosítva {count} időpontnál"
+
+#: src/components/layouts/CashlessPos/index.tsx:205
+msgid "Charge"
+msgstr "Terhelés"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:190
+msgid "Charge {0}"
+msgstr "{0} terhelése"
+
+#: src/components/layouts/CashlessPos/index.tsx:108
+msgid "Charged {0} — {1} left"
+msgstr "{0} terhelve — maradt {1}"
 
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:399
 msgid "Charges"
@@ -2306,7 +2472,7 @@ msgstr "beléptetési listák"
 msgid "Check-in Lists"
 msgstr "Bejelentkezési listák"
 
-#: src/components/layouts/Event/index.tsx:132
+#: src/components/layouts/Event/index.tsx:135
 #: src/components/modals/DuplicateEventModal/index.tsx:54
 #: src/components/routes/event/CheckInLists/index.tsx:37
 msgid "Check-In Lists"
@@ -2457,6 +2623,7 @@ msgid "Class with a T-shirt add-on"
 msgstr "Óra pólóval kiegészítve"
 
 #: src/components/common/OccurrenceSelect/index.tsx:133
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:181
 #: src/components/routes/event/OccurrencesTab/index.tsx:547
 msgid "Clear"
 msgstr "Törlés"
@@ -2515,6 +2682,10 @@ msgstr "Modális ablak bezárása"
 #: src/components/layouts/AppLayout/Sidebar/index.tsx:104
 msgid "Close sidebar"
 msgstr "Oldalsáv bezárása"
+
+#: src/components/forms/CashlessSalesPointForm/index.tsx:75
+msgid "Closes at"
+msgstr "Zár"
 
 #: src/components/common/AffiliateTable/index.tsx:81
 #: src/components/common/PromoCodeTable/index.tsx:69
@@ -2757,7 +2928,7 @@ msgstr "Jelszó megerősítése"
 msgid "Confirm Spam"
 msgstr "Spam megerősítése"
 
-#: src/components/layouts/Event/index.tsx:301
+#: src/components/layouts/Event/index.tsx:311
 msgid "Confirm your email to access all features."
 msgstr "Erősítse meg e-mail címét az összes funkció eléréséhez."
 
@@ -2927,6 +3098,7 @@ msgid "copied to clipboard"
 msgstr "vágólapra másolva"
 
 #: src/components/common/AffiliateTable/index.tsx:49
+#: src/components/common/CashlessSalesPointTable/index.tsx:128
 msgid "Copied to clipboard"
 msgstr "Vágólapra másolva"
 
@@ -2975,6 +3147,7 @@ msgstr "Adatok másolása az első résztvevőhöz"
 msgid "Copy Email"
 msgstr "E-mail másolása"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:124
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:67
 msgid "Copy link"
 msgstr "Link másolása"
@@ -3076,6 +3249,10 @@ msgstr "{0} sablon létrehozása"
 msgid "Create a custom widget to sell tickets on your site."
 msgstr "Hozzon létre egyedi widgetet jegyek értékesítéséhez a webhelyén."
 
+#: src/components/forms/CashlessSalesPointForm/index.tsx:39
+msgid "Create a general product, like a drink, before setting up a sales point"
+msgstr "Hozz létre egy általános terméket, például egy italt, mielőtt értékesítési pontot állítasz be"
+
 #: src/components/modals/SelectCheckInListModal/index.tsx:82
 msgid "Create a list for this date"
 msgstr "Lista létrehozása ehhez az időponthoz"
@@ -3095,6 +3272,10 @@ msgstr "Termék létrehozása"
 #: src/components/common/PromoCodeTable/index.tsx:57
 msgid "Create a Promo Code"
 msgstr "Promóciós kód létrehozása"
+
+#: src/components/modals/CreateCashlessSalesPointModal/index.tsx:51
+msgid "Create a sales point"
+msgstr "Értékesítési pont létrehozása"
 
 #: src/components/modals/CreateCheckInListModal/index.tsx:72
 msgid "Create a Ticket"
@@ -3222,6 +3403,12 @@ msgstr "Promóciós kód létrehozása"
 msgid "Create Question"
 msgstr "Kérdés létrehozása"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:65
+#: src/components/modals/CreateCashlessSalesPointModal/index.tsx:66
+#: src/components/routes/event/Cashless/SalesPoints/index.tsx:57
+msgid "Create sales point"
+msgstr "Értékesítési pont létrehozása"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1164
 msgid "Create schedule"
 msgstr "Ütemezés létrehozása"
@@ -3309,6 +3496,10 @@ msgstr "CTA címke kötelező"
 #: src/components/routes/organizer/Settings/Sections/BasicSettings/index.tsx:116
 msgid "Currency"
 msgstr "Pénznem"
+
+#: src/components/modals/CashlessTopupModal/index.tsx:71
+msgid "Current balance"
+msgstr "Jelenlegi egyenleg"
 
 #: src/components/routes/profile/ManageProfile/index.tsx:229
 msgid "Current Password"
@@ -3471,7 +3662,7 @@ msgid "Dark"
 msgstr "Sötét"
 
 #: src/components/layouts/Admin/index.tsx:13
-#: src/components/layouts/Event/index.tsx:101
+#: src/components/layouts/Event/index.tsx:104
 #: src/components/routes/event/OccurrencesTab/OccurrenceMenu.tsx:57
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Dashboard"
@@ -3618,6 +3809,7 @@ msgstr "Alapértelmezések"
 msgid "delete"
 msgstr "törlés"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:141
 #: src/components/common/LocationsTable/index.tsx:43
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:577
 #: src/components/common/PromoCodeTable/index.tsx:40
@@ -3716,6 +3908,10 @@ msgstr "Törli ezt a terméket? A művelet nem vonható vissza."
 msgid "Delete this question? This cannot be undone."
 msgstr "Törli ezt a kérdést? Ez nem vonható vissza."
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:38
+msgid "Delete this sales point? Its link will stop working immediately. Past transactions are kept."
+msgstr "Törlöd ezt az értékesítési pontot? A linkje azonnal működésképtelenné válik. A korábbi tranzakciók megmaradnak."
+
 #: src/components/common/OrganizerWebhookTable/index.tsx:127
 #: src/components/common/WebhookTable/index.tsx:127
 msgid "Delete webhook"
@@ -3746,6 +3942,7 @@ msgstr "Törlési kérelem megszakítva"
 msgid "Deletion Requests"
 msgstr "Törlési kérelmek"
 
+#: src/components/forms/CashlessSalesPointForm/index.tsx:62
 #: src/components/forms/ProductCategoryForm/index.tsx:29
 #: src/components/forms/ProductForm/index.tsx:393
 #: src/components/forms/ProductForm/index.tsx:399
@@ -3773,6 +3970,7 @@ msgstr "Összes kijelölés megszüntetése"
 msgid "Design Elements"
 msgstr "Tervezési elemek"
 
+#: src/components/common/CashlessTransactionTable/index.tsx:72
 #: src/components/common/ProgressStepper/index.tsx:18
 #: src/components/common/ProgressStepper/index.tsx:23
 #: src/components/modals/ManageAttendeeModal/index.tsx:242
@@ -3929,7 +4127,7 @@ msgid "Downloading Invoice"
 msgstr "Számla letöltése"
 
 #: src/components/common/EventCard/index.tsx:96
-#: src/components/layouts/Event/index.tsx:223
+#: src/components/layouts/Event/index.tsx:233
 #: src/components/layouts/OrganizerLayout/index.tsx:217
 #: src/components/routes/admin/Announcements/index.tsx:183
 #: src/components/routes/admin/Announcements/index.tsx:472
@@ -4025,6 +4223,10 @@ msgstr "pl. Fontos frissítés a jegyeiről"
 msgid "e.g., Standard, Premium, Enterprise"
 msgstr "pl. Alap, Prémium, Vállalati"
 
+#: src/components/routes/event/Cashless/SalesPoints/index.tsx:35
+msgid "Each bar or stand gets its own link. Staff open it, scan a ticket and take payment from the balance."
+msgstr "Minden bár és stand saját linket kap. A csapat megnyitja, beolvas egy jegyet, és az egyenlegből terhel."
+
 #: src/components/modals/OfferWaitlistModal/index.tsx:134
 msgid "Each person will receive an email with a reserved spot to complete their purchase."
 msgstr "Minden személy e-mailt kap egy foglalt hellyel a vásárlás befejezéséhez."
@@ -4046,6 +4248,7 @@ msgstr "Korábban"
 msgid "Early bird"
 msgstr "Korai madár"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:132
 #: src/components/common/LocationPicker/index.tsx:197
 #: src/components/common/QuestionsTable/index.tsx:142
 #: src/components/common/TaxAndFeeList/index.tsx:73
@@ -4156,6 +4359,10 @@ msgstr "Promóciós kód szerkesztése"
 #: src/components/modals/EditQuestionModal/index.tsx:101
 msgid "Edit Question"
 msgstr "Kérdés szerkesztése"
+
+#: src/components/modals/EditCashlessSalesPointModal/index.tsx:56
+msgid "Edit sales point"
+msgstr "Értékesítési pont szerkesztése"
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:867
 msgid "Edit schedule"
@@ -4287,7 +4494,7 @@ msgstr "E-mail cím módosítása függőben"
 msgid "Email confirmation resent"
 msgstr "E-mail megerősítés újraküldve"
 
-#: src/components/layouts/Event/index.tsx:87
+#: src/components/layouts/Event/index.tsx:90
 #: src/components/layouts/OrganizerLayout/index.tsx:123
 #: src/components/routes/profile/ManageProfile/index.tsx:101
 msgid "Email confirmation resent successfully"
@@ -4360,6 +4567,10 @@ msgstr "Résztvevői önkiszolgálás engedélyezése"
 #: src/components/common/SelfServiceSettings/index.tsx:18
 msgid "Enable attendee self-service by default"
 msgstr "Résztvevői önkiszolgálás alapértelmezett engedélyezése"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:78
+msgid "Enable cashless payments"
+msgstr "Cashless fizetés bekapcsolása"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:191
 msgid "Enable Invoicing"
@@ -4474,6 +4685,10 @@ msgstr "Adja meg a partner nevét"
 msgid "Enter an amount excluding taxes and fees."
 msgstr "Adjon meg egy összeget adók és díjak nélkül."
 
+#: src/components/modals/CashlessTopupModal/index.tsx:35
+msgid "Enter an amount greater than zero"
+msgstr "Adj meg nullánál nagyobb összeget"
+
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:435
 msgid "Enter capacity"
 msgstr "Kapacitás megadása"
@@ -4500,6 +4715,10 @@ msgstr "Vezetéknév megadása"
 #: src/components/routes/auth/ResetPassword/index.tsx:65
 msgid "Enter new password"
 msgstr "Írja be az új jelszót"
+
+#: src/components/layouts/CashlessPos/PinGate.tsx:38
+msgid "Enter the PIN to open this till."
+msgstr "Add meg a PIN-t a kassza megnyitásához."
 
 #: src/components/forms/AffiliateForm/index.tsx:39
 msgid "Enter unique affiliate code"
@@ -4684,7 +4903,7 @@ msgstr "Az esemény nevének 150 karakternél rövidebbnek kell lennie."
 msgid "Event Not Available"
 msgstr "Esemény nem elérhető"
 
-#: src/components/layouts/Event/index.tsx:290
+#: src/components/layouts/Event/index.tsx:300
 msgid "Event Page"
 msgstr "Eseményoldal"
 
@@ -4692,21 +4911,21 @@ msgstr "Eseményoldal"
 msgid "Event restored successfully"
 msgstr "Az esemény sikeresen visszaállítva"
 
-#: src/components/layouts/Event/index.tsx:117
+#: src/components/layouts/Event/index.tsx:120
 #: src/components/routes/event/Settings/index.tsx:173
 msgid "Event Settings"
 msgstr "Esemény beállítások"
 
 #: src/components/common/EventCard/index.tsx:79
 #: src/components/common/StatusToggle/index.tsx:62
-#: src/components/layouts/Event/index.tsx:199
+#: src/components/layouts/Event/index.tsx:209
 #: src/components/modals/PublishEventModal/index.tsx:129
 msgid "Event status update failed. Please try again later"
 msgstr "Esemény állapotának frissítése sikertelen. Kérjük, próbálja újra később."
 
 #: src/components/common/EventCard/index.tsx:76
 #: src/components/common/StatusToggle/index.tsx:54
-#: src/components/layouts/Event/index.tsx:196
+#: src/components/layouts/Event/index.tsx:206
 msgid "Event status updated"
 msgstr "Esemény állapota frissítve"
 
@@ -4794,6 +5013,14 @@ msgstr "Minden {cadenceUnit}"
 msgid "Every email template must include a call-to-action button that links to the appropriate page"
 msgstr "Minden e-mail sablonnak tartalmaznia kell egy cselekvésre ösztönző gombot, amely a megfelelő oldalra vezet"
 
+#: src/components/routes/event/Cashless/Wallets/index.tsx:34
+msgid "Every ticket carries a balance that attendees can spend at your bars and stands."
+msgstr "Minden jegyen van egy egyenleg, amit a résztvevők elkölthetnek a bárjaidban és standjaidon."
+
+#: src/components/routes/event/Cashless/Transactions/index.tsx:57
+msgid "Every top-up, purchase, reversal and refund, in the order it happened."
+msgstr "Minden feltöltés, vásárlás, sztornó és visszatérítés a megtörténtük sorrendjében."
+
 #: src/components/forms/ProductForm/index.tsx:388
 msgid "Everything else — tap to edit"
 msgstr "Minden más – koppintson a szerkesztéshez"
@@ -4842,6 +5069,7 @@ msgstr "Lejárati dátum"
 
 #: src/components/routes/event/Affiliates/index.tsx:94
 #: src/components/routes/event/attendees.tsx:262
+#: src/components/routes/event/Cashless/Transactions/index.tsx:81
 #: src/components/routes/event/orders.tsx:206
 msgid "Export"
 msgstr "Exportálás"
@@ -4881,6 +5109,10 @@ msgstr "Exportálás befejezve. Fájl letöltése..."
 #: src/components/routes/event/orders.tsx:122
 msgid "Exporting Orders"
 msgstr "Megrendelések exportálása"
+
+#: src/components/routes/event/Cashless/Transactions/index.tsx:38
+msgid "Exporting transactions"
+msgstr "Tranzakciók exportálása"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:46
 msgid "Facebook"
@@ -5012,6 +5244,10 @@ msgstr "A kérdés törlése sikertelen"
 msgid "Failed to delete template"
 msgstr "A sablon törlése sikertelen"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:43
+msgid "Failed to delete this sales point"
+msgstr "Az értékesítési pont törlése nem sikerült"
+
 #: src/components/layouts/Checkout/index.tsx:195
 #: src/hooks/useOrderActions.tsx:85
 msgid "Failed to download invoice. Please try again."
@@ -5032,6 +5268,10 @@ msgstr "Megrendelések exportálása sikertelen"
 #: src/components/common/OrganizerReportTable/index.tsx:206
 msgid "Failed to export report. Please try again."
 msgstr "A jelentés exportálása sikertelen. Kérjük, próbálja újra."
+
+#: src/components/routes/event/Cashless/Transactions/index.tsx:47
+msgid "Failed to export transactions"
+msgstr "A tranzakciók exportálása nem sikerült"
 
 #: src/components/modals/EditCheckInListModal/index.tsx:87
 msgid "Failed to load Check-In List"
@@ -5143,6 +5383,10 @@ msgstr "A megszemélyesítés indítása sikertelen. Kérjük, próbálja újra.
 #: src/components/common/ImpersonationBanner/index.tsx:29
 msgid "Failed to stop impersonation. Please try again."
 msgstr "A megszemélyesítés leállítása sikertelen. Kérjük, próbálja újra."
+
+#: src/components/modals/CashlessTopupModal/index.tsx:53
+msgid "Failed to top up this balance"
+msgstr "Az egyenleg feltöltése nem sikerült"
 
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:50
 msgid "Failed to update account verification"
@@ -5291,6 +5535,15 @@ msgstr "Szűrők"
 msgid "Filters ({activeFilterCount})"
 msgstr "Szűrők ({activeFilterCount})"
 
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:78
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:67
+msgid "Find"
+msgstr "Keresés"
+
+#: src/components/modals/CashlessTicketLookupModal/index.tsx:56
+msgid "Find ticket"
+msgstr "Jegy keresése"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:281
 msgid "Finish setting up Stripe"
 msgstr "Stripe-beállítás befejezése"
@@ -5401,11 +5654,11 @@ msgstr "Megjelölt esemény részletei"
 msgid "Flagged Events"
 msgstr "Megjelölt események"
 
-#: src/components/layouts/CheckIn/tabs/InlineCameraScanner.tsx:140
+#: src/components/common/InlineCameraScanner/index.tsx:151
 msgid "Flash off"
 msgstr "Vaku ki"
 
-#: src/components/layouts/CheckIn/tabs/InlineCameraScanner.tsx:140
+#: src/components/common/InlineCameraScanner/index.tsx:151
 msgid "Flash on"
 msgstr "Vaku be"
 
@@ -5451,6 +5704,14 @@ msgstr "Negyedik"
 msgid "Free"
 msgstr "Ingyenes"
 
+#: src/components/common/CashlessWalletTable/index.tsx:121
+msgid "Freeze"
+msgstr "Befagyasztás"
+
+#: src/components/common/CashlessWalletTable/index.tsx:39
+msgid "Freezing this balance blocks any further spending. Continue?"
+msgstr "Az egyenleg befagyasztása megakadályoz minden további költést. Folytatod?"
+
 #: src/components/common/LanguageSwitcher/index.tsx:24
 msgid "French"
 msgstr "Francia"
@@ -5483,6 +5744,10 @@ msgstr "{start} és {end} között"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:794
 msgid "from {start}, for {count} dates"
 msgstr "{start} kezdettel, {count} alkalom"
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:74
+msgid "Frozen"
+msgstr "Befagyasztva"
 
 #: src/components/layouts/AuthLayout/index.tsx:27
 msgid "Full data ownership"
@@ -5646,13 +5911,17 @@ msgstr "Bruttó értékesítés"
 msgid "Guest"
 msgstr "Vendég"
 
-#: src/components/layouts/Event/index.tsx:130
+#: src/components/layouts/Event/index.tsx:133
 msgid "Guest Management"
 msgstr "Vendégkezelés"
 
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:638
 msgid "Guests"
 msgstr "Résztvevők"
+
+#: src/components/modals/CashlessRefundModal/index.tsx:58
+msgid "Handed back in person"
+msgstr "Személyesen visszaadva"
 
 #: src/components/routes/event/EventDashboard/NextOccurrenceHero/index.tsx:45
 #: src/components/routes/event/EventDashboard/NextOccurrenceHero/index.tsx:159
@@ -5837,6 +6106,10 @@ msgstr "Kiemelt"
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr "A kiemelt termékek eltérő háttérszínnel jelennek meg, hogy kiemelkedjenek az esemény oldalán."
 
+#: src/components/layouts/CashlessPos/index.tsx:211
+msgid "History"
+msgstr "Előzmények"
+
 #: src/constants/eventCategories.ts:18
 msgid "Hobbies"
 msgstr "Hobbik"
@@ -5846,7 +6119,7 @@ msgstr "Hobbik"
 msgid "Homepage Design"
 msgstr "Honlaptervezés"
 
-#: src/components/layouts/Event/index.tsx:118
+#: src/components/layouts/Event/index.tsx:121
 #: src/components/layouts/OrganizerLayout/index.tsx:109
 msgid "Homepage Designer"
 msgstr "Honlaptervező"
@@ -5871,6 +6144,10 @@ msgstr "Óra"
 msgid "How capacity works"
 msgstr "Hogyan működik a kapacitás"
 
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:94
+msgid "How did they pay?"
+msgstr "Hogyan fizetett?"
+
 #: src/components/forms/PromoCodeForm/index.tsx:116
 msgid "How is the discount applied?"
 msgstr "Hogyan kerül alkalmazásra a kedvezmény?"
@@ -5891,9 +6168,17 @@ msgstr "Hány darabot ad el az egyes jegyekből egy dátumon. A mennyiség melle
 msgid "How many times can this code be used?"
 msgstr "Hányszor használható fel ez a kód?"
 
+#: src/components/modals/CashlessRefundModal/index.tsx:48
+msgid "How should this be refunded?"
+msgstr "Hogyan történjen a visszatérítés?"
+
 #: src/components/routes/organizer/Settings/Sections/PayoutsSettings/index.tsx:449
 msgid "How VAT is applied to the platform fees we charge you."
 msgstr "Hogyan számítjuk fel az áfát az általunk kiszámlázott platformdíjakra."
+
+#: src/components/modals/CashlessTopupModal/index.tsx:86
+msgid "How was this paid?"
+msgstr "Hogyan fizették ki?"
 
 #: src/components/common/Editor/Editor.tsx:90
 msgid "HTML character limit exceeded: {htmlLength}/{maxLength}"
@@ -6102,7 +6387,7 @@ msgstr "Instagram"
 msgid "Instant Stripe payouts"
 msgstr "Azonnali Stripe-kifizetések"
 
-#: src/components/layouts/Event/index.tsx:143
+#: src/components/layouts/Event/index.tsx:153
 #: src/components/layouts/OrganizerLayout/index.tsx:114
 msgid "Integrations"
 msgstr "Integrációk"
@@ -6442,6 +6727,14 @@ msgstr "Legutóbbi beléptetések"
 msgid "Leave “from” as today to start right away."
 msgstr "Hagyja az „Ettől” mezőt a mai napon az azonnali kezdéshez."
 
+#: src/components/routes/event/Cashless/Settings/index.tsx:105
+msgid "Leave blank to keep refunds open indefinitely."
+msgstr "Hagyd üresen, ha a visszatérítések határozatlan ideig nyitva maradnak."
+
+#: src/components/modals/EditCashlessSalesPointModal/index.tsx:62
+msgid "Leave blank to keep the current PIN."
+msgstr "Hagyd üresen a jelenlegi PIN megtartásához."
+
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:201
 msgid "Leave blank to use the default word \"Invoice\""
 msgstr "Hagyja üresen az alapértelmezett „Számla” szó használatához"
@@ -6458,6 +6751,10 @@ msgstr "Hagyja üresen, ha ez a beléptetési lista minden időpontra vonatkozzo
 msgid "Leave on to cover every ticket on the event. Turn off to pick specific tickets."
 msgstr "Hagyja bekapcsolva, hogy az esemény minden jegyére vonatkozzon. Kapcsolja ki, ha konkrét jegyeket szeretne választani."
 
+#: src/components/routes/event/Cashless/Settings/index.tsx:70
+msgid "Let attendees load money onto their ticket and pay with its QR code at your bars and stands."
+msgstr "Engedd, hogy a résztvevők pénzt töltsenek a jegyükre, és a QR-kódjával fizessenek a bárjaidban és standjaidon."
+
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:305
 msgid "Let them know about the change"
 msgstr "Tudassa velük a változást"
@@ -6465,6 +6762,14 @@ msgstr "Tudassa velük a változást"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:267
 msgid "Let them know about the changes"
 msgstr "Tudassa velük a változásokat"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:96
+msgid "Lets you return what attendees did not spend, to their card or in person."
+msgstr "Lehetővé teszi, hogy visszaadd, amit a résztvevők nem költöttek el – kártyára vagy személyesen."
+
+#: src/components/forms/CashlessSalesPointForm/index.tsx:45
+msgid "Lets your team add funds to a ticket in exchange for cash or a card payment."
+msgstr "Lehetővé teszi, hogy a csapatod készpénzért vagy kártyás fizetésért feltöltsön egy jegyet."
 
 #: src/components/layouts/OrganizerLayout/index.tsx:111
 msgid "Library"
@@ -6486,6 +6791,10 @@ msgstr "A jegykeret korlátozza"
 msgid "Link Expired or Invalid"
 msgstr "A link lejárt vagy érvénytelen"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:107
+msgid "Link only"
+msgstr "Csak link"
+
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:61
 msgid "LinkedIn"
 msgstr "LinkedIn"
@@ -6499,7 +6808,7 @@ msgid "List"
 msgstr "Lista"
 
 #: src/components/common/EventCard/index.tsx:99
-#: src/components/layouts/Event/index.tsx:225
+#: src/components/layouts/Event/index.tsx:235
 #: src/components/layouts/OrganizerLayout/index.tsx:219
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:115
 msgid "Live"
@@ -6586,6 +6895,10 @@ msgstr "helyszín"
 msgid "Locations"
 msgstr "Helyszínek"
 
+#: src/components/layouts/CashlessPos/index.tsx:197
+msgid "Lock till"
+msgstr "Kassza zárolása"
+
 #: src/components/routes/auth/Login/index.tsx:109
 #: src/components/routes/auth/Register/index.tsx:76
 msgid "Log in"
@@ -6625,9 +6938,17 @@ msgstr "Kijelentkezés"
 msgid "Look Up My Tickets"
 msgstr "Jegyeim keresése"
 
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:82
+msgid "Looking up {scannedId}..."
+msgstr "{scannedId} keresése…"
+
 #: src/components/common/WidgetEditor/index.tsx:341
 msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
 msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat elementum..."
+
+#: src/components/forms/CashlessSalesPointForm/index.tsx:27
+msgid "Main bar"
+msgstr "Fő bár"
 
 #: src/components/modals/LocationEditModal/index.tsx:136
 msgid "Main Office"
@@ -6646,6 +6967,9 @@ msgid "Make this question mandatory"
 msgstr "Tegye kötelezővé ezt a kérdést"
 
 #: src/components/common/CapacityAssignmentList/index.tsx:140
+#: src/components/common/CashlessSalesPointTable/index.tsx:113
+#: src/components/common/CashlessTransactionTable/index.tsx:115
+#: src/components/common/CashlessWalletTable/index.tsx:100
 #: src/components/common/CheckInListList/index.tsx:143
 #: src/components/common/CheckInListTable/index.tsx:219
 #: src/components/common/EntityActions/index.tsx:44
@@ -6843,7 +7167,7 @@ msgid "Message Sent"
 msgstr "Üzenet elküldve"
 
 #: src/components/layouts/Admin/index.tsx:18
-#: src/components/layouts/Event/index.tsx:133
+#: src/components/layouts/Event/index.tsx:136
 #: src/components/routes/event/messages.tsx:225
 msgid "Messages"
 msgstr "Üzenetek"
@@ -6868,6 +7192,10 @@ msgstr "Minimum megrendelésenként"
 #: src/components/forms/ProductForm/index.tsx:312
 msgid "Minimum Price"
 msgstr "Minimális ár"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:86
+msgid "Minimum top-up"
+msgstr "Minimális feltöltés"
 
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:75
 msgid "minutes"
@@ -6911,6 +7239,10 @@ msgstr "Hétfő"
 #: src/components/routes/admin/Dashboard/index.tsx:163
 msgid "Monetary values are approximate totals across all currencies"
 msgstr "A pénzértékek az összes pénznem hozzávetőleges összegei"
+
+#: src/components/modals/CashlessRefundModal/index.tsx:54
+msgid "Money is sent back to the cards used for online top-ups, newest first."
+msgstr "A pénz az online feltöltésekhez használt kártyákra kerül vissza, a legfrissebbtől kezdve."
 
 #: src/components/routes/admin/FailedJobs/index.tsx:115
 msgid "Monitor and manage failed background jobs"
@@ -6994,10 +7326,12 @@ msgstr "Jegyeim"
 msgid "Nam placerat elementum..."
 msgstr "Nam placerat elementum..."
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:78
 #: src/components/common/LocationsTable/index.tsx:108
 #: src/components/common/OrderDetails/index.tsx:26
 #: src/components/forms/AffiliateForm/index.tsx:81
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:37
+#: src/components/forms/CashlessSalesPointForm/index.tsx:26
 #: src/components/forms/CheckInListForm/index.tsx:99
 #: src/components/forms/ProductCategoryForm/index.tsx:15
 #: src/components/forms/ProductCategoryForm/index.tsx:16
@@ -7162,6 +7496,14 @@ msgstr "Nincs kapacitás"
 #: src/components/common/CapacityAssignmentList/index.tsx:42
 msgid "No Capacity Assignments"
 msgstr "Nincs kapacitás-hozzárendelés"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:59
+msgid "No cashless activity yet"
+msgstr "Még nincs cashless aktivitás"
+
+#: src/components/common/CashlessWalletTable/index.tsx:53
+msgid "No cashless balances yet"
+msgstr "Még nincsenek cashless egyenlegek"
 
 #: src/components/common/KpiGrid/index.tsx:58
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:212
@@ -7419,6 +7761,10 @@ msgstr "Nincs találat"
 msgid "No results found"
 msgstr "Nincs találat"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:53
+msgid "No sales points yet"
+msgstr "Még nincsenek értékesítési pontok"
+
 #: src/components/common/LocationsTable/index.tsx:84
 msgid "No Saved Locations"
 msgstr "Nincsenek mentett helyszínek"
@@ -7439,6 +7785,10 @@ msgstr "Nincsenek javaslatok"
 #: src/components/common/TaxAndFeeList/index.tsx:108
 msgid "No Taxes or Fees have been added."
 msgstr "Nem adtak hozzá adókat vagy díjakat."
+
+#: src/components/modals/CashlessTicketLookupModal/index.tsx:24
+msgid "No ticket was found for this code."
+msgstr "Ehhez a kódhoz nem található jegy."
 
 #: src/components/routes/my-tickets/index.tsx:237
 msgid "No Tickets Found"
@@ -7520,11 +7870,16 @@ msgstr "Nem számít"
 msgid "Not Eligible"
 msgstr "Nem jogosult"
 
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:170
+msgid "Not enough on this ticket. Short by {0}."
+msgstr "Nincs elég fedezet ezen a jegyen. Hiányzik {0}."
+
 #: src/components/common/ProductPriceAvailability/index.tsx:43
 msgid "Not yet on sale"
 msgstr "Még nem kapható"
 
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:238
+#: src/components/modals/CashlessTopupModal/index.tsx:96
 #: src/components/modals/ManageAttendeeModal/index.tsx:225
 #: src/components/modals/ManageAttendeeModal/index.tsx:247
 #: src/components/modals/ManageOrderModal/index.tsx:249
@@ -7576,7 +7931,7 @@ msgstr "Időpont"
 msgid "Occurrence Cancelled"
 msgstr "Időpont lemondva"
 
-#: src/components/layouts/Event/index.tsx:113
+#: src/components/layouts/Event/index.tsx:116
 #: src/components/routes/event/OccurrencesTab/index.tsx:491
 msgid "Occurrence Schedule"
 msgstr "Időpontok ütemterve"
@@ -7783,6 +8138,10 @@ msgstr "Online esemény"
 msgid "Online Event Details"
 msgstr "Online esemény részletei"
 
+#: src/components/common/CashlessTransactionTable/index.tsx:31
+msgid "Online top-up"
+msgstr "Online feltöltés"
+
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:68
 msgid "Only {cap} available"
 msgstr "Csak {cap} elérhető"
@@ -7873,6 +8232,14 @@ msgstr "Időpont megnyitása"
 msgid "Open sidebar"
 msgstr "Oldalsáv megnyitása"
 
+#: src/components/layouts/CashlessPos/PinGate.tsx:58
+msgid "Open till"
+msgstr "Kassza megnyitása"
+
+#: src/components/forms/CashlessSalesPointForm/index.tsx:70
+msgid "Opens at"
+msgstr "Nyit"
+
 #: src/components/forms/QuestionForm/index.tsx:45
 msgid "Option {i}"
 msgstr "Opció {i}"
@@ -7888,6 +8255,10 @@ msgstr "Opcionális cselekvésre ösztönzés"
 #: src/components/modals/LocationEditModal/index.tsx:135
 msgid "Optional nickname shown in pickers, e.g. \"HQ Conference Room\""
 msgstr "A választókban megjelenő opcionális elnevezés, pl. \"Központi tárgyaló\""
+
+#: src/components/modals/CashlessTopupModal/index.tsx:97
+msgid "Optional note for your records"
+msgstr "Opcionális megjegyzés a nyilvántartásodhoz"
 
 #: src/components/routes/event/Settings/Sections/PaymentSettings/index.tsx:210
 msgid "Optional prefix for invoice numbers (e.g., INV-)"
@@ -7913,9 +8284,18 @@ msgstr "vagy"
 msgid "or add a single date"
 msgstr "vagy adjon hozzá egyetlen időpontot"
 
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:106
+msgid "Or choose an amount"
+msgstr "Vagy válassz összeget"
+
 #: src/components/modals/PublishEventModal/index.tsx:85
 msgid "Or enable offline payments and disable Stripe"
 msgstr "Vagy engedélyezd az offline fizetést és tiltsd le a Stripe-ot"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:72
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:62
+msgid "Or type the ticket ID"
+msgstr "Vagy írd be a jegy azonosítóját"
 
 #: src/components/routes/event/OccurrencesTab/index.tsx:443
 msgid "order"
@@ -8087,7 +8467,7 @@ msgstr "megrendelés"
 
 #: src/components/common/OccurrenceAttendeesAndOrders/index.tsx:65
 #: src/components/layouts/Admin/index.tsx:17
-#: src/components/layouts/Event/index.tsx:125
+#: src/components/layouts/Event/index.tsx:128
 #: src/components/modals/ManageOccurrenceModal/index.tsx:178
 #: src/components/routes/admin/Attribution/index.tsx:200
 #: src/components/routes/admin/Orders/index.tsx:44
@@ -8154,7 +8534,7 @@ msgstr "Szervező"
 msgid "Organizer archived successfully"
 msgstr "A szervező sikeresen archiválva"
 
-#: src/components/layouts/Event/index.tsx:97
+#: src/components/layouts/Event/index.tsx:100
 #: src/components/layouts/OrganizerLayout/index.tsx:93
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:155
 msgid "Organizer Dashboard"
@@ -8209,6 +8589,8 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "A szervezők csak eseményeket és termékeket kezelhetnek. Nem kezelhetik a felhasználókat, fiókbeállításokat vagy számlázási információkat."
 
 #: src/components/common/OrdersTable/index.tsx:305
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:101
+#: src/components/modals/CashlessTopupModal/index.tsx:90
 #: src/constants/eventCategories.ts:31
 msgid "Other"
 msgstr "Egyéb"
@@ -8237,7 +8619,7 @@ msgstr "Egyedi díjak ehhez a szervezőhöz"
 msgid "Override removed"
 msgstr "Egyedi beállítás eltávolítva"
 
-#: src/components/layouts/Event/index.tsx:100
+#: src/components/layouts/Event/index.tsx:103
 msgid "Overview"
 msgstr "Áttekintés"
 
@@ -8463,7 +8845,7 @@ msgid "Pending review"
 msgstr "Felülvizsgálatra vár"
 
 #: src/components/common/EventCard/index.tsx:93
-#: src/components/layouts/Event/index.tsx:221
+#: src/components/layouts/Event/index.tsx:231
 #: src/components/routes/admin/Messages/index.tsx:124
 msgid "Pending Review"
 msgstr "Áttekintésre vár"
@@ -8580,6 +8962,14 @@ msgstr "Válasszon legalább egy napot a hétből"
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:842
 msgid "Pick days to see your dates."
 msgstr "Válasszon napokat a dátumok megtekintéséhez."
+
+#: src/components/layouts/CashlessPos/PinGate.tsx:46
+msgid "PIN"
+msgstr "PIN"
+
+#: src/components/common/CashlessSalesPointTable/index.tsx:107
+msgid "PIN protected"
+msgstr "PIN-nel védett"
 
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:82
 msgid "Pinterest"
@@ -8716,6 +9106,7 @@ msgstr "Kérjük, válasszon ki legalább egy terméket."
 
 #: src/components/routes/event/Affiliates/index.tsx:53
 #: src/components/routes/event/attendees.tsx:169
+#: src/components/routes/event/Cashless/Transactions/index.tsx:48
 #: src/components/routes/event/orders.tsx:132
 msgid "Please try again."
 msgstr "Kérjük, próbálja újra."
@@ -8735,6 +9126,10 @@ msgstr "Kérjük, várjon, amíg előkészítjük partnereit az exportálásra..
 #: src/components/routes/event/attendees.tsx:160
 msgid "Please wait while we prepare your attendees for export..."
 msgstr "Kérjük, várjon, amíg előkészítjük résztvevőit az exportálásra..."
+
+#: src/components/routes/event/Cashless/Transactions/index.tsx:39
+msgid "Please wait while we prepare your cashless transactions for export..."
+msgstr "Kérjük, várj, amíg előkészítjük a cashless tranzakcióid exportját…"
 
 #: src/components/layouts/Checkout/index.tsx:187
 #: src/hooks/useOrderActions.tsx:77
@@ -8787,8 +9182,8 @@ msgstr "Előnézet"
 msgid "Preview checkout form"
 msgstr "Pénztári űrlap előnézete"
 
-#: src/components/layouts/Event/index.tsx:283
-#: src/components/layouts/Event/index.tsx:287
+#: src/components/layouts/Event/index.tsx:293
+#: src/components/layouts/Event/index.tsx:297
 msgid "Preview Event page"
 msgstr "Eseményoldal előnézete"
 
@@ -8941,6 +9336,7 @@ msgstr "Termék frissítve"
 msgid "Product(s)"
 msgstr "Termék(ek)"
 
+#: src/components/common/CashlessSalesPointTable/index.tsx:79
 #: src/components/common/PromoCodeTable/index.tsx:72
 #: src/components/modals/DuplicateEventModal/index.tsx:49
 #: src/components/routes/event/OccurrencesTab/OccurrenceEditModal/index.tsx:416
@@ -9010,7 +9406,7 @@ msgstr "promóciós kódok"
 msgid "Promo codes"
 msgstr "Promóciós kódok"
 
-#: src/components/layouts/Event/index.tsx:126
+#: src/components/layouts/Event/index.tsx:129
 #: src/components/modals/DuplicateEventModal/index.tsx:52
 #: src/components/routes/event/promo-codes.tsx:34
 msgid "Promo Codes"
@@ -9078,6 +9474,11 @@ msgstr "Közzétéve"
 #: src/components/modals/PublishEventModal/index.tsx:151
 msgid "Publishing makes your event page public and opens it up for registrations."
 msgstr "A közzététellel az eseményoldalad nyilvánossá válik, és megnyílik a regisztráció."
+
+#: src/components/common/CashlessTransactionTable/index.tsx:33
+#: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:19
+msgid "Purchase"
+msgstr "Vásárlás"
 
 #: src/components/common/WaitlistStats/index.tsx:14
 #: src/components/common/WaitlistTable/index.tsx:27
@@ -9257,6 +9658,10 @@ msgstr "Ajánlott"
 msgid "Record Refund"
 msgstr "Visszatérítés rögzítése"
 
+#: src/components/modals/CashlessRefundModal/index.tsx:59
+msgid "Records the refund without moving any money. Use this when you hand cash back at the venue."
+msgstr "Rögzíti a visszatérítést pénzmozgás nélkül. Akkor használd, ha a helyszínen adsz vissza készpénzt."
+
 #: src/components/common/EventCard/index.tsx:217
 #: src/components/common/EventCard/index.tsx:330
 msgid "Recurring"
@@ -9306,6 +9711,11 @@ msgstr "Az ehhez az időponthoz tartozó összes megrendelés visszatérítése"
 msgid "Refund amount"
 msgstr "Visszatérítés összege"
 
+#: src/components/common/CashlessWalletTable/index.tsx:112
+#: src/components/modals/CashlessRefundModal/index.tsx:76
+msgid "Refund balance"
+msgstr "Egyenleg visszatérítése"
+
 #: src/components/common/OrdersTable/index.tsx:277
 msgid "Refund failed"
 msgstr "Visszatérítés sikertelen"
@@ -9335,6 +9745,10 @@ msgstr "Visszatérítés függőben"
 msgid "Refund recorded successfully."
 msgstr "A visszatérítés sikeresen rögzítve."
 
+#: src/components/modals/CashlessRefundModal/index.tsx:39
+msgid "Refund remaining balance"
+msgstr "Fennmaradó egyenleg visszatérítése"
+
 #: src/components/routes/event/orders.tsx:60
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:279
 msgid "Refund Status"
@@ -9349,6 +9763,14 @@ msgstr "Visszatérítés állapota"
 msgid "Refunded"
 msgstr "Visszatérítve"
 
+#: src/components/modals/CashlessRefundModal/index.tsx:28
+msgid "Refunded {0}"
+msgstr "{0} visszatérítve"
+
+#: src/components/modals/CashlessRefundModal/index.tsx:26
+msgid "Refunded {0}. {1} was loaded as cash and must be handed back in person."
+msgstr "{0} visszatérítve. Ebből {1} készpénzes feltöltés volt, és személyesen kell visszaadni."
+
 #: src/components/common/OrdersTable/index.tsx:274
 msgid "Refunded: {0}"
 msgstr "Visszatérítve: {0}"
@@ -9357,6 +9779,10 @@ msgstr "Visszatérítve: {0}"
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:42
 msgid "Refunds"
 msgstr "Visszatérítések"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:104
+msgid "Refunds close at"
+msgstr "A visszatérítések zárnak"
 
 #: src/components/routes/profile/ManageProfile/index.tsx:179
 msgid "Regional Settings"
@@ -9367,7 +9793,7 @@ msgid "Register"
 msgstr "Regisztráció"
 
 #: src/components/common/QuestionsTable/index.tsx:413
-#: src/components/layouts/Event/index.tsx:120
+#: src/components/layouts/Event/index.tsx:123
 msgid "Registration Questions"
 msgstr "Regisztrációs kérdések"
 
@@ -9384,6 +9810,10 @@ msgstr "Szintek sorrendben történő megnyitása"
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:94
 msgid "Remaining"
 msgstr "Hátralévő"
+
+#: src/components/modals/CashlessRefundModal/index.tsx:42
+msgid "Remaining balance"
+msgstr "Fennmaradó egyenleg"
 
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:82
 msgid "Remaining Uses"
@@ -9404,6 +9834,10 @@ msgstr "Eltávolítás"
 #: src/components/routes/event/OccurrencesTab/OccurrenceBulkEditModal/index.tsx:461
 msgid "Remove label from all dates"
 msgstr "Címke eltávolítása minden időpontról"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:143
+msgid "Remove one"
+msgstr "Egy eltávolítása"
 
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:334
 msgid "Remove overrides for this date"
@@ -9433,7 +9867,7 @@ msgstr "Ismétlődés"
 msgid "Report not found"
 msgstr "Jelentés nem található"
 
-#: src/components/layouts/Event/index.tsx:104
+#: src/components/layouts/Event/index.tsx:107
 #: src/components/layouts/OrganizerLayout/index.tsx:99
 #: src/components/routes/event/Reports/index.tsx:47
 #: src/components/routes/organizer/Reports/index.tsx:51
@@ -9476,7 +9910,7 @@ msgstr "Visszaigazolás újraküldése"
 msgid "Resend Confirmation Email"
 msgstr "Megerősítő e-mail újraküldése"
 
-#: src/components/layouts/Event/index.tsx:303
+#: src/components/layouts/Event/index.tsx:313
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:162
 msgid "Resend email"
 msgstr "E-mail újraküldése"
@@ -9619,6 +10053,18 @@ msgstr "Bevétel"
 msgid "Revenue Summary"
 msgstr "Bevételi összefoglaló"
 
+#: src/components/common/CashlessTransactionTable/index.tsx:34
+msgid "Reversal"
+msgstr "Sztornó"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:118
+msgid "Reverse"
+msgstr "Sztornózás"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:44
+msgid "Reverse this transaction? The amount goes straight back onto the attendee's balance."
+msgstr "Sztornózod ezt a tranzakciót? Az összeg azonnal visszakerül a résztvevő egyenlegére."
+
 #: src/components/routes/admin/SpamEvents/index.tsx:102
 msgid "Review events flagged as potential spam by the automated check"
 msgstr "Az automatikus ellenőrzés által lehetséges spamként megjelölt események felülvizsgálata"
@@ -9676,6 +10122,7 @@ msgid "Sale window"
 msgstr "Értékesítési időszak"
 
 #: src/components/common/AffiliateTable/index.tsx:145
+#: src/components/common/CashlessSalesPointTable/index.tsx:80
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:143
 msgid "Sales"
 msgstr "Értékesítések"
@@ -9690,10 +10137,39 @@ msgstr "Értékesítés szüneteltetve"
 msgid "Sales ended"
 msgstr "Értékesítés befejezve"
 
+#: src/components/layouts/CashlessPos/PinGate.tsx:37
+msgid "Sales point"
+msgstr "Értékesítési pont"
+
+#: src/components/modals/CreateCashlessSalesPointModal/index.tsx:43
+msgid "Sales point created"
+msgstr "Értékesítési pont létrehozva"
+
+#: src/components/common/CashlessSalesPointTable/index.tsx:41
+msgid "Sales point deleted"
+msgstr "Értékesítési pont törölve"
+
+#: src/components/layouts/CashlessPos/index.tsx:168
+msgid "Sales point not found"
+msgstr "Az értékesítési pont nem található"
+
+#: src/components/modals/EditCashlessSalesPointModal/index.tsx:48
+msgid "Sales point updated"
+msgstr "Értékesítési pont frissítve"
+
+#: src/components/layouts/Event/index.tsx:148
+#: src/components/routes/event/Cashless/SalesPoints/index.tsx:37
+msgid "Sales Points"
+msgstr "Értékesítési pontok"
+
 #: src/components/common/ProductPriceAvailability/index.tsx:30
 #: src/components/common/ProductPriceAvailability/index.tsx:68
 msgid "Sales start"
 msgstr "Értékesítés kezdete"
+
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:19
+msgid "Sales you take on this device will appear here."
+msgstr "Az ezen az eszközön rögzített eladások itt jelennek meg."
 
 #: src/components/routes/event/Reports/index.tsx:38
 msgid "Sales, attendance, and check-in breakdown per occurrence"
@@ -9776,9 +10252,17 @@ msgstr "Egyedi díj mentése"
 msgid "Save Organizer"
 msgstr "Szervező mentése"
 
+#: src/components/modals/EditCashlessSalesPointModal/index.tsx:73
+msgid "Save sales point"
+msgstr "Értékesítési pont mentése"
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:1164
 msgid "Save schedule"
 msgstr "Ütemezés mentése"
+
+#: src/components/routes/event/Cashless/Settings/index.tsx:116
+msgid "Save settings"
+msgstr "Beállítások mentése"
 
 #: src/components/routes/account/ManageAccount/sections/AccountSettings/index.tsx:90
 msgid "Save Settings"
@@ -9823,6 +10307,10 @@ msgstr "Beolvasás"
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
 msgid "Scan a ticket to check in an attendee"
 msgstr "Olvasson be egy jegyet a résztvevő beléptetéséhez"
+
+#: src/components/modals/CashlessTicketLookupModal/index.tsx:40
+msgid "Scan the ticket QR code with a handheld scanner, or type the ID printed on the ticket."
+msgstr "Olvasd be a jegy QR-kódját kézi szkennerrel, vagy írd be a jegyre nyomtatott azonosítót."
 
 #: src/components/layouts/CheckIn/tabs/ScanTab.tsx:109
 msgid "Scanned tickets will appear here"
@@ -9933,6 +10421,10 @@ msgstr "Keressen név vagy e-mail alapján, és válasszon ki egyet vagy többet
 msgid "Search by name or email..."
 msgstr "Keresés név vagy e-mail alapján..."
 
+#: src/components/routes/event/Cashless/Wallets/index.tsx:44
+msgid "Search by name, email or ticket ID..."
+msgstr "Keresés név, e-mail vagy jegyazonosító alapján…"
+
 #: src/components/routes/admin/Users/index.tsx:60
 msgid "Search by name, email, or account..."
 msgstr "Keresés név, e-mail vagy fiók alapján..."
@@ -9993,6 +10485,10 @@ msgstr "Termékek keresése"
 msgid "Search results"
 msgstr "Keresési találatok"
 
+#: src/components/routes/event/Cashless/SalesPoints/index.tsx:45
+msgid "Search sales points..."
+msgstr "Értékesítési pontok keresése…"
+
 #: src/components/common/LocationPicker/index.tsx:298
 msgid "Search saved locations or find an address..."
 msgstr "Keressen mentett helyszínek között, vagy találjon meg egy címet..."
@@ -10024,6 +10520,10 @@ msgstr "Másodlagos szövegszín"
 #: src/components/common/InlineOrderSummary/index.tsx:231
 msgid "Secure Checkout"
 msgstr "Biztonságos pénztár"
+
+#: src/components/common/CashlessSalesPointTable/index.tsx:81
+msgid "Security"
+msgstr "Biztonság"
 
 #: src/components/layouts/EventHomepage/index.tsx:438
 msgid "See schedule"
@@ -10095,7 +10595,7 @@ msgstr "Válasszon ki legalább egy felhasználót"
 msgid "Select attendee group"
 msgstr "Résztvevő csoport kiválasztása"
 
-#: src/components/layouts/CheckIn/tabs/InlineCameraScanner.tsx:157
+#: src/components/common/InlineCameraScanner/index.tsx:168
 msgid "Select camera"
 msgstr "Kamera kiválasztása"
 
@@ -10169,6 +10669,10 @@ msgstr "Állapot kiválasztása"
 #: src/components/routes/admin/Accounts/AccountDetail/index.tsx:199
 msgid "Select the messaging tier for this account. This controls message limits and link permissions."
 msgstr "Válassza ki az üzenetküldési szintet ehhez a fiókhoz. Ez szabályozza az üzenetkorlátokat és a link engedélyeket."
+
+#: src/components/forms/CashlessSalesPointForm/index.tsx:33
+msgid "Select the products this sales point sells"
+msgstr "Válaszd ki, mely termékeket árulja ez az értékesítési pont"
 
 #: src/components/modals/CreateAttendeeModal/index.tsx:241
 msgid "Select Ticket"
@@ -10343,6 +10847,11 @@ msgstr "Keresőoptimalizálási cím"
 msgid "September"
 msgstr "Szeptember"
 
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:98
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:79
+msgid "Serve someone else"
+msgstr "Következő vendég kiszolgálása"
+
 #: src/components/forms/TaxAndFeeForm/index.tsx:62
 msgid "Service Fee"
 msgstr "Szolgáltatási díj"
@@ -10447,7 +10956,7 @@ msgstr "Beállítás frissítve"
 msgid "Settings"
 msgstr "Beállítások"
 
-#: src/components/layouts/Event/index.tsx:110
+#: src/components/layouts/Event/index.tsx:113
 msgid "Setup & Design"
 msgstr "Beállítás és tervezés"
 
@@ -10470,8 +10979,8 @@ msgstr "Megosztás"
 msgid "Share Affiliate Link"
 msgstr "Partnerlink megosztása"
 
-#: src/components/layouts/Event/index.tsx:241
-#: src/components/layouts/Event/index.tsx:247
+#: src/components/layouts/Event/index.tsx:251
+#: src/components/layouts/Event/index.tsx:257
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:102
 #: src/components/modals/EventLiveCelebrationModal/index.tsx:131
 msgid "Share Event"
@@ -10481,6 +10990,14 @@ msgstr "Esemény megosztása"
 #: src/components/layouts/OrganizerLayout/index.tsx:278
 msgid "Share Organizer Page"
 msgstr "Szervezői oldal megosztása"
+
+#: src/components/common/CashlessSalesPointTable/index.tsx:165
+msgid "Share this sales point with your team"
+msgstr "Oszd meg ezt az értékesítési pontot a csapatoddal"
+
+#: src/components/common/CashlessSalesPointTable/index.tsx:116
+msgid "Share with staff"
+msgstr "Megosztás a csapattal"
 
 #: src/components/routes/event/CapacityAssignments/index.tsx:35
 msgid "Shared Capacity Management"
@@ -10557,6 +11074,10 @@ msgstr "Hátralévő kapacitás mutatása a vásárlóknak"
 #: src/components/routes/event/Settings/Sections/MiscSettings/index.tsx:61
 msgid "Show tax and fees separately"
 msgstr "Adó és díjak külön megjelenítése"
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:80
+msgid "Show the QR code on your ticket at any bar or stand and the amount is taken straight from this balance — no cash, no card."
+msgstr "Mutasd meg a jegyeden lévő QR-kódot bármelyik bárban vagy standon, és az összeg közvetlenül erről az egyenlegről kerül levonásra – készpénz és kártya nélkül."
 
 #: src/components/common/OrganizerReportTable/index.tsx:355
 msgid "Showing {0} of {totalRows} records"
@@ -10717,7 +11238,8 @@ msgstr "Valami hiba történt."
 msgid "Something went wrong. Please try again later."
 msgstr "Valami hiba történt. Kérjük, próbálja újra később."
 
-#: src/components/layouts/Event/index.tsx:91
+#: src/components/common/CashlessWalletTable/index.tsx:45
+#: src/components/layouts/Event/index.tsx:94
 #: src/components/layouts/OrganizerLayout/index.tsx:127
 #: src/components/routes/account/ManageAccount/sections/DangerZone/index.tsx:72
 #: src/components/routes/admin/DeletionRequests/index.tsx:64
@@ -10748,6 +11270,10 @@ msgstr "Adott fiókok"
 msgid "Specific users"
 msgstr "Adott felhasználók"
 
+#: src/components/common/CashlessWalletTable/index.tsx:72
+msgid "Spent"
+msgstr "Elköltve"
+
 #: src/constants/eventCategories.ts:21
 msgid "Spirituality"
 msgstr "Spiritualitás"
@@ -10760,9 +11286,22 @@ msgstr "Ossza fel a beléptetést napok, területek vagy jegytípusok szerint. O
 msgid "Sports"
 msgstr "Sport"
 
+#: src/components/modals/CreateCashlessSalesPointModal/index.tsx:56
+#: src/components/modals/EditCashlessSalesPointModal/index.tsx:63
+msgid "Staff enter this PIN once when they open the till on their device."
+msgstr "A csapat egyszer adja meg ezt a PIN-t, amikor megnyitja a kasszát a saját eszközén."
+
+#: src/components/forms/CashlessSalesPointForm/index.tsx:44
+msgid "Staff here can top up balances"
+msgstr "Az itteni csapat feltöltheti az egyenlegeket"
+
 #: src/components/common/CheckIn/CheckInInfoModal.tsx:84
 msgid "Staff instructions"
 msgstr "Utasítások a személyzetnek"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:32
+msgid "Staff top-up"
+msgstr "Csapat általi feltöltés"
 
 #: src/components/common/CapacityHelp/index.tsx:52
 msgid "Stalls"
@@ -10856,6 +11395,7 @@ msgstr "Statisztika"
 #: src/components/common/AdminOrdersTable/index.tsx:85
 #: src/components/common/AffiliateTable/index.tsx:83
 #: src/components/common/AttendeeTable/index.tsx:251
+#: src/components/common/CashlessWalletTable/index.tsx:73
 #: src/components/common/CheckInListTable/index.tsx:158
 #: src/components/common/OrderDetails/index.tsx:71
 #: src/components/common/OrdersTable/index.tsx:314
@@ -11174,6 +11714,10 @@ msgstr "Póló"
 msgid "T-shirts, mugs and more"
 msgstr "Pólók, bögrék és még sok más"
 
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:133
+msgid "Tap a product to start an order."
+msgstr "Koppints egy termékre a rendelés indításához."
+
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:961
 msgid "Tap dates like a calendar."
 msgstr "Koppintson a napokra, mint egy naptárban."
@@ -11326,10 +11870,18 @@ msgstr "Köszönjük, hogy részt vett!"
 msgid "Thanks,"
 msgstr "Köszönjük,"
 
+#: src/components/layouts/CashlessPos/PinGate.tsx:27
+msgid "That PIN is not correct."
+msgstr "Ez a PIN nem helyes."
+
 #: src/components/routes/product-widget/SelectProducts/index.tsx:297
 #: src/components/routes/product-widget/SelectProducts/index.tsx:543
 msgid "That promo code is invalid"
 msgstr "Ez a promóciós kód érvénytelen."
+
+#: src/components/layouts/CashlessPos/index.tsx:48
+msgid "That ticket could not be found."
+msgstr "Ez a jegy nem található."
 
 #: src/components/routes/event/OccurrencesTab/RecurrenceScheduleDrawer/index.tsx:819
 msgid "That's {totalOccurrences} sessions — the maximum is {max}. Shorten the range or frequency."
@@ -11405,6 +11957,10 @@ msgstr "A link, amire kattintott, érvénytelen."
 #: src/components/routes/product-widget/SelectProducts/index.tsx:805
 msgid "The maximum number of products for {0}is {1}"
 msgstr "A termékek maximális száma {0} számára {1}"
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:53
+msgid "The minimum top-up is {0}"
+msgstr "A minimális feltöltés {0}"
 
 #: src/components/modals/CancelOrderModal/index.tsx:75
 msgid "The order will be marked as refunded. You will need to return the payment to the customer yourself."
@@ -11582,6 +12138,14 @@ msgstr "Ez az esemény minden egyező időpontjára vonatkozik, azokra is, amely
 msgid "This attendee has an unpaid order."
 msgstr "Ennek a résztvevőnek van egy kifizetetlen megrendelése."
 
+#: src/components/modals/CashlessRefundModal/index.tsx:33
+msgid "This balance could not be refunded"
+msgstr "Ezt az egyenleget nem sikerült visszatéríteni"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:95
+msgid "This balance is frozen"
+msgstr "Ez az egyenleg be van fagyasztva"
+
 #: src/components/common/ProductsTable/ProductsBlankSlate/index.tsx:61
 msgid "This category doesn't have any products yet."
 msgstr "Ez a kategória még nem tartalmaz termékeket."
@@ -11668,7 +12232,11 @@ msgstr "Ez az esemény nem érhető el"
 msgid "This event is not published yet"
 msgstr "Ez az esemény még nem került közzétételre."
 
-#: src/components/layouts/Event/index.tsx:179
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:46
+msgid "This event is not using cashless payments."
+msgstr "Ez az esemény nem használ cashless fizetést."
+
+#: src/components/layouts/Event/index.tsx:189
 msgid "This event is pending manual review and cannot be published until the review is complete."
 msgstr "Ez az esemény kézi felülvizsgálatra vár, és nem tehető közzé, amíg a felülvizsgálat be nem fejeződik."
 
@@ -11724,6 +12292,10 @@ msgstr "Ez a link érvénytelen vagy lejárt."
 #: src/components/routes/product-widget/OrderSummaryAndProducts/LinkExpiredMessage/index.tsx:27
 msgid "This link is no longer valid"
 msgstr "Ez a link már nem érvényes"
+
+#: src/components/layouts/CashlessPos/index.tsx:169
+msgid "This link is no longer valid. Ask the organizer for a new one."
+msgstr "Ez a link már nem érvényes. Kérj újat a szervezőtől."
 
 #: src/components/routes/event/Settings/Sections/EmailSettings/GeneralEmailSettings.tsx:69
 msgid "This message will be included in the footer of all emails sent from this event"
@@ -11789,6 +12361,10 @@ msgstr "Ez a szervezői profil még nem került közzétételre."
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr "Ez felülírja az összes láthatósági beállítást, és elrejti a terméket minden ügyfél elől."
 
+#: src/components/layouts/CashlessPos/index.tsx:115
+msgid "This payment could not be taken."
+msgstr "Ezt a fizetést nem sikerült levonni."
+
 #: src/components/common/EmailTemplateEditor/EmailTemplatePreviewPane.tsx:69
 msgid "This preview shows how your email will look with sample data. Actual emails will use real values."
 msgstr "Ez az előnézet mutatja, hogyan fog kinézni az e-mail mintaadatokkal. A tényleges e-mailek valódi értékeket fognak használni."
@@ -11821,6 +12397,10 @@ msgstr "Ez a jelentés csak tájékoztató jellegű. Mindig konzultáljon adósz
 msgid "This reset password link is invalid or expired."
 msgstr "Ez a jelszó-visszaállító link érvénytelen vagy lejárt."
 
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:38
+msgid "This sales point is not allowed to top up balances."
+msgstr "Ez az értékesítési pont nem tölthet fel egyenlegeket."
+
 #: src/components/common/AttendeeTicket/index.tsx:148
 msgid "This ticket is no longer valid"
 msgstr "Ez a jegy már nem érvényes"
@@ -11832,6 +12412,18 @@ msgstr "Ez a jegy most lett beolvasva. Kérjük, várjon mielőtt újra beolvass
 #: src/components/routes/event/OccurrencesTab/PriceOverrideForm/index.tsx:328
 msgid "This tier's quantity is shared across all dates"
 msgstr "Ennek a szintnek a mennyisége az összes dátum között oszlik meg"
+
+#: src/components/layouts/CashlessPos/index.tsx:143
+msgid "This top-up could not be recorded."
+msgstr "Ezt a feltöltést nem sikerült rögzíteni."
+
+#: src/components/common/CashlessTransactionTable/index.tsx:49
+msgid "This transaction could not be reversed"
+msgstr "Ezt a tranzakciót nem sikerült sztornózni"
+
+#: src/components/layouts/CashlessPos/index.tsx:158
+msgid "This transaction could not be undone."
+msgstr "Ezt a tranzakciót nem sikerült visszavonni."
 
 #: src/components/modals/EditUserModal/index.tsx:66
 msgid "This user is not active, as they have not accepted their invitation."
@@ -11902,7 +12494,7 @@ msgstr "Jegy tervezés"
 msgid "Ticket design saved successfully"
 msgstr "Jegy tervezés sikeresen mentve"
 
-#: src/components/layouts/Event/index.tsx:119
+#: src/components/layouts/Event/index.tsx:122
 msgid "Ticket Designer"
 msgstr "Jegy tervező"
 
@@ -11924,6 +12516,8 @@ msgid "Ticket Holders"
 msgstr "Jegytulajdonosok"
 
 #: src/components/common/AttendeeTicket/index.tsx:162
+#: src/components/common/CashlessWalletTable/index.tsx:69
+#: src/components/modals/CashlessTicketLookupModal/index.tsx:39
 msgid "Ticket ID"
 msgstr "Jegy azonosító"
 
@@ -11931,7 +12525,7 @@ msgstr "Jegy azonosító"
 msgid "Ticket Logo"
 msgstr "Jegy logó"
 
-#: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:22
+#: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:24
 msgid "Ticket Not Found"
 msgstr "Jegy nem található"
 
@@ -11959,7 +12553,7 @@ msgstr "Az esemény jegyértékesítése lezárult"
 msgid "Ticket Type"
 msgstr "Jegy típusa"
 
-#: src/components/layouts/Event/index.tsx:123
+#: src/components/layouts/Event/index.tsx:126
 msgid "Ticketing & Sales"
 msgstr "Jegyértékesítés"
 
@@ -11972,7 +12566,7 @@ msgstr "jegyek"
 msgid "Tickets"
 msgstr "Jegyek"
 
-#: src/components/layouts/Event/index.tsx:124
+#: src/components/layouts/Event/index.tsx:127
 #: src/components/routes/event/products.tsx:48
 msgid "Tickets & Products"
 msgstr "Jegyek és termékek"
@@ -12089,6 +12683,41 @@ msgstr "Eszközök"
 msgid "Top Organizers (Last 14 Days)"
 msgstr "Legjobb szervezők (Elmúlt 14 nap)"
 
+#: src/components/common/CashlessWalletTable/index.tsx:103
+#: src/components/layouts/CashlessPos/index.tsx:208
+msgid "Top up"
+msgstr "Feltöltés"
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:122
+msgid "Top up {0}"
+msgstr "{0} feltöltése"
+
+#: src/components/modals/CashlessTicketLookupModal/index.tsx:34
+#: src/components/routes/event/Cashless/Wallets/index.tsx:65
+msgid "Top up a ticket"
+msgstr "Jegy feltöltése"
+
+#: src/components/modals/CashlessTopupModal/index.tsx:61
+msgid "Top up cashless balance"
+msgstr "Cashless egyenleg feltöltése"
+
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:32
+#: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:17
+msgid "Top-up"
+msgstr "Feltöltés"
+
+#: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:18
+msgid "Top-up at the event"
+msgstr "Feltöltés a helyszínen"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:60
+msgid "Top-ups and purchases will appear here as they happen."
+msgstr "A feltöltések és vásárlások itt jelennek meg, ahogy történnek."
+
+#: src/components/common/CashlessWalletTable/index.tsx:71
+msgid "Topped up"
+msgstr "Feltöltve"
+
 #: src/components/common/ProductsTable/SortableProduct/index.tsx:177
 msgid "total"
 msgstr "összesen"
@@ -12096,6 +12725,7 @@ msgstr "összesen"
 #: src/components/common/AdminOrdersTable/index.tsx:81
 #: src/components/common/InlineOrderSummary/index.tsx:219
 #: src/components/common/OrderSummary/index.tsx:104
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:164
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
@@ -12191,6 +12821,22 @@ msgstr "Kövesse nyomon a fióknövekedést és teljesítményt hozzárendelési
 msgid "Tracking & Analytics"
 msgstr "Követés és elemzés"
 
+#: src/components/common/CashlessTransactionTable/index.tsx:47
+msgid "Transaction reversed"
+msgstr "Tranzakció sztornózva"
+
+#: src/components/layouts/CashlessPos/index.tsx:154
+msgid "Transaction undone"
+msgstr "Tranzakció visszavonva"
+
+#: src/components/layouts/Event/index.tsx:149
+msgid "Transactions"
+msgstr "Tranzakciók"
+
+#: src/components/routes/event/Cashless/Transactions/index.tsx:42
+msgid "Transactions exported"
+msgstr "Tranzakciók exportálva"
+
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:176
 msgid "Try a different search term or filter"
 msgstr "Próbáljon meg más keresőkifejezést vagy szűrőt"
@@ -12237,6 +12883,7 @@ msgstr "Twitch"
 msgid "Two settings decide how many people can book a date. Whichever is lower is what you can sell."
 msgstr "Két beállítás dönti el, hányan foglalhatnak egy dátumra. A kisebbik az, amennyit eladhat."
 
+#: src/components/common/CashlessTransactionTable/index.tsx:70
 #: src/components/forms/TaxAndFeeForm/index.tsx:44
 #: src/components/routes/admin/Announcements/index.tsx:158
 #: src/components/routes/admin/Attribution/index.tsx:171
@@ -12313,9 +12960,18 @@ msgstr "Nem sikerült frissíteni a kérdést. Kérjük, ellenőrizze adatait."
 msgid "Unattributed Accounts"
 msgstr "Nem hozzárendelt fiókok"
 
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:49
 #: src/components/layouts/CheckIn/index.tsx:255
 msgid "Undo"
 msgstr "Visszavonás"
+
+#: src/components/common/CashlessWalletTable/index.tsx:121
+msgid "Unfreeze"
+msgstr "Feloldás"
+
+#: src/components/common/CashlessWalletTable/index.tsx:40
+msgid "Unfreeze this balance so it can be spent again?"
+msgstr "Feloldod ezt az egyenleget, hogy újra el lehessen költeni?"
 
 #: src/components/routes/event/Reports/PromoCodesReport/index.tsx:30
 msgid "Unique Customers"
@@ -12757,7 +13413,7 @@ msgstr "Az ellenőrzött fiókok üzeneteket küldhetnek a résztvevőknek és k
 msgid "Verify Email"
 msgstr "E-mail ellenőrzése"
 
-#: src/components/layouts/Event/index.tsx:300
+#: src/components/layouts/Event/index.tsx:310
 #: src/components/routes/event/EventDashboard/SetupChecklist.tsx:156
 msgid "Verify your email"
 msgstr "Ellenőrizze e-mail címét"
@@ -12921,7 +13577,7 @@ msgstr "Beolvasásra vár…"
 
 #: src/components/forms/ProductForm/index.tsx:456
 #: src/components/layouts/AuthLayout/index.tsx:18
-#: src/components/layouts/Event/index.tsx:134
+#: src/components/layouts/Event/index.tsx:137
 #: src/components/routes/event/Settings/index.tsx:90
 #: src/components/routes/event/Settings/Sections/WaitlistSettings/index.tsx:55
 #: src/components/routes/event/SoldOutWaitlist/index.tsx:73
@@ -12961,6 +13617,10 @@ msgstr "Nem sikerült törölni a kategóriát. Kérjük, próbálja újra."
 msgid "We couldn't disconnect this Stripe account. Please try again."
 msgstr "Nem sikerült leválasztani ezt a Stripe-fiókot. Próbálja újra."
 
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:32
+msgid "We couldn't find a cashless balance for this ticket. The link may have expired."
+msgstr "Nem találtunk cashless egyenleget ehhez a jegyhez. Lehet, hogy a link lejárt."
+
 #: src/components/routes/my-tickets/index.tsx:239
 msgid "We couldn't find any orders associated with this email address."
 msgstr "Nem találtunk ehhez az e-mail címhez tartozó rendeléseket."
@@ -12973,7 +13633,7 @@ msgstr "Nem találtunk jegyeket, amelyek megfelelnek a következőnek: {0}"
 msgid "We couldn't find the order you're looking for. The link may have expired or the order details may have changed."
 msgstr "Nem találtuk a keresett rendelést. A link lejárhatott, vagy a rendelés adatai megváltozhattak."
 
-#: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:23
+#: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:25
 msgid "We couldn't find the ticket you're looking for. The link may have expired or the ticket details may have changed."
 msgstr "Nem találtuk a keresett jegyet. A link lejárhatott, vagy a jegy adatai megváltozhattak."
 
@@ -12996,6 +13656,10 @@ msgstr "Jelenleg nem érjük el a Stripe-ot. Próbálja újra kis idő múlva."
 #: src/components/common/ProductsTable/SortableCategory/index.tsx:98
 msgid "We couldn't reorder the categories. Please try again."
 msgstr "Nem sikerült átrendezni a kategóriákat. Kérjük, próbálja újra."
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:60
+msgid "We couldn't start your top-up. Please try again."
+msgstr "Nem sikerült elindítani a feltöltést. Próbáld újra."
 
 #: src/components/routes/product-widget/CollectInformation/index.tsx:418
 msgid "We hit a snag loading this page. Please try again."
@@ -13107,7 +13771,7 @@ msgstr "A Webhook nem küld értesítéseket."
 msgid "Webhook will send notifications"
 msgstr "A Webhook értesítéseket küld."
 
-#: src/components/layouts/Event/index.tsx:145
+#: src/components/layouts/Event/index.tsx:155
 #: src/components/layouts/OrganizerLayout/index.tsx:115
 #: src/components/modals/DuplicateEventModal/index.tsx:57
 #: src/components/routes/event/Webhooks/index.tsx:32
@@ -13173,6 +13837,10 @@ msgstr "Wellness"
 msgid "What are Tiered Products?"
 msgstr "Mik azok a többszintű termékek?"
 
+#: src/components/forms/CashlessSalesPointForm/index.tsx:32
+msgid "What can be sold here?"
+msgstr "Mit lehet itt eladni?"
+
 #: src/components/modals/CreateProductCategoryModal/index.tsx:51
 msgid "What is a Category?"
 msgstr "Mi az a kategória?"
@@ -13208,6 +13876,10 @@ msgstr "Mit láthat a be nem jelentkezett személyzet"
 #: src/components/routes/organizer/Settings/Sections/SocialLinks/index.tsx:89
 msgid "WhatsApp"
 msgstr "WhatsApp"
+
+#: src/components/common/CashlessTransactionTable/index.tsx:69
+msgid "When"
+msgstr "Mikor"
 
 #: src/components/forms/WebhookForm/index.tsx:129
 msgid "When a check-in is deleted"
@@ -13337,7 +14009,7 @@ msgstr "Ki szervezi ezt az eseményt?"
 msgid "Who should be asked this question?"
 msgstr "Kinek kell feltenni ezt a kérdést?"
 
-#: src/components/layouts/Event/index.tsx:144
+#: src/components/layouts/Event/index.tsx:154
 msgid "Widget Embed"
 msgstr "Widget beágyazása"
 
@@ -13620,6 +14292,10 @@ msgstr "Fiókja mostantól törlésre van ütemezve."
 msgid "Your account name is used on event pages and in emails."
 msgstr "Fióknevét az eseményoldalakon és az e-mailekben használják."
 
+#: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:32
+msgid "Your activity"
+msgstr "A te tevékenységed"
+
 #: src/components/routes/event/Affiliates/index.tsx:48
 msgid "Your affiliates have been exported successfully."
 msgstr "Partnerei sikeresen exportálva."
@@ -13635,6 +14311,14 @@ msgstr "Résztvevői itt jelennek meg, miután regisztráltak az eseményére. M
 #: src/components/common/WidgetEditor/index.tsx:339
 msgid "Your awesome website 🎉"
 msgstr "Az Ön csodálatos weboldala 🎉"
+
+#: src/components/routes/product-widget/CashlessWallet/index.tsx:67
+msgid "Your cashless balance"
+msgstr "A cashless egyenleged"
+
+#: src/components/routes/event/Cashless/Transactions/index.tsx:43
+msgid "Your cashless transactions have been exported successfully."
+msgstr "A cashless tranzakcióid sikeresen exportálva."
 
 #: src/components/modals/CheckInListSuccessModal/index.tsx:23
 msgid "Your check-in list has been created successfully. Share the link below with your check-in staff."
@@ -13745,7 +14429,7 @@ msgstr "A mentett időpontszűrő már nem érhető el – minden időpont láth
 msgid "Your Stripe account itself isn't affected, and no data is lost — you can reconnect at any time."
 msgstr "A Stripe-fiókja nem érintett, és nem vesznek el adatok — bármikor újra összekapcsolhatja."
 
-#: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:47
+#: src/components/routes/product-widget/AttendeeProductAndInformation/index.tsx:49
 msgid "Your ticket for"
 msgstr "Jegyéhez:"
 

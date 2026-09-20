@@ -122,6 +122,14 @@ Gotchas:
 #### Database & Migrations
 - **DO** use auto-incrementing integer IDs (`$table->id()`), not UUIDs
 - Use anonymous class syntax for migrations
+- Postgres returns `decimal` columns as strings. Domain objects type them as `float`, so every new decimal column needs a `'column' => 'float'` entry in the Eloquent model's `getCastMap()` or hydration throws a `TypeError`
+
+#### Cashless
+- A top-up is a **normal order** containing a hidden system product flagged `products.is_cashless_topup`, provisioned by `CashlessTopupProductProvisionService` when cashless is enabled. It deliberately carries no taxes or fees: topping up is an advance on consumption, and VAT is charged on the products sold at the sales point
+- Every balance mutation goes through `CashlessWalletService::record()` / `reverse()`, which take a row lock on the wallet. Never write `cashless_wallets.balance` directly — the ledger must always re-sum to the stored balance
+- `cashless_transactions` is append-only. A mistake is corrected with a `REVERSAL` row, never by editing or deleting
+- Crediting runs in `CreditCashlessWalletJob`, dispatched from `OrderStatusChangedEvent`. Keeping it queued is what stops the Unit suite from hitting the DB. A `PENDING` `cashless_topups` row against a `COMPLETED` order means the job never ran — that is the reconciliation signal
+- Sales point writes are idempotent on `client_reference_id`, unique per sales point. Any new till operation must send one
 
 #### Enums
 - Status enums go in `backend/app/DomainObjects/Status/`
@@ -167,6 +175,9 @@ Gotchas:
 - Add a `data-testid` to interactive elements the E2E suite needs to drive — primarily **buttons** (open-modal triggers, submit/save), **menu items**, and **custom widgets with no accessible label** (e.g. `CustomSelect`, which takes a `dataTestId` prop that lands on its target and options). This is not required for every element: text inputs with a unique `<label>` are found by role/label instead, so don't add IDs there.
 - Convention: kebab-case `<feature>-<element>`, e.g. `promo-code-create-button`, `webhook-submit-button`, `product-edit-menu-item`. For `CustomSelect`, options are auto-derived as `<dataTestId>-option-<value>`.
 - Only add IDs for elements a test actually interacts with; don't blanket-annotate new UI.
+
+#### Public (unauthenticated) pages
+- `frontend/src/api/client.ts` holds `ALLOWED_UNAUTHENTICATED_PATHS`. A new public route must be listed there, otherwise the 401 from `/users/me` redirects anonymous visitors to the login page
 
 #### Error Handling
 - **DON'T** use `showNotification` from `@mantine/notifications`
