@@ -105,11 +105,11 @@ test.describe('cashless', () => {
     await pos.chargeButton().click();
     await expect(page.getByText('$30.00 left')).toBeVisible();
 
-    await page.getByRole('tab', { name: 'History' }).click();
+    await page.getByRole('button', { name: 'History' }).click();
     await expect(page.getByText('2 × Beer')).toBeVisible();
 
     await page.reload();
-    await page.getByRole('tab', { name: 'History' }).click();
+    await page.getByRole('button', { name: 'History' }).click();
     await expect(page.getByText('2 × Beer')).toBeVisible();
     await expect(page.getByText(attendee.publicId)).toBeVisible();
 
@@ -160,7 +160,7 @@ test.describe('cashless', () => {
     const pos = new CashlessPosPage(page);
     await pos.goto(salesPoint.short_id);
 
-    await expect(page.getByRole('tab', { name: 'Charge' })).toHaveCount(0);
+    await expect(page.getByRole('button', { name: 'Charge' })).toHaveCount(0);
 
     await pos.lookUpTicket(attendee.publicId, 'cashless-pos-topup-ticket-input');
     await page.getByRole('combobox', { name: 'How did they pay?' }).click();

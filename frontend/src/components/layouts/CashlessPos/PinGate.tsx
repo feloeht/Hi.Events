@@ -33,7 +33,9 @@ export const PinGate = ({salesPointShortId, salesPointName, onAuthenticated}: Pi
     return (
         <div className={classes.gate}>
             <form className={classes.gateCard} onSubmit={handleSubmit}>
-                <IconLock size={32}/>
+                <div className={classes.gateIcon}>
+                    <IconLock size={26}/>
+                </div>
                 <h1 className={classes.gateTitle}>{salesPointName ?? t`Sales point`}</h1>
                 <p className={classes.gateSubtitle}>{t`Enter the PIN to open this till.`}</p>
 

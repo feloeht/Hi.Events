@@ -1,6 +1,5 @@
 import {t} from "@lingui/macro";
-import {Tabs} from "@mantine/core";
-import {IconArrowsExchange, IconCoin, IconReceipt} from "@tabler/icons-react";
+import {IconArrowsExchange, IconCoin, IconLock, IconReceipt} from "@tabler/icons-react";
 import {useState} from "react";
 import {useParams} from "react-router";
 import {useQueryClient} from "@tanstack/react-query";
@@ -12,6 +11,7 @@ import {
     useGetCashlessSalesPointTransactions,
 } from "../../../queries/useGetCashlessSalesPointTransactions.ts";
 import {HomepageInfoMessage} from "../../common/HomepageInfoMessage";
+import {FloatingTabBar} from "../../common/FloatingTabBar";
 import {showError, showSuccess} from "../../../utilites/notifications.tsx";
 import {formatCurrency} from "../../../utilites/currency.ts";
 import {usePosSession} from "./usePosSession.ts";
@@ -21,6 +21,8 @@ import {CartLine, ChargeTab} from "./ChargeTab.tsx";
 import {TopUpTab} from "./TopUpTab.tsx";
 import {HistoryTab} from "./HistoryTab.tsx";
 import classes from "./CashlessPos.module.scss";
+
+type PosTab = 'charge' | 'topup' | 'history';
 
 const newClientReference = () =>
     (typeof crypto !== 'undefined' && 'randomUUID' in crypto)
@@ -40,6 +42,7 @@ const CashlessPos = () => {
     const [reversingShortId, setReversingShortId] = useState<string | null>(null);
     const [scannerResetToken, setScannerResetToken] = useState(0);
     const [topupAmount, setTopupAmount] = useState(20);
+    const [activeTab, setActiveTab] = useState<PosTab | null>(null);
 
     const basket = cart.map((line) => ({
         product_id: line.product_id,
@@ -57,6 +60,7 @@ const CashlessPos = () => {
 
     const currency = salesPoint?.currency ?? 'USD';
     const sellsProducts = (salesPoint?.products?.length ?? 0) > 0;
+    const currentTab: PosTab = activeTab ?? (sellsProducts ? 'charge' : 'topup');
 
     const lookUpWallet = async (attendeePublicId: string) => {
         setScannedId(attendeePublicId);
@@ -203,74 +207,86 @@ const CashlessPos = () => {
     return (
         <div className={classes.pos}>
             <header className={classes.header}>
-                <div>
-                    <h1 className={classes.salesPointName}>{salesPoint.name}</h1>
-                    <span className={classes.eventName}>{salesPoint.event_title}</span>
+                <div className={classes.headerMain}>
+                    <div className={classes.topLabel}>{t`Sales point`}</div>
+                    <div className={classes.topTitle}>{salesPoint.name}</div>
+                    {salesPoint.event_title && (
+                        <div className={classes.topScope}>{salesPoint.event_title}</div>
+                    )}
                 </div>
                 {salesPoint.requires_pin && (
-                    <button type="button" className={classes.lockButton} onClick={clearToken}>
+                    <button
+                        type="button"
+                        className={classes.lockButton}
+                        onClick={clearToken}
+                        data-testid="cashless-pos-lock-button"
+                    >
+                        <IconLock size={14}/>
                         {t`Lock till`}
                     </button>
                 )}
             </header>
 
-            <Tabs defaultValue={sellsProducts ? 'charge' : 'topup'} className={classes.tabs}>
-                <Tabs.List grow>
-                    {sellsProducts && (
-                        <Tabs.Tab value="charge" leftSection={<IconReceipt size={16}/>}>
-                            {t`Charge`}
-                        </Tabs.Tab>
-                    )}
-                    <Tabs.Tab value="topup" leftSection={<IconCoin size={16}/>}>
-                        {t`Top up`}
-                    </Tabs.Tab>
-                    <Tabs.Tab value="history" leftSection={<IconArrowsExchange size={16}/>}>
-                        {t`History`}
-                    </Tabs.Tab>
-                </Tabs.List>
+            <main className={classes.content}>
+                {currentTab === 'charge' && sellsProducts && (
+                    <div className={classes.panel}>
+                        <ChargeTab
+                            salesPoint={salesPoint}
+                            wallet={wallet}
+                            scannedId={scannedId}
+                            cart={cart}
+                            isCharging={isSubmitting}
+                            onScan={lookUpWallet}
+                            onManualLookup={lookUpWallet}
+                            onAddLine={addLine}
+                            onChangeQuantity={changeQuantity}
+                            onClear={resetCustomer}
+                            onCharge={charge}
+                            scannerResetToken={scannerResetToken}
+                            quote={chargeQuote}
+                        />
+                    </div>
+                )}
 
-                {sellsProducts && <Tabs.Panel value="charge" className={classes.panel}>
-                    <ChargeTab
-                        salesPoint={salesPoint}
-                        wallet={wallet}
-                        scannedId={scannedId}
-                        cart={cart}
-                        isCharging={isSubmitting}
-                        onScan={lookUpWallet}
-                        onManualLookup={lookUpWallet}
-                        onAddLine={addLine}
-                        onChangeQuantity={changeQuantity}
-                        onClear={resetCustomer}
-                        onCharge={charge}
-                        scannerResetToken={scannerResetToken}
-                        quote={chargeQuote}
-                    />
-                </Tabs.Panel>}
+                {currentTab === 'topup' && (
+                    <div className={classes.panel}>
+                        <TopUpTab
+                            salesPoint={salesPoint}
+                            wallet={wallet}
+                            isSubmitting={isSubmitting}
+                            onScan={lookUpWallet}
+                            onManualLookup={lookUpWallet}
+                            onClear={resetCustomer}
+                            onTopUp={topUp}
+                            scannerResetToken={scannerResetToken}
+                            quote={topupQuote}
+                            onAmountChange={setTopupAmount}
+                        />
+                    </div>
+                )}
 
-                <Tabs.Panel value="topup" className={classes.panel}>
-                    <TopUpTab
-                        salesPoint={salesPoint}
-                        wallet={wallet}
-                        isSubmitting={isSubmitting}
-                        onScan={lookUpWallet}
-                        onManualLookup={lookUpWallet}
-                        onClear={resetCustomer}
-                        onTopUp={topUp}
-                        scannerResetToken={scannerResetToken}
-                        quote={topupQuote}
-                        onAmountChange={setTopupAmount}
-                    />
-                </Tabs.Panel>
+                {currentTab === 'history' && (
+                    <div className={classes.panel}>
+                        <HistoryTab
+                            transactions={transactions}
+                            currency={currency}
+                            reversingShortId={reversingShortId}
+                            onReverse={reverse}
+                        />
+                    </div>
+                )}
+            </main>
 
-                <Tabs.Panel value="history" className={classes.panel}>
-                    <HistoryTab
-                        transactions={transactions}
-                        currency={currency}
-                        reversingShortId={reversingShortId}
-                        onReverse={reverse}
-                    />
-                </Tabs.Panel>
-            </Tabs>
+            <FloatingTabBar
+                ariaLabel={t`Sales point navigation`}
+                active={currentTab}
+                onChange={setActiveTab}
+                items={[
+                    ...(sellsProducts ? [{id: 'charge' as PosTab, label: t`Charge`, icon: <IconReceipt size={20} stroke={1.8}/>}] : []),
+                    {id: 'topup' as PosTab, label: t`Top up`, icon: <IconCoin size={20} stroke={1.8}/>},
+                    {id: 'history' as PosTab, label: t`History`, icon: <IconArrowsExchange size={20} stroke={1.8}/>},
+                ]}
+            />
         </div>
     );
 };
