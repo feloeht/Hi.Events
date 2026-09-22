@@ -176,13 +176,6 @@
   gap: 1rem;
 }
 
-.scannerFrame {
-  position: relative;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: var(--mantine-radius-lg);
-}
-
 .manualLookup {
   display: flex;
   gap: .5rem;
@@ -378,7 +371,7 @@
 }
 
 @media (min-width: 900px) {
-  .chargeLayout {
+  .chargeLayoutSplit {
     display: grid;
     grid-template-columns: 340px 1fr;
     align-items: start;

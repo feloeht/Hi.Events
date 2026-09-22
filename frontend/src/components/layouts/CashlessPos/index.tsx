@@ -1,6 +1,6 @@
 import {t} from "@lingui/macro";
 import {IconArrowsExchange, IconCoin, IconLock, IconReceipt} from "@tabler/icons-react";
-import {useState} from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 import {useParams} from "react-router";
 import {useQueryClient} from "@tanstack/react-query";
 import {CashlessStaffPaymentMethod, CashlessWalletPublic, Product} from "../../../types.ts";
@@ -12,8 +12,11 @@ import {
 } from "../../../queries/useGetCashlessSalesPointTransactions.ts";
 import {HomepageInfoMessage} from "../../common/HomepageInfoMessage";
 import {FloatingTabBar} from "../../common/FloatingTabBar";
+import {ScanMode} from "../../common/TicketScanZone";
 import {showError, showSuccess} from "../../../utilites/notifications.tsx";
 import {formatCurrency} from "../../../utilites/currency.ts";
+import {isSsr} from "../../../utilites/helpers.ts";
+import {useUsbBarcodeScanner} from "../../../hooks/useUsbBarcodeScanner.ts";
 import {usePosSession} from "./usePosSession.ts";
 import {useCashlessQuote} from "./useCashlessQuote.ts";
 import {PinGate} from "./PinGate.tsx";
@@ -43,6 +46,45 @@ const CashlessPos = () => {
     const [scannerResetToken, setScannerResetToken] = useState(0);
     const [topupAmount, setTopupAmount] = useState(20);
     const [activeTab, setActiveTab] = useState<PosTab | null>(null);
+    const [scanMode, setScanMode] = useState<ScanMode>(() => {
+        if (isSsr()) return "camera";
+        return localStorage.getItem("cashlessPosScanMode") === "usb" ? "usb" : "camera";
+    });
+    const [isSoundOn, setIsSoundOn] = useState(() => {
+        if (isSsr()) return true;
+        const storedIsSoundOn = localStorage.getItem("cashlessPosSoundOn");
+        return storedIsSoundOn === null ? true : JSON.parse(storedIsSoundOn);
+    });
+    const scanSuccessAudioRef = useRef<HTMLAudioElement | null>(null);
+    const scanErrorAudioRef = useRef<HTMLAudioElement | null>(null);
+
+    useEffect(() => {
+        if (!isSsr()) {
+            localStorage.setItem("cashlessPosScanMode", scanMode);
+        }
+    }, [scanMode]);
+
+    useEffect(() => {
+        if (!isSsr()) {
+            localStorage.setItem("cashlessPosSoundOn", JSON.stringify(isSoundOn));
+        }
+    }, [isSoundOn]);
+
+    const playSuccessSound = useCallback(() => {
+        if (isSoundOn && scanSuccessAudioRef.current) {
+            scanSuccessAudioRef.current.currentTime = 0;
+            scanSuccessAudioRef.current.play().catch(() => {
+            });
+        }
+    }, [isSoundOn]);
+
+    const playErrorSound = useCallback(() => {
+        if (isSoundOn && scanErrorAudioRef.current) {
+            scanErrorAudioRef.current.currentTime = 0;
+            scanErrorAudioRef.current.play().catch(() => {
+            });
+        }
+    }, [isSoundOn]);
 
     const basket = cart.map((line) => ({
         product_id: line.product_id,
@@ -70,8 +112,10 @@ const CashlessPos = () => {
                 String(salesPointShortId), attendeePublicId, token,
             );
             setWallet(data);
+            playSuccessSound();
         } catch (error: any) {
             showError(error?.response?.data?.message || t`That ticket could not be found.`);
+            playErrorSound();
         } finally {
             setScannedId('');
             setScannerResetToken((value) => value + 1);
@@ -84,6 +128,15 @@ const CashlessPos = () => {
         setScannedId('');
         setScannerResetToken((value) => value + 1);
     };
+
+    const processScannedCode = (code: string) => {
+        if (code.startsWith("A-") && code.length > 3) {
+            lookUpWallet(code);
+        }
+    };
+
+    const usbScannerEnabled = !wallet && scanMode === "usb" && (currentTab === "charge" || currentTab === "topup");
+    const {hidBuffer, pageHasFocus} = useUsbBarcodeScanner(usbScannerEnabled, processScannedCode);
 
     const addLine = (product: Product, priceId: number, title: string, unitPrice: number) => {
         setCart((lines) => {
@@ -132,10 +185,12 @@ const CashlessPos = () => {
             }, token);
 
             showSuccess(t`Charged ${formatCurrency(Math.abs(data.amount), currency)} — ${formatCurrency(data.balance_after, currency)} left`);
+            playSuccessSound();
             refreshTransactions();
             resetCustomer();
         } catch (error: any) {
             showError(error?.response?.data?.message || t`This payment could not be taken.`);
+            playErrorSound();
         } finally {
             setIsSubmitting(false);
         }
@@ -157,10 +212,12 @@ const CashlessPos = () => {
             }, token);
 
             showSuccess(t`Added ${formatCurrency(amount, currency)} — balance is now ${formatCurrency(data.balance_after, currency)}`);
+            playSuccessSound();
             refreshTransactions();
             resetCustomer();
         } catch (error: any) {
             showError(error?.response?.data?.message || t`This top-up could not be recorded.`);
+            playErrorSound();
         } finally {
             setIsSubmitting(false);
         }
@@ -244,6 +301,12 @@ const CashlessPos = () => {
                             onCharge={charge}
                             scannerResetToken={scannerResetToken}
                             quote={chargeQuote}
+                            scanMode={scanMode}
+                            onScanModeChange={setScanMode}
+                            hidBuffer={hidBuffer}
+                            hidPageHasFocus={pageHasFocus}
+                            isSoundOn={isSoundOn}
+                            onSoundToggle={() => setIsSoundOn(!isSoundOn)}
                         />
                     </div>
                 )}
@@ -261,6 +324,12 @@ const CashlessPos = () => {
                             scannerResetToken={scannerResetToken}
                             quote={topupQuote}
                             onAmountChange={setTopupAmount}
+                            scanMode={scanMode}
+                            onScanModeChange={setScanMode}
+                            hidBuffer={hidBuffer}
+                            hidPageHasFocus={pageHasFocus}
+                            isSoundOn={isSoundOn}
+                            onSoundToggle={() => setIsSoundOn(!isSoundOn)}
                         />
                     </div>
                 )}
@@ -287,6 +356,9 @@ const CashlessPos = () => {
                     {id: 'history' as PosTab, label: t`History`, icon: <IconArrowsExchange size={20} stroke={1.8}/>},
                 ]}
             />
+
+            <audio ref={scanSuccessAudioRef} src="/sounds/scan-success.wav"/>
+            <audio ref={scanErrorAudioRef} src="/sounds/scan-error.wav"/>
         </div>
     );
 };

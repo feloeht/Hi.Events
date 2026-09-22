@@ -2,7 +2,7 @@ import {t} from "@lingui/macro";
 import {Button, NumberInput, Select, TextInput} from "@mantine/core";
 import {useState} from "react";
 import {CashlessQuote, CashlessSalesPointPublic, CashlessStaffPaymentMethod, CashlessWalletPublic} from "../../../types.ts";
-import {InlineCameraScanner} from "../../common/InlineCameraScanner";
+import {TicketScanZone, ScanMode} from "../../common/TicketScanZone";
 import {formatCurrency} from "../../../utilites/currency.ts";
 import classes from "./CashlessPos.module.scss";
 
@@ -17,6 +17,12 @@ interface TopUpTabProps {
     scannerResetToken: number;
     quote: CashlessQuote | null;
     onAmountChange: (amount: number) => void;
+    scanMode: ScanMode;
+    onScanModeChange: (mode: ScanMode) => void;
+    hidBuffer: string;
+    hidPageHasFocus: boolean;
+    isSoundOn: boolean;
+    onSoundToggle: () => void;
 }
 
 export const TopUpTab = ({
@@ -30,6 +36,12 @@ export const TopUpTab = ({
                              scannerResetToken,
                              quote,
                              onAmountChange,
+                             scanMode,
+                             onScanModeChange,
+                             hidBuffer,
+                             hidPageHasFocus,
+                             isSoundOn,
+                             onSoundToggle,
                          }: TopUpTabProps) => {
     const [manualId, setManualId] = useState('');
     const [amount, setAmount] = useState<number | string>(20);
@@ -48,9 +60,18 @@ export const TopUpTab = ({
         <div className={classes.topUpLayout}>
             {!wallet && (
                 <>
-                    <div className={classes.scannerFrame}>
-                        <InlineCameraScanner onAttendeeScanned={onScan} clearHandledCodesToken={scannerResetToken}/>
-                    </div>
+                    <TicketScanZone
+                        mode={scanMode}
+                        onModeChange={onScanModeChange}
+                        hidPageHasFocus={hidPageHasFocus}
+                        hidBuffer={hidBuffer}
+                        isSoundOn={isSoundOn}
+                        onSoundToggle={onSoundToggle}
+                        onCodeScanned={onScan}
+                        scannerResetToken={scannerResetToken}
+                        listeningLabel={t`Scan a ticket to top up its balance`}
+                        pausedLabel={t`Tap this screen to resume scanning`}
+                    />
 
                     <form
                         className={classes.manualLookup}
