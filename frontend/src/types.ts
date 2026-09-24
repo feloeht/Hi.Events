@@ -1365,7 +1365,7 @@ export interface WebhookLog {
 }
 
 // Email Template Types
-export type EmailTemplateType = 'order_confirmation' | 'attendee_ticket' | 'occurrence_cancellation';
+export type EmailTemplateType = 'order_confirmation' | 'attendee_ticket' | 'occurrence_cancellation' | 'cashless_topup';
 export type EmailTemplateEngine = 'liquid' | 'blade';
 
 export interface EmailTemplate {

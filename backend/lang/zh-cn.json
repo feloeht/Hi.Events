@@ -777,5 +777,10 @@
     "View my balance": "查看我的余额",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "我们已为您在 **:event** 的门票关联的无现金余额充入 **:amount**。",
     "Your cashless balance is topped up": "您的无现金余额已充值",
-    "💳 Your cashless balance for :event": "💳 您在 :event 的无现金余额"
+    "💳 Your cashless balance for :event": "💳 您在 :event 的无现金余额",
+    "Cashless Top-up": "无现金充值",
+    "Sent to attendees when their cashless balance is topped up online": "当参与者的无现金余额在线充值后发送给他们",
+    "The amount that was just added to the balance": "刚刚添加到余额的金额",
+    "The balance available after this top-up": "本次充值后的可用余额",
+    "Link to view the cashless balance": "查看无现金余额的链接"
 }

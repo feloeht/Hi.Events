@@ -10,10 +10,12 @@ import {useUpdateEmailTemplateForEvent} from "../../../../../../mutations/useUpd
 import {useDeleteEmailTemplateForEvent} from "../../../../../../mutations/useDeleteEmailTemplate.ts";
 import {EmailTemplateSettingsBase} from '../../../../../common/EmailTemplateSettings';
 import {useGetEvent} from '../../../../../../queries/useGetEvent';
+import {useGetEventSettings} from '../../../../../../queries/useGetEventSettings';
 
 export const TemplateSettings = () => {
     const {eventId} = useParams();
     const {data: event} = useGetEvent(eventId);
+    const {data: eventSettings} = useGetEventSettings(eventId);
     const [shouldFetchDefaults, setShouldFetchDefaults] = useState(false);
 
     // Queries
@@ -48,6 +50,7 @@ export const TemplateSettings = () => {
             previewMutation={previewMutation}
             onCreateTemplate={handleCreateTemplate}
             eventType={event?.type}
+            isCashlessEnabled={eventSettings?.cashless_enabled}
         />
     );
 };

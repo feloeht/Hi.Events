@@ -974,5 +974,10 @@
     "View my balance": "내 잔액 보기",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "**:event** 티켓에 연결된 캐시리스 잔액에 **:amount**을(를) 충전했습니다.",
     "Your cashless balance is topped up": "캐시리스 잔액이 충전되었습니다",
-    "💳 Your cashless balance for :event": "💳 :event 캐시리스 잔액"
+    "💳 Your cashless balance for :event": "💳 :event 캐시리스 잔액",
+    "Cashless Top-up": "캐시리스 충전",
+    "Sent to attendees when their cashless balance is topped up online": "캐시리스 잔액이 온라인으로 충전되면 참석자에게 발송됩니다",
+    "The amount that was just added to the balance": "방금 잔액에 추가된 금액",
+    "The balance available after this top-up": "이번 충전 후 사용 가능한 잔액",
+    "Link to view the cashless balance": "캐시리스 잔액 보기 링크"
 }

@@ -14,7 +14,6 @@ use HiEvents\DomainObjects\Generated\CashlessTopupDomainObjectAbstract;
 use HiEvents\DomainObjects\OrderDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
 use HiEvents\DomainObjects\Status\CashlessTopupStatus;
-use HiEvents\Mail\Cashless\CashlessTopupConfirmationMail;
 use HiEvents\Repository\Eloquent\Value\Relationship;
 use HiEvents\Repository\Interfaces\AttendeeRepositoryInterface;
 use HiEvents\Repository\Interfaces\CashlessTopupRepositoryInterface;
@@ -22,6 +21,7 @@ use HiEvents\Repository\Interfaces\CashlessWalletRepositoryInterface;
 use HiEvents\Repository\Interfaces\EventRepositoryInterface;
 use HiEvents\Services\Domain\Cashless\CashlessWalletService;
 use HiEvents\Services\Domain\Cashless\DTO\RecordCashlessTransactionDTO;
+use HiEvents\Services\Domain\Email\MailBuilderService;
 use Illuminate\Contracts\Mail\Mailer;
 use Throwable;
 
@@ -33,6 +33,7 @@ class CreditCashlessTopupHandler
         private readonly AttendeeRepositoryInterface $attendeeRepository,
         private readonly EventRepositoryInterface $eventRepository,
         private readonly CashlessWalletService $walletService,
+        private readonly MailBuilderService $mailBuilderService,
         private readonly Mailer $mailer,
     ) {}
 
@@ -95,7 +96,7 @@ class CreditCashlessTopupHandler
         $this->mailer
             ->to($attendee->getEmail())
             ->locale($order->getLocale())
-            ->send(new CashlessTopupConfirmationMail(
+            ->send($this->mailBuilderService->buildCashlessTopupConfirmationMail(
                 wallet: $wallet,
                 transaction: $transaction,
                 attendee: $attendee,

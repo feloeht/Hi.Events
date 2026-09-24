@@ -777,5 +777,10 @@
     "View my balance": "Zobraziť môj zostatok",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "Pripísali sme **:amount** na cashless zostatok viazaný na váš lístok na **:event**.",
     "Your cashless balance is topped up": "Váš cashless zostatok bol dobitý",
-    "💳 Your cashless balance for :event": "💳 Váš cashless zostatok pre :event"
+    "💳 Your cashless balance for :event": "💳 Váš cashless zostatok pre :event",
+    "Cashless Top-up": "Cashless dobitie",
+    "Sent to attendees when their cashless balance is topped up online": "Odosiela sa účastníkom, keď sa ich cashless zostatok dobije online",
+    "The amount that was just added to the balance": "Suma, ktorá bola práve pripísaná na zostatok",
+    "The balance available after this top-up": "Zostatok dostupný po tomto dobití",
+    "Link to view the cashless balance": "Odkaz na zobrazenie cashless zostatku"
 }

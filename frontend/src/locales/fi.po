@@ -47,15 +47,15 @@ msgstr "{0} (kopio)"
 msgid "{0} {1}"
 msgstr "{0} {1}"
 
-#: src/components/layouts/CheckIn/index.tsx:362
+#: src/components/layouts/CheckIn/index.tsx:360
 msgid "{0} {1} is already checked in"
 msgstr "{0} {1} on jo kirjautunut sisään"
 
-#: src/components/layouts/CheckIn/index.tsx:249
+#: src/components/layouts/CheckIn/index.tsx:247
 msgid "{0} <0>checked in</0>"
 msgstr "{0} <0>kirjautunut sisään</0>"
 
-#: src/components/layouts/CheckIn/index.tsx:284
+#: src/components/layouts/CheckIn/index.tsx:282
 msgid "{0} <0>checked out</0> successfully"
 msgstr "{0} <0>kirjautunut ulos</0> onnistuneesti"
 
@@ -89,7 +89,7 @@ msgstr "{0}-logo"
 msgid "{0} of {1} seats are taken."
 msgstr "{0}/{1} paikkaa on varattuna."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:119
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:140
 msgid "{0} onto the ticket plus {1} in fees"
 msgstr "{0} lipulle plus {1} maksuja"
 
@@ -170,15 +170,15 @@ msgstr "{count} lisätuotetta"
 msgid "{days} days, {hours} hours, {minutes} minutes, and {seconds} seconds"
 msgstr "{days} päivää, {hours} tuntia, {minutes} minuuttia ja {seconds} sekuntia"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:29
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:28
 msgid "{diffHr}h ago"
 msgstr "{diffHr}t sitten"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:27
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:26
 msgid "{diffMin}m ago"
 msgstr "{diffMin}min sitten"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:25
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:24
 msgid "{diffSec}s ago"
 msgstr "{diffSec}s sitten"
 
@@ -633,7 +633,7 @@ msgstr "Aktivointipäivä"
 #: src/components/common/AttendeeTable/index.tsx:260
 #: src/components/common/CheckInListList/index.tsx:114
 #: src/components/common/CheckInListTable/index.tsx:168
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:279
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:284
 #: src/components/forms/AffiliateForm/index.tsx:21
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:19
 #: src/components/modals/EditUserModal/index.tsx:111
@@ -657,7 +657,7 @@ msgstr "Aktiiviset maksutavat"
 msgid "Activity"
 msgstr "Toiminta"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:133
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:154
 msgid "Add {0}"
 msgstr "Lisää {0}"
 
@@ -770,7 +770,7 @@ msgstr "Lisää useita aikoja, jos järjestät useita istuntoja päivässä."
 msgid "Add New"
 msgstr "Lisää uusi"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:154
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:176
 msgid "Add one"
 msgstr "Lisää yksi"
 
@@ -848,7 +848,7 @@ msgstr "Lisätuotteet"
 msgid "Add-ons"
 msgstr "Lisätuotteet"
 
-#: src/components/layouts/CashlessPos/index.tsx:147
+#: src/components/layouts/CashlessPos/index.tsx:214
 msgid "Added {0} — balance is now {1}"
 msgstr "Lisättiin {0} — saldo on nyt {1}"
 
@@ -1137,7 +1137,7 @@ msgstr "Onko sinulla jo lippu? Lataa siihen liitettyä saldoa ja maksa tapahtuma
 msgid "Already have an account? <0>{0}</0>"
 msgstr "Onko sinulla jo tili? <0>{0}</0>"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:135
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:87
 msgid "Already in"
 msgstr "Jo sisällä"
 
@@ -1185,7 +1185,7 @@ msgstr "Maksettu summa"
 msgid "Amount paid ({0})"
 msgstr "Maksettu summa ({0})"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:88
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:109
 #: src/components/modals/CashlessTopupModal/index.tsx:78
 msgid "Amount to add"
 msgstr "Lisättävä summa"
@@ -1472,11 +1472,11 @@ msgstr "Haluatko varmasti poistaa tämän kampanjakoodin?"
 msgid "Are you sure you want to delete this tax or fee? It will no longer be applied to new orders."
 msgstr "Haluatko varmasti poistaa tämän veron tai maksun? Sitä ei enää sovelleta uusiin tilauksiin."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:111
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:114
 msgid "Are you sure you want to delete this template? This action cannot be undone and emails will fall back to the default template."
 msgstr "Haluatko varmasti poistaa tämän mallineen? Tätä toimintoa ei voi perua, ja sähköpostit palaavat käyttämään oletusmallinnetta."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:110
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:113
 msgid "Are you sure you want to delete this template? This action cannot be undone and emails will fall back to the organizer or default template."
 msgstr "Haluatko varmasti poistaa tämän mallineen? Tätä toimintoa ei voi perua, ja sähköpostit palaavat käyttämään järjestäjän tai oletusmallinnetta."
 
@@ -1665,7 +1665,7 @@ msgstr "Osallistujan tiedot"
 msgid "Attendee information collection"
 msgstr "Osallistujatietojen keruu"
 
-#: src/components/layouts/CheckIn/index.tsx:353
+#: src/components/layouts/CheckIn/index.tsx:351
 msgid "Attendee not found"
 msgstr "Osallistujaa ei löydy"
 
@@ -1677,8 +1677,8 @@ msgstr "Osallistujamuistiinpanot"
 msgid "Attendee Status"
 msgstr "Osallistujan tila"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:98
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:211
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:102
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:214
 msgid "Attendee Ticket"
 msgstr "Osallistujan lippu"
 
@@ -1986,7 +1986,7 @@ msgstr "Laskutusosoite"
 msgid "Billing Settings"
 msgstr "Laskutusasetukset"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:47
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:54
 msgid "Body is required"
 msgstr "Viesti on pakollinen"
 
@@ -2101,7 +2101,7 @@ msgid "Call-to-Action Button"
 msgstr "Toimintopainike"
 
 #: src/components/common/InlineCameraScanner/index.tsx:160
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:90
+#: src/components/common/TicketScanZone/index.tsx:81
 msgid "Camera"
 msgstr "Kamera"
 
@@ -2119,7 +2119,7 @@ msgstr "Ei voi kirjautua sisään"
 
 #: src/components/common/CheckIn/CheckInOptionsModal.tsx:57
 #: src/components/common/ContactOrganizerModal/index.tsx:104
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:131
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:134
 #: src/components/common/LocationPicker/index.tsx:352
 #: src/components/common/PromoCodeTable/index.tsx:40
 #: src/components/common/QuestionAndAnswerList/index.tsx:125
@@ -2200,6 +2200,7 @@ msgstr "Peruuttaminen peruuttaa kaikki tähän tilaukseen liittyvät osallistuja
 #: src/components/common/OrdersTable/index.tsx:341
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:28
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:31
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:114
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:80
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:226
@@ -2270,12 +2271,12 @@ msgstr "Käytetty kapasiteetti"
 msgid "Card fees make very small top-ups uneconomical."
 msgstr "Korttimaksut tekevät hyvin pienistä latauksista kannattamattomia."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:107
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:128
 #: src/components/modals/CashlessTopupModal/index.tsx:89
 msgid "Card terminal"
 msgstr "Maksupääte"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:106
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:127
 #: src/components/modals/CashlessTopupModal/index.tsx:88
 msgid "Cash"
 msgstr "Käteinen"
@@ -2314,6 +2315,11 @@ msgstr "Cashless-asetukset"
 #: src/components/routes/event/Cashless/Settings/index.tsx:81
 msgid "Cashless settings saved"
 msgstr "Cashless-asetukset tallennettu"
+
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:104
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:216
+msgid "Cashless Top-up"
+msgstr "Cashless-lataus"
 
 #: src/components/routes/event/Cashless/Transactions/index.tsx:59
 msgid "Cashless Transactions"
@@ -2372,15 +2378,15 @@ msgstr "Muuta jonotuslistan asetuksia"
 msgid "Changed duration for {count} date(s)"
 msgstr "Kesto muutettiin {count} päivälle"
 
-#: src/components/layouts/CashlessPos/index.tsx:217
+#: src/components/layouts/CashlessPos/index.tsx:354
 msgid "Charge"
 msgstr "Veloita"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:211
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:233
 msgid "Charge {0}"
 msgstr "Veloita {0}"
 
-#: src/components/layouts/CashlessPos/index.tsx:119
+#: src/components/layouts/CashlessPos/index.tsx:187
 msgid "Charged {0} — {1} left"
 msgstr "Veloitettiin {0} — jäljellä {1}"
 
@@ -2433,7 +2439,7 @@ msgstr "Tarkista sähköpostisi"
 msgid "Check your inbox! If tickets are associated with this email, you'll receive a link to view them."
 msgstr "Tarkista postilaatikkosi! Jos tähän sähköpostiin liittyy lippuja, saat linkin niiden tarkastelemiseen."
 
-#: src/components/layouts/CheckIn/index.tsx:549
+#: src/components/layouts/CheckIn/index.tsx:492
 msgid "Check-in"
 msgstr "Sisäänkirjaus"
 
@@ -2450,7 +2456,7 @@ msgstr "Sisäänkirjaus luotu"
 msgid "Check-in Deleted"
 msgstr "Sisäänkirjaus poistettu"
 
-#: src/components/layouts/CheckIn/index.tsx:215
+#: src/components/layouts/CheckIn/index.tsx:213
 msgid "Check-in for {0} was undone"
 msgstr "Sisäänkirjaus {0}:lta peruttiin"
 
@@ -2471,19 +2477,19 @@ msgstr "Sisäänkirjauslista luotu"
 msgid "Check-In List deleted successfully"
 msgstr "Sisäänkirjauslista poistettiin onnistuneesti"
 
-#: src/components/layouts/CheckIn/index.tsx:481
+#: src/components/layouts/CheckIn/index.tsx:424
 msgid "Check-in list has expired"
 msgstr "Sisäänkirjauslista on vanhentunut"
 
-#: src/components/layouts/CheckIn/index.tsx:583
+#: src/components/layouts/CheckIn/index.tsx:526
 msgid "Check-in list info"
 msgstr "Tietoja sisäänkirjauslistasta"
 
-#: src/components/layouts/CheckIn/index.tsx:520
+#: src/components/layouts/CheckIn/index.tsx:463
 msgid "Check-in list is not active"
 msgstr "Sisäänkirjauslista ei ole aktiivinen"
 
-#: src/components/layouts/CheckIn/index.tsx:466
+#: src/components/layouts/CheckIn/index.tsx:409
 msgid "Check-in list not found"
 msgstr "Sisäänkirjauslista ei löydy"
 
@@ -2501,11 +2507,11 @@ msgstr "Sisäänkirjauslistat"
 msgid "Check-In Lists"
 msgstr "Sisäänkirjauslistat"
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:21
+#: src/components/layouts/CheckIn/BottomNav.tsx:14
 msgid "Check-in navigation"
 msgstr "Sisäänkirjautumisen navigointi"
 
-#: src/components/layouts/CheckIn/index.tsx:567
+#: src/components/layouts/CheckIn/index.tsx:510
 msgid "Check-in progress"
 msgstr "Sisäänkirjautumisen eteneminen"
 
@@ -2646,7 +2652,7 @@ msgid "Class with a T-shirt add-on"
 msgstr "Tunti T-paitalisällä"
 
 #: src/components/common/OccurrenceSelect/index.tsx:133
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:202
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:224
 #: src/components/routes/event/OccurrencesTab/index.tsx:547
 msgid "Clear"
 msgstr "Tyhjennä"
@@ -2975,7 +2981,7 @@ msgstr "Onnittelut! Tapahtumasi on nyt julkisesti nähtävillä."
 msgid "Connect bank"
 msgstr "Yhdistä pankki"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:370
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:375
 #: src/components/modals/PublishEventModal/index.tsx:83
 #: src/components/modals/SendMessageModal/index.tsx:298
 msgid "Connect Stripe"
@@ -2985,7 +2991,7 @@ msgstr "Yhdistä Stripe"
 msgid "Connect Stripe to accept payments"
 msgstr "Yhdistä Stripe vastaanottaaksesi maksuja"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:360
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:365
 msgid "Connect Stripe to enable email template editing"
 msgstr "Yhdistä Stripe ottaaksesi käyttöön sähköpostipohjien muokkauksen"
 
@@ -3265,7 +3271,7 @@ msgstr "Luo"
 msgid "Create {0}"
 msgstr "Luo {0}"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:112
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:117
 msgid "Create {0} Template"
 msgstr "Luo {0}-pohja"
 
@@ -3281,7 +3287,7 @@ msgstr "Luo yleinen tuote, esimerkiksi juoma, myydäksesi sitä täällä"
 msgid "Create a list for this date"
 msgstr "Luo lista tälle päivälle"
 
-#: src/components/layouts/CheckIn/index.tsx:508
+#: src/components/layouts/CheckIn/index.tsx:451
 msgid "Create a new check-in list for an active session, or contact the organizer if you think this is a mistake."
 msgstr "Luo uusi sisäänkirjauslista aktiiviselle istunnolle, tai ota yhteyttä järjestäjään, jos uskot tämän olevan virhe."
 
@@ -3368,11 +3374,11 @@ msgstr "Luo sisäänkirjauslista"
 msgid "Create Configuration"
 msgstr "Luo konfiguraatio"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:324
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:329
 msgid "Create custom email templates for this event that override the organizer defaults"
 msgstr "Luo tapahtumalle mukautetut sähköpostipohjat, jotka ohittavat järjestäjän oletukset"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:314
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:319
 msgid "Create Custom Template"
 msgstr "Luo mukautettu malli"
 
@@ -3505,7 +3511,7 @@ msgstr "Luodaan järjestäjäprofiiliasi, odota hetki"
 msgid "CTA"
 msgstr "CTA"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:48
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:55
 msgid "CTA label is required"
 msgstr "CTA-etiketti on pakollinen"
 
@@ -3563,7 +3569,7 @@ msgstr "Mukautetut kysymykset"
 msgid "Custom Range"
 msgstr "Mukautettu alue"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:235
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:240
 msgid "Custom template"
 msgstr "Mukautettu malli"
 
@@ -3592,7 +3598,7 @@ msgstr "Mukauta sivua"
 msgid "Customize the email and notification settings for this event"
 msgstr "Mukauta tämän tapahtuman sähköposti- ja ilmoitusasetuksia"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:326
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:331
 msgid "Customize the emails sent to your customers using Liquid templating. These templates will be used as defaults for all events in your organization."
 msgstr "Mukauta asiakkaille lähetettäviä sähköposteja Liquid-mallinnusta käyttäen. Näitä malleja käytetään oletuksina kaikissa organisaatiosi tapahtumissa."
 
@@ -3625,7 +3631,7 @@ msgstr "Muokkaa jatka-painikkeen tekstiä"
 msgid "Customize the text shown on the floating button that scrolls to the tickets section"
 msgstr "Muokkaa kelluvassa painikkeessa näytettävää tekstiä, joka siirtyy lippuosioon"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:116
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:121
 msgid "Customize your email template using Liquid templating"
 msgstr "Mukauta sähköpostipohjaasi Liquid-mallinnuksella"
 
@@ -3708,8 +3714,8 @@ msgstr "Päivämäärä"
 msgid "Date & Time"
 msgstr "Päivämäärä ja aika"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:99
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:212
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:103
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:215
 msgid "Date Cancellation"
 msgstr "Päivämäärän peruutus"
 
@@ -3820,7 +3826,7 @@ msgstr "Oletuskapasiteetti per päivämäärä"
 msgid "Default Fee Handling"
 msgstr "Oletusmaksujen käsittely"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:225
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:230
 msgid "Default template will be used"
 msgstr "Oletuspohjaa käytetään"
 
@@ -3916,7 +3922,7 @@ msgstr "Poista järjestäjä"
 msgid "Delete Permanently"
 msgstr "Poista pysyvästi"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:131
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:134
 msgid "Delete Template"
 msgstr "Poista malli"
 
@@ -4166,7 +4172,7 @@ msgstr "Drop-in"
 msgid "Dropdown selection"
 msgstr "Pudotusvalikkovalinta"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:361
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:366
 msgid "Due to the high risk of spam, you must connect a Stripe account before you can modify email templates. This is to ensure that all event organizers are verified and accountable."
 msgstr "Koska roskapostiriski on korkea, sinun on yhdistettävä Stripe-tili ennen kuin voit muokata sähköpostimalleja. Tämä varmistaa, että kaikki tapahtuman järjestäjät ovat vahvistettuja ja vastuullisia."
 
@@ -4289,7 +4295,7 @@ msgstr "Muokkaa"
 msgid "Edit {0}"
 msgstr "Muokkaa {0}"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:110
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:115
 msgid "Edit {0} Template"
 msgstr "Muokkaa {0}-mallia"
 
@@ -4421,7 +4427,7 @@ msgstr "Muokkaa webhookia"
 msgid "Edited"
 msgstr "Muokattu"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:140
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:145
 msgid "Editor"
 msgstr "Muokkausohjelma"
 
@@ -4502,7 +4508,7 @@ msgstr "Sähköpostiosoite kopioitu leikepöydälle"
 msgid "Email addresses do not match"
 msgstr "Sähköpostiosoitteet eivät täsmää"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:153
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:158
 msgid "Email Body"
 msgstr "Sähköpostin sisältö"
 
@@ -4542,7 +4548,7 @@ msgstr "Sähköpostia ei ole vahvistettu"
 msgid "Email Preview"
 msgstr "Sähköpostin esikatselu"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:349
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:354
 #: src/components/routes/organizer/Settings/index.tsx:67
 msgid "Email Templates"
 msgstr "Sähköpostipohjat"
@@ -4604,7 +4610,7 @@ msgstr "Ota laskutus käyttöön"
 msgid "Enable this capacity to stop product sales when the limit is reached"
 msgstr "Ota tämä kapasiteetti käyttöön estääksesi tuotteen myynnin rajan ylittyessä"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:195
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:200
 msgid "Enable this template for sending emails"
 msgstr "Ota tämä malli käyttöön sähköpostien lähettämistä varten"
 
@@ -4722,7 +4728,7 @@ msgstr "Anna kapasiteetti"
 msgid "Enter email"
 msgstr "Anna sähköpostiosoite"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:132
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:137
 msgid "Enter email subject..."
 msgstr "Anna sähköpostin aihe..."
 
@@ -4740,7 +4746,7 @@ msgstr "Anna sukunimi"
 msgid "Enter new password"
 msgstr "Anna uusi salasana"
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:38
+#: src/components/layouts/CashlessPos/PinGate.tsx:40
 msgid "Enter the PIN to open this till."
 msgstr "Syötä PIN avataksesi tämän kassan."
 
@@ -4860,7 +4866,7 @@ msgstr "Tapahtuma luotu"
 msgid "Event Created"
 msgstr "Tapahtuma luotu"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:235
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:240
 msgid "Event custom template"
 msgstr "Tapahtuman mukautettu malli"
 
@@ -5146,7 +5152,7 @@ msgstr "Viedään tapahtumia"
 msgid "Facebook"
 msgstr "Facebook"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:138
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:90
 #: src/components/routes/admin/Messages/index.tsx:127
 msgid "Failed"
 msgstr "Epäonnistui"
@@ -5216,8 +5222,8 @@ msgstr "Aikataulun luonti epäonnistui"
 msgid "Failed to create schedule. Please try again."
 msgstr "Aikataulun luonti epäonnistui. Yritä uudelleen."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:192
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:195
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:198
 msgid "Failed to create template"
 msgstr "Mallin luonti epäonnistui"
 
@@ -5267,8 +5273,8 @@ msgstr "Tuotteen poisto epäonnistui. Yritä uudelleen."
 msgid "Failed to delete question"
 msgstr "Kysymyksen poisto epäonnistui"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:126
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:127
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:129
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:130
 msgid "Failed to delete template"
 msgstr "Mallin poisto epäonnistui"
 
@@ -5379,10 +5385,10 @@ msgstr "Hintaylikirjoituksen tallennus epäonnistui"
 msgid "Failed to save product settings"
 msgstr "Tuoteasetusten tallennus epäonnistui"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:158
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:161
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:164
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:189
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:167
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:192
 msgid "Failed to save template"
 msgstr "Mallin tallennus epäonnistui"
 
@@ -5505,7 +5511,7 @@ msgstr "Kulun ohitus tallennettu"
 #: src/components/common/InlineOrderSummary/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/ProductForm/index.tsx:486
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:174
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:196
 #: src/components/routes/event/Cashless/Settings/index.tsx:130
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
@@ -5565,8 +5571,8 @@ msgstr "Suodattimet"
 msgid "Filters ({activeFilterCount})"
 msgstr "Suodattimet ({activeFilterCount})"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:81
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:71
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:102
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:92
 msgid "Find"
 msgstr "Hae"
 
@@ -6136,7 +6142,7 @@ msgstr "Korostettu"
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr "Korostetuilla tuotteilla on eri taustaväri, jotta ne erottuvat tapahtumasivulla."
 
-#: src/components/layouts/CashlessPos/index.tsx:224
+#: src/components/layouts/CashlessPos/index.tsx:356
 msgid "History"
 msgstr "Historia"
 
@@ -6174,7 +6180,7 @@ msgstr "Tunnit"
 msgid "How capacity works"
 msgstr "Näin kapasiteetti toimii"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:101
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:122
 msgid "How did they pay?"
 msgstr "Miten hän maksoi?"
 
@@ -6343,7 +6349,7 @@ msgstr "Käynnissä"
 #: src/components/common/AffiliateTable/index.tsx:131
 #: src/components/common/CheckInListList/index.tsx:114
 #: src/components/common/CheckInListTable/index.tsx:173
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:279
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:284
 #: src/components/forms/AffiliateForm/index.tsx:27
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:25
 #: src/components/modals/EditUserModal/index.tsx:112
@@ -6442,8 +6448,8 @@ msgstr "Sähköpostiosoite on virheellisessä muodossa"
 msgid "Invalid file type. Please upload an image."
 msgstr "Virheellinen tiedostotyyppi. Lataa kuva."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:154
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:185
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:157
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:188
 msgid "Invalid Liquid syntax. Please correct it and try again."
 msgstr "Virheellinen Liquid-syntaksi. Korjaa se ja yritä uudelleen."
 
@@ -6591,7 +6597,7 @@ msgstr "Kesäkuu"
 msgid "Just looking for your tickets?"
 msgstr "Etsitkö vain lippujasi?"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:24
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:23
 msgid "just now"
 msgstr "juuri nyt"
 
@@ -6929,7 +6935,7 @@ msgstr "sijainnit"
 msgid "Locations"
 msgstr "Sijainnit"
 
-#: src/components/layouts/CashlessPos/index.tsx:208
+#: src/components/layouts/CashlessPos/index.tsx:282
 msgid "Lock till"
 msgstr "Lukitse kassa"
 
@@ -6972,7 +6978,7 @@ msgstr "Kirjaudu ulos"
 msgid "Look Up My Tickets"
 msgstr "Etsi lippuni"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:85
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:106
 msgid "Looking up {scannedId}..."
 msgstr "Haetaan {scannedId}…"
 
@@ -7904,7 +7910,7 @@ msgstr "Ei lasketa"
 msgid "Not Eligible"
 msgstr "Ei kelvollinen"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:191
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:213
 msgid "Not enough on this ticket. Short by {0}."
 msgstr "Tämän lipun saldo ei riitä. Puuttuu {0}."
 
@@ -8036,8 +8042,8 @@ msgid "Offers expire after {timeoutHours} hours."
 msgstr "Tarjoukset vanhenevat {timeoutHours} tunnin kuluttua."
 
 #: src/components/common/OrdersTable/index.tsx:300
-#: src/components/layouts/CheckIn/index.tsx:573
-#: src/components/layouts/CheckIn/index.tsx:575
+#: src/components/layouts/CheckIn/index.tsx:516
+#: src/components/layouts/CheckIn/index.tsx:518
 #: src/components/routes/product-widget/Payment/index.tsx:135
 msgid "Offline"
 msgstr "Offline"
@@ -8270,7 +8276,7 @@ msgstr "Avaa ajankohta"
 msgid "Open sidebar"
 msgstr "Avaa sivupalkki"
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:60
+#: src/components/layouts/CashlessPos/PinGate.tsx:62
 msgid "Open till"
 msgstr "Avaa kassa"
 
@@ -8330,8 +8336,8 @@ msgstr "Tai valitse summa"
 msgid "Or enable offline payments and disable Stripe"
 msgstr "Tai ota offline-maksut käyttöön ja poista Stripe käytöstä"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:75
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:66
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:96
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:87
 msgid "Or type the ticket ID"
 msgstr "Tai kirjoita lipun tunnus"
 
@@ -8378,8 +8384,8 @@ msgstr "Tilaus peruutettu"
 msgid "Order complete"
 msgstr "Tila valmis"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:97
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:210
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:101
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:213
 msgid "Order Confirmation"
 msgstr "Tilauksen vahvistus"
 
@@ -8617,7 +8623,7 @@ msgstr "Järjestäjän tilapäivitys epäonnistui. Yritä uudelleen myöhemmin."
 msgid "Organizer status updated"
 msgstr "Järjestäjän tila päivitettiin."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:224
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:229
 msgid "Organizer/default template will be used"
 msgstr "Järjestäjän/oletuspohja käytetään."
 
@@ -8631,7 +8637,7 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "Järjestäjät voivat hallita vain tapahtumia ja tuotteita. He eivät voi hallita käyttäjiä, tilin asetuksia tai laskutustietoja."
 
 #: src/components/common/OrdersTable/index.tsx:305
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:108
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:129
 #: src/components/modals/CashlessTopupModal/index.tsx:90
 #: src/constants/eventCategories.ts:31
 msgid "Other"
@@ -9005,7 +9011,7 @@ msgstr "Valitse vähintään yksi viikonpäivä"
 msgid "Pick days to see your dates."
 msgstr "Valitse päivät nähdäksesi aikataulusi päivämäärät."
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:48
+#: src/components/layouts/CashlessPos/PinGate.tsx:50
 msgid "PIN"
 msgstr "PIN"
 
@@ -9214,7 +9220,7 @@ msgstr "Kassaa edeltävä viesti"
 msgid "Prevent overselling by sharing inventory across multiple ticket types."
 msgstr "Estä ylivaraus jakamalla kapasiteetti useiden lipputyyppien kesken."
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:143
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:148
 #: src/components/routes/admin/Announcements/index.tsx:495
 #: src/components/routes/event/TicketDesigner/index.tsx:216
 msgid "Preview"
@@ -9661,7 +9667,7 @@ msgstr "Viimeaikainen toiminta"
 msgid "Recent Attendees"
 msgstr "Viimeaikaiset osallistujat"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:106
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
 msgid "Recent check-ins"
 msgstr "Viimeaikaiset sisäänkirjautumiset"
 
@@ -9739,7 +9745,7 @@ msgstr "Ohjataan Stripeen..."
 msgid "Referral Accounts"
 msgstr "Suosittelutilit"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:179
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:184
 msgid "Refresh Preview"
 msgstr "Päivitä esikatselu"
 
@@ -9882,7 +9888,7 @@ msgstr "Poista"
 msgid "Remove label from all dates"
 msgstr "Poista merkintä kaikilta päiviltä"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:146
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:168
 msgid "Remove one"
 msgstr "Poista yksi"
 
@@ -10184,7 +10190,8 @@ msgstr "Myynti on tauolla"
 msgid "Sales ended"
 msgstr "Myynti päättynyt"
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:37
+#: src/components/layouts/CashlessPos/index.tsx:268
+#: src/components/layouts/CashlessPos/PinGate.tsx:39
 msgid "Sales point"
 msgstr "Myyntipiste"
 
@@ -10196,7 +10203,11 @@ msgstr "Myyntipiste luotu"
 msgid "Sales point deleted"
 msgstr "Myyntipiste poistettu"
 
-#: src/components/layouts/CashlessPos/index.tsx:179
+#: src/components/layouts/CashlessPos/index.tsx:350
+msgid "Sales point navigation"
+msgstr "Myyntipisteen navigointi"
+
+#: src/components/layouts/CashlessPos/index.tsx:244
 msgid "Sales point not found"
 msgstr "Myyntipistettä ei löytynyt"
 
@@ -10319,7 +10330,7 @@ msgstr "Tallenna asetukset"
 msgid "Save Social Links"
 msgstr "Tallenna sosiaaliset linkit"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:204
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:209
 msgid "Save Template"
 msgstr "Tallenna mallipohja"
 
@@ -10347,13 +10358,21 @@ msgstr "Tallennetut sijainnit"
 msgid "Saving an override creates a dedicated configuration for this organizer if it's currently on the system default."
 msgstr "Ylikirjoituksen tallentaminen luo tätä järjestäjää varten oman asetuksen, jos se on tällä hetkellä järjestelmän oletusarvo."
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:15
+#: src/components/layouts/CheckIn/BottomNav.tsx:18
 msgid "Scan"
 msgstr "Skannaa"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:52
 msgid "Scan a ticket to check in an attendee"
 msgstr "Skannaa lippu kirjauttaaksesi osallistujan sisään"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:81
+msgid "Scan a ticket to look up its balance"
+msgstr "Skannaa lippu nähdäksesi sen saldon"
+
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:72
+msgid "Scan a ticket to top up its balance"
+msgstr "Skannaa lippu ladataksesi sen saldoa"
 
 #: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:76
 msgid "Scan my ticket QR code"
@@ -10363,11 +10382,11 @@ msgstr "Skannaa lippuni QR-koodi"
 msgid "Scan the ticket QR code with a handheld scanner, or type the ID printed on the ticket."
 msgstr "Skannaa lipun QR-koodi käsiskannerilla tai kirjoita lippuun painettu tunnus."
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:109
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:61
 msgid "Scanned tickets will appear here"
 msgstr "Skannatut liput näkyvät täällä"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:71
+#: src/components/common/TicketScanZone/index.tsx:62
 msgid "Scanner mode"
 msgstr "Skannaustila"
 
@@ -10422,7 +10441,7 @@ msgstr "Aikataulutettu poisto"
 msgid "Scheduled time"
 msgstr "Ajoitettu aika"
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:16
+#: src/components/layouts/CheckIn/BottomNav.tsx:19
 msgid "Search"
 msgstr "Hae"
 
@@ -10858,15 +10877,19 @@ msgstr "Lähetetty"
 msgid "Sent By"
 msgstr "Lähettäjä"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:218
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:222
 msgid "Sent to attendees when a scheduled date is cancelled"
 msgstr "Lähetetään osallistujille, kun aikataulutettu päivämäärä perutaan"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:216
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:223
+msgid "Sent to attendees when their cashless balance is topped up online"
+msgstr "Lähetetään osallistujille, kun heidän cashless-saldonsa ladataan verkossa"
+
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:220
 msgid "Sent to customers when they place an order"
 msgstr "Lähetetään asiakkaille, kun he tekevät tilauksen"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:217
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:221
 msgid "Sent to each attendee with their ticket details"
 msgstr "Lähetetään jokaiselle osallistujalle lipputiedoilla"
 
@@ -10899,8 +10922,8 @@ msgstr "SEO-otsikko"
 msgid "September"
 msgstr "Syyskuu"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:101
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:83
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:122
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:104
 msgid "Serve someone else"
 msgstr "Palvele seuraavaa"
 
@@ -10908,7 +10931,7 @@ msgstr "Palvele seuraavaa"
 msgid "Service Fee"
 msgstr "Palvelumaksu"
 
-#: src/components/layouts/CheckIn/index.tsx:498
+#: src/components/layouts/CheckIn/index.tsx:441
 msgid "Session cancelled"
 msgstr "Istunto peruttu"
 
@@ -11443,7 +11466,7 @@ msgstr "Tilastot"
 msgid "Statistics are based on account creation date"
 msgstr "Tilastot perustuvat tilin luontipäivään"
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:17
+#: src/components/layouts/CheckIn/BottomNav.tsx:20
 msgid "Stats"
 msgstr "Tilastot"
 
@@ -11533,14 +11556,14 @@ msgstr "Stripe tarvitsee pian vielä muutamia tietoja"
 msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Stripe ohjaa sinut muutaman nopean kysymyksen läpi asennuksen viimeistelyä varten."
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:136
 #: src/components/modals/SendMessageModal/index.tsx:438
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
 msgid "Subject"
 msgstr "Aihe"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:46
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:53
 msgid "Subject is required"
 msgstr "Aihe on pakollinen"
 
@@ -11548,13 +11571,13 @@ msgstr "Aihe on pakollinen"
 msgid "Subject will appear here"
 msgstr "Aihe näkyy tässä"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:267
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:272
 msgid "Subject:"
 msgstr "Aihe:"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:168
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:190
 msgid "Subtotal"
 msgstr "Välisumma"
 
@@ -11771,11 +11794,11 @@ msgstr "T-paita"
 msgid "T-shirts, mugs and more"
 msgstr "T-paitoja, mukit ja muuta"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:114
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:135
 msgid "Take on the card terminal"
 msgstr "Veloita maksupäätteellä"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:136
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:158
 msgid "Tap a product to start an order."
 msgstr "Aloita tilaus napauttamalla tuotetta."
 
@@ -11783,7 +11806,9 @@ msgstr "Aloita tilaus napauttamalla tuotetta."
 msgid "Tap dates like a calendar."
 msgstr "Napauta päivämääriä kuten kalenterissa."
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:59
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:82
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:73
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:53
 msgid "Tap this screen to resume scanning"
 msgstr "Napauta tätä näyttöä jatkaaksesi skannausta"
 
@@ -11803,7 +11828,7 @@ msgstr "Kohdennetaan osallistujia {0} valitun istunnon yli."
 #: src/components/common/OrdersTable/index.tsx:269
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:180
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:202
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:42
@@ -11895,19 +11920,19 @@ msgstr "Kerro, kuinka usein tapahtumasi toistuu, niin luomme kaikki päivämää
 msgid "Tell us your VAT registration status so we apply the correct VAT treatment to platform fees."
 msgstr "Ilmoita VAT-rekisteröintitilanteesi, jotta voimme soveltaa oikeaa VAT-käsittelyä palvelumaksuihin."
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:194
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:199
 msgid "Template Active"
 msgstr "Malli aktiivinen"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:174
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:177
 msgid "Template created successfully"
 msgstr "Malli luotu onnistuneesti"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:122
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:125
 msgid "Template deleted successfully"
 msgstr "Malli poistettu onnistuneesti"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:143
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:146
 msgid "Template saved successfully"
 msgstr "Malli tallennettu onnistuneesti"
 
@@ -11946,7 +11971,7 @@ msgstr "PIN-koodi ei ole oikein."
 msgid "That promo code is invalid"
 msgstr "Tämä kampanjakoodi on virheellinen"
 
-#: src/components/layouts/CashlessPos/index.tsx:59
+#: src/components/layouts/CashlessPos/index.tsx:117
 msgid "That ticket could not be found."
 msgstr "Lippua ei löytynyt."
 
@@ -11962,7 +11987,7 @@ msgstr "Se on paketissa"
 msgid "The background color of the page. When using cover image, this is applied as an overlay."
 msgstr "Sivun taustaväri. Kun käytät kansikuvaa, tämä käytetään peiton päällä."
 
-#: src/components/layouts/CheckIn/index.tsx:471
+#: src/components/layouts/CheckIn/index.tsx:414
 msgid "The check-in list you are looking for does not exist."
 msgstr "Etsimääsi sisäänkirjautumislistaa ei löydy."
 
@@ -12086,8 +12111,8 @@ msgstr "Tapahtuman \"{title}\" istunto, joka oli alun perin ajankohtana {0}, on 
 msgid "The size of the room. The total number of people who can attend a date across every ticket. Leave it empty for no limit."
 msgstr "Tilan koko. Kaikkien lippujen yhteenlaskettu enimmäismäärä osallistujia yhtenä päivämääränä. Jätä tyhjäksi, jos rajaa ei ole."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:155
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:186
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:158
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:189
 msgid "The template body contains invalid Liquid syntax. Please correct it and try again."
 msgstr "Mallipohja sisältää Liquid-syntaksia. Korjaa se ja yritä uudelleen."
 
@@ -12173,11 +12198,11 @@ msgstr "Nämä hinnat koskevat kaikkia aikataulusi päivämääriä, ja kunkin h
 msgid "These settings apply only to copied embed code and won't be stored."
 msgstr "Nämä asetukset koskevat vain kopioitua upotuskoodia, eikä niitä tallenneta."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:339
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:344
 msgid "These templates will be used as defaults for all events in your organization. Individual events can override these templates with their own custom versions."
 msgstr "Näitä mallipohjia käytetään organisaatiosi kaikkien tapahtumien oletusmallipohjina. Yksittäiset tapahtumat voivat ohittaa nämä mallipohjat omilla mukautetuilla versioillaan."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:332
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:337
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Nämä mallipohjat ohittavat järjestäjän oletusmallipohjat vain tämän tapahtuman osalta. Jos tähän ei määritetä mukautettua mallipohjaa, käytetään järjestäjän mallipohjaa."
 
@@ -12209,7 +12234,7 @@ msgstr "Tällä osallistujalla on maksamaton tilaus."
 msgid "This balance could not be refunded"
 msgstr "Tätä saldoa ei voitu palauttaa"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:98
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:119
 msgid "This balance is frozen"
 msgstr "Tämä saldo on jäädytetty"
 
@@ -12225,7 +12250,7 @@ msgstr "Tämä kategoria on piilotettu julkisesta näkymästä"
 msgid "This check-in list has expired"
 msgstr "Tämä sisäänkirjautumislista on vanhentunut"
 
-#: src/components/layouts/CheckIn/index.tsx:486
+#: src/components/layouts/CheckIn/index.tsx:429
 msgid "This check-in list has expired and is no longer available for check-ins."
 msgstr "Tämä sisäänkirjautumislista on vanhentunut, eikä sitä voi enää käyttää sisäänkirjautumiseen."
 
@@ -12237,11 +12262,11 @@ msgstr "Tämä sisäänkirjautumislista on aktiivinen"
 msgid "This check-in list is not active yet"
 msgstr "Tämä sisäänkirjautumislista ei ole vielä aktiivinen"
 
-#: src/components/layouts/CheckIn/index.tsx:525
+#: src/components/layouts/CheckIn/index.tsx:468
 msgid "This check-in list is not yet active and is not available for check-ins."
 msgstr "Tämä sisäänkirjautumislista ei ole vielä aktiivinen, eikä sitä voi käyttää sisäänkirjautumiseen."
 
-#: src/components/layouts/CheckIn/index.tsx:503
+#: src/components/layouts/CheckIn/index.tsx:446
 msgid "This check-in list is scoped to a session that has been cancelled, so it can no longer be used for check-ins."
 msgstr "Tämä sisäänkirjautumislista koskee peruttua istuntoa, joten sitä ei voi enää käyttää sisäänkirjautumiseen."
 
@@ -12360,7 +12385,7 @@ msgstr "Tämä linkki ei kelpaa tai on vanhentunut."
 msgid "This link is no longer valid"
 msgstr "Tämä linkki ei ole enää voimassa"
 
-#: src/components/layouts/CashlessPos/index.tsx:180
+#: src/components/layouts/CashlessPos/index.tsx:245
 msgid "This link is no longer valid. Ask the organizer for a new one."
 msgstr "Tämä linkki ei ole enää voimassa. Pyydä järjestäjältä uusi."
 
@@ -12428,7 +12453,7 @@ msgstr "Järjestäjäprofiilia ei ole vielä julkaistu"
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr "Tämä ohittaa kaikki näkyvyysasetukset ja piilottaa tuotteen kaikilta asiakkailta."
 
-#: src/components/layouts/CashlessPos/index.tsx:126
+#: src/components/layouts/CashlessPos/index.tsx:192
 msgid "This payment could not be taken."
 msgstr "Tätä maksua ei voitu veloittaa."
 
@@ -12464,7 +12489,7 @@ msgstr "Tämä raportti on tarkoitettu ainoastaan tiedoksi. Keskustele aina vero
 msgid "This reset password link is invalid or expired."
 msgstr "Tämä salasanan palautuslinkki ei kelpaa tai on vanhentunut."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:42
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:54
 msgid "This sales point is not allowed to top up balances."
 msgstr "Tämä myyntipiste ei saa ladata saldoja."
 
@@ -12472,7 +12497,7 @@ msgstr "Tämä myyntipiste ei saa ladata saldoja."
 msgid "This ticket is no longer valid"
 msgstr "Tämä lippu ei ole enää voimassa"
 
-#: src/components/layouts/CheckIn/index.tsx:330
+#: src/components/layouts/CheckIn/index.tsx:328
 msgid "This ticket was just scanned. Please wait before scanning again."
 msgstr "Tämä lippu skannattiin juuri. Odota ennen uutta skannausta."
 
@@ -12480,7 +12505,7 @@ msgstr "Tämä lippu skannattiin juuri. Odota ennen uutta skannausta."
 msgid "This tier's quantity is shared across all dates"
 msgstr "Tämän hintatason määrä on jaettu kaikkien päivämäärien kesken"
 
-#: src/components/layouts/CashlessPos/index.tsx:154
+#: src/components/layouts/CashlessPos/index.tsx:219
 msgid "This top-up could not be recorded."
 msgstr "Tätä latausta ei voitu kirjata."
 
@@ -12488,7 +12513,7 @@ msgstr "Tätä latausta ei voitu kirjata."
 msgid "This transaction could not be reversed"
 msgstr "Tätä tapahtumaa ei voitu perua"
 
-#: src/components/layouts/CashlessPos/index.tsx:169
+#: src/components/layouts/CashlessPos/index.tsx:234
 msgid "This transaction could not be undone."
 msgstr "Tätä tapahtumaa ei voitu kumota."
 
@@ -12751,7 +12776,7 @@ msgid "Top Organizers (Last 14 Days)"
 msgstr "Suosituimmat järjestäjät (viimeiset 14 päivää)"
 
 #: src/components/common/CashlessWalletTable/index.tsx:104
-#: src/components/layouts/CashlessPos/index.tsx:221
+#: src/components/layouts/CashlessPos/index.tsx:355
 msgid "Top up"
 msgstr "Lataa"
 
@@ -12777,7 +12802,7 @@ msgstr "Lataa saldoni"
 msgid "Top up your balance at any top-up point during the event."
 msgstr "Lataa saldosi missä tahansa latauspisteessä tapahtuman aikana."
 
-#: src/components/layouts/CashlessPos/HistoryTab.tsx:32
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:36
 #: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:17
 msgid "Top-up"
 msgstr "Lataus"
@@ -12810,7 +12835,7 @@ msgstr "yhteensä"
 #: src/components/common/AdminOrdersTable/index.tsx:81
 #: src/components/common/InlineOrderSummary/index.tsx:219
 #: src/components/common/OrderSummary/index.tsx:104
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:185
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:207
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
@@ -12910,7 +12935,7 @@ msgstr "Seuranta ja analytiikka"
 msgid "Transaction reversed"
 msgstr "Tapahtuma peruttu"
 
-#: src/components/layouts/CashlessPos/index.tsx:165
+#: src/components/layouts/CashlessPos/index.tsx:231
 msgid "Transaction undone"
 msgstr "Tapahtuma kumottu"
 
@@ -12952,11 +12977,11 @@ msgstr "tiistai"
 msgid "Turkish"
 msgstr "Turkki"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:94
+#: src/components/common/TicketScanZone/index.tsx:85
 msgid "Turn sound off"
 msgstr "Poista äänet käytöstä"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:94
+#: src/components/common/TicketScanZone/index.tsx:85
 msgid "Turn sound on"
 msgstr "Ota äänet käyttöön"
 
@@ -12996,12 +13021,12 @@ msgstr "Kirjoita hakua varten..."
 msgid "Typography"
 msgstr "Typografia"
 
-#: src/components/layouts/CheckIn/index.tsx:271
+#: src/components/layouts/CheckIn/index.tsx:269
 msgid "Unable to check in attendee"
 msgstr "Osallistujan sisäänkirjautuminen ei onnistu"
 
+#: src/components/layouts/CheckIn/index.tsx:295
 #: src/components/layouts/CheckIn/index.tsx:297
-#: src/components/layouts/CheckIn/index.tsx:299
 msgid "Unable to check out attendee"
 msgstr "Osallistujan uloskirjaus ei onnistu"
 
@@ -13021,7 +13046,7 @@ msgstr "Kysymyksen luominen ei onnistu. Tarkista tietosi"
 msgid "Unable to duplicate product. Please check the your details"
 msgstr "Tuotteen monistaminen ei onnistu. Tarkista tietosi"
 
-#: src/components/layouts/CheckIn/index.tsx:345
+#: src/components/layouts/CheckIn/index.tsx:343
 msgid "Unable to fetch attendee"
 msgstr "Osallistujan tietojen hakeminen ei onnistu"
 
@@ -13037,7 +13062,7 @@ msgstr "Osallistujan tietojen lataaminen ei onnistu."
 msgid "Unable to load products for this date. Please try again."
 msgstr "Tuotteiden lataaminen tälle päivälle ei onnistu. Yritä uudelleen."
 
-#: src/components/layouts/CheckIn/index.tsx:220
+#: src/components/layouts/CheckIn/index.tsx:218
 msgid "Unable to undo check-in"
 msgstr "Sisäänkirjautumisen kumoaminen ei onnistu"
 
@@ -13049,8 +13074,8 @@ msgstr "Kysymyksen päivittäminen ei onnistu. Tarkista tietosi"
 msgid "Unattributed Accounts"
 msgstr "Kohdistamattomat tilit"
 
-#: src/components/layouts/CashlessPos/HistoryTab.tsx:49
-#: src/components/layouts/CheckIn/index.tsx:255
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:63
+#: src/components/layouts/CheckIn/index.tsx:253
 msgid "Undo"
 msgstr "Kumoa"
 
@@ -13289,19 +13314,19 @@ msgstr "Käyttöesimerkki"
 msgid "Usage Limit"
 msgstr "Käyttöraja"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:80
+#: src/components/common/TicketScanZone/index.tsx:71
 msgid "USB"
 msgstr "USB"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:53
+#: src/components/common/TicketScanZone/index.tsx:46
 msgid "USB scanner listening"
 msgstr "USB-lukija kuuntelee"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:53
+#: src/components/common/TicketScanZone/index.tsx:46
 msgid "USB scanner paused"
 msgstr "USB-lukija keskeytetty"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:154
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:159
 msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Käytä <0>Liquid-mallinnusta</0> personoidaksesi sähköpostisi"
 
@@ -13562,8 +13587,7 @@ msgid "View details for {0} {1}"
 msgstr "Näytä kohteen {0} {1} tiedot"
 
 #: src/components/common/AdminEventsTable/index.tsx:159
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:58
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:41
 #: src/components/routes/admin/Dashboard/index.tsx:478
 msgid "View Event"
 msgstr "Näytä tapahtuma"
@@ -13589,13 +13613,16 @@ msgstr "Näytä kartta"
 msgid "View Message"
 msgstr "Näytä viesti"
 
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:42
+msgid "View my balance"
+msgstr "Näytä saldoni"
+
 #: src/components/layouts/EventHomepage/index.tsx:468
 msgid "View on Google Maps"
 msgstr "Näytä Google Mapsissa"
 
 #: src/components/common/EmailTemplateEditor/CTAConfiguration.tsx:28
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:57
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:39
 #: src/components/common/WaitlistTable/index.tsx:62
 #: src/components/routes/my-tickets/index.tsx:127
 msgid "View Order"
@@ -13615,8 +13642,7 @@ msgstr "Näytä tilausten tiedot, tee hyvityksiä ja lähetä vahvistuksia uudel
 msgid "View Organizer Homepage"
 msgstr "Näytä järjestäjäsivu"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:59
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:40
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:110
 msgid "View Ticket"
 msgstr "Näytä lippu"
@@ -13660,7 +13686,7 @@ msgstr "Odottaa"
 msgid "Waiting for payment"
 msgstr "Odottaa maksua"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:64
+#: src/components/common/TicketScanZone/index.tsx:55
 msgid "Waiting for scan…"
 msgstr "Odotetaan skannausta…"
 
@@ -14198,8 +14224,8 @@ msgstr "Esiinnyt käyttäjänä <0>{0}</0> ({1})"
 msgid "You are issuing a partial refund. The customer will be refunded {0} {1}."
 msgstr "Olet tekemässä osittaista hyvitystä. Asiakkaalle hyvitetään {0} {1}."
 
-#: src/components/layouts/CheckIn/index.tsx:266
-#: src/components/layouts/CheckIn/index.tsx:292
+#: src/components/layouts/CheckIn/index.tsx:264
+#: src/components/layouts/CheckIn/index.tsx:290
 msgid "You are offline"
 msgstr "Olet offline-tilassa"
 
@@ -14227,8 +14253,8 @@ msgstr "Et voi arkistoida tilisi viimeistä aktiivista järjestäjää."
 msgid "You cannot change the product type as there are attendees associated with this product."
 msgstr "Et voi vaihtaa tuotetyyppiä, koska tähän tuotteeseen liittyy osallistujia."
 
-#: src/components/layouts/CheckIn/index.tsx:315
-#: src/components/layouts/CheckIn/index.tsx:381
+#: src/components/layouts/CheckIn/index.tsx:313
+#: src/components/layouts/CheckIn/index.tsx:379
 msgid "You cannot check in attendees with unpaid orders. This setting can be changed in the event settings."
 msgstr "Et voi kirjata sisään osallistujia, joiden tilaus on maksamatta. Voit muuttaa tätä asetusta tapahtuman asetuksissa."
 
@@ -14313,7 +14339,7 @@ msgstr "Sinun on vahvistettava sähköpostiosoitteesi ennen kuin voit päivittä
 msgid "You need to create at least one occurrence before you can add attendees to this recurring event."
 msgstr "Sinun on luotava vähintään yksi tapahtumakerta ennen kuin voit lisätä osallistujia tähän toistuvaan tapahtumaan."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:355
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:360
 msgid "You need to verify your account email before you can modify email templates."
 msgstr "Sinun on vahvistettava tilisi sähköpostiosoite ennen kuin voit muokata sähköpostimallipohjia."
 
@@ -14514,7 +14540,7 @@ msgstr "Pakettisi"
 msgid "Your refund is processing."
 msgstr "Hyvitystäsi käsitellään."
 
-#: src/components/layouts/CheckIn/index.tsx:117
+#: src/components/layouts/CheckIn/index.tsx:115
 msgid "Your saved date filter is no longer available — showing all dates."
 msgstr "Tallennettu päivämääräsuodattimesi ei ole enää käytettävissä — näytetään kaikki päivämäärät."
 

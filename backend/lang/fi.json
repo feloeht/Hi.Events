@@ -973,5 +973,10 @@
     "View my balance": "Näytä saldoni",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "Lisäsimme **:amount** lippuusi liitettyyn cashless-saldoon tapahtumaan **:event**.",
     "Your cashless balance is topped up": "Cashless-saldosi on ladattu",
-    "💳 Your cashless balance for :event": "💳 Cashless-saldosi tapahtumaan :event"
+    "💳 Your cashless balance for :event": "💳 Cashless-saldosi tapahtumaan :event",
+    "Cashless Top-up": "Cashless-lataus",
+    "Sent to attendees when their cashless balance is topped up online": "Lähetetään osallistujille, kun heidän cashless-saldonsa ladataan verkossa",
+    "The amount that was just added to the balance": "Saldoon juuri lisätty summa",
+    "The balance available after this top-up": "Latauksen jälkeen käytettävissä oleva saldo",
+    "Link to view the cashless balance": "Linkki cashless-saldon katseluun"
 }

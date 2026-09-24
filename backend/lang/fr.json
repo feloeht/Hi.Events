@@ -777,5 +777,10 @@
     "View my balance": "Voir ma cagnotte",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "Nous avons ajouté **:amount** à la cagnotte cashless associée à votre billet pour **:event**.",
     "Your cashless balance is topped up": "Votre cagnotte cashless a été rechargée",
-    "💳 Your cashless balance for :event": "💳 Votre cagnotte cashless pour :event"
+    "💳 Your cashless balance for :event": "💳 Votre cagnotte cashless pour :event",
+    "Cashless Top-up": "Recharge cashless",
+    "Sent to attendees when their cashless balance is topped up online": "Envoyé aux participants lorsque leur cagnotte cashless est rechargée en ligne",
+    "The amount that was just added to the balance": "Le montant qui vient d'être ajouté à la cagnotte",
+    "The balance available after this top-up": "La cagnotte disponible après cette recharge",
+    "Link to view the cashless balance": "Lien pour consulter la cagnotte cashless"
 }

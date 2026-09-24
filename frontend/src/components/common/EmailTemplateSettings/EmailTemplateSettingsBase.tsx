@@ -57,6 +57,7 @@ interface EmailTemplateSettingsBaseProps {
     onDeleteSuccess?: () => void;
     onError?: (error: any, message: string) => void;
     eventType?: EventType;
+    isCashlessEnabled?: boolean;
 }
 
 export const EmailTemplateSettingsBase = ({
@@ -73,7 +74,8 @@ export const EmailTemplateSettingsBase = ({
     onSaveSuccess,
     onDeleteSuccess,
     onError,
-    eventType
+    eventType,
+    isCashlessEnabled
 }: EmailTemplateSettingsBaseProps) => {
     const [editorOpened, {open: openEditor, close: closeEditor}] = useDisclosure(false);
     const [editingTemplate, setEditingTemplate] = useState<EmailTemplate | null>(null);
@@ -91,6 +93,7 @@ export const EmailTemplateSettingsBase = ({
     const orderConfirmationTemplate = templates.find(t => t.template_type === 'order_confirmation');
     const attendeeTicketTemplate = templates.find(t => t.template_type === 'attendee_ticket');
     const occurrenceCancellationTemplate = templates.find(t => t.template_type === 'occurrence_cancellation');
+    const cashlessTopupTemplate = templates.find(t => t.template_type === 'cashless_topup');
 
     const handleCreateTemplate = (type: EmailTemplateType) => {
         setEditingTemplate(null);
@@ -210,12 +213,14 @@ export const EmailTemplateSettingsBase = ({
         'order_confirmation': t`Order Confirmation`,
         'attendee_ticket': t`Attendee Ticket`,
         'occurrence_cancellation': t`Date Cancellation`,
+        'cashless_topup': t`Cashless Top-up`,
     };
 
     const templateDescriptions: Record<EmailTemplateType, string> = {
         'order_confirmation': t`Sent to customers when they place an order`,
         'attendee_ticket': t`Sent to each attendee with their ticket details`,
         'occurrence_cancellation': t`Sent to attendees when a scheduled date is cancelled`,
+        'cashless_topup': t`Sent to attendees when their cashless balance is topped up online`,
     };
 
     const getTemplateStatusBadge = (template?: EmailTemplate) => {
@@ -402,6 +407,15 @@ export const EmailTemplateSettingsBase = ({
                             template={occurrenceCancellationTemplate}
                             label={templateTypeLabels.occurrence_cancellation}
                             description={templateDescriptions.occurrence_cancellation}
+                        />
+                    )}
+
+                    {(contextType === 'organizer' || isCashlessEnabled) && (
+                        <TemplateCard
+                            type="cashless_topup"
+                            template={cashlessTopupTemplate}
+                            label={templateTypeLabels.cashless_topup}
+                            description={templateDescriptions.cashless_topup}
                         />
                     )}
                 </Stack>

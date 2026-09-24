@@ -47,15 +47,15 @@ msgstr "{0} (αντίγραφο)"
 msgid "{0} {1}"
 msgstr "{0} {1}"
 
-#: src/components/layouts/CheckIn/index.tsx:362
+#: src/components/layouts/CheckIn/index.tsx:360
 msgid "{0} {1} is already checked in"
 msgstr "{0} {1} έχει ήδη κάνει check-in"
 
-#: src/components/layouts/CheckIn/index.tsx:249
+#: src/components/layouts/CheckIn/index.tsx:247
 msgid "{0} <0>checked in</0>"
 msgstr "{0} <0>με check-in</0>"
 
-#: src/components/layouts/CheckIn/index.tsx:284
+#: src/components/layouts/CheckIn/index.tsx:282
 msgid "{0} <0>checked out</0> successfully"
 msgstr "{0} <0>έκανε check-out</0> επιτυχώς"
 
@@ -89,7 +89,7 @@ msgstr "Λογότυπο {0}"
 msgid "{0} of {1} seats are taken."
 msgstr "{0} από {1} θέσεις είναι πιασμένες."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:119
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:140
 msgid "{0} onto the ticket plus {1} in fees"
 msgstr "{0} στο εισιτήριο συν {1} χρεώσεις"
 
@@ -170,15 +170,15 @@ msgstr "{count} πρόσθετα"
 msgid "{days} days, {hours} hours, {minutes} minutes, and {seconds} seconds"
 msgstr "{days} ημέρες, {hours} ώρες, {minutes} λεπτά και {seconds} δευτερόλεπτα"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:29
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:28
 msgid "{diffHr}h ago"
 msgstr "πριν από {diffHr} ώ."
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:27
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:26
 msgid "{diffMin}m ago"
 msgstr "πριν από {diffMin} λ."
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:25
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:24
 msgid "{diffSec}s ago"
 msgstr "πριν από {diffSec} δευτ."
 
@@ -633,7 +633,7 @@ msgstr "Ημερομηνία ενεργοποίησης"
 #: src/components/common/AttendeeTable/index.tsx:260
 #: src/components/common/CheckInListList/index.tsx:114
 #: src/components/common/CheckInListTable/index.tsx:168
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:279
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:284
 #: src/components/forms/AffiliateForm/index.tsx:21
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:19
 #: src/components/modals/EditUserModal/index.tsx:111
@@ -657,7 +657,7 @@ msgstr "Ενεργοί τρόποι πληρωμής"
 msgid "Activity"
 msgstr "Δραστηριότητα"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:133
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:154
 msgid "Add {0}"
 msgstr "Προσθήκη {0}"
 
@@ -770,7 +770,7 @@ msgstr "Προσθέστε πολλές ώρες αν πραγματοποιεί
 msgid "Add New"
 msgstr "Προσθήκη Νέου"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:154
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:176
 msgid "Add one"
 msgstr "Προσθήκη ενός"
 
@@ -848,7 +848,7 @@ msgstr "Πρόσθετα προϊόντα"
 msgid "Add-ons"
 msgstr "Πρόσθετα"
 
-#: src/components/layouts/CashlessPos/index.tsx:147
+#: src/components/layouts/CashlessPos/index.tsx:214
 msgid "Added {0} — balance is now {1}"
 msgstr "Προστέθηκαν {0} — το υπόλοιπο είναι τώρα {1}"
 
@@ -1137,7 +1137,7 @@ msgstr "Έχετε ήδη εισιτήριο; Φορτίστε το υπόλοι
 msgid "Already have an account? <0>{0}</0>"
 msgstr "Έχετε ήδη λογαριασμό; <0>{0}</0>"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:135
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:87
 msgid "Already in"
 msgstr "Ήδη προστέθηκε"
 
@@ -1185,7 +1185,7 @@ msgstr "Ποσό που Καταβλήθηκε"
 msgid "Amount paid ({0})"
 msgstr "Ποσό που καταβλήθηκε ({0})"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:88
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:109
 #: src/components/modals/CashlessTopupModal/index.tsx:78
 msgid "Amount to add"
 msgstr "Ποσό προς προσθήκη"
@@ -1472,11 +1472,11 @@ msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετ�
 msgid "Are you sure you want to delete this tax or fee? It will no longer be applied to new orders."
 msgstr "Σίγουρα θέλετε να διαγράψετε αυτόν τον φόρο ή τη χρέωση; Δεν θα εφαρμόζεται πλέον σε νέες παραγγελίες."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:111
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:114
 msgid "Are you sure you want to delete this template? This action cannot be undone and emails will fall back to the default template."
 msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το πρότυπο; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί και τα email θα επιστρέψουν στο προεπιλεγμένο πρότυπο."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:110
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:113
 msgid "Are you sure you want to delete this template? This action cannot be undone and emails will fall back to the organizer or default template."
 msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το πρότυπο; Δεν μπορεί να αναιρεθεί και τα email θα επιστρέψουν στο πρότυπο του διοργανωτή ή στο προεπιλεγμένο."
 
@@ -1665,7 +1665,7 @@ msgstr "Πληροφορίες Συμμετέχοντα"
 msgid "Attendee information collection"
 msgstr "Συλλογή πληροφοριών συμμετέχοντα"
 
-#: src/components/layouts/CheckIn/index.tsx:353
+#: src/components/layouts/CheckIn/index.tsx:351
 msgid "Attendee not found"
 msgstr "Ο συμμετέχων δεν βρέθηκε"
 
@@ -1677,8 +1677,8 @@ msgstr "Σημειώσεις συμμετέχοντα"
 msgid "Attendee Status"
 msgstr "Κατάσταση Συμμετέχοντα"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:98
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:211
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:102
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:214
 msgid "Attendee Ticket"
 msgstr "Εισιτήριο Συμμετέχοντα"
 
@@ -1986,7 +1986,7 @@ msgstr "Διεύθυνση Χρέωσης"
 msgid "Billing Settings"
 msgstr "Ρυθμίσεις Χρέωσης"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:47
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:54
 msgid "Body is required"
 msgstr "Το σώμα του μηνύματος είναι υποχρεωτικό"
 
@@ -2101,7 +2101,7 @@ msgid "Call-to-Action Button"
 msgstr "Κουμπί Κλήσης για Δράση"
 
 #: src/components/common/InlineCameraScanner/index.tsx:160
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:90
+#: src/components/common/TicketScanZone/index.tsx:81
 msgid "Camera"
 msgstr "Κάμερα"
 
@@ -2119,7 +2119,7 @@ msgstr "Δεν είναι δυνατό το check-in"
 
 #: src/components/common/CheckIn/CheckInOptionsModal.tsx:57
 #: src/components/common/ContactOrganizerModal/index.tsx:104
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:131
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:134
 #: src/components/common/LocationPicker/index.tsx:352
 #: src/components/common/PromoCodeTable/index.tsx:40
 #: src/components/common/QuestionAndAnswerList/index.tsx:125
@@ -2200,6 +2200,7 @@ msgstr "Η ακύρωση θα ακυρώσει όλους τους συμμετ
 #: src/components/common/OrdersTable/index.tsx:341
 #: src/components/common/OrderStatusBadge/index.tsx:9
 #: src/components/common/WaitlistTable/index.tsx:28
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:31
 #: src/components/layouts/CheckIn/AttendeeDetailSheet.tsx:114
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:80
 #: src/components/layouts/CheckIn/tabs/SearchTab.tsx:226
@@ -2270,12 +2271,12 @@ msgstr "Χωρητικότητα που χρησιμοποιήθηκε"
 msgid "Card fees make very small top-ups uneconomical."
 msgstr "Οι χρεώσεις κάρτας καθιστούν ασύμφορες τις πολύ μικρές ανανεώσεις."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:107
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:128
 #: src/components/modals/CashlessTopupModal/index.tsx:89
 msgid "Card terminal"
 msgstr "Τερματικό κάρτας"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:106
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:127
 #: src/components/modals/CashlessTopupModal/index.tsx:88
 msgid "Cash"
 msgstr "Μετρητά"
@@ -2314,6 +2315,11 @@ msgstr "Ρυθμίσεις cashless"
 #: src/components/routes/event/Cashless/Settings/index.tsx:81
 msgid "Cashless settings saved"
 msgstr "Οι ρυθμίσεις cashless αποθηκεύτηκαν"
+
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:104
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:216
+msgid "Cashless Top-up"
+msgstr "Φόρτιση cashless"
 
 #: src/components/routes/event/Cashless/Transactions/index.tsx:59
 msgid "Cashless Transactions"
@@ -2372,15 +2378,15 @@ msgstr "Αλλαγή ρυθμίσεων λίστας αναμονής"
 msgid "Changed duration for {count} date(s)"
 msgstr "Η διάρκεια άλλαξε για {count} ημερομηνία/ες"
 
-#: src/components/layouts/CashlessPos/index.tsx:217
+#: src/components/layouts/CashlessPos/index.tsx:354
 msgid "Charge"
 msgstr "Χρέωση"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:211
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:233
 msgid "Charge {0}"
 msgstr "Χρέωση {0}"
 
-#: src/components/layouts/CashlessPos/index.tsx:119
+#: src/components/layouts/CashlessPos/index.tsx:187
 msgid "Charged {0} — {1} left"
 msgstr "Χρεώθηκαν {0} — απομένουν {1}"
 
@@ -2433,7 +2439,7 @@ msgstr "Ελέγξτε το email σας"
 msgid "Check your inbox! If tickets are associated with this email, you'll receive a link to view them."
 msgstr "Ελέγξτε τα εισερχόμενά σας! Εάν υπάρχουν εισιτήρια συνδεδεμένα με αυτό το email, θα λάβετε σύνδεσμο για προβολή."
 
-#: src/components/layouts/CheckIn/index.tsx:549
+#: src/components/layouts/CheckIn/index.tsx:492
 msgid "Check-in"
 msgstr "Check-in"
 
@@ -2450,7 +2456,7 @@ msgstr "Δημιουργία Check-in"
 msgid "Check-in Deleted"
 msgstr "Διαγραφή Check-in"
 
-#: src/components/layouts/CheckIn/index.tsx:215
+#: src/components/layouts/CheckIn/index.tsx:213
 msgid "Check-in for {0} was undone"
 msgstr "Το check-in για {0} αναιρέθηκε"
 
@@ -2471,19 +2477,19 @@ msgstr "Δημιουργία Λίστας Check-In"
 msgid "Check-In List deleted successfully"
 msgstr "Η λίστα check-in διαγράφηκε επιτυχώς"
 
-#: src/components/layouts/CheckIn/index.tsx:481
+#: src/components/layouts/CheckIn/index.tsx:424
 msgid "Check-in list has expired"
 msgstr "Η λίστα check-in έχει λήξει"
 
-#: src/components/layouts/CheckIn/index.tsx:583
+#: src/components/layouts/CheckIn/index.tsx:526
 msgid "Check-in list info"
 msgstr "Πληροφορίες λίστας check-in"
 
-#: src/components/layouts/CheckIn/index.tsx:520
+#: src/components/layouts/CheckIn/index.tsx:463
 msgid "Check-in list is not active"
 msgstr "Η λίστα check-in δεν είναι ενεργή"
 
-#: src/components/layouts/CheckIn/index.tsx:466
+#: src/components/layouts/CheckIn/index.tsx:409
 msgid "Check-in list not found"
 msgstr "Η λίστα check-in δεν βρέθηκε"
 
@@ -2501,11 +2507,11 @@ msgstr "Λίστες Check-in"
 msgid "Check-In Lists"
 msgstr "Λίστες Check-In"
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:21
+#: src/components/layouts/CheckIn/BottomNav.tsx:14
 msgid "Check-in navigation"
 msgstr "Πλοήγηση check-in"
 
-#: src/components/layouts/CheckIn/index.tsx:567
+#: src/components/layouts/CheckIn/index.tsx:510
 msgid "Check-in progress"
 msgstr "Πρόοδος check-in"
 
@@ -2646,7 +2652,7 @@ msgid "Class with a T-shirt add-on"
 msgstr "Μάθημα με μπλουζάκι ως πρόσθετο"
 
 #: src/components/common/OccurrenceSelect/index.tsx:133
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:202
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:224
 #: src/components/routes/event/OccurrencesTab/index.tsx:547
 msgid "Clear"
 msgstr "Καθαρισμός"
@@ -2975,7 +2981,7 @@ msgstr "Συγχαρητήρια! Η εκδήλωσή σας είναι τώρα
 msgid "Connect bank"
 msgstr "Σύνδεση τράπεζας"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:370
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:375
 #: src/components/modals/PublishEventModal/index.tsx:83
 #: src/components/modals/SendMessageModal/index.tsx:298
 msgid "Connect Stripe"
@@ -2985,7 +2991,7 @@ msgstr "Σύνδεση Stripe"
 msgid "Connect Stripe to accept payments"
 msgstr "Συνδέστε το Stripe για να δέχεστε πληρωμές"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:360
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:365
 msgid "Connect Stripe to enable email template editing"
 msgstr "Συνδέστε το Stripe για να ενεργοποιήσετε την επεξεργασία προτύπων email"
 
@@ -3265,7 +3271,7 @@ msgstr "Δημιουργία"
 msgid "Create {0}"
 msgstr "Δημιουργία {0}"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:112
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:117
 msgid "Create {0} Template"
 msgstr "Δημιουργία Προτύπου {0}"
 
@@ -3281,7 +3287,7 @@ msgstr "Δημιουργήστε ένα γενικό προϊόν, όπως έν
 msgid "Create a list for this date"
 msgstr "Δημιουργία λίστας για αυτή την ημερομηνία"
 
-#: src/components/layouts/CheckIn/index.tsx:508
+#: src/components/layouts/CheckIn/index.tsx:451
 msgid "Create a new check-in list for an active session, or contact the organizer if you think this is a mistake."
 msgstr "Δημιουργήστε νέα λίστα check-in για μια ενεργή συνεδρία ή επικοινωνήστε με τον διοργανωτή αν πιστεύετε ότι πρόκειται για λάθος."
 
@@ -3368,11 +3374,11 @@ msgstr "Δημιουργία Λίστας Check-In"
 msgid "Create Configuration"
 msgstr "Δημιουργία Ρύθμισης"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:324
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:329
 msgid "Create custom email templates for this event that override the organizer defaults"
 msgstr "Δημιουργία προσαρμοσμένων προτύπων email για αυτή την εκδήλωση που παρακάμπτουν τις προεπιλογές του διοργανωτή"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:314
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:319
 msgid "Create Custom Template"
 msgstr "Δημιουργία Προσαρμοσμένου Προτύπου"
 
@@ -3505,7 +3511,7 @@ msgstr "Δημιουργία προφίλ διοργανωτή, παρακαλώ
 msgid "CTA"
 msgstr "CTA"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:48
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:55
 msgid "CTA label is required"
 msgstr "Η ετικέτα CTA είναι υποχρεωτική"
 
@@ -3563,7 +3569,7 @@ msgstr "Προσαρμοσμένες Ερωτήσεις"
 msgid "Custom Range"
 msgstr "Προσαρμοσμένο Εύρος"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:235
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:240
 msgid "Custom template"
 msgstr "Προσαρμοσμένο πρότυπο"
 
@@ -3592,7 +3598,7 @@ msgstr "Προσαρμογή σελίδας"
 msgid "Customize the email and notification settings for this event"
 msgstr "Προσαρμογή ρυθμίσεων email και ειδοποιήσεων για αυτή την εκδήλωση"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:326
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:331
 msgid "Customize the emails sent to your customers using Liquid templating. These templates will be used as defaults for all events in your organization."
 msgstr "Προσαρμόστε τα email που αποστέλλονται στους πελάτες σας χρησιμοποιώντας Liquid templating. Αυτά τα πρότυπα θα χρησιμοποιούνται ως προεπιλογές για όλες τις εκδηλώσεις στον οργανισμό σας."
 
@@ -3625,7 +3631,7 @@ msgstr "Προσαρμογή κειμένου στο κουμπί συνέχει
 msgid "Customize the text shown on the floating button that scrolls to the tickets section"
 msgstr "Προσαρμογή κειμένου του αιωρούμενου κουμπιού που μεταβαίνει στην ενότητα εισιτηρίων"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:116
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:121
 msgid "Customize your email template using Liquid templating"
 msgstr "Προσαρμόστε το πρότυπο email χρησιμοποιώντας Liquid templating"
 
@@ -3708,8 +3714,8 @@ msgstr "Ημερομηνία"
 msgid "Date & Time"
 msgstr "Ημερομηνία & Ώρα"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:99
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:212
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:103
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:215
 msgid "Date Cancellation"
 msgstr "Ακύρωση ημερομηνίας"
 
@@ -3820,7 +3826,7 @@ msgstr "Προεπιλεγμένη χωρητικότητα ανά ημερομ�
 msgid "Default Fee Handling"
 msgstr "Προεπιλεγμένη Διαχείριση Τελών"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:225
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:230
 msgid "Default template will be used"
 msgstr "Θα χρησιμοποιηθεί το προεπιλεγμένο πρότυπο"
 
@@ -3916,7 +3922,7 @@ msgstr "Διαγραφή Διοργανωτή"
 msgid "Delete Permanently"
 msgstr "Οριστική διαγραφή"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:131
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:134
 msgid "Delete Template"
 msgstr "Διαγραφή Προτύπου"
 
@@ -4166,7 +4172,7 @@ msgstr "Μεμονωμένη συμμετοχή"
 msgid "Dropdown selection"
 msgstr "Αναπτυσσόμενη επιλογή"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:361
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:366
 msgid "Due to the high risk of spam, you must connect a Stripe account before you can modify email templates. This is to ensure that all event organizers are verified and accountable."
 msgstr "Λόγω υψηλού κινδύνου spam, πρέπει να συνδέσετε λογαριασμό Stripe πριν τροποποιήσετε πρότυπα email. Αυτό διασφαλίζει ότι όλοι οι διοργανωτές είναι επαληθευμένοι."
 
@@ -4289,7 +4295,7 @@ msgstr "Επεξεργασία"
 msgid "Edit {0}"
 msgstr "Επεξεργασία {0}"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:110
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:115
 msgid "Edit {0} Template"
 msgstr "Επεξεργασία Προτύπου {0}"
 
@@ -4421,7 +4427,7 @@ msgstr "Επεξεργασία Webhook"
 msgid "Edited"
 msgstr "Επεξεργασμένη"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:140
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:145
 msgid "Editor"
 msgstr "Επεξεργαστής"
 
@@ -4502,7 +4508,7 @@ msgstr "Η διεύθυνση email αντιγράφηκε στο πρόχειρ
 msgid "Email addresses do not match"
 msgstr "Οι διευθύνσεις email δεν ταιριάζουν"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:153
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:158
 msgid "Email Body"
 msgstr "Σώμα Email"
 
@@ -4542,7 +4548,7 @@ msgstr "Το email δεν έχει επαληθευτεί"
 msgid "Email Preview"
 msgstr "Προεπισκόπηση Email"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:349
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:354
 #: src/components/routes/organizer/Settings/index.tsx:67
 msgid "Email Templates"
 msgstr "Πρότυπα Email"
@@ -4604,7 +4610,7 @@ msgstr "Ενεργοποίηση Τιμολόγησης"
 msgid "Enable this capacity to stop product sales when the limit is reached"
 msgstr "Ενεργοποίηση αυτής της χωρητικότητας για διακοπή πωλήσεων όταν φτάσει το όριο"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:195
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:200
 msgid "Enable this template for sending emails"
 msgstr "Ενεργοποίηση αυτού του προτύπου για αποστολή email"
 
@@ -4722,7 +4728,7 @@ msgstr "Εισαγωγή χωρητικότητας"
 msgid "Enter email"
 msgstr "Εισάγετε email"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:132
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:137
 msgid "Enter email subject..."
 msgstr "Εισάγετε θέμα email..."
 
@@ -4740,7 +4746,7 @@ msgstr "Εισάγετε επώνυμο"
 msgid "Enter new password"
 msgstr "Εισάγετε νέο κωδικό"
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:38
+#: src/components/layouts/CashlessPos/PinGate.tsx:40
 msgid "Enter the PIN to open this till."
 msgstr "Εισαγάγετε το PIN για να ανοίξετε αυτό το ταμείο."
 
@@ -4860,7 +4866,7 @@ msgstr "Η εκδήλωση δημιουργήθηκε"
 msgid "Event Created"
 msgstr "Εκδήλωση Δημιουργήθηκε"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:235
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:240
 msgid "Event custom template"
 msgstr "Προσαρμοσμένο πρότυπο εκδήλωσης"
 
@@ -5146,7 +5152,7 @@ msgstr "Εξαγωγή συναλλαγών"
 msgid "Facebook"
 msgstr "Facebook"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:138
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:90
 #: src/components/routes/admin/Messages/index.tsx:127
 msgid "Failed"
 msgstr "Απέτυχε"
@@ -5216,8 +5222,8 @@ msgstr "Αποτυχία δημιουργίας προγράμματος"
 msgid "Failed to create schedule. Please try again."
 msgstr "Η δημιουργία του προγράμματος απέτυχε. Παρακαλώ δοκιμάστε ξανά."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:192
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:195
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:198
 msgid "Failed to create template"
 msgstr "Αποτυχία δημιουργίας προτύπου"
 
@@ -5267,8 +5273,8 @@ msgstr "Αποτυχία διαγραφής του προϊόντος. Δοκι�
 msgid "Failed to delete question"
 msgstr "Αποτυχία διαγραφής ερώτησης"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:126
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:127
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:129
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:130
 msgid "Failed to delete template"
 msgstr "Αποτυχία διαγραφής προτύπου"
 
@@ -5379,10 +5385,10 @@ msgstr "Αποτυχία αποθήκευσης της παράκαμψης τι
 msgid "Failed to save product settings"
 msgstr "Αποτυχία αποθήκευσης των ρυθμίσεων προϊόντος"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:158
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:161
 #: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:164
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:189
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:167
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:192
 msgid "Failed to save template"
 msgstr "Αποτυχία αποθήκευσης προτύπου"
 
@@ -5505,7 +5511,7 @@ msgstr "Η παράκαμψη χρέωσης αποθηκεύτηκε"
 #: src/components/common/InlineOrderSummary/index.tsx:156
 #: src/components/common/OrdersTable/index.tsx:270
 #: src/components/forms/ProductForm/index.tsx:486
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:174
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:196
 #: src/components/routes/event/Cashless/Settings/index.tsx:130
 #: src/components/routes/organizer/Reports/RevenueSummaryReport/index.tsx:54
 #: src/components/routes/product-widget/SelectProducts/Prices/Tiered/index.tsx:89
@@ -5565,8 +5571,8 @@ msgstr "Φίλτρα"
 msgid "Filters ({activeFilterCount})"
 msgstr "Φίλτρα ({activeFilterCount})"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:81
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:71
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:102
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:92
 msgid "Find"
 msgstr "Αναζήτηση"
 
@@ -6136,7 +6142,7 @@ msgstr "Αναδειγμένο"
 msgid "Highlighted products will have a different background color to make them stand out on the event page."
 msgstr "Τα αναδειγμένα προϊόντα θα έχουν διαφορετικό χρώμα φόντου για να ξεχωρίζουν στη σελίδα εκδήλωσης."
 
-#: src/components/layouts/CashlessPos/index.tsx:224
+#: src/components/layouts/CashlessPos/index.tsx:356
 msgid "History"
 msgstr "Ιστορικό"
 
@@ -6174,7 +6180,7 @@ msgstr "Ώρες"
 msgid "How capacity works"
 msgstr "Πώς λειτουργεί η χωρητικότητα"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:101
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:122
 msgid "How did they pay?"
 msgstr "Πώς πλήρωσε;"
 
@@ -6343,7 +6349,7 @@ msgstr "Σε εξέλιξη"
 #: src/components/common/AffiliateTable/index.tsx:131
 #: src/components/common/CheckInListList/index.tsx:114
 #: src/components/common/CheckInListTable/index.tsx:173
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:279
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:284
 #: src/components/forms/AffiliateForm/index.tsx:27
 #: src/components/forms/CapaciyAssigmentForm/index.tsx:25
 #: src/components/modals/EditUserModal/index.tsx:112
@@ -6442,8 +6448,8 @@ msgstr "Μη έγκυρη μορφή email"
 msgid "Invalid file type. Please upload an image."
 msgstr "Μη έγκυρος τύπος αρχείου. Παρακαλώ μεταφορτώστε εικόνα."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:154
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:185
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:157
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:188
 msgid "Invalid Liquid syntax. Please correct it and try again."
 msgstr "Μη έγκυρη σύνταξη Liquid. Παρακαλώ διορθώστε και δοκιμάστε ξανά."
 
@@ -6591,7 +6597,7 @@ msgstr "Ιούνιος"
 msgid "Just looking for your tickets?"
 msgstr "Αναζητάτε μόνο τα εισιτήριά σας;"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:24
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:23
 msgid "just now"
 msgstr "μόλις τώρα"
 
@@ -6929,7 +6935,7 @@ msgstr "τοποθεσίες"
 msgid "Locations"
 msgstr "Τοποθεσίες"
 
-#: src/components/layouts/CashlessPos/index.tsx:208
+#: src/components/layouts/CashlessPos/index.tsx:282
 msgid "Lock till"
 msgstr "Κλείδωμα ταμείου"
 
@@ -6972,7 +6978,7 @@ msgstr "Αποσύνδεση"
 msgid "Look Up My Tickets"
 msgstr "Αναζήτηση Εισιτηρίων μου"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:85
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:106
 msgid "Looking up {scannedId}..."
 msgstr "Αναζήτηση {scannedId}…"
 
@@ -7904,7 +7910,7 @@ msgstr "Δεν υπολογίζεται"
 msgid "Not Eligible"
 msgstr "Μη Επιλέξιμο"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:191
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:213
 msgid "Not enough on this ticket. Short by {0}."
 msgstr "Ανεπαρκές υπόλοιπο σε αυτό το εισιτήριο. Λείπουν {0}."
 
@@ -8036,8 +8042,8 @@ msgid "Offers expire after {timeoutHours} hours."
 msgstr "Οι προσφορές λήγουν μετά από {timeoutHours} ώρες."
 
 #: src/components/common/OrdersTable/index.tsx:300
-#: src/components/layouts/CheckIn/index.tsx:573
-#: src/components/layouts/CheckIn/index.tsx:575
+#: src/components/layouts/CheckIn/index.tsx:516
+#: src/components/layouts/CheckIn/index.tsx:518
 #: src/components/routes/product-widget/Payment/index.tsx:135
 msgid "Offline"
 msgstr "Εκτός Σύνδεσης"
@@ -8270,7 +8276,7 @@ msgstr "Άνοιγμα ημερομηνίας"
 msgid "Open sidebar"
 msgstr "Άνοιγμα πλαϊνής μπάρας"
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:60
+#: src/components/layouts/CashlessPos/PinGate.tsx:62
 msgid "Open till"
 msgstr "Άνοιγμα ταμείου"
 
@@ -8330,8 +8336,8 @@ msgstr "Ή επιλέξτε ποσό"
 msgid "Or enable offline payments and disable Stripe"
 msgstr "Ή ενεργοποιήστε τις πληρωμές εκτός σύνδεσης και απενεργοποιήστε το Stripe"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:75
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:66
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:96
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:87
 msgid "Or type the ticket ID"
 msgstr "Ή πληκτρολογήστε το αναγνωριστικό εισιτηρίου"
 
@@ -8378,8 +8384,8 @@ msgstr "Παραγγελία Ακυρώθηκε"
 msgid "Order complete"
 msgstr "Παραγγελία ολοκληρώθηκε"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:97
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:210
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:101
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:213
 msgid "Order Confirmation"
 msgstr "Επιβεβαίωση Παραγγελίας"
 
@@ -8617,7 +8623,7 @@ msgstr "Η ενημέρωση κατάστασης διοργανωτή απέτ
 msgid "Organizer status updated"
 msgstr "Η κατάσταση διοργανωτή ενημερώθηκε"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:224
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:229
 msgid "Organizer/default template will be used"
 msgstr "Θα χρησιμοποιηθεί το πρότυπο διοργανωτή/προεπιλογής"
 
@@ -8631,7 +8637,7 @@ msgid "Organizers can only manage events and products. They cannot manage users,
 msgstr "Οι διοργανωτές μπορούν να διαχειρίζονται μόνο εκδηλώσεις και προϊόντα. Δεν μπορούν να διαχειρίζονται χρήστες, ρυθμίσεις λογαριασμού ή στοιχεία χρέωσης."
 
 #: src/components/common/OrdersTable/index.tsx:305
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:108
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:129
 #: src/components/modals/CashlessTopupModal/index.tsx:90
 #: src/constants/eventCategories.ts:31
 msgid "Other"
@@ -9005,7 +9011,7 @@ msgstr "Επιλέξτε τουλάχιστον μία ημέρα της εβδ�
 msgid "Pick days to see your dates."
 msgstr "Επιλέξτε ημέρες για να δείτε τις ημερομηνίες σας."
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:48
+#: src/components/layouts/CashlessPos/PinGate.tsx:50
 msgid "PIN"
 msgstr "PIN"
 
@@ -9214,7 +9220,7 @@ msgstr "Μήνυμα Πριν το Checkout"
 msgid "Prevent overselling by sharing inventory across multiple ticket types."
 msgstr "Αποτροπή υπερπώλησης με κοινό απόθεμα σε πολλαπλούς τύπους εισιτηρίων."
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:143
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:148
 #: src/components/routes/admin/Announcements/index.tsx:495
 #: src/components/routes/event/TicketDesigner/index.tsx:216
 msgid "Preview"
@@ -9661,7 +9667,7 @@ msgstr "Πρόσφατη δραστηριότητα"
 msgid "Recent Attendees"
 msgstr "Πρόσφατοι συμμετέχοντες"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:106
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
 msgid "Recent check-ins"
 msgstr "Πρόσφατα check-in"
 
@@ -9739,7 +9745,7 @@ msgstr "Ανακατεύθυνση στο Stripe..."
 msgid "Referral Accounts"
 msgstr "Λογαριασμοί Παραπομπής"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:179
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:184
 msgid "Refresh Preview"
 msgstr "Ανανέωση Προεπισκόπησης"
 
@@ -9882,7 +9888,7 @@ msgstr "Αφαίρεση"
 msgid "Remove label from all dates"
 msgstr "Αφαίρεση ετικέτας από όλες τις ημερομηνίες"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:146
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:168
 msgid "Remove one"
 msgstr "Αφαίρεση ενός"
 
@@ -10184,7 +10190,8 @@ msgstr "Οι πωλήσεις είναι σε παύση"
 msgid "Sales ended"
 msgstr "Οι πωλήσεις έχουν λήξει"
 
-#: src/components/layouts/CashlessPos/PinGate.tsx:37
+#: src/components/layouts/CashlessPos/index.tsx:268
+#: src/components/layouts/CashlessPos/PinGate.tsx:39
 msgid "Sales point"
 msgstr "Σημείο πώλησης"
 
@@ -10196,7 +10203,11 @@ msgstr "Το σημείο πώλησης δημιουργήθηκε"
 msgid "Sales point deleted"
 msgstr "Το σημείο πώλησης διαγράφηκε"
 
-#: src/components/layouts/CashlessPos/index.tsx:179
+#: src/components/layouts/CashlessPos/index.tsx:350
+msgid "Sales point navigation"
+msgstr "Πλοήγηση σημείου πώλησης"
+
+#: src/components/layouts/CashlessPos/index.tsx:244
 msgid "Sales point not found"
 msgstr "Το σημείο πώλησης δεν βρέθηκε"
 
@@ -10319,7 +10330,7 @@ msgstr "Αποθήκευση Ρυθμίσεων"
 msgid "Save Social Links"
 msgstr "Αποθήκευση Κοινωνικών Συνδέσμων"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:204
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:209
 msgid "Save Template"
 msgstr "Αποθήκευση Προτύπου"
 
@@ -10347,13 +10358,21 @@ msgstr "Αποθηκευμένες τοποθεσίες"
 msgid "Saving an override creates a dedicated configuration for this organizer if it's currently on the system default."
 msgstr "Η αποθήκευση μιας παράκαμψης δημιουργεί ξεχωριστή διαμόρφωση για αυτόν τον διοργανωτή, αν αυτή τη στιγμή χρησιμοποιεί την προεπιλογή του συστήματος."
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:15
+#: src/components/layouts/CheckIn/BottomNav.tsx:18
 msgid "Scan"
 msgstr "Σάρωση"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:58
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:52
 msgid "Scan a ticket to check in an attendee"
 msgstr "Σαρώστε ένα εισιτήριο για να κάνετε check-in σε έναν συμμετέχοντα"
+
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:81
+msgid "Scan a ticket to look up its balance"
+msgstr "Σαρώστε ένα εισιτήριο για να δείτε το υπόλοιπό του"
+
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:72
+msgid "Scan a ticket to top up its balance"
+msgstr "Σαρώστε ένα εισιτήριο για να φορτίσετε το υπόλοιπό του"
 
 #: src/components/routes/product-widget/CashlessTopupEntry/index.tsx:76
 msgid "Scan my ticket QR code"
@@ -10363,11 +10382,11 @@ msgstr "Σάρωση του QR code του εισιτηρίου μου"
 msgid "Scan the ticket QR code with a handheld scanner, or type the ID printed on the ticket."
 msgstr "Σαρώστε τον κωδικό QR του εισιτηρίου με φορητό σαρωτή ή πληκτρολογήστε το αναγνωριστικό που είναι τυπωμένο πάνω του."
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:109
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:61
 msgid "Scanned tickets will appear here"
 msgstr "Τα εισιτήρια που σαρώνονται θα εμφανίζονται εδώ"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:71
+#: src/components/common/TicketScanZone/index.tsx:62
 msgid "Scanner mode"
 msgstr "Λειτουργία σαρωτή"
 
@@ -10422,7 +10441,7 @@ msgstr "Προγραμματισμένη διαγραφή"
 msgid "Scheduled time"
 msgstr "Προγραμματισμένη ώρα"
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:16
+#: src/components/layouts/CheckIn/BottomNav.tsx:19
 msgid "Search"
 msgstr "Αναζήτηση"
 
@@ -10858,15 +10877,19 @@ msgstr "Εστάλη"
 msgid "Sent By"
 msgstr "Εστάλη Από"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:218
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:222
 msgid "Sent to attendees when a scheduled date is cancelled"
 msgstr "Στέλνεται στους συμμετέχοντες όταν ακυρώνεται μια προγραμματισμένη ημερομηνία"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:216
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:223
+msgid "Sent to attendees when their cashless balance is topped up online"
+msgstr "Αποστέλλεται στους συμμετέχοντες όταν το cashless υπόλοιπό τους φορτίζεται διαδικτυακά"
+
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:220
 msgid "Sent to customers when they place an order"
 msgstr "Αποστέλλεται στους πελάτες όταν κάνουν παραγγελία"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:217
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:221
 msgid "Sent to each attendee with their ticket details"
 msgstr "Αποστέλλεται σε κάθε συμμετέχοντα με τα στοιχεία εισιτηρίου"
 
@@ -10899,8 +10922,8 @@ msgstr "Τίτλος SEO"
 msgid "September"
 msgstr "Σεπτέμβριος"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:101
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:83
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:122
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:104
 msgid "Serve someone else"
 msgstr "Εξυπηρέτηση επόμενου"
 
@@ -10908,7 +10931,7 @@ msgstr "Εξυπηρέτηση επόμενου"
 msgid "Service Fee"
 msgstr "Χρέωση Υπηρεσίας"
 
-#: src/components/layouts/CheckIn/index.tsx:498
+#: src/components/layouts/CheckIn/index.tsx:441
 msgid "Session cancelled"
 msgstr "Η συνεδρία ακυρώθηκε"
 
@@ -11443,7 +11466,7 @@ msgstr "Στατιστικά"
 msgid "Statistics are based on account creation date"
 msgstr "Τα στατιστικά βασίζονται στην ημερομηνία δημιουργίας λογαριασμού"
 
-#: src/components/layouts/CheckIn/BottomNav.tsx:17
+#: src/components/layouts/CheckIn/BottomNav.tsx:20
 msgid "Stats"
 msgstr "Στατιστικά"
 
@@ -11533,14 +11556,14 @@ msgstr "Το Stripe θα χρειαστεί σύντομα μερικά ακόμ
 msgid "Stripe will walk you through a few quick questions to finish setup."
 msgstr "Το Stripe θα σας καθοδηγήσει με μερικές γρήγορες ερωτήσεις για να ολοκληρώσετε τη ρύθμιση."
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:131
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:136
 #: src/components/modals/SendMessageModal/index.tsx:438
 #: src/components/routes/admin/Messages/index.tsx:162
 #: src/components/routes/admin/Messages/index.tsx:273
 msgid "Subject"
 msgstr "Θέμα"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:46
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:53
 msgid "Subject is required"
 msgstr "Το θέμα είναι υποχρεωτικό"
 
@@ -11548,13 +11571,13 @@ msgstr "Το θέμα είναι υποχρεωτικό"
 msgid "Subject will appear here"
 msgstr "Το θέμα θα εμφανιστεί εδώ"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:267
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:272
 msgid "Subject:"
 msgstr "Θέμα:"
 
 #: src/components/common/InlineOrderSummary/index.tsx:148
 #: src/components/common/OrderSummary/index.tsx:53
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:168
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:190
 msgid "Subtotal"
 msgstr "Υποσύνολο"
 
@@ -11771,11 +11794,11 @@ msgstr "Μπλούζα"
 msgid "T-shirts, mugs and more"
 msgstr "Μπλουζάκια, κούπες και άλλα"
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:114
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:135
 msgid "Take on the card terminal"
 msgstr "Χρέωση στο τερματικό κάρτας"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:136
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:158
 msgid "Tap a product to start an order."
 msgstr "Πατήστε ένα προϊόν για να ξεκινήσετε παραγγελία."
 
@@ -11783,7 +11806,9 @@ msgstr "Πατήστε ένα προϊόν για να ξεκινήσετε πα
 msgid "Tap dates like a calendar."
 msgstr "Πατήστε τις ημερομηνίες όπως σε ημερολόγιο."
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:59
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:82
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:73
+#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:53
 msgid "Tap this screen to resume scanning"
 msgstr "Πατήστε την οθόνη για να συνεχιστεί η σάρωση"
 
@@ -11803,7 +11828,7 @@ msgstr "Στοχεύει συμμετέχοντες από {0} επιλεγμέ�
 #: src/components/common/OrdersTable/index.tsx:269
 #: src/components/forms/TaxAndFeeForm/index.tsx:12
 #: src/components/forms/TaxAndFeeForm/index.tsx:39
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:180
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:202
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:36
 #: src/components/modals/CreateTaxOrFeeModal/index.tsx:59
 #: src/components/modals/EditTaxOrFeeModal/index.tsx:42
@@ -11895,19 +11920,19 @@ msgstr "Πείτε μας πόσο συχνά επαναλαμβάνεται η 
 msgid "Tell us your VAT registration status so we apply the correct VAT treatment to platform fees."
 msgstr "Δηλώστε μας το καθεστώς ΦΠΑ σας ώστε να εφαρμόσουμε τη σωστή μεταχείριση ΦΠΑ στις χρεώσεις πλατφόρμας."
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:194
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:199
 msgid "Template Active"
 msgstr "Πρότυπο Ενεργό"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:174
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:177
 msgid "Template created successfully"
 msgstr "Το πρότυπο δημιουργήθηκε επιτυχώς"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:122
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:125
 msgid "Template deleted successfully"
 msgstr "Το πρότυπο διαγράφηκε επιτυχώς"
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:143
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:146
 msgid "Template saved successfully"
 msgstr "Το πρότυπο αποθηκεύτηκε επιτυχώς"
 
@@ -11946,7 +11971,7 @@ msgstr "Αυτό το PIN δεν είναι σωστό."
 msgid "That promo code is invalid"
 msgstr "Αυτός ο κωδικός προσφοράς δεν είναι έγκυρος"
 
-#: src/components/layouts/CashlessPos/index.tsx:59
+#: src/components/layouts/CashlessPos/index.tsx:117
 msgid "That ticket could not be found."
 msgstr "Αυτό το εισιτήριο δεν βρέθηκε."
 
@@ -11962,7 +11987,7 @@ msgstr "Αυτό ήταν"
 msgid "The background color of the page. When using cover image, this is applied as an overlay."
 msgstr "Το χρώμα φόντου της σελίδας. Όταν χρησιμοποιείται εικόνα εξωφύλλου, εφαρμόζεται ως επικάλυψη."
 
-#: src/components/layouts/CheckIn/index.tsx:471
+#: src/components/layouts/CheckIn/index.tsx:414
 msgid "The check-in list you are looking for does not exist."
 msgstr "Η λίστα check-in που αναζητάτε δεν υπάρχει."
 
@@ -12086,8 +12111,8 @@ msgstr "Η συνεδρία για «{title}», που είχε αρχικά π�
 msgid "The size of the room. The total number of people who can attend a date across every ticket. Leave it empty for no limit."
 msgstr "Το μέγεθος της αίθουσας. Ο συνολικός αριθμός ατόμων που μπορούν να παρευρεθούν σε μια ημερομηνία από όλα τα εισιτήρια. Αφήστε το κενό για κανένα όριο."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:155
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:186
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:158
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:189
 msgid "The template body contains invalid Liquid syntax. Please correct it and try again."
 msgstr "Το σώμα προτύπου περιέχει μη έγκυρη σύνταξη Liquid. Παρακαλώ διορθώστε και δοκιμάστε ξανά."
 
@@ -12173,11 +12198,11 @@ msgstr "Αυτές οι τιμές ισχύουν για όλες τις ημε�
 msgid "These settings apply only to copied embed code and won't be stored."
 msgstr "Αυτές οι ρυθμίσεις ισχύουν μόνο για τον αντιγραμμένο κώδικα ενσωμάτωσης και δεν θα αποθηκευτούν."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:339
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:344
 msgid "These templates will be used as defaults for all events in your organization. Individual events can override these templates with their own custom versions."
 msgstr "Αυτά τα πρότυπα θα χρησιμοποιούνται ως προεπιλογές για όλες τις εκδηλώσεις στον οργανισμό σας. Μεμονωμένες εκδηλώσεις μπορούν να τα παρακάμψουν."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:332
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:337
 msgid "These templates will override the organizer defaults for this event only. If no custom template is set here, the organizer template will be used instead."
 msgstr "Αυτά τα πρότυπα θα παρακάμψουν τις προεπιλογές διοργανωτή μόνο για αυτή την εκδήλωση. Εάν δεν έχει οριστεί προσαρμοσμένο πρότυπο, θα χρησιμοποιηθεί το πρότυπο διοργανωτή."
 
@@ -12209,7 +12234,7 @@ msgstr "Αυτός ο συμμετέχων έχει μη πληρωμένη πα
 msgid "This balance could not be refunded"
 msgstr "Δεν ήταν δυνατή η επιστροφή αυτού του υπολοίπου"
 
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:98
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:119
 msgid "This balance is frozen"
 msgstr "Αυτό το υπόλοιπο είναι παγωμένο"
 
@@ -12225,7 +12250,7 @@ msgstr "Αυτή η κατηγορία είναι κρυφή από δημόσι
 msgid "This check-in list has expired"
 msgstr "Αυτή η λίστα check-in έχει λήξει"
 
-#: src/components/layouts/CheckIn/index.tsx:486
+#: src/components/layouts/CheckIn/index.tsx:429
 msgid "This check-in list has expired and is no longer available for check-ins."
 msgstr "Αυτή η λίστα check-in έχει λήξει και δεν είναι πλέον διαθέσιμη."
 
@@ -12237,11 +12262,11 @@ msgstr "Αυτή η λίστα check-in είναι ενεργή"
 msgid "This check-in list is not active yet"
 msgstr "Αυτή η λίστα check-in δεν είναι ακόμα ενεργή"
 
-#: src/components/layouts/CheckIn/index.tsx:525
+#: src/components/layouts/CheckIn/index.tsx:468
 msgid "This check-in list is not yet active and is not available for check-ins."
 msgstr "Αυτή η λίστα check-in δεν είναι ακόμα ενεργή και δεν είναι διαθέσιμη."
 
-#: src/components/layouts/CheckIn/index.tsx:503
+#: src/components/layouts/CheckIn/index.tsx:446
 msgid "This check-in list is scoped to a session that has been cancelled, so it can no longer be used for check-ins."
 msgstr "Αυτή η λίστα check-in αφορά συνεδρία που έχει ακυρωθεί, οπότε δεν μπορεί πλέον να χρησιμοποιηθεί για check-in."
 
@@ -12360,7 +12385,7 @@ msgstr "Αυτός ο σύνδεσμος δεν είναι έγκυρος ή έ�
 msgid "This link is no longer valid"
 msgstr "Αυτός ο σύνδεσμος δεν είναι πλέον έγκυρος"
 
-#: src/components/layouts/CashlessPos/index.tsx:180
+#: src/components/layouts/CashlessPos/index.tsx:245
 msgid "This link is no longer valid. Ask the organizer for a new one."
 msgstr "Αυτός ο σύνδεσμος δεν ισχύει πλέον. Ζητήστε νέο από τον διοργανωτή."
 
@@ -12428,7 +12453,7 @@ msgstr "Αυτό το προφίλ διοργανωτή δεν έχει δημο
 msgid "This overrides all visibility settings and will hide the product from all customers."
 msgstr "Αυτό παρακάμπτει όλες τις ρυθμίσεις ορατότητας και θα αποκρύψει το προϊόν από όλους τους πελάτες."
 
-#: src/components/layouts/CashlessPos/index.tsx:126
+#: src/components/layouts/CashlessPos/index.tsx:192
 msgid "This payment could not be taken."
 msgstr "Δεν ήταν δυνατή η χρέωση αυτής της πληρωμής."
 
@@ -12464,7 +12489,7 @@ msgstr "Αυτή η αναφορά είναι μόνο για ενημερωτι
 msgid "This reset password link is invalid or expired."
 msgstr "Αυτός ο σύνδεσμος επαναφοράς κωδικού δεν είναι έγκυρος ή έχει λήξει."
 
-#: src/components/layouts/CashlessPos/TopUpTab.tsx:42
+#: src/components/layouts/CashlessPos/TopUpTab.tsx:54
 msgid "This sales point is not allowed to top up balances."
 msgstr "Αυτό το σημείο πώλησης δεν επιτρέπεται να ανανεώνει υπόλοιπα."
 
@@ -12472,7 +12497,7 @@ msgstr "Αυτό το σημείο πώλησης δεν επιτρέπεται 
 msgid "This ticket is no longer valid"
 msgstr "Αυτό το εισιτήριο δεν ισχύει πλέον"
 
-#: src/components/layouts/CheckIn/index.tsx:330
+#: src/components/layouts/CheckIn/index.tsx:328
 msgid "This ticket was just scanned. Please wait before scanning again."
 msgstr "Αυτό το εισιτήριο σαρώθηκε μόλις τώρα. Παρακαλώ περιμένετε πριν σαρώσετε ξανά."
 
@@ -12480,7 +12505,7 @@ msgstr "Αυτό το εισιτήριο σαρώθηκε μόλις τώρα. �
 msgid "This tier's quantity is shared across all dates"
 msgstr "Η ποσότητα αυτού του επιπέδου είναι κοινή για όλες τις ημερομηνίες"
 
-#: src/components/layouts/CashlessPos/index.tsx:154
+#: src/components/layouts/CashlessPos/index.tsx:219
 msgid "This top-up could not be recorded."
 msgstr "Δεν ήταν δυνατή η καταγραφή αυτής της ανανέωσης."
 
@@ -12488,7 +12513,7 @@ msgstr "Δεν ήταν δυνατή η καταγραφή αυτής της α�
 msgid "This transaction could not be reversed"
 msgstr "Δεν ήταν δυνατή η ακύρωση αυτής της συναλλαγής"
 
-#: src/components/layouts/CashlessPos/index.tsx:169
+#: src/components/layouts/CashlessPos/index.tsx:234
 msgid "This transaction could not be undone."
 msgstr "Δεν ήταν δυνατή η αναίρεση αυτής της συναλλαγής."
 
@@ -12751,7 +12776,7 @@ msgid "Top Organizers (Last 14 Days)"
 msgstr "Κορυφαίοι Διοργανωτές (Τελευταίες 14 Ημέρες)"
 
 #: src/components/common/CashlessWalletTable/index.tsx:104
-#: src/components/layouts/CashlessPos/index.tsx:221
+#: src/components/layouts/CashlessPos/index.tsx:355
 msgid "Top up"
 msgstr "Ανανέωση"
 
@@ -12777,7 +12802,7 @@ msgstr "Φόρτιση του υπολοίπου μου"
 msgid "Top up your balance at any top-up point during the event."
 msgstr "Φορτίστε το υπόλοιπό σας σε οποιοδήποτε σημείο φόρτισης κατά τη διάρκεια της εκδήλωσης."
 
-#: src/components/layouts/CashlessPos/HistoryTab.tsx:32
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:36
 #: src/components/routes/product-widget/CashlessWallet/CashlessTransactionHistory.tsx:17
 msgid "Top-up"
 msgstr "Ανανέωση"
@@ -12810,7 +12835,7 @@ msgstr "σύνολο"
 #: src/components/common/AdminOrdersTable/index.tsx:81
 #: src/components/common/InlineOrderSummary/index.tsx:219
 #: src/components/common/OrderSummary/index.tsx:104
-#: src/components/layouts/CashlessPos/ChargeTab.tsx:185
+#: src/components/layouts/CashlessPos/ChargeTab.tsx:207
 #: src/components/layouts/CheckIn/tabs/StatsTab.tsx:99
 #: src/components/modals/ManageOrderModal/index.tsx:113
 #: src/components/routes/organizer/OrganizerDashboard/index.tsx:352
@@ -12910,7 +12935,7 @@ msgstr "Παρακολούθηση & Αναλυτικά"
 msgid "Transaction reversed"
 msgstr "Η συναλλαγή ακυρώθηκε"
 
-#: src/components/layouts/CashlessPos/index.tsx:165
+#: src/components/layouts/CashlessPos/index.tsx:231
 msgid "Transaction undone"
 msgstr "Η συναλλαγή αναιρέθηκε"
 
@@ -12952,11 +12977,11 @@ msgstr "Τρίτη"
 msgid "Turkish"
 msgstr "Τουρκικά"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:94
+#: src/components/common/TicketScanZone/index.tsx:85
 msgid "Turn sound off"
 msgstr "Απενεργοποίηση ήχου"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:94
+#: src/components/common/TicketScanZone/index.tsx:85
 msgid "Turn sound on"
 msgstr "Ενεργοποίηση ήχου"
 
@@ -12996,12 +13021,12 @@ msgstr "Πληκτρολογήστε για αναζήτηση..."
 msgid "Typography"
 msgstr "Τυπογραφία"
 
-#: src/components/layouts/CheckIn/index.tsx:271
+#: src/components/layouts/CheckIn/index.tsx:269
 msgid "Unable to check in attendee"
 msgstr "Αδύνατο check-in συμμετέχοντα"
 
+#: src/components/layouts/CheckIn/index.tsx:295
 #: src/components/layouts/CheckIn/index.tsx:297
-#: src/components/layouts/CheckIn/index.tsx:299
 msgid "Unable to check out attendee"
 msgstr "Αδύνατο check-out συμμετέχοντα"
 
@@ -13021,7 +13046,7 @@ msgstr "Αδύνατη δημιουργία ερώτησης. Ελέγξτε τ�
 msgid "Unable to duplicate product. Please check the your details"
 msgstr "Αδύνατη αντιγραφή προϊόντος. Ελέγξτε τα στοιχεία σας"
 
-#: src/components/layouts/CheckIn/index.tsx:345
+#: src/components/layouts/CheckIn/index.tsx:343
 msgid "Unable to fetch attendee"
 msgstr "Αδύνατη φόρτωση συμμετέχοντα"
 
@@ -13037,7 +13062,7 @@ msgstr "Δεν ήταν δυνατή η φόρτωση των στοιχείων
 msgid "Unable to load products for this date. Please try again."
 msgstr "Δεν ήταν δυνατή η φόρτωση των προϊόντων για αυτή την ημερομηνία. Δοκιμάστε ξανά."
 
-#: src/components/layouts/CheckIn/index.tsx:220
+#: src/components/layouts/CheckIn/index.tsx:218
 msgid "Unable to undo check-in"
 msgstr "Δεν είναι δυνατή η αναίρεση του check-in"
 
@@ -13049,8 +13074,8 @@ msgstr "Αδύνατη ενημέρωση ερώτησης. Ελέγξτε τα 
 msgid "Unattributed Accounts"
 msgstr "Μη Αποδιδόμενοι Λογαριασμοί"
 
-#: src/components/layouts/CashlessPos/HistoryTab.tsx:49
-#: src/components/layouts/CheckIn/index.tsx:255
+#: src/components/layouts/CashlessPos/HistoryTab.tsx:63
+#: src/components/layouts/CheckIn/index.tsx:253
 msgid "Undo"
 msgstr "Αναίρεση"
 
@@ -13289,19 +13314,19 @@ msgstr "Παράδειγμα Χρήσης"
 msgid "Usage Limit"
 msgstr "Όριο Χρήσης"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:80
+#: src/components/common/TicketScanZone/index.tsx:71
 msgid "USB"
 msgstr "USB"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:53
+#: src/components/common/TicketScanZone/index.tsx:46
 msgid "USB scanner listening"
 msgstr "Ο σαρωτής USB ακούει"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:53
+#: src/components/common/TicketScanZone/index.tsx:46
 msgid "USB scanner paused"
 msgstr "Ο σαρωτής USB σε παύση"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:154
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:159
 msgid "Use <0>Liquid templating</0> to personalize your emails"
 msgstr "Χρησιμοποιήστε <0>Liquid templating</0> για εξατομίκευση email"
 
@@ -13562,8 +13587,7 @@ msgid "View details for {0} {1}"
 msgstr "Προβολή λεπτομερειών για {0} {1}"
 
 #: src/components/common/AdminEventsTable/index.tsx:159
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:58
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:41
 #: src/components/routes/admin/Dashboard/index.tsx:478
 msgid "View Event"
 msgstr "Προβολή Εκδήλωσης"
@@ -13589,13 +13613,16 @@ msgstr "Προβολή Χάρτη"
 msgid "View Message"
 msgstr "Προβολή Μηνύματος"
 
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:42
+msgid "View my balance"
+msgstr "Προβολή του υπολοίπου μου"
+
 #: src/components/layouts/EventHomepage/index.tsx:468
 msgid "View on Google Maps"
 msgstr "Προβολή στο Google Maps"
 
 #: src/components/common/EmailTemplateEditor/CTAConfiguration.tsx:28
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:57
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:39
 #: src/components/common/WaitlistTable/index.tsx:62
 #: src/components/routes/my-tickets/index.tsx:127
 msgid "View Order"
@@ -13615,8 +13642,7 @@ msgstr "Προβολή λεπτομερειών παραγγελίας, έκδο
 msgid "View Organizer Homepage"
 msgstr "Προβολή Αρχικής Διοργανωτή"
 
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:59
-#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:72
+#: src/components/common/EmailTemplateEditor/EmailTemplateEditor.tsx:40
 #: src/components/routes/product-widget/OrderSummaryAndProducts/index.tsx:110
 msgid "View Ticket"
 msgstr "Προβολή Εισιτηρίου"
@@ -13660,7 +13686,7 @@ msgstr "Αναμονή"
 msgid "Waiting for payment"
 msgstr "Αναμονή πληρωμής"
 
-#: src/components/layouts/CheckIn/tabs/ScanTab.tsx:64
+#: src/components/common/TicketScanZone/index.tsx:55
 msgid "Waiting for scan…"
 msgstr "Αναμονή σάρωσης…"
 
@@ -14198,8 +14224,8 @@ msgstr "Υποκαθιστάτε τον <0>{0}</0> ({1})"
 msgid "You are issuing a partial refund. The customer will be refunded {0} {1}."
 msgstr "Εκδίδετε μερική επιστροφή. Ο πελάτης θα επιστραφεί {0} {1}."
 
-#: src/components/layouts/CheckIn/index.tsx:266
-#: src/components/layouts/CheckIn/index.tsx:292
+#: src/components/layouts/CheckIn/index.tsx:264
+#: src/components/layouts/CheckIn/index.tsx:290
 msgid "You are offline"
 msgstr "Είστε εκτός σύνδεσης"
 
@@ -14227,8 +14253,8 @@ msgstr "Δεν μπορείτε να αρχειοθετήσετε τον τελ�
 msgid "You cannot change the product type as there are attendees associated with this product."
 msgstr "Δεν μπορείτε να αλλάξετε τον τύπο προϊόντος καθώς υπάρχουν συμμετέχοντες συνδεδεμένοι."
 
-#: src/components/layouts/CheckIn/index.tsx:315
-#: src/components/layouts/CheckIn/index.tsx:381
+#: src/components/layouts/CheckIn/index.tsx:313
+#: src/components/layouts/CheckIn/index.tsx:379
 msgid "You cannot check in attendees with unpaid orders. This setting can be changed in the event settings."
 msgstr "Δεν μπορείτε να κάνετε check-in σε συμμετέχοντες με μη πληρωμένες παραγγελίες."
 
@@ -14313,7 +14339,7 @@ msgstr "Πρέπει να επαληθεύσετε τη διεύθυνση email
 msgid "You need to create at least one occurrence before you can add attendees to this recurring event."
 msgstr "Πρέπει να δημιουργήσετε τουλάχιστον μία ημερομηνία πριν προσθέσετε συμμετέχοντες σε αυτή την επαναλαμβανόμενη εκδήλωση."
 
-#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:355
+#: src/components/common/EmailTemplateSettings/EmailTemplateSettingsBase.tsx:360
 msgid "You need to verify your account email before you can modify email templates."
 msgstr "Πρέπει να επαληθεύσετε το email λογαριασμού πριν τροποποιήσετε πρότυπα email."
 
@@ -14514,7 +14540,7 @@ msgstr "Το Πλάνο σας"
 msgid "Your refund is processing."
 msgstr "Η επιστροφή σας επεξεργάζεται."
 
-#: src/components/layouts/CheckIn/index.tsx:117
+#: src/components/layouts/CheckIn/index.tsx:115
 msgid "Your saved date filter is no longer available — showing all dates."
 msgstr "Το αποθηκευμένο φίλτρο ημερομηνιών δεν είναι πλέον διαθέσιμο — εμφανίζονται όλες οι ημερομηνίες."
 

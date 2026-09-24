@@ -777,5 +777,10 @@
     "View my balance": "Visa mitt saldo",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "Vi har lagt till **:amount** på cashless-saldot kopplat till din biljett för **:event**.",
     "Your cashless balance is topped up": "Ditt cashless-saldo har fyllts på",
-    "💳 Your cashless balance for :event": "💳 Ditt cashless-saldo för :event"
+    "💳 Your cashless balance for :event": "💳 Ditt cashless-saldo för :event",
+    "Cashless Top-up": "Cashless-påfyllning",
+    "Sent to attendees when their cashless balance is topped up online": "Skickas till deltagare när deras cashless-saldo fylls på online",
+    "The amount that was just added to the balance": "Beloppet som just lades till saldot",
+    "The balance available after this top-up": "Saldot som är tillgängligt efter denna påfyllning",
+    "Link to view the cashless balance": "Länk för att se cashless-saldot"
 }

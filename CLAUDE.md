@@ -134,6 +134,7 @@ Gotchas:
 - Sales point writes are idempotent on `client_reference_id`, unique per sales point. Any new till operation must send one
 - The till never computes a total itself: it asks `CashlessQuoteService` (`/quote`) so the amount shown to staff, and the amount to key into a card terminal, always match what the order will charge
 - Visitors reach their balance without logging in: the event homepage links to `/cashless/:eventId` (type or scan the ticket ID), which redirects to `/cashless/:eventId/:ticketReference`. `CashlessWalletResolveService::resolveByTicketReference` accepts both `A-…` public ids and `a_…` short ids; the public wallet response only exposes the surname initial, and both public endpoints are throttled because the public id is the only secret
+- The top-up confirmation email is the editable `EmailTemplateType::CASHLESS_TOPUP` template (Liquid, event/organizer level like order confirmation), built through `MailBuilderService::buildCashlessTopupConfirmationMail`. The blade view is only the fallback when no template exists — never send `CashlessTopupConfirmationMail` directly, and add tokens in `LiquidTemplateRenderer` and `EmailTokenContextBuilder` together
 
 #### Enums
 - Status enums go in `backend/app/DomainObjects/Status/`

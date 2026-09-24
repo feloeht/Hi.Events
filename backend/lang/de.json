@@ -777,5 +777,10 @@
     "View my balance": "Mein Guthaben ansehen",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "Wir haben **:amount** auf das Cashless-Guthaben Ihres Tickets für **:event** gebucht.",
     "Your cashless balance is topped up": "Ihr Cashless-Guthaben wurde aufgeladen",
-    "💳 Your cashless balance for :event": "💳 Ihr Cashless-Guthaben für :event"
+    "💳 Your cashless balance for :event": "💳 Ihr Cashless-Guthaben für :event",
+    "Cashless Top-up": "Cashless-Aufladung",
+    "Sent to attendees when their cashless balance is topped up online": "Wird an Teilnehmer gesendet, wenn ihr Cashless-Guthaben online aufgeladen wird",
+    "The amount that was just added to the balance": "Der Betrag, der dem Guthaben gerade gutgeschrieben wurde",
+    "The balance available after this top-up": "Das nach dieser Aufladung verfügbare Guthaben",
+    "Link to view the cashless balance": "Link zum Anzeigen des Cashless-Guthabens"
 }

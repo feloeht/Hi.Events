@@ -15,9 +15,7 @@
 
 {{ __('We have added **:amount** to the cashless balance attached to your ticket for **:event**.', ['amount' => $toppedUpAmount, 'event' => $event->getTitle()]) }}
 
-<x-mail::panel>
 {{ __('New balance') }}: **{{ $newBalance }}**
-</x-mail::panel>
 
 {{ __('Show the QR code on your ticket at any bar or stand to pay — no cash needed.') }}
 

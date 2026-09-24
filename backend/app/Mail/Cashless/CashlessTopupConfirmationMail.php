@@ -3,14 +3,11 @@
 namespace HiEvents\Mail\Cashless;
 
 use HiEvents\DomainObjects\AttendeeDomainObject;
-use HiEvents\DomainObjects\CashlessTransactionDomainObject;
-use HiEvents\DomainObjects\CashlessWalletDomainObject;
 use HiEvents\DomainObjects\EventDomainObject;
 use HiEvents\DomainObjects\EventSettingDomainObject;
 use HiEvents\DomainObjects\OrganizerDomainObject;
-use HiEvents\Helper\Currency;
-use HiEvents\Helper\Url;
 use HiEvents\Mail\BaseMail;
+use HiEvents\Services\Domain\Email\DTO\RenderedEmailTemplateDTO;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Support\Str;
@@ -21,28 +18,43 @@ use Illuminate\Support\Str;
 class CashlessTopupConfirmationMail extends BaseMail
 {
     public function __construct(
-        private readonly CashlessWalletDomainObject $wallet,
-        private readonly CashlessTransactionDomainObject $transaction,
         private readonly AttendeeDomainObject $attendee,
         private readonly EventDomainObject $event,
         private readonly EventSettingDomainObject $eventSettings,
         private readonly OrganizerDomainObject $organizer,
+        private readonly string $toppedUpAmount,
+        private readonly string $newBalance,
+        private readonly string $walletUrl,
+        private readonly ?RenderedEmailTemplateDTO $renderedTemplate = null,
     ) {
         parent::__construct();
     }
 
     public function envelope(): Envelope
     {
+        $subject = $this->renderedTemplate?->subject ?? __('💳 Your cashless balance for :event', [
+            'event' => Str::limit($this->event->getTitle(), 50),
+        ]);
+
         return new Envelope(
             replyTo: $this->eventSettings->getSupportEmail(),
-            subject: __('💳 Your cashless balance for :event', [
-                'event' => Str::limit($this->event->getTitle(), 50),
-            ]),
+            subject: $subject,
         );
     }
 
     public function content(): Content
     {
+        if ($this->renderedTemplate) {
+            return new Content(
+                markdown: 'emails.custom-template',
+                with: [
+                    'renderedBody' => $this->renderedTemplate->body,
+                    'renderedCta' => $this->renderedTemplate->cta,
+                    'eventSettings' => $this->eventSettings,
+                ]
+            );
+        }
+
         return new Content(
             markdown: 'emails.cashless.topup-confirmation',
             with: [
@@ -50,19 +62,9 @@ class CashlessTopupConfirmationMail extends BaseMail
                 'eventSettings' => $this->eventSettings,
                 'organizer' => $this->organizer,
                 'attendee' => $this->attendee,
-                'toppedUpAmount' => Currency::format(
-                    abs($this->transaction->getAmount()),
-                    $this->wallet->getCurrency(),
-                ),
-                'newBalance' => Currency::format(
-                    $this->transaction->getBalanceAfter(),
-                    $this->wallet->getCurrency(),
-                ),
-                'walletUrl' => sprintf(
-                    Url::getFrontEndUrlFromConfig(Url::CASHLESS_WALLET),
-                    $this->event->getId(),
-                    $this->attendee->getShortId(),
-                ),
+                'toppedUpAmount' => $this->toppedUpAmount,
+                'newBalance' => $this->newBalance,
+                'walletUrl' => $this->walletUrl,
             ]
         );
     }

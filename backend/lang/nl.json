@@ -777,5 +777,10 @@
     "View my balance": "Mijn saldo bekijken",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "We hebben **:amount** toegevoegd aan het cashless-saldo van je ticket voor **:event**.",
     "Your cashless balance is topped up": "Je cashless-saldo is opgewaardeerd",
-    "💳 Your cashless balance for :event": "💳 Je cashless-saldo voor :event"
+    "💳 Your cashless balance for :event": "💳 Je cashless-saldo voor :event",
+    "Cashless Top-up": "Cashless opwaardering",
+    "Sent to attendees when their cashless balance is topped up online": "Verstuurd naar deelnemers wanneer hun cashless saldo online wordt opgewaardeerd",
+    "The amount that was just added to the balance": "Het bedrag dat zojuist aan het saldo is toegevoegd",
+    "The balance available after this top-up": "Het beschikbare saldo na deze opwaardering",
+    "Link to view the cashless balance": "Link om het cashless saldo te bekijken"
 }

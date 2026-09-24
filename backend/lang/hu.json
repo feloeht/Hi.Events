@@ -782,5 +782,10 @@
     "View my balance": "Egyenlegem megtekintése",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "**:amount** összeget írtunk jóvá a(z) **:event** eseményre szóló jegyedhez tartozó cashless egyenlegen.",
     "Your cashless balance is topped up": "A cashless egyenleged fel lett töltve",
-    "💳 Your cashless balance for :event": "💳 A cashless egyenleged: :event"
+    "💳 Your cashless balance for :event": "💳 A cashless egyenleged: :event",
+    "Cashless Top-up": "Cashless feltöltés",
+    "Sent to attendees when their cashless balance is topped up online": "Akkor kapják meg a résztvevők, amikor a cashless egyenlegüket online feltöltik",
+    "The amount that was just added to the balance": "Az egyenlegre az imént jóváírt összeg",
+    "The balance available after this top-up": "A feltöltés után elérhető egyenleg",
+    "Link to view the cashless balance": "Hivatkozás a cashless egyenleg megtekintéséhez"
 }

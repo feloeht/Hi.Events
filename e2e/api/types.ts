@@ -313,7 +313,7 @@ export interface CreateWebhookPayload {
 }
 
 export interface CreateEmailTemplatePayload {
-  template_type: 'order_confirmation' | 'attendee_ticket' | 'occurrence_cancellation';
+  template_type: 'order_confirmation' | 'attendee_ticket' | 'occurrence_cancellation' | 'cashless_topup';
   subject: string;
   body: string;
   ctaLabel: string;

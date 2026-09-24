@@ -777,5 +777,10 @@
     "View my balance": "Προβολή του υπολοίπου μου",
     "We have added **:amount** to the cashless balance attached to your ticket for **:event**.": "Προσθέσαμε **:amount** στο υπόλοιπο cashless που συνδέεται με το εισιτήριό σας για την εκδήλωση **:event**.",
     "Your cashless balance is topped up": "Το υπόλοιπό σας cashless ανανεώθηκε",
-    "💳 Your cashless balance for :event": "💳 Το υπόλοιπό σας cashless για :event"
+    "💳 Your cashless balance for :event": "💳 Το υπόλοιπό σας cashless για :event",
+    "Cashless Top-up": "Φόρτιση cashless",
+    "Sent to attendees when their cashless balance is topped up online": "Αποστέλλεται στους συμμετέχοντες όταν το cashless υπόλοιπό τους φορτίζεται διαδικτυακά",
+    "The amount that was just added to the balance": "Το ποσό που μόλις προστέθηκε στο υπόλοιπο",
+    "The balance available after this top-up": "Το διαθέσιμο υπόλοιπο μετά από αυτή τη φόρτιση",
+    "Link to view the cashless balance": "Σύνδεσμος για προβολή του cashless υπολοίπου"
 }
